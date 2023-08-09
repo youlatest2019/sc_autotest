@@ -1,0 +1,221 @@
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_rlcts import *
+from pageKeyword.keyword_bsgl_common import *
+from Common.OtherFunc import *
+
+
+class BsglRLCTSTest(InitCls, BsglMainKeyword, BsglPubBsrwKeyword, BsglPubBsfwKeyword, BsglPubFzglKeyword,
+                    BsglPubBssqKeyword, BsglPubSjsqKeyword, BsglPubSplcKeyword, OperationXml, BsglRlctsBscsKeyword,
+                    BsglRlctsZjytszKeyword, BsglPubBssqDeFxqKeyword, BsglPubSplcDeFxqKeyword):
+    def test_01_add_bsrw_success(self):
+        """大额监控报送任务新增+废弃报送任务成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择大额监控品种进入大额监控管理界面
+        self.intoRlctsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送任务管理页签
+        self.swithToBsrw()
+        # 6、新增报送任务
+        self.bsglMainFrame()
+        self.addBsrw("LCTS01", "20200329", type="day")
+        self.addBsrwSave()
+        # 断言新增成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '保存成功')
+        self.closeXzrw_success()
+        # 7、废弃新增的报送任务
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.switchBspzFrame()
+        self.queryBsrw("2020年03月29日", "大额监控")
+        self.abandonBsrw("废弃")
+        # 断言废弃成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '操作成功!')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    # 报送范围
+    def test_02_sfbs_bsfw_success(self):
+        """大额监控报送范围点击是否报送成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择大额监控品种进入大额监控管理界面
+        self.intoRlctsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、查询并点击是否报送按钮
+        self.bsglMainFrame()
+        self.queryBsnr("按日", "大额监控")
+        self.whetherBsnr()
+        # 断言点击是否报送成功
+        res = self.GetTagText(self.MSG_SFBS_RESULT)
+        self.assertEqual(res, '设置成功')
+        self.clickOkAlert()
+        # 6、查询并点击是否报送按钮(是)
+        self.whetherBsnr()
+        # 断言点击是否报送成功
+        res = self.GetTagText(self.MSG_SFBS_RESULT)
+        self.assertEqual(res, '设置成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_03_change_bsfw_success(self):
+        """大额监控报送范围修改单个报送内容设置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择大额监控品种进入大额监控管理界面
+        self.intoRlctsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、修改单个报送内容设置
+        self.bsglMainFrame()
+        self.checkOneBsnr()
+        self.changeBsnr("上期", "0 0 4 * * ?", "15", "天", "是", "是")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_04_change_bscs_success(self):
+        """大额监控修改报送参数成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择大额监控品种进入大额监控管理界面
+        self.intoRlctsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送参数管理页签
+        self.swithToBscs()
+        self.bsglMainFrame()
+        # 6、修改报送参数设置
+        self.changeBscsRlctsJedw("千元")
+        self.changeBscsRlctsJesxed("8888")
+        self.changeBscsRlctsDezjbm("0001")
+        self.changeBscsRlctsDezjsjbbbh("1000")
+        self.changeBscsRlctsDrzfzjebm("0003")
+        self.changeBscsRlctsDrzfzjesjbbbh("1000")
+        self.changeBscsRlctsDewjscdz("http://192.168.20.157:1002/RPTS/napi/uploadFile")
+        self.changeBscsRlctsDyjkyhm("nstccdxxdddd")
+        self.changeBscsRlctsDyjkmm("nstccdxxdddd")
+        self.changeBscsRlctsTzry("反洗钱")
+        self.Click(self.INPUT_DYJKYHM_DE)
+        self.changeBscsRlctsZdwjxzdz("http://192.168.20.157:1003/RPTS/napi/downfilesGet")
+        self.changeBscsRlctsZdwjqdcxdz("http://192.168.20.157:1003/RPTS/napi/downfilesList")
+        self.changeBscsRlctsRzwjcxdz("http://192.168.20.157:1003/RPTS/napi/synPushDt")
+        self.changeBscsRlctsSave()
+        # 断言修改参数成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '保存成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_05_change_zjytsz_success(self):
+        """大额监控新增+删除资金用途设置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择大额监控品种进入大额监控管理界面
+        self.intoRlctsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToZjytsz()
+        # 6、新增资金用途设置
+        self.bsglMainFrame()
+        self.changeZjytszRlctsAdd()
+        self.changeZjytszRlctsZjytbm("1213")
+        self.changeZjytszRlctsZjytbmhy("1213编码含义")
+        self.changeZjytszRlctsSave()
+        self.Click(self.ALERT_QRCG1)
+        # 7.删除新增的资金用途设置
+        self.changeZjytszRlctsFxk("1213")
+        self.changeZjytszRlctsDelete()
+        self.AlertAccept()
+        # 断言修改参数成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '删除成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_06_change_bssq_success(self):
+        """大额监控报送授权+取消授权成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择大额监控品种进入大额监控管理界面
+        self.intoRlctsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送授权管理页签
+        self.swithToBssq()
+        # 6、选择人员授权保存并断言成功
+        self.bsglMainFrame()
+        self.changeBssqRlctsfxqRymc("反洗钱权限1")
+        self.changeBssqRlctsfxqRefresh()
+        self.changeBssqRlctsfxqSq()
+        self.changeBssqRlctsfxqFrame()
+        self.changeBssqRlctsfxqFxk()
+        self.changeBssqRlctsfxqSave()
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '授权成功！')
+        self.Click(self.ALERT_QRCG1)
+        # 6、选择人员取消授权保存并断言成功
+        self.changeBssqRlctsfxqFxk()
+        self.changeBssqRlctsfxqSave()
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '授权成功！')
+        self.Click(self.ALERT_QRCG1)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_07_change_splc_success(self):
+        """大额监控审批流程成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择大额监控品种进入大额监控管理界面
+        self.intoRlctsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送授权管理页签
+        self.swithToBssq()
+        # 6、选择人员授权保存并断言成功
+        self.bsglMainFrame()
+        self.changeBssqRlctsfxqRymc("反洗钱权限1")
+        self.changeBssqRlctsfxqRefresh()
+        self.changeBssqRlctsfxqSq()
+        self.changeBssqRlctsfxqFrame()
+        self.changeBssqRlctsfxqFxk()
+        self.changeBssqRlctsfxqSave()
+        self.Click(self.ALERT_QRCG1)
+        self.SwitchFatherFrame()
+        self.SwitchFatherFrame()
+        self.swithToSplc()
+        self.bsglMainFrame()
+        # 5、进入审批流程管理页签
+        self.changeSplcRlctsfxqYh("反洗钱权限1")
+        self.changeSplcRlctsfxqRefresh()
+        self.changeSplcRlctsfxqFxk()
+        self.changeSplcRlctsfxqPlxg()
+        self.QuiteFrame()
+        self.changeSplcRlctsfxqframe()
+        self.changeSplcRlctsfxqChoiceSplc("大额监控审批")
+        self.changeSplcRlctsfxqSave()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

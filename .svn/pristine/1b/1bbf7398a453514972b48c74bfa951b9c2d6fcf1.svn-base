@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 10:01
+# @Author   : yangshukun
+# @File     : keyword_bsgl.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglZXBmzhKeyword(BsglElementFrame, ZXBmzhElement, WebDriver):
+    """征信编码转换"""
+
+    def bsglMainFrame(self):
+        """征信报送管理主框架"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def changeZXBmzh(self, text, bm_code):
+        """征信编码转换修改报送编码"""
+        self.Click(self.INPUT_BMLX)
+        self.Input(text, self.INPUT_BM_NAME)
+        self.Click(self.BUTTON_REFRESH)
+        self.ClearData(self.INPUT_MODIFY_BSBM)
+        self.Input(bm_code, self.INPUT_MODIFY_BSBM)
+        self.Click(self.INPUT_BM_NAME)

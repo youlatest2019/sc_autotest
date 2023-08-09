@@ -1,0 +1,196 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/6/2 16:58
+# @Author   : yangshukun
+# @File     : make_install_package.py
+import os
+
+from Common.OtherFunc import *
+import shutil
+
+
+class MakeInstallPackage():
+    def __init__(self, base_app_dir, base_target_dir):
+        self.base_app_dir = base_app_dir
+        self.base_target_dir = base_target_dir
+
+    def batch_unzip_package(self, dir_path):
+        dir_list = os.listdir(dir_path)
+        for z in dir_list:
+            if z.endswith('.zip'):
+                un_zip(self.base_app_dir + '\{}'.format(z))
+                log('【' + z + '】' + '解压完成')
+            else:
+                log('当前目录:' + self.base_app_dir + '，存在已解压过的目录，' + z)
+        log('当前目录:' + self.base_app_dir + '全部压缩包均解压完成')
+
+    def get_app_list(self, dir_path):
+        app_list = os.listdir(dir_path)
+        new_list = []
+        for i in app_list:
+            if i.endswith('.zip'):
+                continue
+            else:
+                new_list.append(i)
+        return new_list
+
+    def get_install_package_name(self, base_name, dir_path):
+        package_list = self.get_app_list(dir_path)
+        for packs in package_list:
+            if base_name == packs.split('-')[0]:
+                return packs
+            else:
+                continue
+
+    def copy_files(self):
+        pt_base_list = ['DOM-Service_1.0.0', 'DOM-Web_1.0.0', 'DOMSD-Service_1.0.0', 'RMM-Service_1.0.0',
+                        'RMM-Web_1.0.0']
+        # 调试代码
+        # app_list = ['db-dap-release', 'DCAB-APP_1.7.1.0', 'DOM-Service_1.0.0', 'DOM-Web_1.0.0', 'DOMSD-Service_1.0.0',
+        #             'PEFD_1.0.0', 'RAMLRS-Service_1.0.0','RAMLRS-Web_1.0.0', 'RMM-Service_1.0.0', 'RMM-Web_1.0.0', 'RPTS_1.0.0']
+        app_list = self.get_app_list(self.base_app_dir)  # 获取jekins下载的应用模块名称
+        pt_package_name = self.get_install_package_name('PT', self.base_target_dir)  # 获取平台安装包的名称（带版本号，不存在则为none）
+        ck_package_name = self.get_install_package_name('CK', self.base_target_dir)  # 获取仓库安装包的名称（带版本号none）
+        for app in app_list:
+            app_package_name = self.get_install_package_name(app.split('-')[0],
+                                                             self.base_target_dir)  # 获取品种安装包的名称（带版本号，不存在则为none）
+            log('\n开始替换应用包：{}，请稍后。。。。。'.format(app))
+            # 处理应用包中所有的service包
+            if 'Service' in app:
+                web_inf_source_path = self.base_app_dir + r'\{}\{}\{}\WEB-INF'.format(app, app, app.split('_')[0])
+                web_inf_target_path = self.base_target_dir + r'\{}\bs\{}\WEB-INF'.format(app_package_name,
+                                                                                         app.split('_')[0])
+                sql_source_path = self.base_app_dir + r'\{}\{}\{}'.format(app, app, 'sql')
+                sql_target_path = self.base_target_dir + r'\{}\bs\{}\sql\oracle'.format(app_package_name,
+                                                                                        app.split('_')[0])
+                # 如果service包为平台安装包中的应用，则单独处理复制路径
+                if app in pt_base_list:
+                    web_inf_target_path = self.base_target_dir + r'\{}\bs\{}\WEB-INF'.format(pt_package_name,
+                                                                                             app.split('_')[0])
+                    sql_target_path = self.base_target_dir + r'\{}\bs\{}\sql\oracle'.format(pt_package_name,
+                                                                                            app.split('_')[0])
+                # 删除安装包中的对应目录，避免报错
+                if os.path.exists(web_inf_target_path):
+                    shutil.rmtree(web_inf_target_path)
+                if os.path.exists(sql_target_path):
+                    shutil.rmtree(sql_target_path)
+                # 复制整个目录及文件到安装包中对应路径
+                shutil.copytree(web_inf_source_path, web_inf_target_path)
+                shutil.copytree(sql_source_path, sql_target_path)
+            # 处理应用包中web应用
+            elif 'Web' in app:
+                web_inf_source_path = self.base_app_dir + r'\{}\{}\{}\WEB-INF'.format(app, app, app.split('_')[0])
+                web_inf_target_path = self.base_target_dir + r'\{}\bs\{}\WEB-INF'.format(app_package_name,
+                                                                                         app.split('_')[0])
+                web_root_source_path = self.base_app_dir + r'\{}\{}\{}\{}'.format(app, app, app.split('_')[0],
+                                                                                  app.split('_')[0] + '-ROOT')
+                web_root_target_path = self.base_target_dir + r'\{}\bs\{}\{}'.format(app_package_name,
+                                                                                     app.split('_')[0],
+                                                                                     app.split('_')[0] + '-ROOT')
+                sql_source_path = self.base_app_dir + r'\{}\{}\{}'.format(app, app, 'sql')
+                sql_target_path = self.base_target_dir + r'\{}\bs\{}\sql\oracle'.format(app_package_name,
+                                                                                        app.split('_')[0])
+                # 如果web应用属于平台安装包，单独处理
+                if app in pt_base_list:
+                    web_inf_target_path = self.base_target_dir + r'\{}\bs\{}\WEB-INF'.format(pt_package_name,
+                                                                                             app.split('_')[0])
+                    web_root_target_path = self.base_target_dir + r'\{}\bs\{}\{}'.format(pt_package_name,
+                                                                                         app.split('_')[0],
+                                                                                         app.split('_')[0] + '-ROOT')
+                    sql_target_path = self.base_target_dir + r'\{}\bs\{}\sql\oracle'.format(pt_package_name,
+                                                                                            app.split('_')[0])
+                # 删除安装包中的对应目录，避免报错
+                if os.path.exists(web_inf_target_path):
+                    shutil.rmtree(web_inf_target_path)
+                if os.path.exists(web_root_target_path):
+                    shutil.rmtree(web_root_target_path)
+                if os.path.exists(sql_target_path):
+                    shutil.rmtree(sql_target_path)
+                # 复制整个目录及文件到安装包中对应路径
+                shutil.copytree(web_inf_source_path, web_inf_target_path)
+                shutil.copytree(web_root_source_path, web_root_target_path)
+                shutil.copytree(sql_source_path, sql_target_path)
+            # 处理应用包中的独立服务，属于特殊应用，包括文件目录，jar包，不同的sql目录
+            elif 'DCAB-APP' in app:
+                dcab_app_source_path = self.base_app_dir + r'\{}\{}'.format(app, app)
+                base_files_list = os.listdir(dcab_app_source_path)
+                for f in base_files_list:
+                    if f == 'config':
+                        config_source_path = dcab_app_source_path + r'\{}'.format(f)
+                        config_target_path = self.base_target_dir + r'\{}\bs\dcab-app\config'.format(pt_package_name)
+                        if os.path.exists(config_target_path):
+                            shutil.rmtree(config_target_path)
+                        shutil.copytree(config_source_path, config_target_path)
+                    elif f == 'dcab-app.jar':
+                        jar_source_path = dcab_app_source_path + r'\{}'.format(f)
+                        jar_target_path = self.base_target_dir + r'\{}\bs\dcab-app\dcab-app.jar'.format(pt_package_name)
+                        if os.path.exists(jar_target_path):
+                            os.remove(jar_target_path)
+                        shutil.copy(jar_source_path, jar_target_path)
+                    elif f == 'sql':
+                        sql_base_source_path = self.base_app_dir + r'\{}\{}\{}'.format(app, app, 'sql')
+                        sql_base_list = os.listdir(sql_base_source_path)
+                        for sql_dir in sql_base_list:
+                            sql_source_path = sql_base_source_path + r'\{}'.format(sql_dir)
+                            sql_target_path = self.base_target_dir + r'\{}\bs\{}'.format(pt_package_name, sql_dir)
+                            if os.path.exists(sql_target_path):
+                                shutil.rmtree(sql_target_path)
+                            shutil.copytree(sql_source_path, sql_target_path)
+            # 处理应用包中的PEFD，属于特殊应用
+            elif 'PEFD' in app:
+                web_inf_source_path = self.base_app_dir + r'\{}\{}\{}\{}'.format(app, app, app.split('_')[0], 'theme4')
+                web_inf_target_path = self.base_target_dir + r'\{}\bs\PEFD\theme4'.format(pt_package_name)
+                if os.path.exists(web_inf_target_path):
+                    shutil.rmtree(web_inf_target_path)
+                shutil.copytree(web_inf_source_path, web_inf_target_path)
+            # 处理应用包中的RPTS，属于比较特殊的应用，替换方式不通用
+            elif 'RPTS' in app:
+                rpts_base_source_path = self.base_app_dir + r'\{}\{}\{}'.format(app, app, app.split('_')[0])
+                rpts_base_target_path = self.base_target_dir + r'\{}\bs\RPTS'.format(pt_package_name)
+                rpts_sql_source_path = self.base_app_dir + r'\{}\{}\{}'.format(app, app, 'sql')
+                rpts_sql_target_path = self.base_target_dir + r'\{}\bs\RPTS\sql\oracle'.format(pt_package_name)
+                base_files_list = os.listdir(rpts_base_source_path)
+                for rpts_dir in base_files_list:
+                    rpts_source_path = rpts_base_source_path + r'\{}'.format(rpts_dir)
+                    rpts_target_path = rpts_base_target_path + r'\{}'.format(rpts_dir)
+                    if os.path.isdir(rpts_source_path):
+                        if os.path.exists(rpts_target_path):
+                            shutil.rmtree(rpts_target_path)
+                        shutil.copytree(rpts_source_path, rpts_target_path)
+                    else:
+                        if os.path.exists(rpts_target_path):
+                            os.remove(rpts_target_path)
+                        shutil.copy(rpts_source_path, rpts_target_path)
+                if os.path.exists(rpts_sql_target_path):
+                    shutil.rmtree(rpts_sql_target_path)
+                shutil.copytree(rpts_sql_source_path, rpts_sql_target_path)
+            # 处理T03仓库应用包，特殊应用，单独处理
+            elif app == 'db-dap-release':
+                sql_map_source_path = self.base_app_dir + r'\db-dap-release\db-dap-release\DOM-Service\code\DOM-Service-CFG\DmSqlmap\DOM.KeyValue.xml'
+                sql_map_target_path = self.base_target_dir + r'\{}\bs\DOM-Service\code\DOM-Service-CFG\DmSqlmap\DOM.KeyValue.xml'.format(
+                    ck_package_name)
+                page_template_source_path = self.base_app_dir + r'\db-dap-release\db-dap-release\DOM-Service\code\DOM-Service-CFG\pageTemplate'
+                page_template_target_path = self.base_target_dir + r'\{}\bs\DOM-Service\code\DOM-Service-CFG\pageTemplate'.format(
+                    ck_package_name)
+                sql_source_path = self.base_app_dir + r'\db-dap-release\db-dap-release\DOM-Service\sql'
+                sql_target_path = self.base_target_dir + r'\{}\bs\DOM-Service\sql'.format(ck_package_name)
+                if os.path.exists(sql_map_target_path):
+                    os.remove(sql_map_target_path)
+                if os.path.exists(page_template_target_path):
+                    shutil.rmtree(page_template_target_path)
+                if os.path.exists(sql_target_path):
+                    shutil.rmtree(sql_target_path)
+                shutil.copy(sql_map_source_path, sql_map_target_path)
+                shutil.copytree(page_template_source_path, page_template_target_path)
+                shutil.copytree(sql_source_path, sql_target_path)
+            log('\n结束替换应用包：{}，替换成功。。。'.format(app))
+
+    def main(self):
+        pass
+
+
+if __name__ == '__main__':
+    a = MakeInstallPackage(r'D:\应用打包', r'D:\数仓安装记录\install')
+    a.batch_unzip_package()
+    # a.get_app_list(r'D:\数仓安装记录\install')
+    a.copy_files()

@@ -1,0 +1,149 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/8/8 16:19
+# @Author   : yangshukun
+# @File     : case_rmbtd_main_process.py
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bscl_common import *
+from data.data_class.common_data import *
+from pageKeyword.keyword_bsgl_common import *
+from pageKeyword.keyword_mingxi_common import *
+import sys
+from Common.OtherFunc import *
+from pageKeyword.keyword_rmbtd_hedui import *
+
+
+class ReastMainProcessTest(InitCls, BsclMainKeyword, PubKeywordHdDataListPageForMx, PubKeywordHdPageForMx,
+                           PubKeywordSpPageForMx, PubKeywordSbPageForMx,
+                           PubKeywordCxPageForMx, BsglPubFzglKeyword, BsglPubBssqKeyword, BsglPubSplcKeyword,
+                           BsglPubBsrwKeyword, BsglMainKeyword, BsglPubBbmbKeyword):
+
+    def test_01_reast_main_process(self):
+        """EAST--建立分组->授权->新增报送任务-->核对提交->审批通过->确认成功->查询，主流程案例"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        conf = Config()
+        user_chinese_name = conf.get("BaseUrl", "user_name")
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理页签
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 将当前登录用户添加到管理员分组，如果存在则不添加
+        self.addUserForAdminGroup()
+        # 6、新增分组
+        group_name = "reast自动化分组" + get_now_time_to_str()
+        self.addGroup(group_name, user_chinese_name, "自动化测试_reast分组描述")
+        # 7、分组授权
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 8、选择分组
+        self.searchGroupNameBssq(group_name)
+        self.searchBsnr("员工信息")
+        self.refreshBssqPage()
+        # 9、勾选核对权限，上报权限，查询，重抽权限
+        self.tickHdqx()
+        self.tickSbqx()
+        self.tickCxqx()
+        self.tickCcqx()
+        self.saveBssq()
+        # 10、进入审批流程页面
+        self.SwitchFatherFrame()
+        self.swithToSplc()
+        self.bsglMainFrame()
+        # 11、选择分组
+        self.searchGroupNameSplc(group_name)
+        # 12、勾选报送内容，批量修改,并断言修改成功
+        self.tickBoxAll()
+        self.batchUpdateSplc("EAST默认审批流")
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.bsglMainFrame()
+        self.closeBatchAlertSplc()
+        # 14、进入报送任务页面，查看报送任务是否存在，存在则废弃报送任务
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 15、选择EAST种进入EAST管理界面
+        self.intoReastTab()
+        # 16、切换到品种管理frame
+        self.switchBspzFrame()
+        self.swithToBsrw()
+        self.switchBspzFrame()
+        bsnr_no = "103-YGXX"
+        bsqj_no = "2022"
+        bsqj_date = "2022年第二季度"
+        report_no = bsnr_no + "-" + bsqj_no
+        response = self.queryBsrw(bsqj_date, "员工信息")
+        if response:
+            res = self.GetTagText(self.COUNG_QUERY_RESULT_BSRW)
+            if res != "共有 0 个报送任务，0 个已过期":
+                self.abandonBsrw("reast任务自动化废弃")
+        # 17、新增报送任务
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 18、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        self.switchBspzFrame()
+        self.swithToBsrw()
+        self.switchBspzFrame()
+        self.addBsrw(bsnr_no, bsqj_no, qssd_index=3, type="season", bsqj_month="第二季度")
+        self.addBsrwSave()
+        # 19、点击主菜单 - -报送处理，进入reast核对界面
+        self.RefreshPage()
+        self.clickBsclMainMenue()
+        self.intoReastHdPage()
+        # 20、输入报送期间，报送任务编号查询
+        self.choiceHdReportDateForMx(bsqj_date)
+        self.inputHdReportNoForMx(report_no)
+        self.refreshHdDataForMx()
+        # 21、选择报送任务，点击提交
+        self.tickAllBoxAllPageForMx()
+        self.submitHdForMx()
+        self.GotoSleep(1)
+        res1 = self.GetTagText(self.MSG_PUB_MX)
+        self.assertIn("提交成功", res1)
+        self.clickAlertConfirmButtonForMx()
+        # 22、进入审批界面
+        self.RefreshPage()
+        self.clickBsclMainMenue()
+        self.intoReastSpPage()
+        self.entringHandleForMx(biz_flow_name="EAST默认审批流")
+        # 23、搜索对应的报送任务，全选，审批通过
+        self.choiceSpReportDateForMx(bsqj_date)
+        self.inputSpReportNoForMx(report_no)
+        self.refreshSpDataForMx()
+        self.tickAllBoxAllPageForMx()
+        self.inputAuditResonSpDataForMx("自动化reast审批通过")
+        self.agreeSpDataForMx()
+        self.GotoSleep(1)
+        res2 = self.GetTagText(self.MSG_PUB_MX)
+        self.assertIn("审批成功", res2)
+        self.clickAlertConfirmButtonForMx()
+        # 24、进入上报页面
+        self.RefreshPage()
+        self.clickBsclMainMenue()
+        self.intoReastSbPage()
+        # 25、搜索对应报送任务，全选，不下载，确认成功
+        self.choiceSbReportDateForMx(bsqj_date)
+        self.inputSbReportNoForMx(report_no)
+        self.refreshSbDataForMx()
+        self.tickAllBoxAllPageForMx()
+        self.confirmSuccessSbForMx()
+        self.confirmSuccessAlertSbForMx(1)
+        # 26、进入查询页面
+        self.RefreshPage()
+        self.clickBsclMainMenue()
+        self.intoReastCxPage()
+        # 27、搜索对应报送任务，批量导出
+        self.choiceCxReportDateForMx(bsqj_date)
+        self.inputCxReportNoForMx(report_no)
+        self.refreshCxDataForMx()
+        self.tickAllBoxAllPageForMx()
+        self.downLoadCxDataForMx()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

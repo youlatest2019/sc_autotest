@@ -1,0 +1,62 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/5
+# @Author   : tangle
+# @File     : keyword_bsgl_js.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglJsKeyword(BsglElementFrame, JsZbjpzElement, WebDriver):
+    """金数准备金缴存界面关键字"""
+
+    def JsZbjjcFrame(self):
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def setJsZbjjc(self, ckzl_name, jcfs):
+        """设置金数准备金缴存--设置存款种类，设置缴存方式"""
+        self.Click(self.SET_ZBJJC.format(ckzl_name, jcfs))
+
+    def successClose(self):
+        """关闭保存成功弹窗"""
+        self.Click(self.SUCCESS_CLOSE)  # 关闭成功弹窗
+
+    def queryZbjjc(self, text, jcfs):
+        """查询准备金缴存"""
+        self.Input(text, self.INPUT_CKZL)
+        self.Click(self.CHOICE_JCFS.format(jcfs))
+
+    def refersh(self):
+        """刷新"""
+        self.Click(self.BUTTON_REFRESH)
+
+    def setJsZbjjc_null(self, ckzl_name):
+        """设置金数准备金缴存--设置存款种类，缴存方式为空"""
+        self.Click(self.SET_ZBJJC_NULL.format(ckzl_name))
+
+
+class BscsJsKeyword(BsglElementFrame, JsBscsElement, WebDriver):
+    """金数报送参数界面关键字"""
+
+    def JsBscsFrame(self):
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def setJsPjhl(self, pjhl):
+        """设置是/否启用平均汇率"""
+        self.Click(self.SET_QYPJHL.format(pjhl))
+
+    def setJsSbspYes(self):
+        """设置上报审批--是"""
+        self.Click(self.SET_SBSP_YES)
+
+    def setJsSbspNo(self):
+        """设置上报审批--否"""
+        self.Click(self.SET_SBSP_NO)
+
+    def save(self):
+        """保存设置"""
+        self.Click(self.BUTTON_SAVE)
+
+    def successClose(self):
+        """关闭保存成功弹窗"""
+        self.Click(self.SUCCESS_CLOSE)  # 关闭成功弹窗

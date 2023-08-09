@@ -1,0 +1,35 @@
+#配置需要同步更新的应用
+[Service]
+#是否更新该应用，True代表要更新，False代表不更新
+dom_service =False
+dom_web = True
+rmm_service = False
+rmm_web = False
+reast_service = False
+reast_web = False
+rfbs_service = False
+rfbs_web = False
+rimas_service = False
+rimas_web = False
+rmbtd_service = False
+rmbtd_web = False
+rsazj_service = False
+rsazj_web = False
+rn1104_service = False
+rn1104_web = False
+rpbcc_service = False
+rpbcc_web = False
+rgec_service = False
+rgec_web = False
+
+#配置需要清理的报送品种下的DM表
+[bspz]
+EAST = False
+IMAS = True
+RFBS = False
+MBTD = False
+RGEC = False
+SAZJ = False
+
+
+

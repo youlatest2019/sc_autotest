@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/8/30 17:10
+# @Author   : yangshukun
+# @File     : page_sjgl_common.py
+from Common.common_map import *
+
+
+class SjglMainMenueElement():
+    """数据管理菜单"""
+    SJGL_MAIN_MENUE = "//span[text()='数据管理']".__add__(XPATH)  # 数据管理菜单
+    DATASET_MANAGE_MENUE = "//a[@menuid='Supplement010501']".__add__(XPATH)  # 数据集管理菜单
+    DATASET_MANAGE_TAG = "//li[@menuid='Supplement010501']".__add__(XPATH)  # 数据集管理标题栏页签
+    DATASET_QUERY_MENUE = "//a[@menuid='Supplement010502']".__add__(XPATH)  # 数据查询菜单
+    DATASET_QUERY_TAG = "//li[@menuid='Supplement010502']".__add__(XPATH)  # 数据查询标题栏页签
+    DATASET_BL_MENUE = "//a[@menuid='Supplement010503']".__add__(XPATH)  # 数据补录菜单
+    DATASET_BL_TAG = "//li[@menuid='Supplement010503']".__add__(XPATH)  # 数据补录标题栏页签
+    DATASET_SQ_MENUE = "//a[@menuid='Supplement010504']".__add__(XPATH)  # 数据授权菜单
+    DATASET_SQ_TAG = "//li[@menuid='Supplement010504']".__add__(XPATH)  # 数据授权标题栏页签
+    DATASET_SP_MENUE = "//a[@menuid='Supplement010505']".__add__(XPATH)  # 数据审批菜单
+    DATASET_SP_TAG = "//li[@menuid='Supplement010505']".__add__(XPATH)  # 数据审批标题栏页签
+
+

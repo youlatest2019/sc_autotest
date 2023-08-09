@@ -1,0 +1,265 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/8/8 14:06
+# @Author   : yangshukun
+# @File     : keyword_mingxi_common.py
+
+from pageElement.page_bscl_common import *
+from baseOperation.WebOperation import *
+
+
+class PubKeywordHdPageForMx(WebDriver, PubMxBspzElement):  # 明细类核对页面公共关键字
+
+    def inputHdSjrqForMx(self, start_date, end_date):
+        """明细类品种--核对页面--通用数据日期输入框"""
+        self.Click(self.INPUT_PUB_HD_START_DATE_MX)
+        self.Input(start_date, self.INPUT_PUB_HD_START_DATE_MX)
+        self.Click(self.INPUT_PUB_HD_END_DATE_MX)
+        self.Input(end_date, self.INPUT_PUB_HD_END_DATE_MX)
+
+    def clickHdRefreshButtonForMx(self):
+        """明细类品种--核对页面--通用刷新按钮"""
+        self.Click(self.BUTTON_PUB_HD_REFRESH_MX)
+
+    def inputHdReportNameForMx(self, rp_name):
+        """明细类品种--核对页面--通用任务名称输入"""
+        self.Input(rp_name, self.INPUT_PUB_HD_REPORT_NAME_MX)
+
+    def inputHdReportNoForMx(self, rp_no):
+        """明细类品种--核对页面--通用报表编号输入"""
+        self.Input(rp_no, self.INPUT_PUB_HD_REPORT_NO_MX)
+
+    def choiceHdReportDateForMx(self, rp_date):
+        """明细类品种--核对页面--通用报送期间选择"""
+        self.Click(self.SELECT_PUB_HD_BSQJ_MX.format(rp_date))
+
+    def choiceHdBsplForMx(self, bspl):
+        """明细类品种--核对页面--通用报送频率选择"""
+        self.Click(self.SELECT_PUB_HD_BSQJ_MX.format(bspl))
+
+    def clickCheckButtonForMx(self):
+        """明细类品种--核对页面--通用点击校验按钮"""
+        self.Click(self.BUTTON_PUB_HD_CHECK_DATA_MX)
+
+    def refreshHdDataForMx(self):
+        """明细类品种--核对页面--核对页面刷新按钮"""
+        self.Click(self.BUTTON_PUB_HD_REFRESH_MX)
+
+    def submitHdForMx(self):
+        """明细类品种--核对页面--通用批量提交按钮"""
+        self.Click(self.BUTTON_PUB_HD_BATCH_SUBMIT_MX)
+
+    def entryInformationForMx(self, rp_no):
+        """明细类品种--核对页面--通用进入办理"""
+        self.Click(self.BUTTON_PUB_HD_JRBL_MX.format(rp_no))
+
+    def tickAllBoxAllPageForMx(self):
+        """明细类品种--全页面通用--通用任务列表全选复选框（包括核对、审批，上报，查询）"""
+        self.Click(self.BOX_ALL_PUB_MX)
+
+    def clickAlertConfirmButtonForMx(self):
+        """报表类品种--通用弹窗确认按钮（提交、审批同意、驳回）"""
+        self.Click(self.ALERT_PUB_MX)
+
+
+class PubKeywordHdDataListPageForMx(WebDriver, PubMxBspzElement):  # 明细类核对页面--进入办理--数据列表公共关键字
+
+    def addDataForMx(self):
+        """明细类品种--核对页面--进入办理--新增"""
+        self.Click(self.BUTTON_PUB_ADD_DATA_FOR_MX)
+
+    def importDataForMx(self):
+        """明细类品种--核对页面--进入办理--导入"""
+        self.Click(self.BUTTON_PUB_IMPORT_DATA_FOR_MX)
+
+    def exportDataByTypeForMx(self, type_index):
+        """明细类品种--核对页面--进入办理--导出不同的文件类型，1-Excel，2-CSV"""
+        self.MouseFouce(self.BUTTON_PUB_EXPORT_DATA_FOR_MX)
+        self.Click(self.SELECT_PUB_EXPORT_DATA_BY_TYPE_MX.format(type_index))
+
+    def submitDataForMx(self):
+        """明细类品种--核对页面--进入办理--提交数据"""
+        self.Click(self.BUTTON_PUB_SUBMIT_ALONE_MX)
+
+    def refreshDataListForMx(self):
+        """明细类品种--核对页面--进入办理--刷新数据列表"""
+        self.Click(self.BUTTON_PUB_SUBMIT_ALONE_MX)
+
+    def saveDataFormForMx(self):
+        """明细类品种--核对页面--进入办理--新增页面--保存数据"""
+        self.Click(self.BUTTON_PUB_SAVE_FOR_INFORMATION_MX)
+
+
+class PubKeywordMbtdAddPage(WebDriver, PubMxBspzElement):
+
+    def changeToModulePageFrame(self):
+        """明细类品种--核对页面--进入办理--切换到数据类表主框架"""
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.DATA_LIST_FRAME_MX)
+
+    def changeToAddDataFormFrame(self):
+        """明细类品种--核对页面--进入办理--新增--切换到新增页面框架"""
+        self.SwitchFrameByElement(self.DATA_FORM_ADD_FRAME_MX)
+
+    def closeAddFormPage(self):
+        """明细类品种--核对页面--进入办理--新增--关闭新增表单"""
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.DATA_LIST_FRAME_MX)
+        self.Click(self.DATA_FORM_ADD_CLOSE_BUTTON_MX)
+
+    def closeDataListPage(self):
+        """明细类品种--核对页面--进入办理--新增--关闭数据列表页面"""
+        self.QuiteFrame()
+        self.Click(self.DATA_LIST_CLOSE_BUTTON_MX)
+
+
+
+
+class PubKeywordSpPageForMx(WebDriver, PubMxBspzElement):
+
+    def entringHandleForMx(self, biz_flow_name):
+        """明细类品种--审批页面--通用审批页面进入办理"""
+        self.Click(self.BUTTON_PUB_ENTERE_HANDLE_MX.format(biz_flow_name))
+
+    def inputSpSjrqForMx(self, start_date, end_date):
+        """明细类品种--审批页面--通用数据日期输入框"""
+        self.Click(self.INPUT_PUB_SP_START_DATE_MX)
+        self.Input(start_date, self.INPUT_PUB_SP_START_DATE_MX)
+        self.Click(self.INPUT_PUB_SP_END_DATE_MX)
+        self.Input(end_date, self.INPUT_PUB_SP_END_DATE_MX)
+
+    def inputSpReportNameForMx(self, rp_name):
+        """明细类品种--审批页面--通用任务名称输入"""
+        self.Input(rp_name, self.INPUT_PUB_SP_REPORT_NAME_MX)
+
+    def inputSpReportNoForMx(self, rp_no):
+        """明细类品种--审批页面--通用报表编号输入"""
+        self.Input(rp_no, self.INPUT_PUB_SP_REPORT_NO_MX)
+
+    def choiceSpReportDateForMx(self, rp_date):
+        """明细类品种--审批页面--通用报送期间选择"""
+        self.Click(self.SELECT_PUB_SP_BSQJ_MX.format(rp_date))
+
+    def choiceSpBsplForMx(self, bspl):
+        """明细类品种--审批页面--通用报送频率选择"""
+        self.Click(self.SELECT_PUB_SP_BSQJ_MX.format(bspl))
+
+    def choiceSpCommitUserForMx(self, user_name):
+        """明细类品种--审批页面--提交人选择"""
+        self.Click(self.SELECT_PUB_SP_COMMIT_USER_MX.format(user_name))
+
+    def refreshSpDataForMx(self):
+        """明细类品种--审批页面--审批页面刷新按钮"""
+        self.Click(self.BUTTON_PUB_SP_REFRESH_MX)
+
+    def backSpDataForMx(self):
+        """明细类品种--审批页面--审批页面返回按钮"""
+        self.Click(self.BUTTON_PUB_SP_BACK_MX)
+
+    def inputAuditResonSpDataForMx(self, audit_reson):
+        """明细类品种--审批页面--审批意见输入"""
+        self.Input(audit_reson, self.INPUT_PUB_SP_AUDIT_RESON_MX)
+
+    def agreeSpDataForMx(self):
+        """明细类品种--审批页面--审批同意"""
+        self.Click(self.BUTTON_PUB_SP_AUDIT_AGREE_MX)
+
+    def rejectSpDataForMx(self):
+        """明细类品种--审批页面--审批驳回"""
+        self.Click(self.BUTTON_PUB_SP_AUDIT_REJECT_MX)
+
+
+class PubKeywordSbPageForMx(WebDriver, PubMxBspzElement):
+
+    def inputSbSjrqForMx(self, start_date, end_date):
+        """明细类品种--上报页面--通用数据日期输入框"""
+        self.Click(self.INPUT_PUB_SB_START_DATE_MX)
+        self.Input(start_date, self.INPUT_PUB_SB_START_DATE_MX)
+        self.Click(self.INPUT_PUB_SB_END_DATE_MX)
+        self.Input(end_date, self.INPUT_PUB_SB_END_DATE_MX)
+
+    def inputSbReportNameForMx(self, rp_name):
+        """明细类品种--上报页面--通用任务名称输入"""
+        self.Input(rp_name, self.INPUT_PUB_SB_REPORT_NAME_MX)
+
+    def inputSbReportNoForMx(self, rp_no):
+        """明细类品种--上报页面--通用报表编号输入"""
+        self.Input(rp_no, self.INPUT_PUB_SB_REPORT_NO_MX)
+
+    def choiceSbReportDateForMx(self, rp_date):
+        """明细类品种--上报页面--通用报送期间选择"""
+        self.Click(self.SELECT_PUB_SB_BSQJ_MX.format(rp_date))
+
+    def choiceSbBsplForMx(self, bspl):
+        """明细类品种--上报页面--通用报送频率选择"""
+        self.Click(self.SELECT_PUB_SB_BSQJ_MX.format(bspl))
+
+    def refreshSbDataForMx(self):
+        """明细类品种--上报页面--审批页面刷新按钮"""
+        self.Click(self.BUTTON_PUB_SB_REFRESH_MX)
+
+    def openSbJdgzPageForMx(self):
+        """明细类品种--上报页面--打开进度跟踪页面"""
+        self.Click(self.BUTTON_PUB_SB_JDGZ_MX)
+
+    def openSbJybgForMx(self):
+        """明细类品种--上报页面--打开校验报告页面"""
+        self.Click(self.BUTTON_PUB_SB_JYBG_MX)
+
+    def downLoadSbDataForMx(self):
+        """明细类品种--上报页面--下载报文"""
+        self.Click(self.BUTTON_PUB_SB_DOWN_LOAD_MX)
+
+    def downLoadSbANForMx(self):
+        """明细类品种--上报页面--上报按钮"""
+        self.Click(self.BUTTON_PUB_SB_SB_MX)
+
+    def confirmSuccessSbForMx(self):
+        """明细类品种--上报页面--确认成功"""
+        self.Click(self.BUTTON_PUB_SB_QRCG_MX)
+
+    def confirmSuccessAlertSbForMx(self, index):
+        """明细类品种--上报页面--确认成功弹窗,1-确认，2-取消"""
+        self.Click(self.ALERT_PUB_SB_QRCG_MX.format(index))
+
+    def checkDataSbForMx(self):
+        """明细类品种--上报页面--校验"""
+        self.Click(self.BUTTON_PUB_SB_JY_MX)
+
+    def submitDataSbForMx(self):
+        """明细类品种--上报页面--上报审批提交"""
+        self.Click(self.BUTTON_PUB_SB_TJ_MX)
+
+
+class PubKeywordCxPageForMx(WebDriver, PubMxBspzElement):
+
+    def inputCxSjrqForMx(self, start_date, end_date):
+        """明细类品种--查询页面--通用数据日期输入框"""
+        self.Click(self.INPUT_PUB_CX_START_DATE_MX)
+        self.Input(start_date, self.INPUT_PUB_CX_START_DATE_MX)
+        self.Click(self.INPUT_PUB_CX_END_DATE_MX)
+        self.Input(end_date, self.INPUT_PUB_CX_END_DATE_MX)
+
+    def inputCxReportNameForMx(self, rp_name):
+        """明细类品种--查询页面--通用任务名称输入"""
+        self.Input(rp_name, self.INPUT_PUB_CX_REPORT_NAME_MX)
+
+    def inputCxReportNoForMx(self, rp_no):
+        """明细类品种--查询页面--通用报表编号输入"""
+        self.Input(rp_no, self.INPUT_PUB_CX_REPORT_NO_MX)
+
+    def choiceCxReportDateForMx(self, rp_date):
+        """明细类品种--查询页面--通用报送期间选择"""
+        self.Click(self.SELECT_PUB_CX_BSQJ_MX.format(rp_date))
+
+    def choiceCxBsplForMx(self, bspl):
+        """明细类品种--查询页面--通用报送频率选择"""
+        self.Click(self.SELECT_PUB_CX_BSQJ_MX.format(bspl))
+
+    def refreshCxDataForMx(self):
+        """明细类品种--查询页面--审批页面刷新按钮"""
+        self.Click(self.BUTTON_PUB_CX_REFRESH_MX)
+
+    def downLoadCxDataForMx(self):
+        """明细类品种--查询页面--下载报文"""
+        self.Click(self.BUTTON_PUB_CX_DOWN_LOAD_MX)

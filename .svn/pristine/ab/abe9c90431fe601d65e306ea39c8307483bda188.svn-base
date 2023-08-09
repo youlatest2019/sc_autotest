@@ -1,0 +1,10 @@
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_east import *
+from utils.operationXml import *
+import sys
+from baseOperation.init_self import *
+
+
+class BsrwEastTest(InitCls, BsglEastKeyword, OperationXml):
+
+    def test_01_bsrw(self):

@@ -1,0 +1,63 @@
+from baseOperation.init_cls import *
+from pageKeyword.keyword_ywbl import *
+from utils.operationXml import *
+import sys
+from baseOperation.init_self import *
+
+
+class YwblImportTest(InitSelf, YwblKeyword, OperationXml):
+
+    def test_01_import_kjkm(self):
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        commit_date = self.getXmlData('ywbl.xml', 'commitDate')
+        '''补录模型导入：会计科目'''
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入补录主界面
+        self.intoMainMenu()
+        self.switchMainFrame()
+        # 3、选择业务模型
+        self.choiceYwlx(self.YWLX_CWXX)
+        self.choiceYwmx(self.YWMX_KJKM)
+        self.ywblRefresh()
+        # 4、导入数据
+        self.importData(self.FILE_PATH_KJKM)
+        # 5、校验数据
+        self.checkData()
+        # self.GotoSleep(5)
+        # 切换到补录主框架
+        self.switchMainFrame()
+        # 提交全部
+        self.commitAllData(commit_date)
+        # 关闭调度任务进度弹窗
+        self.GotoSleep(3)
+        self.closeProcessAlert()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_import_ygxx(self):
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        commit_date = self.getXmlData('ywbl.xml', 'commitDate')
+        '''补录模型导入：员工信息'''
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入补录主界面
+        self.intoMainMenu()
+        self.switchMainFrame()
+        # 3、选择业务模型
+        self.choiceYwlx(self.YWLX_JCXX)
+        self.choiceYwmx(self.YWMX_YGXX)
+        self.ywblRefresh()
+        # 4、导入数据
+        self.importData(self.FILE_PATH_YGXX)
+        # 5、校验数据
+        self.checkData()
+        # 切换到补录主框架
+        self.switchMainFrame()
+        # 提交全部
+        self.commitAllData(commit_date)
+        # 关闭调度任务进度弹窗
+        self.GotoSleep(3)
+        self.closeProcessAlert()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+
+if __name__ == '__main__':
+    unittest.main()

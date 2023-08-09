@@ -1,0 +1,103 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/25 11:28
+# @Author   : yangshukun
+# @File     : keyword_baobiao_common.py
+from pageElement.page_bscl_common import *
+from baseOperation.WebOperation import *
+
+
+class PubKeywordForBb(WebDriver, PubBbBspzElement):
+
+    def inputSjrqForBb(self, start_date, end_date):
+        """报表类品种--通用数据日期输入框（包括核对、审批、上报、查询）"""
+        self.Click(self.INPUT_PUB_START_DATE_BB)
+        self.Input(start_date, self.INPUT_PUB_START_DATE_BB)
+        self.Click(self.INPUT_PUB_END_DATE_BB)
+        self.Input(end_date, self.INPUT_PUB_END_DATE_BB)
+
+    def inputSjrqForBbDEJK(self, start_date, end_date):
+        """大额监控--通填报日期日期输入框（包括核对）"""
+        self.Click(self.INPUT_PUB_START_DATE_DEJK)
+        self.Input(start_date, self.INPUT_PUB_START_DATE_DEJK)
+        self.Click(self.INPUT_PUB_END_DATE_DEJK)
+        self.Input(end_date, self.INPUT_PUB_END_DATE_DEJK)
+
+    def clickRefreshButtonForBb(self):
+        """报表类品种--通用刷新按钮（包括核对、审批、上报、查询）"""
+        self.Click(self.BUTTON_PUB_REFRESH_BB)
+
+    def choiceGroupForBb(self, group_name):
+        """报表类品种--通用报表分组下拉选择（包括核对、审批、上报、查询）"""
+        self.Click(self.SELECT_PUB_GROUP_BB.format(group_name))
+
+    def inputReportNameForBb(self, rp_name):
+        """报表类品种--通用任务名称输入（包括核对、审批、上报、查询）"""
+        self.Input(rp_name, self.INPUT_PUB_REPORT_NAME_BB)
+
+    def inputReportNoForBb(self, rp_no):
+        """报表类品种--通用报表编号输入（包括核对、审批、上报、查询）"""
+        self.Input(rp_no, self.INPUT_PUB_REPORT_NO_BB)
+
+    def choiceReportDateForBb(self, rp_date):
+        """报表类品种--通用报送期间选择（包括核对、审批、上报、查询）"""
+        self.Click(self.SELECT_PUB_REPORT_DATA_BB.format(rp_date))
+
+    def openForBb(self):
+        """报表类品种--通用打开功能（包括核对、审批、上报、查询）"""
+        self.Click(self.BUTTON_PUB_OPEN_BB)
+
+    def exportBatchForBb(self):
+        """报表类品种--通用批量导出（包括核对、审批、上报、查询）"""
+        self.Click(self.BUTTON_PUB_EXPORT_BATCH_BB)
+
+    def submitForBb(self):
+        """报表类品种--通用提交按钮（包括核对、审批、上报、查询）"""
+        self.Click(self.BUTTON_PUB_SUBMIT_BB)
+
+    def entringHandleForBb(self, biz_flow_name):
+        """报表类品种--通用审批页面进入办理（包括核对、审批）"""
+        self.Click(self.BUTTON_PUB_ENTERING_HANDLE_BB.format(biz_flow_name))
+
+    def tickAllBoxForBb(self):
+        """报表类品种--通用任务列表全选复选框（包括核对、审批，上报，不含查询）"""
+        self.Click(self.BOX_PUB_CHOOSE_ALL)
+
+    def tickAllBoxForBbDEJK(self):
+        """报表类品种--通用任务列表全选复选框（包括核对、审批，上报，不含查询）"""
+        self.Click(self.BOX_PUB_CHOOSE_ALL_DEJK)
+
+    def tickAllBoxCxPageForBb(self):
+        """报表类品种--通用任务列表全选复选框（包括核对、审批，上报，不含查询）"""
+        self.Click(self.BOX_PUB_CHOOSE_ALL_CX_BB)
+
+    def inputAuditReasonForBb(self, audit_reson):
+        """报表类品种--通用审批页面输入审批意见（审批）"""
+        self.Click(self.INPUT_PUB_AUDIT_RESON_BB)
+        self.Input(audit_reson, self.INPUT_PUB_AUDIT_RESON_BB)
+
+    def clickAuditAgreeForBb(self):
+        """报表类品种--通用审批页面-同意按钮（审批）"""
+        self.Click(self.BUTTON_PUB_AGREE_BB)
+
+    def clickAuditRefuseForBb(self):
+        """报表类品种--通用审批页面-驳回按钮（审批）"""
+        self.Click(self.BUTTON_PUB_REFUSE_BB)
+
+    def clickAlertConfirmButtonForBb(self):
+        """报表类品种--通用弹窗确认按钮（提交、审批同意、驳回）"""
+        self.Click(self.ALERT_PUB_BB)
+
+    def clickDownloadButtonForBb(self):
+        """报表类品种--通用打包下载按钮（上报）"""
+        self.Click(self.BUTTON_PUB_DBXZ_BB)
+
+    def clickQrcgButtonForBb(self):
+        """报表类品种--通用确认成功按钮（上报）"""
+        self.Click(self.BUTTON_PUB_QRCG_BB)
+
+
+
+
+
+

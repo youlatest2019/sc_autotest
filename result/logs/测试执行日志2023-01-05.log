@@ -1,0 +1,126 @@
+2023-01-05 11:15:19,127 - yangshukun-INFO 
+----------【用例开始执行】----------
+2023-01-05 11:15:25,245 - yangshukun-INFO 
+************开始执行案例：【test_01_pbcc_main_process】************
+2023-01-05 11:15:28,978 - yangshukun-INFO 元素【//a[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:15:30,203 - yangshukun-INFO 元素【//li[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:15:33,836 - yangshukun-INFO 元素【//li[contains(@url,'人行报表')]$xpath】点击成功
+2023-01-05 11:15:35,517 - yangshukun-INFO 元素【//a[text()='分组管理']$xpath】点击成功
+2023-01-05 11:15:38,311 - yangshukun-INFO 元素【//span[text()='管理员']/../../td[4]/a[1]$xpath】点击成功
+2023-01-05 11:15:39,480 - yangshukun-INFO 元素【//*[@class='xm-label single-row']$xpath】点击成功
+2023-01-05 11:15:40,619 - yangshukun-INFO 
+----------【用例执行结束】----------
+2023-01-05 11:15:53,565 - yangshukun-INFO 
+----------【用例开始执行】----------
+2023-01-05 11:15:58,363 - yangshukun-INFO 
+************开始执行案例：【test_01_pbcc_main_process】************
+2023-01-05 11:16:01,810 - yangshukun-INFO 元素【//a[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:16:02,879 - yangshukun-INFO 元素【//li[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:16:06,186 - yangshukun-INFO 元素【//li[contains(@url,'人行报表')]$xpath】点击成功
+2023-01-05 11:16:07,870 - yangshukun-INFO 元素【//a[text()='分组管理']$xpath】点击成功
+2023-01-05 11:16:10,554 - yangshukun-INFO 元素【//span[text()='管理员']/../../td[4]/a[1]$xpath】点击成功
+2023-01-05 11:16:11,670 - yangshukun-INFO 元素【//*[@class='xm-label single-row']$xpath】点击成功
+2023-01-05 11:16:12,716 - yangshukun-INFO 
+----------【用例执行结束】----------
+2023-01-05 11:18:11,327 - yangshukun-INFO 
+----------【用例开始执行】----------
+2023-01-05 11:18:14,886 - yangshukun-INFO 
+************开始执行案例：【test_01_pbcc_main_process】************
+2023-01-05 11:18:19,011 - yangshukun-INFO 元素【//a[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:18:20,150 - yangshukun-INFO 元素【//li[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:18:23,303 - yangshukun-INFO 元素【//li[contains(@url,'人行报表')]$xpath】点击成功
+2023-01-05 11:18:24,975 - yangshukun-INFO 元素【//a[text()='分组管理']$xpath】点击成功
+2023-01-05 11:18:27,748 - yangshukun-INFO 元素【//span[text()='管理员']/../../td[4]/a[1]$xpath】点击成功
+2023-01-05 11:18:28,987 - yangshukun-INFO 元素【//*[@class='xm-label single-row']$xpath】点击成功
+2023-01-05 11:18:30,100 - yangshukun-INFO 
+----------【用例执行结束】----------
+2023-01-05 11:19:24,911 - yangshukun-INFO 
+----------【用例开始执行】----------
+2023-01-05 11:19:28,556 - yangshukun-INFO 
+************开始执行案例：【test_01_pbcc_main_process】************
+2023-01-05 11:19:31,990 - yangshukun-INFO 
+----------【用例执行结束】----------
+2023-01-05 11:19:39,340 - yangshukun-INFO 
+----------【用例开始执行】----------
+2023-01-05 11:19:42,885 - yangshukun-INFO 
+************开始执行案例：【test_01_pbcc_main_process】************
+2023-01-05 11:19:46,125 - yangshukun-INFO 元素【//a[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:19:47,231 - yangshukun-INFO 元素【//li[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:19:50,526 - yangshukun-INFO 元素【//li[contains(@url,'人行报表')]$xpath】点击成功
+2023-01-05 11:19:52,208 - yangshukun-INFO 元素【//a[text()='分组管理']$xpath】点击成功
+2023-01-05 11:19:55,069 - yangshukun-INFO 元素【//*[@class='button26 button']$xpath】点击成功
+2023-01-05 11:19:56,254 - yangshukun-INFO 元素【//*[@id='listTable']/tbody/tr[1]/td[1]/input$xpath】输入【pbcc自动化分组9338276】成功
+2023-01-05 11:19:57,467 - yangshukun-INFO 元素【//*[@class='xm-label single-row']$xpath】点击成功
+2023-01-05 11:19:58,580 - yangshukun-INFO 元素【//*[@class='xm-input xm-search-input']$xpath】输入【人行报表权限1】成功
+2023-01-05 11:19:59,761 - yangshukun-INFO 元素【//*[@class='xm-iconfont xm-icon-quanxuan']$xpath】点击成功
+2023-01-05 11:20:00,832 - yangshukun-INFO 元素【//*[@id='listTable']/tbody/tr[1]/td[3]/textarea$xpath】输入【自动化测试_人行报表分组描述】成功
+2023-01-05 11:20:02,161 - yangshukun-INFO 元素【//*[@class='button30 button']$xpath】点击成功
+2023-01-05 11:20:03,916 - yangshukun-INFO 元素【//a[text()='报送授权']$xpath】点击成功
+2023-01-05 11:20:05,702 - yangshukun-INFO 元素【search_input_input$class】点击成功
+2023-01-05 11:20:06,916 - yangshukun-INFO 元素【//*[@class='search_input_input_table']//input$xpath】输入【pbcc自动化分组9338276】成功
+2023-01-05 11:20:08,399 - yangshukun-INFO 元素【//*[@class='search_input_table']/tbody/tr[1]$xpath】点击成功
+2023-01-05 11:20:09,611 - yangshukun-INFO 元素【//*[@id='reportUserAuthorizationForm.bsnrmc']$xpath】输入【A1302】成功
+2023-01-05 11:20:11,272 - yangshukun-INFO 元素【reportUserAuthorizationForm.refresh$id】点击成功
+2023-01-05 11:20:12,451 - yangshukun-INFO 元素【//*[@id='fixed_title']/thead/tr/th[2]/span/span$xpath】点击成功
+2023-01-05 11:20:13,561 - yangshukun-INFO 元素【//*[@id="fixed_title"]/thead/tr/th[3]/span/span$xpath】点击成功
+2023-01-05 11:20:14,737 - yangshukun-INFO 元素【//*[@id="fixed_title"]/thead/tr/th[4]/span/span$xpath】点击成功
+2023-01-05 11:20:15,935 - yangshukun-INFO 元素【//*[@id="fixed_title"]/thead/tr/th[5]/span/span$xpath】点击成功
+2023-01-05 11:20:17,600 - yangshukun-INFO 元素【//input[@id='reportUserAuthorizationList.save']$xpath】点击成功
+2023-01-05 11:20:19,331 - yangshukun-INFO 元素【//a[text()='审批流程']$xpath】点击成功
+2023-01-05 11:20:21,055 - yangshukun-INFO 元素【search_input_input$class】点击成功
+2023-01-05 11:20:22,176 - yangshukun-INFO 元素【//*[@class='search_input_input_table']//input$xpath】输入【pbcc自动化分组9338276】成功
+2023-01-05 11:20:23,574 - yangshukun-INFO 元素【//*[@class='search_input_table']/tbody/tr[1]$xpath】点击成功
+2023-01-05 11:20:24,973 - yangshukun-INFO 元素【reportBizFlow_Form.refresh$id】点击成功
+2023-01-05 11:20:26,153 - yangshukun-INFO 元素【//*[@id='fixed_title']/thead/tr/th[1]/span/span$xpath】点击成功
+2023-01-05 11:20:27,391 - yangshukun-INFO 元素【reportBizFlow_List.batchModify$id】点击成功
+2023-01-05 11:20:29,545 - yangshukun-INFO 元素【//*[@id='reportBizFlow_List.bizCode']/option[text()='人行报表审批']$xpath】点击成功
+2023-01-05 11:20:30,673 - yangshukun-INFO 元素【batchBizFlowForm.save$id】点击成功
+2023-01-05 11:20:35,161 - yangshukun-INFO 元素【aui_close$class】点击成功
+2023-01-05 11:20:39,069 - yangshukun-INFO 元素【//a[text()='报表模板']$xpath】点击成功
+2023-01-05 11:21:11,315 - yangshukun-ERROR 获取元素:【importButton$id】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2023-01-05 11点21分11秒.png】
+2023-01-05 11:21:11,333 - yangshukun-INFO 
+----------【用例执行结束】----------
+2023-01-05 11:27:24,428 - yangshukun-INFO 
+----------【用例开始执行】----------
+2023-01-05 11:27:27,903 - yangshukun-INFO 
+************开始执行案例：【test_01_pbcc_main_process】************
+2023-01-05 11:27:31,619 - yangshukun-INFO 元素【//a[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:27:32,731 - yangshukun-INFO 元素【//li[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:27:36,056 - yangshukun-INFO 元素【//li[contains(@url,'人行报表')]$xpath】点击成功
+2023-01-05 11:27:40,312 - yangshukun-INFO 元素【//a[text()='报表模板']$xpath】点击成功
+2023-01-05 11:28:12,264 - yangshukun-ERROR 获取元素:【importButton$id】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2023-01-05 11点28分11秒.png】
+2023-01-05 11:28:12,268 - yangshukun-INFO 
+----------【用例执行结束】----------
+2023-01-05 11:34:57,426 - yangshukun-INFO 
+----------【用例开始执行】----------
+2023-01-05 11:35:00,510 - yangshukun-INFO 
+************开始执行案例：【test_01_pbcc_main_process】************
+2023-01-05 11:35:04,263 - yangshukun-INFO 元素【//a[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:35:05,310 - yangshukun-INFO 元素【//li[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:35:08,645 - yangshukun-INFO 元素【//li[contains(@url,'人行报表')]$xpath】点击成功
+2023-01-05 11:35:13,018 - yangshukun-INFO 元素【//a[text()='报表模板']$xpath】点击成功
+2023-01-05 11:35:52,201 - yangshukun-ERROR 获取元素:【importButton$id】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2023-01-05 11点35分51秒.png】
+2023-01-05 11:37:42,719 - yangshukun-INFO 
+----------【用例开始执行】----------
+2023-01-05 11:37:46,020 - yangshukun-INFO 
+************开始执行案例：【test_01_pbcc_main_process】************
+2023-01-05 11:37:50,051 - yangshukun-INFO 元素【//a[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:37:51,131 - yangshukun-INFO 元素【//li[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:37:54,273 - yangshukun-INFO 元素【//li[contains(@url,'人行报表')]$xpath】点击成功
+2023-01-05 11:37:58,609 - yangshukun-INFO 元素【//a[text()='报表模板']$xpath】点击成功
+2023-01-05 11:38:00,623 - yangshukun-INFO 元素【dom_ReportTemplateList.export$id】点击成功
+2023-01-05 11:38:02,893 - yangshukun-INFO 元素【//input[@class='buttonNew3 button']$xpath】点击成功
+2023-01-05 11:38:05,570 - yangshukun-INFO 元素【//span[@class='fileInput']$xpath】点击成功
+2023-01-05 11:38:07,712 - yangshukun-INFO 上传文件成功
+2023-01-05 11:38:10,825 - yangshukun-INFO 元素【upload$id】点击成功
+2023-01-05 11:38:16,360 - yangshukun-INFO 元素【//a[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:38:17,868 - yangshukun-INFO 元素【//li[@menuid='Setings010102']$xpath】点击成功
+2023-01-05 11:38:21,164 - yangshukun-INFO 元素【//li[contains(@url,'人行报表')]$xpath】点击成功
+2023-01-05 11:38:22,949 - yangshukun-INFO 元素【//a[text()='报送任务']$xpath】点击成功
+2023-01-05 11:38:25,965 - yangshukun-INFO 元素【//*[@id='reportJobManagement_from.bsqj']/option[text()='2022年第一季度']$xpath】点击成功
+2023-01-05 11:38:27,107 - yangshukun-INFO 元素【//*[@id='reportJobManagement_from.reportName']$xpath】输入【A1302】成功
+2023-01-05 11:38:28,864 - yangshukun-INFO 元素【reportJobManagement_from.refresh$id】点击成功
+2023-01-05 11:38:28,864 - yangshukun-INFO ['', '2021年03月', '2021年06月', '2021年12月', '2021年第四季度', '2021年第一季度', '2022年', '2022年01月', '2022年03月', '2022年04月', '2022年05月', '2022年06月', '2022年06月30日', '2022年07月', '2022年08月', '2022年09月', '2022年10月', '2022年11月', '2022年12月', '2022年12月28日', '2022年12月29日', '2022年第二季度', '2022年第三季度', '2022年第四季度', '2022年第一季度', '2023年01月', '2023年01月02日', '2023年01月03日', '2023年01月04日', '2023年02月', '2023年03月', '2023年06月', '2024年', '2025年', '2025年01月', '2025年第一季度']
+2023-01-05 11:38:31,078 - yangshukun-INFO 元素【reportJobManagement_list.lockedText$id】点击成功
+2023-01-05 11:38:33,844 - yangshukun-INFO 元素【missionLocked_from.lockedReason$id】输入【pbcc任务自动化废弃】成功
+2023-01-05 11:38:35,250 - yangshukun-INFO 元素【missionLocked_from.reset$id】点击成功

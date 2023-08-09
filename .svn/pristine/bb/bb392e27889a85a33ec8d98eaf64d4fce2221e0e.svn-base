@@ -1,0 +1,375 @@
+from baseOperation.init_cls import *
+from utils.operationXml import *
+import sys
+from baseOperation.init_self import *
+from pageKeyword.keyword_bsgl_common import *
+from Common.OtherFunc import *
+from pageKeyword.keyword_bsgl_rsafer import *
+from data.data_class.common_data import *
+
+
+class BsglRimasTest(InitCls, BsglMainKeyword, BsglPubBsrwKeyword, BsglPubBsfwKeyword, BsglPubFzglKeyword,
+                    BsglPubBssqKeyword, BsglPubSjsqKeyword, BsglPubSplcKeyword, BsglRsaferBscsKeyword, OperationXml,
+                    BsglPubHswhKeyword, BsglPubSjxwhKeyword, BsglBsplData):
+    def test_01_add_bsrw_success(self):
+        """外管局报表报送任务新增+废弃报送任务成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择外管局报表品种进入外管局报表管理界面
+        self.intoRsaferTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送任务管理页签
+        self.swithToBsrw()
+        # 6、新增报送任务
+        self.bsglMainFrame()
+        self.addBsrw("P02", "20210329", type="day")
+        self.BbpzChoiceMould()
+        self.addBsrwSave()
+        # 断言新增成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '保存成功')
+        self.closeXzrw_success()
+        # 7、废弃新增的报送任务
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.switchBspzFrame()
+        self.queryBsrw("2021年03月29日", "P02-大额结售汇交易统计表")
+        self.abandonBsrw("废弃")
+        # 断言废弃成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '操作成功!')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_sfbs_bsfw_success(self):
+        """外管局报表报送范围点击是否报送成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择外管局报表品种进入外管局报表管理界面
+        self.intoRsaferTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、查询并点击是否报送按钮
+        self.bsglMainFrame()
+        self.queryBsnr("按日", "P02-大额结售汇交易统计表")
+        self.whetherBsnr()
+        # 断言点击是否报送成功
+        res = self.GetTagText(self.MSG_SFBS_RESULT)
+        self.assertEqual(res, '设置成功')
+        self.clickOkAlert()
+        # 6、查询并点击是否报送按钮(是)
+        self.whetherBsnr()
+        # 断言点击是否报送成功
+        res = self.GetTagText(self.MSG_SFBS_RESULT)
+        self.assertEqual(res, '设置成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_03_change_bsfw_success(self):
+        """外管局报表报送范围修改单个报送内容设置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择外管局报表品种进入外管局报表管理界面
+        self.intoRsaferTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、修改单个报送内容设置
+        self.bsglMainFrame()
+        self.checkOneBsnr()
+        self.changeBsnr("上期", "0 0 /1 * * ?", "1", "天", "是", "是")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_04_add_group_east_success(self):
+        """外管局报表分组管理--新增分组+删除分组成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择外管局报表品种进入外管局报表管理界面
+        self.intoRsaferTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理页签
+        self.swithToFzgl()
+        # 6、新增分组并断言成功
+        self.bsglMainFrame()
+        group_name = "外管局报表自动化分组" + get_now_time_to_str()
+        self.addGroup(group_name, "利率报备权限1", "自动化测试_外管局报表分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 7、编辑分组并断言修改成功
+        self.editeGroup(group_name, group_name + "_修改", "自动化测试_外管局报表分组描述_修改")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 8查询修改后的名称正确
+        self.searchGroupName(group_name + "_修改")
+        self.refreshGroupPage()
+        res = self.GetTagText(self.DATA_FIRST_GROUP.format(1))
+        self.assertEqual(res, group_name + "_修改")
+        # 删除分组
+        self.delGroup(group_name + "_修改")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_05_bssq_success(self):
+        """外管局报表报送授权成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择外管局报表品种进入外管局报表管理界面
+        self.intoRsaferTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        group_name = "外管局报表自动化分组" + get_now_time_to_str()
+        self.addGroup(group_name, "利率报备权限1", "自动化测试_外管局报表分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq(group_name)
+        self.searchBsnr("P02-大额结售汇交易统计表")
+        self.refreshBssqPage()
+        # 勾选核对权限，上报权限，查询，重抽权限
+        self.tickHdqx()
+        self.tickSbqx()
+        self.tickCxqx()
+        self.tickCcqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 进入分组管理
+        self.SwitchFatherFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 删除分组
+        self.delGroup(group_name)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_06_splc_batch_update_success(self):
+        """外管局报表审批流程批量修改成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择外管局报表品种进入外管局报表管理界面
+        self.intoRsaferTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        group_name = "外管局报表自动化分组" + get_now_time_to_str()
+        self.addGroup(group_name, "利率报备权限1", "自动化测试_外管局报表分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq(group_name)
+        self.searchBsnr("P02-大额结售汇交易统计表")
+        self.refreshBssqPage()
+        # 8、勾选核对权限
+        self.tickHdqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 9、进入审批流程页面
+        self.SwitchFatherFrame()
+        self.swithToSplc()
+        self.bsglMainFrame()
+        # 10、选择分组
+        self.searchGroupNameSplc(group_name)
+        self.refreshSplcPage()
+        # 11、勾选报送内容，批量修改,并断言修改成功
+        self.tickBoxAll()
+        self.batchUpdateSplc("外管局报表审批")
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.bsglMainFrame()
+        res = self.GetTagText(self.MSG_BATCH_ALERT_SPLC)
+        self.assertEqual(res, "保存成功")
+        self.closeBatchAlertSplc()
+        # 进入分组管理
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 删除分组
+        self.delGroup(group_name)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_07_bscs_update_success(self):
+        """外管局报表报送参数修改成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择外管局报表品种进入外管局报表管理界面
+        self.intoRsaferTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、修改报送参数并保存成功
+        self.swithToBscs()
+        self.bsglMainFrame()
+        self.changeRsaferBscsJy()
+        self.changeRsaferBscsDay("2")
+        self.changeRsaferBscsSbsp()
+        self.changeRsaferBscsSave()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_08_rsafer_hswh_add_function_success(self):
+        """外管局报表函数维护--新增函数成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择1104品种进入1104管理界面
+        self.intoRsaferTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入函数维护页面，点击新增进入新增页面
+        self.swithToHswh()
+        self.bsglMainFrame()
+        self.addHswhMainPage()
+        self.switchToDetailFrame()
+        # 6、输入函数基础信息
+        hsmc = "rsafer自动化测试函数" + get_now_time_to_str()
+        self.inputHsmcHswhDetailPage(hsmc)
+        self.inputHslbHswhDetailPage(self.HSLB_DKYE)
+        self.inputHsmsHswhDetailPage("rsafer自动化测试-函数描述")
+        self.inputResTypeHswhDetailPage(self.RES_ZS)
+        self.inputSqlHswhDetailPage("select @1 from dual")
+        # 7、点击解析参数，并输入参数名称、类型、参数值
+        self.clickAnalParamHswhDetailPage()
+        self.makeParamsInfoHswhDetailPage("rsafer自动化测试参数", self.PARAMS_TEXT, "1")
+        # 8、点击测试,并断言测试sql成功,退出测试界面
+        self.clickTestHswhDetailPage()
+        res = self.GetTagText(self.MSG_DETAIL_HSWH)
+        self.assertEqual(res, "SQL预执行成功，语法正确！")
+        self.closeAlertTestHswhDetailPage()
+        self.closeTestHswhDetailPage()
+        # 9、切换到详情frame，点击保存，并断言保存成功
+        self.switchToDetailFrame()
+        self.clickSaveHswhDetailPage()
+        res1 = self.GetTagText(self.MSG_DETAIL_HSWH)
+        self.assertEqual(res1, "保存成功")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_09_rsafer_sjxwh_add_data_success(self):
+        """外管局报表数据项维护维护--新增数据项成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择1104品种进入1104管理界面
+        self.intoRsaferTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入函数维护页面，点击新增进入新增页面
+        self.swithToHswh()
+        self.bsglMainFrame()
+        self.addHswhMainPage()
+        self.switchToDetailFrame()
+        # 6、输入函数基础信息
+        hsmc = "rsafer自动化测试函数" + get_now_time_to_str()
+        self.inputHsmcHswhDetailPage(hsmc)
+        self.inputHslbHswhDetailPage(self.HSLB_DKYE)
+        self.inputHsmsHswhDetailPage("rsafer自动化测试-函数描述")
+        self.inputResTypeHswhDetailPage(self.RES_ZS)
+        self.inputSqlHswhDetailPage("select @1 from dual")
+        # 7、点击解析参数，并输入参数名称、类型、参数值
+        self.clickAnalParamHswhDetailPage()
+        self.makeParamsInfoHswhDetailPage("rsafer自动化测试参数", self.PARAMS_TEXT, "1")
+        # 8、点击测试,并断言测试sql成功,退出测试界面
+        self.clickTestHswhDetailPage()
+        res = self.GetTagText(self.MSG_DETAIL_HSWH)
+        self.assertEqual(res, "SQL预执行成功，语法正确！")
+        self.closeAlertTestHswhDetailPage()
+        self.closeTestHswhDetailPage()
+        # 9、切换到详情frame，点击保存，并断言保存成功,关闭弹窗和详情主窗口
+        self.switchToDetailFrame()
+        self.clickSaveHswhDetailPage()
+        res1 = self.GetTagText(self.MSG_DETAIL_HSWH)
+        self.assertEqual(res1, "保存成功")
+        self.closeHswhAlert()
+        self.closeHswhDetailMainPage()
+        # 10、进入数据项维护页面，点击新增按钮
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.swithToSjxwh()
+        self.switchBspzFrame()
+        self.clickSjxwhAddButton()
+        # 输入数据项基本信息
+        sjx_name = "rsafer自动化数据项名称" + get_now_time_to_str()
+        self.inputSjxwhInfo(sjx_name, "rsafer自动化数据项描述", self.GROUP_JSH_MONTH, "S01-即期结售汇统计月报表—结汇")
+        # 添加函数并插入
+        self.choiceSjxwhFuncDataAndInster(hsmc, "8")
+        # 添加数据项并插入
+        self.choiceSjxwhItemsDataAndInster("S03.其他_外资机构")
+        # 保存
+        self.clickSjxwhSaveButton()
+        res2 = self.GetTagText(self.MSG_FUNC_FORM_SJXWH)
+        self.assertEqual(res2, "保存成功！")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+
+def test_10_Wbzmyhl_update_success(self):
+    """外管局报表外币折美元汇率修改成功"""
+    mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+    # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+    # 2、进入报送管理主界面
+    self.intoBsglMainMenu()
+    self.switchToBsglBaseFrame()
+    # 3、选择外管局报表品种进入外管局报表管理界面
+    self.intoRsaferTab()
+    # 4、切换到品种管理frame
+    self.switchBspzFrame()
+    # 5、新增外币折美元汇率并断言成功
+    self.swithToWbzhmyhl()
+    self.bsglMainFrame()
+    self.changeRsaferWbzmyhlAdd()
+    self.changeRsaferWbzmyhlBz("人民币")
+    self.changeRsaferWbzmyhlSxrq("2030-03-29")
+    self.changeRsaferWbzmyhlRate("1.23")
+    self.changeRsaferWbzmyhlSave()
+    res = self.GetTagText(self.MSG_ADD_RESULT)
+    self.assertEqual(res, "保存成功")
+    self.changeRsaferWbzmyhlClose()
+    # 6、删除新增的外币折美元汇率并断言成功
+    self.ClickRsaferWbzmyhlCxtj("人民币")
+    self.changeRsaferWbzmyhlRfresh()
+    self.changeRsaferWbzmyhlFxkAll()
+    self.changeRsaferWbzmyhlDelete()
+    res = self.GetTagText(self.MSG_ADD_RESULT)
+    self.assertEqual(res, "删除成功")
+    mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

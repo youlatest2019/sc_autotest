@@ -1,0 +1,109 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 16:40
+# @Author   : yangshukun
+# @File     : keyword_bsgl_1104.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class Rn1104BbmbKeyword(BsglElementMain, BsglElementFrame, WebDriver, Rn1104ElementBbmb):
+    """报表模板界面关键字"""
+
+    def importBbmb(self, file_path):
+        """导入报表模板"""
+        self.Click(self.BUTTON_IMPORT)
+        self.QuiteFrame()
+        self.SwitchFrame(self.RN1104_UPLOAD_ALTER_FRAME)
+        self.Click(self.BUTTON_UPLOAD)
+        self.UploadFile(file_path)
+        self.GotoSleep(2)
+        self.Click(self.BUTTON_UPLOAD_FILE)
+        self.SwitchFatherFrame()
+        self.SwitchFrameByElement(self.RN1104_MSG_ALTER_FRAME)
+
+    def exportBbmb(self):
+        """导出模板"""
+        self.Click(self.BUTTON_EXPORT)
+
+    def inputBsnrbh(self, text):
+        """输入报送内容编号"""
+        self.Input(text, self.INPUT_BSNRBH)
+
+    def inputBsnrmc(self, text):
+        """输入报送内容名称"""
+        self.Input(text, self.INPUT_BSNRMC)
+
+    def choiceGroup(self, group_name):
+        """选择报送分组"""
+        self.Click(self.CHOOSE_GROUP_NAME.format(group_name))
+
+    def choiceReportFlag(self, flag_index):
+        """选择是否报送"""
+        self.Click(self.INPUT_REPORT_FLAG.format(flag_index))
+
+    def clickCheckBox(self, box_index):
+        """复选框单选数据"""
+        self.Click(self.BOX_BBMB.format(box_index))
+
+    def checkAllBox(self, box_index):
+        """复选框全选数据"""
+        self.Click(self.BOX_BBMB.format(box_index))
+
+    def refreshBbmbPage(self):
+        """点击刷新按钮"""
+        self.Click(self.BUTTON_BBMB_REFRESH)
+
+
+class Rn1104BsrypzKeyword(BsglElementMain, BsglElementFrame, WebDriver, Rn1104ElementBsrypz):
+    """"报送人员配置界面关键字"""
+
+    def choiceBspl(self, bspl_name):
+        """选择报送频率"""
+        self.Click(self.INPUT_BSPL_BSRYPZ.format(bspl_name))
+
+    def inputBbbh(self, bbbh_name):
+        """输入报表编号"""
+        self.Input(bbbh_name, self.INPUT_BBBH)
+
+    def inputBbmc(self, bbmc_name):
+        """输入报表名称"""
+        self.Input(bbmc_name, self.INPUT_BBMC)
+
+    def choiceBbfz(self, bbfz_name):
+        """选择报表分组"""
+        self.Click(self.INPUT_BBFZ.format(bbfz_name))
+
+    def refreshBsrypz(self):
+        """报送人员配置页面刷新按钮"""
+        self.Click(self.BUTTON_REFRESH)
+
+    def checkAllBsrypz(self):
+        """报送人员配置页面，全选"""
+        self.Click(self.BOX_ALL)
+
+    def checkAloneBsrypz(self):
+        """报送人员配置页面，单选"""
+        self.Click(self.BOX_ALONE)
+
+    def batchUpdate(self, user_type, user_name):
+        """批量编辑"""
+        self.Click(self.BUTTON_EDIT_MANY)
+        self.QuiteFrame()
+        self.SwitchFrame(self.RN1104_BSRYPZ_BATCH_UPDATE_FRAME)
+        self.Click(self.INPUT_RYLX.format(user_type))
+        self.Input(user_name, self.INPUT_NAME)
+        self.Click(self.BUTTON_CONFIRM)
+
+    def saveBsrypz(self):
+        """报送人员配置页面，保存"""
+        self.Click(self.BUTTON_SAVE)
+
+    def updateUserForTable(self, tbr_name, fhr_name, fzr_name):
+        """主页面修改填表人，复核人，负责人"""
+        self.ClearData(self.INPUT_TBR)
+        self.ClearData(self.INPUT_FHR)
+        self.ClearData(self.INPUT_FZR)
+        self.Input(tbr_name, self.INPUT_TBR)
+        self.Input(fhr_name, self.INPUT_FHR)
+        self.Input(fzr_name, self.INPUT_FZR)

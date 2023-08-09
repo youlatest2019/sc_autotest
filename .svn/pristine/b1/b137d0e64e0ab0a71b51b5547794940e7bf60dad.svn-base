@@ -1,0 +1,164 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 10:01
+# @Author   : yangshukun
+# @File     : keyword_bsgl.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglEastKeyword(BsglElementFrame, EastBsrw, EastBsfw, EastBscs, EastBmzh, WebDriver):
+
+    def bsglMainFrame(self):
+        """EAST报送管理主框架"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    # 报送任务
+    def addEastBsrw(self, bsnr_name, bsqj):
+        """EAST新增报送任务"""
+        self.Click(self.BUTTON_ADD)
+        self.QuiteFrame()
+        self.SwitchFrame(self.ADD_BSRW_FRAME)
+        self.Click(self.ALERT_BSNRMC)
+        self.QuiteFrame()
+        self.SwitchFrame(self.ADD_BSNR_FRAME)
+        self.Click(self.BUTTON_BSNRMC.format(bsnr_name))
+        self.QuiteFrame()
+        self.SwitchFrame(self.ADD_BSRW_FRAME)
+        self.Click(self.INPUT_ADD_BSQJ.format(bsqj))
+        self.Click(self.INPUT_RWLX_TQSC)  # 可修改为其他任务类型
+        self.Click(self.INPUT_QSSD_LJQS)  # 可修改为其他取数时点
+        self.Click(self.BUTTON_SAVE)
+
+    def closeEastXzrw_success(self):
+        """关闭新增任务成功弹窗"""
+        self.Click(self.ALERT_ADD)
+
+    def queryEastBsrw(self, bsqj, text):
+        """EAST查询报送任务"""
+        self.Click(self.INPUT_BSQJ.format(bsqj))
+        self.Input(text, self.INPUT_RWMC)
+        self.Click(self.BUTTON_SEARCH)
+
+    def createEastJzcj(self):
+        """EAST创建集中采集任务"""
+        self.Click(self.BUTTON_JZCJ)
+        self.QuiteFrame()
+        self.SwitchFrame(self.JZCJ_FRAME)
+        self.Click(self.BUTTON_SCBSRW)
+
+    def abandonEastBsrw(self, text):
+        """EAST废弃报送任务"""
+        self.Click(self.BUTTON_RWFQ)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.RWFQ_FRAME)
+        self.Input(text, self.INPUT_RWFQ)
+        self.Click(self.ALERT_RWFQ)
+
+    def inputEastTbjsrq(self):
+        """EAST填报结束日期"""
+        self.Click(self.BUTTON_TBJSRQ)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.RWFQ_FRAME)
+        self.Click(self.BUTTON_TBJSRQ_BC)
+        self.Click(self.ALERT_QRCG1)
+        self.QuiteFrame()
+        self.Click(self.ALERT_QRCG2)
+
+    # 报送范围
+    def queryEastBsnr(self, text):
+        """EAST报送范围查询报送内容"""
+        self.Click(self.INPUT_BSPL)
+        self.Input(text, self.INPUT_BSNR)
+        self.Click(self.BUTTON_SEARCH1)
+
+    def whetherEastBsnr(self):
+        """EAST是否报送报送内容"""
+        self.Click(self.BUTTON_SFBS)
+
+    def checkAllEastBsnr(self):
+        """EAST复选框全选报送内容"""
+        self.Click(self.CHECK_ALL)
+
+    def checkOneEastBsnr(self):
+        """EAST复选框单选报送内容"""
+        self.Click(self.CHECK_ONE)
+
+    def changeEastBsnr(self, text, text1):
+        """EAST修改报送内容设置"""
+        self.Click(self.BUTTON_MODIFY)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.BSFW_CHANGE_FRAME)
+        self.Click(self.INPUT_QSQJ)
+        self.ClearData(self.INPUT_QSSD)
+        self.Input(text, self.INPUT_QSSD)
+        self.ClearData(self.INPUT_BSJZQX)
+        self.Input(text1, self.INPUT_BSJZQX)
+        self.Click(self.INPUT_BSJZQX_TYPE)
+        self.Click(self.INPUT_SFHJJR)
+        self.Click(self.INPUT_ZDHD)
+        self.Click(self.BUTTON_CHANGE_SAVE)
+        self.QuiteFrame()
+        self.Click(self.ALERT_MODIFY)
+
+    # 报送参数
+    def changeEastBscsLead(self, lead_person):
+        """EAST修改报送参数-牵头部门负责人"""
+        self.ClearData(self.INPUT_LEAD_PERSON)
+        self.Input(lead_person, self.INPUT_LEAD_PERSON)
+
+    def changeEastBscsDepartment(self, department_person):
+        """EAST修改报送参数-部门负责人联系方式"""
+        self.ClearData(self.INPUT_DEPARTMENT_PERSON)
+        self.Input(department_person, self.INPUT_DEPARTMENT_PERSON)
+
+    def changeEastBscsPreparer(self, preparer):
+        """EAST修改报送参数-填表人"""
+        self.ClearData(self.INPUT_PREPARER)
+        self.Input(preparer, self.INPUT_PREPARER)
+
+    def changeEastBscsNumber(self, preparer_number):
+        """EAST修改报送参数-填表人手机号"""
+        self.ClearData(self.INPUT_PREPARER_NUMBER)
+        self.Input(preparer_number, self.INPUT_PREPARER_NUMBER)
+
+    def changeEastBscsMonth(self):
+        """EAST修改报送参数-月份计算方式"""
+        self.Click(self.INPUT_MONTH_COUNT)
+
+    def changeEastBscsRemoveNum(self, remove_number):
+        """EAST修改报送参数-内部分户账需排除的账号"""
+        self.ClearData(self.INPUT_REMOVE_NUMBER)
+        self.Input(remove_number, self.INPUT_REMOVE_NUMBER)
+
+    def changeEastBscsRemoveSub(self, remove_subject):
+        """EAST修改报送参数-内部分户账需排除的科目	"""
+        self.ClearData(self.INPUT_REMOVE_SUBJECT)
+        self.Input(remove_subject, self.INPUT_REMOVE_SUBJECT)
+
+    def changeEastBscsSbsp(self):
+        """EAST修改报送参数-上报审批"""
+        self.Click(self.BUTTON_SBSP)
+
+    def changeEastBscsExport(self):
+        """EAST修改报送参数-导出控制开关"""
+        self.Click(self.BUTTON_EXPORT)
+
+    def changeEastBscsJgdm(self, code):
+        """EAST修改报送参数-机构代码"""
+        self.ClearData(self.INPUT_ORGANIZATION_CODE)
+        self.Input(code, self.INPUT_ORGANIZATION_CODE)
+
+    def changeEastBscsSave(self):
+        """EAST修改报送参数-保存"""
+        self.Click(self.BUTTON_SAVE_CSSZ)
+
+    # 报送参数
+    def changeEastBmzh(self, text, bm_code):
+        """EAST编码转换修改报送编码"""
+        self.Click(self.INPUT_BMLX)
+        self.Input(text, self.INPUT_BM_NAME)
+        self.Click(self.BUTTON_REFRESH)
+        self.ClearData(self.INPUT_MODIFY_BSBM)
+        self.Input(bm_code, self.INPUT_MODIFY_BSBM)
+        self.Click(self.df)

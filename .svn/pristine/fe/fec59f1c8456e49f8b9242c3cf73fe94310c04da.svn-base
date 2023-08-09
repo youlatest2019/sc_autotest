@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page cn="MBTD290" title="个人借贷账户信息记录" type="pagingForm" table="DM_MBTD_GRJD_JCD" orderBy="ID" primaryKey="ACCTCODE">
+    <form name="个人借贷账户信息记录">
+        <itemGroup name="基础段">
+            <item name="信息记录类型" code="INFRECTYPE" value="" xpath=""/>
+            <item name="账户类型" code="ACCTTYPE"  value="" xpath="//select[@name='DM_MBTD_GRJD_JCD.ACCTTYPE']/option[3]"/>
+            <item name="账户标识码" code="ACCTCODE"  value="auto_test" xpath="//input[@name='DM_MBTD_GRJD_JCD.ACCTCODE']"/>
+            <item name="信息报告日期" code="RPTDATE" value="20220331" xpath="//input[@name='DM_MBTD_GRJD_JCD.RPTDATE']"/>
+            <item name="报告时点说明代码" code="RPTDATECODE"  value="" xpath="//select[@name='DM_MBTD_GRJD_JCD.RPTDATECODE']/option[2]"/>
+            <item name="借款人姓名" code="NAME"  value="test_script" xpath="//input[@name='DM_MBTD_GRJD_JCD.NAME']"/>
+            <item name="借款人证件类型" code="IDTYPE"  value="" xpath="//select[@name='DM_MBTD_GRJD_JCD.IDTYPE']/option[2]"/>
+            <item name="借款人证件号码" code="IDNUM"  value="5221231" xpath="//input[@name='DM_MBTD_GRJD_JCD.IDNUM']"/>
+            <item name="业务管理机构代码" code="MNGMTORGCODE" value="auto_jgdm001" xpath="//input[@name='DM_MBTD_GRJD_JCD.MNGMTORGCODE']"/>
+        </itemGroup>
+    </form>
+</page>

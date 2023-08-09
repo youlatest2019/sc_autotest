@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/5
+# @Author   : tangle
+# @File     : keyword_bsgl_js.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglJsKeyword(BsglElementFrame, JsZbjpz, WebDriver):
+    """金数准备金缴存界面关键字"""
+
+    def setJsZbjjc(self, ckzl_name, jcfs):
+        """设置金数准备金缴存"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+        self.Click(self.SET_ZBJJC.format(ckzl_name, jcfs))
+
+    def successClose(self):
+        """关闭保存成功弹窗"""
+        self.Click(self.SUCCESS_CLOSE)  # 关闭成功弹窗
+
+    def queryZbjjc(self, text, jcfs):
+        """查询准备金缴存"""
+        self.Input(text, self.INPUT_CKZL)
+        self.Click(self.CHOICE_JCFS.format(jcfs))
+
+    def refersh(self):
+        """刷新"""
+        self.Click(self.BUTTON_REFRESH)

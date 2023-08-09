@@ -1,0 +1,427 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/18 11:20
+# @Author   : yangshukun
+# @File     : case_bsgl_rpbcc.py
+
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_common import *
+from pageKeyword.keyword_bsgl_1104 import *
+from data.data_class.common_data import *
+import sys
+from Common.OtherFunc import *
+
+
+class BsglRn1104Test(InitCls, BsglMainKeyword, BsglPubBbmbKeyword, BsglPubBsrwKeyword, BsglPubBsfwKeyword,
+                     BsglPubFzglKeyword, BsglPubBssqKeyword, BsglPubSplcKeyword, BsglBsplData, BsglPubBsnrsqKeyword):
+
+    def test_01_rpbcc_import_module_success(self):
+        """RPBCC人行报表模板导入成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        # 3、选择rpbcc品种进入rpbcc管理界面
+        self.switchToBsglBaseFrame()
+        self.intoRpbccTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBbmb()
+        # 6、导入模板
+        self.switchBspzFrame()
+        self.importBbmb(self.RPBCC_A1302_PATH)
+        self.GotoSleep(1)
+        # 断言导入成功
+        res = self.GetTagText(self.MSG_IMPORT_RESULT)
+        self.assertEqual(res, '成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_rpbcc_export_module_success(self):
+        """RPBCC报表模板导出成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        # 3、选择人行报表品种进入rpbcc管理界面
+        self.switchToBsglBaseFrame()
+        self.intoRpbccTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBbmb()
+        # 6、导出模板
+        self.switchBspzFrame()
+        self.inputBsnrbh("A1302")
+        self.refreshBbmbPage()
+        self.clickCheckBox(1)
+        self.exportBbmb()
+        self.GotoSleep(1)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_03_add_bsrw_rpbcc_success(self):
+        """rpbcc报送任务新增报送任务并废弃成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择人行报表品种进入rpbcc管理界面
+        self.intoRpbccTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送任务管理页签
+        self.swithToBsrw()
+        # 6、新增报送任务
+        self.switchBspzFrame()
+        self.addBsrw("A1302", "2021")
+        self.BbpzChoiceMould()
+        self.addBsrwSave()
+        # 7、断言新增成功
+        self.GotoSleep(1)
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, "保存成功")
+        self.closeXzrw_success()
+        # 废弃报送任务
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.switchBspzFrame()
+        self.queryBsrw("2021年第一季度", "A1302监管类指标类报表")
+        self.abandonBsrw("rpbcc任务自动化废弃")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_04_change_rpbcc_bsfw_success(self):
+        """rpbcc报送范围修改单个报送内容设置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择人行报表品种进入rpbcc管理界面
+        self.intoRpbccTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、查询并修改单个报送内容设置
+        self.bsglMainFrame()
+        self.queryBsnr(self.PL_SEASON, "A1302监管类指标类报表")
+        self.checkOneBsnr()
+        self.changeBsnr("上期", "0 45 /1 * * ?", "15", "天", "是", "是")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_05_add_edit_del_group_rpbcc_success(self):
+        """rpbcc分组管理--新增分组，编辑，删除，成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择人行报表品种进入rpbcc管理界面
+        self.intoRpbccTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToFzgl()
+        # 6、新增分组并断言成功
+        self.bsglMainFrame()
+        group_name = "rpbcc自动化分组" + get_now_time_to_str()
+        self.addGroup(group_name, "人行报表权限1", "自动化测试_rpbcc分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 7、编辑分组并断言修改成功
+        self.editeGroup(group_name, group_name + "_修改", "自动化测试_rpbcc分组描述_修改")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 8查询修改后的名称正确
+        self.searchGroupName(group_name + "_修改")
+        self.refreshGroupPage()
+        res = self.GetTagText(self.DATA_FIRST_GROUP.format(1))
+        self.assertEqual(res, group_name + "_修改")
+        # 删除分组
+        self.delGroup(group_name + "_修改")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_06_bssq_success(self):
+        """rpbcc报送授权成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择人行报表品种进入rpbcc管理界面
+        self.intoRpbccTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        group_name = "rpbcc自动化分组" + get_now_time_to_str()
+        self.addGroup(group_name, "人行报表权限1", "自动化测试_rpbcc授权分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq(group_name)
+        self.searchBsnr("A1302监管类指标类报表")
+        self.refreshBssqPage()
+        # 8、勾选核对权限，上报权限，查询，重抽权限
+        self.tickHdqx()
+        self.tickSbqx()
+        self.tickCxqx()
+        self.tickCcqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 9、进入分组管理
+        self.SwitchFatherFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 10、删除分组
+        self.delGroup(group_name)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_07_rpbcc_splc_batch_update_success(self):
+        """rpbcc审批流程批量修改成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择人行报表品种进入rpbcc管理界面
+        self.intoRpbccTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        group_name = "rpbcc自动化分组" + get_now_time_to_str()
+        self.addGroup(group_name, "人行报表权限1", "自动化测试_rpbcc授权分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq(group_name)
+        self.searchBsnr("A1302监管类指标类报表")
+        self.refreshBssqPage()
+        # 8、勾选核对权限，上报权限，查询，重抽权限
+        self.tickHdqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 9、进入审批流程页面
+        self.SwitchFatherFrame()
+        self.swithToSplc()
+        self.bsglMainFrame()
+        # 10、选择分组
+        self.searchGroupNameSplc(group_name)
+        self.refreshSplcPage()
+        # 11、勾选报送内容，批量修改,并断言修改成功
+        self.tickBoxAll()
+        self.batchUpdateSplc("人行报表审批")
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.bsglMainFrame()
+        res = self.GetTagText(self.MSG_BATCH_ALERT_SPLC)
+        self.assertEqual(res, "保存成功")
+        self.closeBatchAlertSplc()
+        # 进入分组管理
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 删除分组
+        self.delGroup(group_name)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_08_rpbcc_bsnrsq_edit_all_success(self):
+        """rpbcc报送内容授权--编辑全部成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择人行报表品种进入rpbcc管理界面
+        self.intoRpbccTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        group_name = "rpbcc分组" + get_now_time_to_str()
+        self.addGroup(group_name, "人行报表权限2", "自动化测试_rpbcc授权分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq(group_name)
+        self.searchBsnr("A1302监管类指标类报表")
+        self.refreshBssqPage()
+        # 8、勾选核对权限
+        self.tickHdqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 9、进入报送内容授权页面
+        self.SwitchFatherFrame()
+        self.swithToBsnrsq()
+        self.bsglMainFrame()
+        # 10、选择分组
+        self.searchGroupNameSplc(group_name)
+        self.refreshBsnrsqPage()
+        # 11、输入报送内容，点击刷新
+        self.searchBsnrBsnrsq("A1302监管类指标类报表")
+        self.clickRefreshBsnrsq()
+        self.choiceBoxByNameBsnrsq("A1302监管类指标类报表")
+        # 12、点击编辑全部，进行授权
+        self.clickEditAllBsnrsq()
+        self.AlertAccept()
+        # 13、断言编辑全部授权后，检查编辑权限项不为0
+        res = self.GetTagText(self.BUTTON_EDIT_COUNT_BSNRSQ.format("A1302监管类指标类报表", 1)).split("(")[1].split(")")[0]
+        self.assertGreater(int(res), 0)
+        # 14、进入分组管理
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 15、删除分组
+        self.delGroup(group_name)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_09_rpbcc_bsnrsq_trace_all_success(self):
+        """rpbcc报送内容授权--追溯全部成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择人行报表品种进入rpbcc管理界面
+        self.intoRpbccTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        group_name = "rpbcc分组" + get_now_time_to_str()
+        self.addGroup(group_name, "人行报表权限2", "自动化测试_rpbcc授权分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq(group_name)
+        self.searchBsnr("A1302监管类指标类报表")
+        self.refreshBssqPage()
+        # 8、勾选核对权限
+        self.tickHdqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 9、进入报送内容授权页面
+        self.SwitchFatherFrame()
+        self.swithToBsnrsq()
+        self.bsglMainFrame()
+        # 10、选择分组
+        self.searchGroupNameSplc(group_name)
+        self.refreshBsnrsqPage()
+        # 11、输入报送内容，点击刷新
+        self.searchBsnrBsnrsq("A1302监管类指标类报表")
+        self.clickRefreshBsnrsq()
+        self.choiceBoxByNameBsnrsq("A1302监管类指标类报表")
+        # 12、点击追溯全部，进行授权
+        self.clickTraceAllBsnrsq()
+        self.AlertAccept()
+        # 13、断言追溯全部授权后，检查追溯权限项不为0
+        res = self.GetTagText(self.BUTTON_EDIT_COUNT_BSNRSQ.format("A1302监管类指标类报表", 2)).split("(")[1].split(")")[0]
+        self.assertGreater(int(res), 0)
+        # 14、进入分组管理
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 15、删除分组
+        self.delGroup(group_name)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_10_rpbcc_bsnrsq_cancel_all_success(self):
+        """rpbcc报送内容授权--取消全部成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择人行报表品种进入rpbcc管理界面
+        self.intoRpbccTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        group_name = "rpbcc分组" + get_now_time_to_str()
+        self.addGroup(group_name, "人行报表权限2", "自动化测试_rpbcc授权分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq(group_name)
+        self.searchBsnr("A1302监管类指标类报表")
+        self.refreshBssqPage()
+        # 8、勾选核对权限
+        self.tickHdqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 9、进入报送内容授权页面
+        self.SwitchFatherFrame()
+        self.swithToBsnrsq()
+        self.bsglMainFrame()
+        # 10、选择分组
+        self.searchGroupNameSplc(group_name)
+        self.refreshBsnrsqPage()
+        # 11、输入报送内容，点击刷新
+        self.searchBsnrBsnrsq("A1302监管类指标类报表")
+        self.clickRefreshBsnrsq()
+        self.choiceBoxByNameBsnrsq("A1302监管类指标类报表")
+        # 12、点击追溯全部，进行授权
+        self.clickTraceAllBsnrsq()
+        self.AlertAccept()
+        # 13、断言追溯全部授权后，检查追溯权限项不为0
+        res = self.GetTagText(self.BUTTON_EDIT_COUNT_BSNRSQ.format("A1302监管类指标类报表", 2)).split("(")[1].split(")")[0]
+        self.assertGreater(int(res), 0)
+        # 14、取消全部授权，断言取消后权限项为0
+        self.choiceBoxByNameBsnrsq("A1302监管类指标类报表")
+        self.clickCancelAllBsnrsq()
+        self.AlertAccept()
+        res1 = self.GetTagText(self.BUTTON_EDIT_COUNT_BSNRSQ.format("A1302监管类指标类报表", 2)).split("(")[1].split(")")[0]
+        self.assertEqual(int(res1), 0)
+        res2 = self.GetTagText(self.BUTTON_EDIT_COUNT_BSNRSQ.format("A1302监管类指标类报表", 1)).split("(")[1].split(")")[0]
+        self.assertEqual(int(res2), 0)
+        # 15、进入分组管理
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 16、删除分组
+        self.delGroup(group_name)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

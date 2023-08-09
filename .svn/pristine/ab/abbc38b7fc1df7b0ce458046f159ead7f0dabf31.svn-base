@@ -1,0 +1,33 @@
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglRamlrsBscsKeyword(RAMLRSBscsElement, WebDriver):
+    """反洗钱报送参数"""
+
+    def changeBscsRamlrsSave(self):
+        """反洗钱报送参数-保存按钮"""
+        self.Click(self.BUTTON_SAVE_RAMLRS)
+
+    def changeBscsRamlrsGsbm(self, text):
+        """反洗钱报送参数-可疑交易默认归属部门"""
+        self.Click(self.INPUT_GSBM_RAMLRS.format(text))
+
+    def changeBscsRamlrsBgjgbm(self, text):
+        """反洗钱报送参数-报告机构编码"""
+        self.ClearData(self.INPUT_BGJGBM_RAMLRS)
+        self.Input(text, self.INPUT_BGJGBM_RAMLRS)
+
+    def changeBscsRamlrsSjblj(self, text):
+        """反洗钱报送参数-数据包文件保存路径"""
+        self.ClearData(self.INPUT_SJBLJ_RAMLRS)
+        self.Input(text, self.INPUT_SJBLJ_RAMLRS)
+
+    def changeBscsRamlrsZjdq(self, text):
+        """反洗钱报送参数-证件到期提醒天数"""
+        self.ClearData(self.INPUT_ZJDQTXTS_RAMLRS)
+        self.Input(text, self.INPUT_ZJDQTXTS_RAMLRS)
+
+    def changeBscsRamlrsSaveOk(self):
+        """反洗钱报送参数-保存成功关闭按钮"""
+        self.Click(self.BUTTON_CLOSE_RAMLRS)

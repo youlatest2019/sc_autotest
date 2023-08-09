@@ -1,0 +1,83 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 10:01
+# @Author   : yangshukun
+# @File     : keyword_bsgl.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglEastBscsKeyword(BsglElementFrame, EastBscs, WebDriver):
+    """EAST报送参数"""
+
+    def bsglMainFrame(self):
+        """EAST报送管理主框架"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def changeEastBscsLead(self, lead_person):
+        """EAST修改报送参数-牵头部门负责人"""
+        self.ClearData(self.INPUT_LEAD_PERSON)
+        self.Input(lead_person, self.INPUT_LEAD_PERSON)
+
+    def changeEastBscsDepartment(self, department_person):
+        """EAST修改报送参数-部门负责人联系方式"""
+        self.ClearData(self.INPUT_DEPARTMENT_PERSON)
+        self.Input(department_person, self.INPUT_DEPARTMENT_PERSON)
+
+    def changeEastBscsPreparer(self, preparer):
+        """EAST修改报送参数-填表人"""
+        self.ClearData(self.INPUT_PREPARER)
+        self.Input(preparer, self.INPUT_PREPARER)
+
+    def changeEastBscsNumber(self, preparer_number):
+        """EAST修改报送参数-填表人手机号"""
+        self.ClearData(self.INPUT_PREPARER_NUMBER)
+        self.Input(preparer_number, self.INPUT_PREPARER_NUMBER)
+
+    def changeEastBscsMonth(self):
+        """EAST修改报送参数-月份计算方式"""
+        self.Click(self.INPUT_MONTH_COUNT)
+
+    def changeEastBscsRemoveNum(self, remove_number):
+        """EAST修改报送参数-内部分户账需排除的账号"""
+        self.ClearData(self.INPUT_REMOVE_NUMBER)
+        self.Input(remove_number, self.INPUT_REMOVE_NUMBER)
+
+    def changeEastBscsRemoveSub(self, remove_subject):
+        """EAST修改报送参数-内部分户账需排除的科目	"""
+        self.ClearData(self.INPUT_REMOVE_SUBJECT)
+        self.Input(remove_subject, self.INPUT_REMOVE_SUBJECT)
+
+    def changeEastBscsSbsp(self):
+        """EAST修改报送参数-上报审批"""
+        self.Click(self.BUTTON_SBSP)
+
+    def changeEastBscsExport(self):
+        """EAST修改报送参数-导出控制开关"""
+        self.Click(self.BUTTON_EXPORT)
+
+    def changeEastBscsJgdm(self, code):
+        """EAST修改报送参数-机构代码"""
+        self.ClearData(self.INPUT_ORGANIZATION_CODE)
+        self.Input(code, self.INPUT_ORGANIZATION_CODE)
+
+    def changeEastBscsSave(self):
+        """EAST修改报送参数-保存"""
+        self.Click(self.BUTTON_SAVE_CSSZ)
+
+
+class BsglEastBmzhKeyword(BsglElementFrame, EastBmzh, WebDriver):
+    """EAST编码转换"""
+
+    def bsglMainFrame(self):
+        """EAST报送管理主框架"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def changeEastBmzh(self, text, bm_code):
+        """EAST编码转换修改报送编码"""
+        self.Click(self.INPUT_BMLX)
+        self.Input(text, self.INPUT_BM_NAME)
+        self.Click(self.BUTTON_REFRESH)
+        self.ClearData(self.INPUT_MODIFY_BSBM)
+        self.Input(bm_code, self.INPUT_MODIFY_BSBM)
+        self.Click(self.df)

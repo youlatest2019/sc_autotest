@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/5 14:45
+# @Author   : yangshukun
+# @File     : common_data.py
+
+class BsglBsplData(object):
+    """报表类报送人员配置页面报送频率"""
+    PL_HOURE = "按小时"
+    PL_DAY = "按日"
+    PL_WEEK = "按周"
+    PL_MONTH = "按月"
+    PL_SEASON = "按季"
+    PL_HALF_YEAR = "按半年"
+    PL_YEAR = "按年"
+
+    """1104报送人员配置页面报表分组"""
+    GROUP_HALF_YEAR = "半年报"
+    GROUP_YEAR = "年报"
+    GROUP_SEASON_ONE = "季报1批次"
+    GROUP_SEASON_TWO = "季报2批次"
+    GROUP_SEASON_THREE = "季报3批次"
+    GROUP_MONTH_ONE = "月报1批次"
+    GROUP_MONTH_TWO = "月报2批次"

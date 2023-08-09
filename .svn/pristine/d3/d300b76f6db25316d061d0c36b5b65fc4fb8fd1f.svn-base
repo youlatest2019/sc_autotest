@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 9:42
+# @Author   : yangshukun
+# @File     : page_bsgl.py
+from Common.common_map import *
+
+
+class BsglElementMain(object):
+    """主页面功能按钮及tab页切换"""
+    XTGL = "//span[text()='系统管理']".__add__(XPATH)  # 主菜单--系统管理
+    BSGL = "//a[@menuid='Setings010102']".__add__(XPATH)  # 报送管理菜单按钮
+    BSGL_TAB = "//li[@menuid='Setings010102']".__add__(XPATH)  # 报送管理标题菜单
+    SWITCH_BSPZ = "//li[contains(@url,'{}')]".__add__(XPATH)  # 切换报送品种的表达式，以占位符{}对品种进行站位，可以在关键字中传递品种名称
+    CHOICE_FUNC_TAB = "//a[text()='{}']".__add__(XPATH)  # 不同品种下管理页签切换的表达式，使用占位符{}，可通过传参确定页签
+
+
+class BsglElementFrame(object):
+    """报送管理菜单相关frame"""
+    MAIN_FRAME = "ifrSetings010102"  # 报送管理页面主框架frameID
+    TAB_FRAME = "frame"  # 报送管理--功能按钮及数据主框架frameID
+    BSPZ_FRAME = "ifrmcontent"  # 各报送品种页签功能框架frameID
+    RN1104_UPLOAD_ALTER_FRAME = "LAYOUT_WIN_/RPTS/upload.jsp_iframe"  # 报表模板导入弹窗frameID
+    RN1104_MSG_ALTER_FRAME = "//iframe[@id='LAYOUT_WIN_/RPTS/errorMsg.jsp_iframe']".__add__(XPATH)  # 报表模板导入弹窗frameID
+
+
+class Rn1104ElementBbmb(object):
+    """1104报表模板页面"""
+    CHOOSE_GROUP_NAME = "//select[@id='dom_ReportTemplateSettingForm.dgroup_s']/option[text()='{}']".__add__(
+        XPATH)  # 报送分组选择，分组名称使用{}占位符，可在案例中传参
+    INPUT_BSNRBH = "dom_ReportTemplateSettingForm.bsnrbh".__add__(ID)  # 报送内容编号输入框
+    INPUT_BSNRMC = "dom_ReportTemplateSettingForm.bsnrmc".__add__(ID)  # 报送内容名称输入框
+    INPUT_REPORT_FLAG = "//select[@id='dom_ReportTemplateSettingForm.availableFlag']/option[{}]".__add__(
+        XPATH)  # 是否报送下拉框，传参2为“是”，3为“否”
+    BUTTON_BBMB_REFRESH = "//input[@id='dom_ReportTemplateSettingForm.refresh']".__add__(XPATH)  # 报表模板页面刷新按钮
+    BUTTON_IMPORT = "dom_ReportTemplateList.export".__add__(ID)  # 导入模板按钮
+    BUTTON_UPLOAD = "//span[@class='fileInput']".__add__(XPATH)  # 导入弹窗上传按钮
+    BUTTON_UPLOAD_FILE = "upload".__add__(ID)  # 模板导入弹窗中，文件导入按钮
+    MSG_IMPORT_SUCC = "//table[@id='msgTable']/tbody/tr/td[text()='成功']".__add__(XPATH)  # 导入成功提示信息
+    G0100_PATH = "D:\\DcabAtuoTest\\data\\2022年模板\\月报\\G0100-211.xls"
+    BUTTON_EXPORT = "dom_ReportTemplateList.import".__add__(ID)  # 导出模板按钮

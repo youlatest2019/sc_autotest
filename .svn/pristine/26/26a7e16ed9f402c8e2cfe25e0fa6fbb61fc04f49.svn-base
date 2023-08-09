@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/8/9 9:25
+# @Author   : yangshukun
+# @File     : keyword_rmbtd_hedui.py
+from baseOperation.WebOperation import *
+from data.data_class.mbtd290_data import *
+from pageElement.page_bscl_common import *
+
+
+class PubKeywordMbtdAddPage(WebDriver, PubMxBspzElement):
+
+    def changeToModulePageFrame(self):
+        """明细类品种--核对页面--进入办理--切换到数据类表主框架"""
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.DATA_LIST_FRAME_MX)
+
+    def changeToAddDataFormFrame(self):
+        """明细类品种--核对页面--进入办理--新增--切换到新增页面框架"""
+        self.SwitchFrameByElement(self.DATA_FORM_ADD_FRAME_MX)
+
+    def closeAddFormPage(self):
+        """明细类品种--核对页面--进入办理--新增--关闭新增表单"""
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.DATA_LIST_FRAME_MX)
+        self.Click(self.DATA_FORM_ADD_CLOSE_BUTTON_MX)
+
+    def closeDataListPage(self):
+        """明细类品种--核对页面--进入办理--新增--关闭数据列表页面"""
+        self.QuiteFrame()
+        self.Click(self.DATA_LIST_CLOSE_BUTTON_MX)
+
+
+class MbtdAddData(WebDriver, MBTD290DATA):
+
+    def dm_mbtd_grjd_jcd(self):
+        """征信-个人借贷账户信息记录，新增数据"""
+        self.Click(self.ACCTTYPE_XPATH)
+        self.Input(self.ACCTCODE, self.ACCTCODE_XPATH)
+        self.Input(self.RPTDATE, self.RPTDATE_XPATH)
+        self.Click(self.RPTDATECODE_XPATH)
+        self.Input(self.NAME, self.NAME_XPATH)
+        self.Click(self.IDTYPE_XPATH)
+        self.Input(self.IDNUM, self.IDNUM_XPATH)
+        self.Input(self.MNGMTORGCODE, self.MNGMTORGCODE_XPATH)

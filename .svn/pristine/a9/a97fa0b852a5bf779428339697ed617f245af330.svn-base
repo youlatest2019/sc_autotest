@@ -1,0 +1,701 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 10:01
+# @Author   : yangshukun
+# @File     : keyword_bsgl_common.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglMainKeyword(BsglElementMain, BsglElementFrame, WebDriver):
+
+    def intoBsglMainMenu(self):
+        """进入报送管理主界面"""
+        self.RefreshPage()
+        self.MouseFouce(self.XTGL)
+        self.Click(self.BSGL)
+        self.Click(self.BSGL_TAB)
+
+    def switchToBsglBaseFrame(self):
+        """切换主框架"""
+        self.GotoSleep(0.5)
+        self.QuiteFrame()
+        self.SwitchFrame(self.MAIN_FRAME)
+        self.SwitchFrame(self.TAB_FRAME)
+
+    def switchBspzFrame(self):
+        """切换到报送品种页签框架"""
+        self.SwitchFrame(self.BSPZ_FRAME)
+
+    def bsglMainFrame(self):
+        """报送管理主框架"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def intoReastTab(self):
+        """选EAST品种"""
+        self.Click(self.SWITCH_BSPZ.format('EAST'))
+
+    def intoRimasTab(self):
+        """选利率报备品种"""
+        self.Click(self.SWITCH_BSPZ.format('利率报备'))
+
+    def intoRfbsTab(self):
+        """选金数品种"""
+        self.Click(self.SWITCH_BSPZ.format('金数'))
+
+    def intoRmbtdTab(self):
+        """选征信品种"""
+        self.Click(self.SWITCH_BSPZ.format('征信'))
+
+    def intoRsazjTab(self):
+        """选浙江国资委品种"""
+        self.Click(self.SWITCH_BSPZ.format('浙江国资委'))
+
+    def intoRamlrsTab(self):
+        """选反洗钱品种"""
+        self.Click(self.SWITCH_BSPZ.format('反洗钱'))
+
+    def intoRn1104Tab(self):
+        """选1104品种"""
+        self.Click(self.SWITCH_BSPZ.format('1104'))
+
+    def intoRpbccTab(self):
+        """选人行报表品种"""
+        self.Click(self.SWITCH_BSPZ.format('人行报表'))
+
+    def intoRsafeTab(self):
+        """选外管局品种"""
+        self.Click(self.SWITCH_BSPZ.format('外管局'))
+
+    def intoRsaferTab(self):
+        """选外管局品种"""
+        self.Click(self.SWITCH_BSPZ.format('外管局报表'))
+
+    def intoRptcTab(self):
+        """选综合报表品种"""
+        self.Click(self.SWITCH_BSPZ.format('综合报表'))
+
+    def swithToBsrw(self):
+        """报送任务"""
+        self.Click(self.CHOICE_FUNC_TAB.format('报送任务'))
+
+    def swithToBsfw(self):
+        """报送范围"""
+        self.Click(self.CHOICE_FUNC_TAB.format('报送范围'))
+
+    def swithToBscs(self):
+        """报送参数"""
+        self.Click(self.CHOICE_FUNC_TAB.format('报送参数'))
+
+    def swithToBssq(self):
+        """报送授权"""
+        self.Click(self.CHOICE_FUNC_TAB.format('报送授权'))
+
+    def swithToSjsq(self):
+        """数据授权"""
+        self.Click(self.CHOICE_FUNC_TAB.format('数据授权'))
+
+    def swithToSplc(self):
+        """审批流程"""
+        self.Click(self.CHOICE_FUNC_TAB.format('审批流程'))
+
+    def swithToKmjzsz(self):
+        """科目记账设置"""
+        self.Click(self.CHOICE_FUNC_TAB.format('科目记账设置'))
+
+    def swithToMxkmsz(self):
+        """明细科目设置"""
+        self.Click(self.CHOICE_FUNC_TAB.format('明细科目设置'))
+
+    def swithToZdysjlx(self):
+        """自定义数据类型"""
+        self.Click(self.CHOICE_FUNC_TAB.format('自定义数据类型'))
+
+    def swithToBmzh(self):
+        """编码转换"""
+        self.Click(self.CHOICE_FUNC_TAB.format('编码转换'))
+
+    def swithToKytzsz(self):
+        """可疑特征设置"""
+        self.Click(self.CHOICE_FUNC_TAB.format('可疑特征设置'))
+
+    def swithToJkzbsz(self):
+        """监控指标设置"""
+        self.Click(self.CHOICE_FUNC_TAB.format('监控指标设置'))
+
+    def swithToSbwdsz(self):
+        """上报网点设置"""
+        self.Click(self.CHOICE_FUNC_TAB.format('上报网点设置'))
+
+    def swithToKhzlwh(self):
+        """客户资料维护"""
+        self.Click(self.CHOICE_FUNC_TAB.format('客户资料维护'))
+
+    def swithToSkhmdsz(self):
+        """涉恐黑名单设置"""
+        self.Click(self.CHOICE_FUNC_TAB.format('涉恐黑名单设置'))
+
+    def swithToBbmb(self):
+        """报表模板"""
+        self.Click(self.CHOICE_FUNC_TAB.format('报表模板'))
+
+    def swithToBsnrsq(self):
+        """报送内容授权"""
+        self.Click(self.CHOICE_FUNC_TAB.format('报送内容授权'))
+
+    def swithToHswh(self):
+        """函数维护"""
+        self.Click(self.CHOICE_FUNC_TAB.format('函数维护'))
+
+    def swithToSjxwh(self):
+        """数据项维护"""
+        self.Click(self.CHOICE_FUNC_TAB.format('数据项维护'))
+
+    def swithToFzgl(self):
+        """分组管理"""
+        self.Click(self.CHOICE_FUNC_TAB.format('分组管理'))
+
+    def swithToBsrypz(self):
+        """报送人员配置"""
+        self.Click(self.CHOICE_FUNC_TAB.format('报送人员配置'))
+
+    def swithToJybmwh(self):
+        """交易编码维护"""
+        self.Click(self.CHOICE_FUNC_TAB.format('交易编码维护'))
+
+    def swithToZhxzwh(self):
+        """账户性质维护"""
+        self.Click(self.CHOICE_FUNC_TAB.format('账户性质维护'))
+
+    def swithToZbjjcpz(self):
+        """准备金缴存配置"""
+        self.Click(self.CHOICE_FUNC_TAB.format('准备金缴存配置'))
+
+
+class BsglPubBsrwKeyword(BsglElementFrame, PubBsrwElement, WebDriver):
+    """报送任务"""
+
+    # 报送任务
+    def addBsrw(self, bsnr_name, bsqj, type="year"):
+        """新增报送任务,根据type判断，不同的type报送期间不一样"""
+        self.Click(self.BUTTON_ADD_BSRW)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.ADD_BSRW_FRAME)
+        self.Click(self.ALERT_BSNRMC)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.ADD_BSNR_FRAME)
+        self.Click(self.BUTTON_BSNRMC.format(bsnr_name))
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.ADD_BSRW_FRAME)
+        if type == "year":
+            self.Click(self.INPUT_ADD_BSQJ_FOR_YEAR.format(bsqj))
+        elif type == "day":
+            self.Input(bsqj, self.INPUT_ADD_BSQJ_FOR_DAY)
+            self.Click(self.TITLE_ADD_BSRW)
+        self.Click(self.INPUT_RWLX_TQSC)  # 可修改为其他任务类型
+        self.Click(self.INPUT_QSSD_LJQS)  # 可修改为其他取数时点
+
+    def BbpzChoiceMould(self, mb_index=2):
+        """报表类品种新增任务选择报表模板，默认选择第一个模板"""
+        self.Click(self.INPUT_BBMB_FOR_1104.format(mb_index))
+
+    def addBsrwSave(self):
+        """新增报送任务保存按钮"""
+        self.Click(self.BUTTON_SAVE_BSRW)
+
+    def closeXzrw_success(self):
+        """关闭新增任务成功弹窗"""
+        self.Click(self.ALERT_ADD)
+
+    def queryBsrw(self, bsqj, text):
+        """查询报送任务"""
+        self.Click(self.INPUT_BSQJ.format(bsqj))
+        self.Input(text, self.INPUT_RWMC)
+        self.Click(self.BUTTON_SEARCH)
+
+    def createEastJzcj(self):
+        """EAST创建集中采集任务"""
+        self.Click(self.BUTTON_JZCJ)
+        self.QuiteFrame()
+        self.SwitchFrame(self.JZCJ_FRAME)
+        self.Click(self.BUTTON_SCBSRW)
+
+    def abandonBsrw(self, text):
+        """废弃报送任务"""
+        self.Click(self.BUTTON_RWFQ)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.RWFQ_FRAME)
+        self.Input(text, self.INPUT_RWFQ)
+        self.Click(self.ALERT_RWFQ)
+
+    def inputTbjsrq(self):
+        """填报结束日期"""
+        self.Click(self.BUTTON_TBJSRQ)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.RWFQ_FRAME)
+        self.Click(self.BUTTON_TBJSRQ_BC)
+        self.Click(self.ALERT_QRCG1)
+        self.QuiteFrame()
+        self.Click(self.ALERT_QRCG2)
+
+
+class BsglPubBsfwKeyword(BsglElementFrame, PubBsfwElement, WebDriver):
+    """报送范围"""
+
+    def queryBsnr(self, bspl, text):
+        """报送范围查询报送内容"""
+        self.Click(self.INPUT_BSPL.format(bspl))
+        self.Input(text, self.INPUT_BSNR)
+        self.Click(self.BUTTON_SEARCH1)
+
+    def whetherBsnr(self):
+        """是否报送报送内容"""
+        self.Click(self.BUTTON_SFBS)
+
+    def checkAllBsnr(self):
+        """复选框全选报送内容"""
+        self.Click(self.CHECK_ALL)
+
+    def checkOneBsnr(self):
+        """复选框单选报送内容"""
+        self.Click(self.CHECK_ONE)
+
+    def changeBsnr(self, qsqj, text, text1, bsjzqx_type, sfhjjr, zdhd):
+        """修改报送内容设置"""
+        self.Click(self.BUTTON_MODIFY)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.BSFW_CHANGE_FRAME)
+        self.Click(self.INPUT_QSQJ.format(qsqj))
+        self.ClearData(self.INPUT_QSSD)
+        self.KeyBordDel(self.INPUT_QSSD)
+        self.Input(text, self.INPUT_QSSD)
+        self.ClearData(self.INPUT_BSJZQX)
+        self.Input(text1, self.INPUT_BSJZQX)
+        self.Click(self.INPUT_BSJZQX_TYPE.format(bsjzqx_type))
+        self.Click(self.INPUT_SFHJJR.format(sfhjjr))
+        self.Click(self.INPUT_ZDHD.format(zdhd))
+        self.Click(self.BUTTON_CHANGE_SAVE)
+        self.QuiteFrame()
+        self.Click(self.ALERT_MODIFY)
+
+    def clickOkAlert(self):
+        """设置成功确认按钮"""
+        self.Click(self.BUTTON_OK_ALERT)
+
+
+class BsglPubFzglKeyword(BsglElementFrame, PubFzglElement, WebDriver):
+    """分组管理--公共页面"""
+
+    def searchGroupName(self, group_name):
+        # 输入分组名称
+        self.Input(group_name, self.INPUT_GROUP_NAME)
+
+    def searchUser(self, user_name):
+        # 输入成员姓名
+        self.Input(user_name, self.INPUT_GROUP_USER)
+
+    def refreshGroupPage(self):
+        # 刷新按钮
+        self.Click(self.BUTTON_GROUP_REFRESH)
+
+    def addGroup(self, add_group_name, user, add_group_ms):
+        # 新增分组,保存，并关闭弹窗
+        self.Click(self.BUTTON_GROUP_ADD)
+        self.Input(add_group_name, self.INPUT_ADD_FZMC)
+        self.Click(self.BUTTON_CLICK_CYLB)
+        self.Input(user, self.INPUT_ADD_CYLB)
+        self.Click(self.BOX_CYLB)
+        self.Input(add_group_ms, self.INPUT_ADD_FZMS)
+        self.Click(self.BUTTON_GROUP_SAVE)
+
+    def closeGroupSaveAlert(self):
+        self.Click(self.ALERT_GROUP_SAVE_CLOSE)
+
+    def editeGroup(self, group_name, new_name, new_ms):
+        # 编辑分组
+        self.Click(self.BUTTON_GROUP_EDITE_OR_DEL.format(group_name, 1))  # group_name定位某一行数据，1代表编辑，2代表删除
+        self.ClearData(self.INPUT_EDITE_GROUP_BY_NAME.format(group_name))
+        self.Input(new_name, self.INPUT_EDITE_GROUP_BY_NAME.format(group_name))
+        self.ClearData(self.INPUT_EDITE_GROUP_BY_MS.format(group_name))
+        self.Input(new_ms, self.INPUT_EDITE_GROUP_BY_MS.format(group_name))
+        self.Click(self.BUTTON_GROUP_SAVE)
+
+    def delGroup(self, group_name):
+        # 删除分组
+        self.Click(self.BUTTON_GROUP_EDITE_OR_DEL.format(group_name, 2))  # group_name定位某一行数据，1代表编辑，2代表删除
+        self.Click(self.BUTTON_GROUP_DEL_CONFIRM)
+
+
+class BsglPubBssqKeyword(BsglElementFrame, PubBssqElement, WebDriver):
+    """报送授权"""
+
+    def searchGroupNameBssq(self, group_name):
+        """选择分组"""
+        self.Click(self.CLICK_GROUP_NAME_BSSQ)
+        self.Input(group_name, self.INPUT_GROUP_NAME_BSSQ)
+        self.Click(self.CLICK_GROUP_NAME_ONE_BSSQ)
+
+    def searchBsnr(self, bsnr):
+        """报送内容输入框"""
+        self.Input(bsnr, self.INPUT_BSNR_BSSQ)
+
+    def refreshBssqPage(self):
+        """报送内容页面刷新按钮"""
+        self.Click(self.BUTTON_REFRESH_BSSQ)
+
+    def tickHdqx(self):
+        """报送授权勾选核对权限"""
+        self.Click(self.BUTTON_HDQX)
+
+    def tickSbqx(self):
+        """报送授权勾选上报权限"""
+        self.Click(self.BUTTON_SBQX)
+
+    def tickCxqx(self):
+        """报送授权勾选查询权限"""
+        self.Click(self.BUTTON_CXQX)
+
+    def tickCcqx(self):
+        """报送授权勾选重抽权限"""
+        self.Click(self.BUTTON_CCQX)
+
+    def saveBssq(self):
+        """报送授权保存授权"""
+        self.Click(self.BUTTON_SAVE_BSSQ)
+
+
+class BsglPubSjsqKeyword(BsglElementFrame, PubSjsqElement, PubBssqElement, WebDriver):
+    """数据授权"""
+
+    def bssqMainFrame(self):
+        """数据授权frame"""
+        self.SwitchFrameByElement(self.SJSQ_FRAME)
+
+    def searchGroupNameSjsq(self, group_name):
+        """选择分组"""
+        self.Click(self.CLICK_GROUP_NAME_BSSQ)
+        self.Input(group_name, self.INPUT_GROUP_NAME_BSSQ)
+        self.Click(self.CLICK_GROUP_NAME_ONE_BSSQ)
+
+    def searchBsnrSjsq(self, bsnr):
+        """报送内容输入框"""
+        self.Input(bsnr, self.INPUT_BSNR_SJSQ)
+
+    def refreshSjsqPage(self):
+        """数据授权页面刷新按钮"""
+        self.Click(self.BUTTON_REFRESH_SJSQ)
+
+    def clearDataBssqPage(self):
+        """数据授权页面清除条件按钮"""
+        self.Click(self.BUTTON_CLEAR)
+
+    def clickAllBssqPage(self):
+        """数据授权页面全部按钮"""
+        self.Click(self.BUTTON_ALL)
+        self.QuiteFrame()
+
+    def checkZdBssqPage(self):
+        """数据授权页面按字段筛选按钮"""
+        self.Click(self.BUTTON_AZDSX)
+
+    def clickZdOneBssqPage(self, text):
+        """数据授权页面按字段筛选-第一个下拉框"""
+        self.Click(self.INPUT_AZDSX.format(text))
+
+    def clickZdTwoBssqPage(self, text):
+        """数据授权页面按字段筛选-第二个下拉框"""
+        self.Click(self.CLICK_AZDSX_XLK)
+        self.Click(self.INPUT_AZDSX_CLICK.format(text))
+
+    def inputZdBssqPage(self, text):
+        """数据授权页面按字段筛选-第二个输入框"""
+        self.Input(text, self.INPUT_AZDSX_INPUT)
+
+    def clickSjbsBssqPage(self):
+        """数据授权页面按数据标识筛选"""
+        self.Click(self.BUTTON_ASJBSSX)
+
+    def inputSjbsBssqPage(self, text):
+        """数据授权页面按数据标识筛选-输入框"""
+        self.Input(text, self.INPUT_ASJBSSX)
+
+    def saveSjsqPage(self):
+        """数据授权页面保存按钮"""
+        self.Click(self.BUTTON_SAVE_SJSQ)
+
+    def alertSucBssqPage(self):
+        """数据授权页面保存成功确认按钮"""
+        self.Click(self.ALERT_QR_SJSQ)
+
+    def alertBssqPage(self):
+        """数据授权页面关闭数据范围弹窗"""
+        self.SwitchFatherFrame()
+        self.Click(self.ALERT_CLOSE_SJSQ)
+
+    def clickAllSjsq(self):
+        """选择全部权限"""
+        self.Click(self.INPUT_ALL_SJSQ)
+
+
+class BsglPubSplcKeyword(BsglElementFrame, PubSplcElement, WebDriver):
+    """审批流程--公共页面"""
+
+    def searchGroupNameSplc(self, group_name):
+        """选择分组"""
+        self.Click(self.CLICK_GROUP_NAME_SPLC)
+        self.Input(group_name, self.INPUT_GROUP_NAME_SPLC)
+        self.Click(self.CLICK_GROUP_NAME_ONE_SPLC)
+
+    def refreshSplcPage(self):
+        """报送内容页面刷新按钮"""
+        self.Click(self.BUTTON_REFRESH_SPLC)
+
+    def batchUpdateSplc(self, bizflow_name):
+        """点击批量修改按钮"""
+        self.Click(self.BUTTON_BATCH_UPDATE)
+        self.QuiteFrame()
+        self.SwitchFrame(self.PUB_SPLC_BATCH_UPDATE_FRAME)
+        self.Click(self.INPUT_BIZCODE_SPLC.format(bizflow_name))
+        self.Click(self.BUTTON_BATCH_SAVE_SPLC)
+
+    def closeBatchAlertSplc(self):
+        """关闭批量修改保存弹窗"""
+        self.Click(self.BUTTON_BATCH_ALERT_CLOSE_SPLC)
+
+    def tickBoxAll(self):
+        """复选框全选"""
+        self.Click(self.BOX_ALL_SPLC)
+
+
+class BsglPubBbmbKeyword(BsglElementMain, BsglElementFrame, WebDriver, PubBbmbElement):
+    """报表模板界面关键字"""
+
+    def importBbmb(self, file_path):
+        """导入报表模板"""
+        self.Click(self.BUTTON_IMPORT)
+        self.QuiteFrame()
+        self.SwitchFrame(self.RN1104_UPLOAD_ALTER_FRAME)
+        self.Click(self.BUTTON_UPLOAD)
+        self.UploadFile(file_path)
+        self.GotoSleep(2)
+        self.Click(self.BUTTON_UPLOAD_FILE)
+        self.SwitchFatherFrame()
+        self.SwitchFrameByElement(self.RN1104_MSG_ALTER_FRAME)
+
+    def exportBbmb(self):
+        """导出模板"""
+        self.Click(self.BUTTON_EXPORT)
+
+    def inputBsnrbh(self, text):
+        """输入报送内容编号"""
+        self.Input(text, self.INPUT_BSNRBH)
+
+    def inputBsnrmc(self, text):
+        """输入报送内容名称"""
+        self.Input(text, self.INPUT_BSNRMC)
+
+    def choiceGroup(self, group_name):
+        """选择报送分组"""
+        self.Click(self.CHOOSE_GROUP_NAME.format(group_name))
+
+    def choiceReportFlag(self, flag_index):
+        """选择是否报送"""
+        self.Click(self.INPUT_REPORT_FLAG.format(flag_index))
+
+    def clickCheckBox(self, box_index):
+        """复选框单选数据"""
+        self.Click(self.BOX_BBMB.format(box_index))
+
+    def checkAllBox(self, box_index):
+        """复选框全选数据"""
+        self.Click(self.BOX_BBMB.format(box_index))
+
+    def refreshBbmbPage(self):
+        """点击刷新按钮"""
+        self.Click(self.BUTTON_BBMB_REFRESH)
+
+
+class BsglPubBsnrsqKeyword(BsglElementMain, BsglElementFrame, WebDriver, PubBsnrsqElement):
+    """报表类--报送内容授权界面关键字"""
+
+    def searchGroupNameBsnrsq(self, group_name):
+        """选择分组"""
+        self.Click(self.CLICK_GROUP_NAME_BSNRSQ)
+        self.Input(group_name, self.INPUT_GROUP_NAME_BSNRSQ)
+        self.Click(self.CLICK_GROUP_NAME_ONE_BSNRSQ)
+
+    def searchBsnrBsnrsq(self, bsnr):
+        """报送内容输入框"""
+        self.Input(bsnr, self.INPUT_BSNR_BSNRSQ)
+
+    def refreshBsnrsqPage(self):
+        """报送内容页面刷新按钮"""
+        self.Click(self.BUTTON_REFRESH_BSNRSQ)
+
+    def choiceBoxAllBsnrsq(self):
+        """报送内容授权页面，复选框全选"""
+        self.Click(self.BOX_ALL_BSNRSQ)
+
+    def choiceBoxByNameBsnrsq(self, bsnr_name):
+        """根据报送内容名称，选择单个复选框"""
+        self.Click(self.BOX_ANY_BY_NAME_BSNRSQ.format(bsnr_name))
+
+    def clickEditAllBsnrsq(self):
+        """点击编辑全部按钮"""
+        self.Click(self.BUTTON_EDIT_ALL_BSNRSQ)
+
+    def clickTraceAllBsnrsq(self):
+        """点击追溯全部按钮"""
+        self.Click(self.BUTTON_TRACE_ALL_BSNRSQ)
+
+    def clickCancelAllBsnrsq(self):
+        """点击取消全部权限按钮"""
+        self.Click(self.BUTTON_CANCEL_ALL_BSNRSQ)
+
+    def clickRefreshBsnrsq(self):
+        """报送内容授权--点击刷新按钮"""
+        self.Click(self.BUTTON_REFRESH_BSNRSQ)
+
+
+class ZdysjlxPubSplcKeyword(BsglElementFrame, PubZdysjlxElement, WebDriver):
+    """自定义数据类型--公共页面"""
+
+    def ZdysjlxFrame(self):
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def addSjlxButton(self):
+        """数据类型-新增按钮"""
+        self.Click(self.BUTTON_SJLX_ADD)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.SJLX_ADD_FRAME)
+
+    def addSjlxBh(self, text):
+        """数据类型-新增-编号"""
+        self.Input(text, self.INPUT_SJLX_ADD_BH)
+
+    def addSjlxName(self, text):
+        """数据类型-新增-名称"""
+        self.Input(text, self.INPUT_SJLX_ADD_NAME)
+
+    def addSjlxSm(self, text):
+        """数据类型-新增-说明"""
+        self.Input(text, self.INPUT_SJLX_ADD_SM)
+
+    def addSjlxSave(self):
+        """数据类型-新增-保存按钮"""
+        self.Click(self.BUTTON_SJLX_ADD_SAVE)
+
+    def choiceSjlxClick(self, bh):
+        """选择一条数据类型编号-点击"""
+        self.Click(self.CLICK_SJLX_BH.format(bh))
+
+    def editSjlxButton(self):
+        """数据类型--编辑按钮"""
+        self.Click(self.BUTTON_SJLX_EDIT)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.SJLX_EIDT_FRAME)
+
+    def editSjlxName(self, text):
+        """数据类型-编辑-名称"""
+        self.ClearData(self.INPUT_SJLX_EDIT_NAME)
+        self.Input(text, self.INPUT_SJLX_EDIT_NAME)
+
+    def editSjlxSm(self, text):
+        """数据类型-编辑-说明"""
+        self.ClearData(self.INPUT_SJLX_EDIT_SM)
+        self.Input(text, self.INPUT_SJLX_EDIT_SM)
+
+    def editSjlxSave(self):
+        """数据类型-编辑-保存按钮"""
+        self.Click(self.BUTTON_SJLX_EDIT_SAVE)
+
+    def delSjlxButton(self):
+        """数据类型-删除按钮"""
+        self.Click(self.BUTTON_SJLX_DEL)
+        self.AlertAccept()
+
+    def delSjlxSuccessClose(self):
+        """数据类型-删除-删除成功--弹窗关闭"""
+        self.Click(self.DEL_SJLX_SUCCESS_CLOSE)
+
+    def delSjlxFail(self):
+        """数据类型-删除失败-确定"""
+        self.Click(self.DEL_SJLX_FAIL)
+
+    def addSjlxMxButton(self):
+        """数据类型明细-新增按钮"""
+        self.Click(self.BUTTON_SJLXMX_ADD)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.SJLXMX_ADD_FRAME)
+
+    def addSjlxMxName(self, text):
+        """数据类型明细-新增-名称"""
+        self.Input(text, self.INPUT_SJLXMX_ADD_NAME)
+
+    def addSjlxMxCsz(self, text):
+        """数据类型明细-新增-参数值"""
+        self.Input(text, self.INPUT_SJLXMX_ADD_CSZ)
+
+    def addSjlxMxSave(self):
+        """数据类型明细-新增-保存按钮"""
+        self.Click(self.BUTTON_SJLXMX_ADD_SAVE)
+
+    def SelectSjlxMxAll(self):
+        """勾选数据类型明细复选框"""
+        self.Click(self.SELECT_SJLXMX_ALL)
+
+    def SelectSjlxMxFrist(self):
+        """勾选数据类型明细第一条"""
+        self.Click(self.SELECT_SJLXMX_FRIST)
+
+    def editSjlxMxButton(self):
+        """数据类型明细-编辑按钮"""
+        self.Click(self.BUTTON_SJLXMX_EDIT)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.SJLXMX_EIDT_FRAME)
+
+    def editSjlxMxName(self, text):
+        """数据类型明细-编辑-名称"""
+        self.ClearData(self.INPUT_SJLXMX_EDIT_NAME)
+        self.Input(text, self.INPUT_SJLXMX_EDIT_NAME)
+
+    def editSjlxMxCsz(self, text):
+        """数据类型明细-编辑-参数值"""
+        self.ClearData(self.INPUT_SJLXMX_EDIT_CSZ)
+        self.Input(text, self.INPUT_SJLXMX_EDIT_CSZ)
+
+    def editSjlxMxSave(self):
+        """数据类型明细-编辑-保存按钮"""
+        self.Click(self.BUTTON_SJLXMX_EDIT_SAVE)
+
+    def delSjlxMxButton(self):
+        """数据类型明细-删除按钮"""
+        self.Click(self.BUTTON_SJLXMX_DEL)
+        self.AlertAccept()
+
+    def delSjlxMxSuccessClose(self):
+        """数据类型明细-删除-删除成功弹窗关闭"""
+        self.Click(self.DEL_SJLXMX_SUCCESS_CLOSE)
+
+
+class BsglPubHswhKeyword(BsglElementMain, BsglElementFrame, WebDriver, PubHswhElement):
+
+    def searchHslbHswhMainPage(self, hslb_name):
+        """函数类别搜索"""
+        self.Click(self.SELECT_HSLB_HSWH, hslb_name)
+
+    def searchStatusHswhMainPage(self, index):
+        """函数维护--状态搜索"""
+        self.Click(self.SELECT_STATUS_HSWH)
+
+    def refreshHswhMainPage(self):
+        """函数维护--刷新按钮"""
+        self.Click(self.BUTTON_REFRESH_HSWH)
+
+    def addHswhMainPage(self):
+        """函数维护--新增按钮"""
+        self.Click(self.BUTTON_ADD_HSWH)
+
+    def inputHsmcDetailPage(self):
+        """函数详情页面--函数名称输入框"""
+        self.SwitchFrameByElement(self.PUB_HSWH_DETAIL_FRAME)

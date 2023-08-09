@@ -1,0 +1,34 @@
+2022-12-07 16:28:11,501 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-12-07 16:28:19,037 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-12-07 16:29:59,989 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-12-07 16:30:04,739 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-12-07 16:33:15,598 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-12-07 16:33:19,459 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-12-07 17:56:16,711 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-12-07 17:56:22,180 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-12-07 17:56:26,640 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-12-07 17:56:27,708 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-12-07 17:56:31,341 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-12-07 17:56:32,393 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-12-07 17:56:34,025 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-12-07 17:56:35,805 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-12-07 17:56:39,370 - yangshukun-INFO 上传文件成功
+2022-12-07 17:56:40,480 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-12-07 17:56:44,137 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-12-07 17:56:45,804 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-12-07 17:56:51,027 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-12-07 17:56:53,666 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-12-07 17:56:54,768 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-12-07 17:57:02,882 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-12-07 17:57:02,882 - yangshukun-INFO 
+************案例：【test_01_import_kjkm】执行结束************
+2022-12-07 17:57:02,882 - yangshukun-INFO 
+----------【用例执行结束】----------

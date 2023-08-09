@@ -1,0 +1,73 @@
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_east import *
+from utils.operationXml import *
+import sys
+from baseOperation.init_self import *
+from pageKeyword.keyword_bsgl_common import *
+
+
+class BsrwEastTest(InitCls, BsglMainKeyword, BsglEastKeyword, OperationXml):
+
+    def test_01_add_bsrw_success(self):
+        """EAST新增报送任务成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBsrw()
+        # 6、新增报送任务
+        self.addEastBsrw("101-JGXX", "2021")
+        # 7、断言新增成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '保存成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_abandon_bsrw_success(self):
+        """EAST废弃报送任务成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBsrw()
+        # 6、废弃报送任务
+        self.queryEastBsrw("2021年第一季度", "机构信息")
+        self.abandonEastBsrw("废弃")
+        # 断言新增成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '操作成功!')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_03_jzcj_bsrw_success(self):
+        """EAST集中采集报送任务成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBsrw()
+        # 6、集中采集报送任务
+        self.createEastJzcj()
+        # 断言新增成功
+        res = self.GetTagText(self.MSG_JZCJ_RESULT)
+        self.assertEqual(res, '报送任务已生成，系统正在生成报送数据，请稍后进入核对页面查看。')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

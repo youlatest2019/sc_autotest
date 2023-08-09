@@ -1,0 +1,61 @@
+from Common.common_map import *
+
+
+class DataYgxx(object):
+    EMPLOYEE_EMPLOYEE_ID = "auto_test_01"  # 工号
+    EMPLOYEE_EMPLOYEE_ID_XPATH = "//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[2]/input".__add__(XPATH)  # 工号元素表达式
+    EMPLOYEE_EMPLOYEE_NAME = "自动化测试001"  # 姓名
+    EMPLOYEE_EMPLOYEE_NAME_XPATH = "//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[4]/input".__add__(XPATH)  # 姓名元素表达式
+    EMPLOYEE_COMPANY_BUTTON = ""  # 所属单位选择按钮
+    EMPLOYEE_COMPANY_BUTTON_XPATH = "//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[6]/input[1]".__add__(
+        XPATH)  # 所属单位选择按钮元素表达式
+    EMPLOYEE_COMPANY_KHH = "2021101377777"  # 所属单位查询客户号
+    EMPLOYEE_COMPANY_KHH_XPATH = "//*[@id='queryArea']/table/tbody/tr/td[2]/input".__add__(XPATH)  # 所属单位查询客户号元素表达式
+    EMPLOYEE_COMPANY_KHH_BUTTON = ""  # 所属单位刷新按钮
+    EMPLOYEE_COMPANY_KHH_BUTTON_XPATH = "/html/body/div[2]/div[2]/div[1]/button".__add__(XPATH)  # 所属单位刷新按钮元素表达式
+    EMPLOYEE_COMPANY_KHH_CHOICE = ""  # 所属单位选择第一个
+    EMPLOYEE_COMPANY_KHH_CHOICE_XPATH = "/html/body/div[2]/div[2]/div[3]/table/tbody/tr[1]/td[1]/span".__add__(
+        XPATH)  # 所属单位选择第一个元素表达式
+    EMPLOYEE_CERTTP = ""  # 证件类别
+    EMPLOYEE_CERTTP_XPATH = "//*[@name='EMPLOYEE.CERTTP']/option[2]".__add__(XPATH)  # 证件类别元素表达式
+    EMPLOYEE_CERTNO = "522123198788854"  # 证件号码
+    EMPLOYEE_CERTNO_XPATH = "//*[@name='EMPLOYEE.CERTNO']".__add__(XPATH)  # 证件号码元素表达式
+    EMPLOYEE_DEPT_NAME = "自动测试部"  # 所属部门
+    EMPLOYEE_DEPT_NAME_XPATH = "//*[@name='EMPLOYEE.DEPT_NAME']".__add__(XPATH)  # 所属部门元素表达式
+    EMPLOYEE_POST_TYPE_CODE = ""  # 岗位类型
+    EMPLOYEE_POST_TYPE_CODE_XPATH = "//*[@name='EMPLOYEE.POST_TYPE_CODE']/option[2]".__add__(XPATH)  # 岗位类型元素表达式
+    EMPLOYEE_PHONE = "1522123333"  # 联系电话
+    EMPLOYEE_PHONE_XPATH = "//*[@name='EMPLOYEE.PHONE']".__add__(XPATH)  # 联系电话元素表达式
+    EMPLOYEE_EMPLOYEE_STATUS = ""  # 员工状态
+    EMPLOYEE_EMPLOYEE_STATUS_XPATH = "//*[@id='formArea']/div[1]/table/tbody/tr[4]/td[6]/select/option[2]".__add__(
+        XPATH)  # 员工状态元素表达式
+
+
+class YgxxData01(object):
+    DATA1_EMPLOYEE_ID = "auto_test_01"  # 工号
+    DATA1_EMPLOYEE_ID_XPATH = "//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[2]/input".__add__(XPATH)  # 工号元素表达式
+    DATA1_EMPLOYEE_NAME = "自动化测试001"  # 姓名
+    DATA1_EMPLOYEE_NAME_XPATH = "//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[4]/input".__add__(XPATH)  # 姓名元素表达式
+    DATA1_COMPANY_BUTTON = ""  # 所属单位选择按钮
+    DATA1_COMPANY_BUTTON_XPATH = "//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[6]/input[1]".__add__(
+        XPATH)  # 所属单位选择按钮元素表达式
+    DATA1_COMPANY_KHH = "2021101377777"  # 所属单位查询客户号
+    DATA1_COMPANY_KHH_XPATH = "//*[@id='queryArea']/table/tbody/tr/td[2]/input".__add__(XPATH)  # 所属单位查询客户号元素表达式
+    DATA1_COMPANY_KHH_BUTTON = ""  # 所属单位刷新按钮
+    DATA1_COMPANY_KHH_BUTTON_XPATH = "/html/body/div[2]/div[2]/div[1]/button".__add__(XPATH)  # 所属单位刷新按钮元素表达式
+    DATA1_COMPANY_KHH_CHOICE = ""  # 所属单位选择第一个
+    DATA1_COMPANY_KHH_CHOICE_XPATH = "/html/body/div[2]/div[2]/div[3]/table/tbody/tr[1]/td[1]/span".__add__(
+        XPATH)  # 所属单位选择第一个元素表达式
+    DATA1_CERTTP = ""  # 证件类别
+    DATA1_CERTTP_XPATH = "//*[@name='EMPLOYEE.CERTTP']/option[2]".__add__(XPATH)  # 证件类别元素表达式
+    DATA1_CERTNO = "522123198788854"  # 证件号码
+    DATA1_CERTNO_XPATH = "//*[@name='EMPLOYEE.CERTNO']".__add__(XPATH)  # 证件号码元素表达式
+    DATA1_DEPT_NAME = "自动测试部"  # 所属部门
+    DATA1_DEPT_NAME_XPATH = "//*[@name='EMPLOYEE.DEPT_NAME']".__add__(XPATH)  # 所属部门元素表达式
+    DATA1_POST_TYPE_CODE = ""  # 岗位类型
+    DATA1_POST_TYPE_CODE_XPATH = "//*[@name='EMPLOYEE.POST_TYPE_CODE']/option[2]".__add__(XPATH)  # 岗位类型元素表达式
+    DATA1_PHONE = "1522123333"  # 联系电话
+    DATA1_PHONE_XPATH = "//*[@name='EMPLOYEE.PHONE']".__add__(XPATH)  # 联系电话元素表达式
+    DATA1_EMPLOYEE_STATUS = ""  # 员工状态
+    DATA1_EMPLOYEE_STATUS_XPATH = "//*[@id='formArea']/div[1]/table/tbody/tr[4]/td[6]/select/option[2]".__add__(
+        XPATH)  # 员工状态元素表达式

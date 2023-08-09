@@ -1,0 +1,235 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/8/1 11:27
+# @Author   : tangle
+# @File     : case_bsgl_lqdrm.py
+
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_common import *
+from pageKeyword.keyword_bsgl_1104 import *
+from data.data_class.common_data import *
+import sys
+from Common.OtherFunc import *
+from pageKeyword.keyword_bsgl_rpbcc import *
+
+
+class BsglRpbccTest(InitCls, BsglMainKeyword, BsglPubBbmbKeyword, BsglPubBsrwKeyword, BsglPubBsfwKeyword,
+                    BsglPubFzglKeyword, BsglPubBssqKeyword, BsglPubSplcKeyword, BsglBsplData, BsglPubBsnrsqKeyword,
+                    BsglPubHswhKeyword, BsglPubSjxwhKeyword, ZdysjlxPubSplcKeyword, BsglRpbccBscsKeyword):
+
+    def test_01_lqdrm_import_module_success(self):
+        """流动性风险分析测试模板导入成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        # 3、选择lqdrm品种进入流动性风险分析测试管理界面
+        self.switchToBsglBaseFrame()
+        self.intoLqdrmTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBbmb()
+        # 6、导入模板
+        self.switchBspzFrame()
+        self.importBbmb(self.LQDRM_G22_XPATH)
+        self.GotoSleep(1)
+        # 断言导入成功
+        res = self.GetTagText(self.MSG_IMPORT_RESULT)
+        self.assertEqual(res, '成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_lqdrm_export_module_success(self):
+        """流动性风险分析测试模板导出成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        # 3、选择流动性风险分析测试品种进入lqdrm管理界面
+        self.switchToBsglBaseFrame()
+        self.intoLqdrmTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBbmb()
+        # 6、导出模板
+        self.switchBspzFrame()
+        self.inputBsnrbh("LQDRMG22")
+        self.refreshBbmbPage()
+        self.clickCheckBox(1)
+        self.exportBbmb()
+        self.GotoSleep(1)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_03_lqdrm_hswh_add_function_success(self):
+        """流动性风险分析函数维护--新增函数成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择流动性风险分析品种进入流动性风险分析管理界面
+        self.intoLqdrmTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入函数维护页面，点击新增进入新增页面
+        self.swithToHswh()
+        self.bsglMainFrame()
+        self.addHswhMainPage()
+        self.switchToDetailFrame()
+        # 6、输入函数基础信息
+        hsmc = "流动性lqdrm自动化测试函数" + get_now_time_to_str()
+        self.inputHsmcHswhDetailPage(hsmc)
+        self.inputHslbHswhDetailPage(self.HSLB_DKYE)
+        self.inputHsmsHswhDetailPage("流动性lqdrm自动化测试-函数描述")
+        self.inputResTypeHswhDetailPage(self.RES_ZS)
+        self.inputSqlHswhDetailPage("select @1 from dual")
+        # 7、点击解析参数，并输入参数名称、类型、参数值
+        self.clickAnalParamHswhDetailPage()
+        self.makeParamsInfoHswhDetailPage("流动性lqdrm自动化测试参数", self.PARAMS_TEXT, "1")
+        # 8、点击测试,并断言测试sql成功,退出测试界面
+        self.clickTestHswhDetailPage()
+        res = self.GetTagText(self.MSG_DETAIL_HSWH)
+        self.assertEqual(res, "SQL预执行成功，语法正确！")
+        self.closeAlertTestHswhDetailPage()
+        self.closeTestHswhDetailPage()
+        # 9、切换到详情frame，点击保存，并断言保存成功
+        self.switchToDetailFrame()
+        self.clickSaveHswhDetailPage()
+        res1 = self.GetTagText(self.MSG_DETAIL_HSWH)
+        self.assertEqual(res1, "保存成功")
+        self.closeHswhAlert()
+        self.closeHswhDetailMainPage()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_04_lqdrm_sjxwh_add_data_success(self):
+        """流动性风险分析数据项维护维护--新增数据项成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择1流动性风险分析品种进入流动性风险分析管理界面
+        self.intoLqdrmTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入数据项维护页面，点击新增按钮
+        self.swithToSjxwh()
+        self.switchBspzFrame()
+        self.clickSjxwhAddButton()
+        # 6、输入数据项基本信息
+        sjx_name = "流动性lqdrm自动化数据项名称" + get_now_time_to_str()
+        self.inputSjxwhInfo(sjx_name, "流动性lqdrm自动化数据项描述", self.GROUP_RPTC_LQDRM, "LQDRMG22-091-流动性比例监测表")
+        # 7、添加函数并插入
+        self.choiceSjxwhFuncDataAndInster("8")
+        # 8、添加数据项并插入
+        self.choiceSjxwhItemsDataAndInster("LQDRMG22.月度最低流动性比例_本外币合计")
+        # 9、保存
+        self.clickSjxwhSaveButton()
+        res2 = self.GetTagText(self.MSG_FUNC_FORM_SJXWH)
+        self.assertEqual(res2, "保存成功！")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_05_lqdrm_set_zdysjlx_success(self):
+        """设置流动性风险分析-自定义数据类型"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择流动性风险分析品种进入流动性风险分析管理界面
+        self.intoLqdrmTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入自定义数据类型页签
+        self.swithToZdysjlx()
+        self.ZdysjlxFrame()
+        # 新增数据类型-编辑数据类型-新增数据类型明细-编辑数据类型明细-删除数据类型失败（该自定义类型已被引用，不可删除！）--删除数据类型明细后（删除成功！）--删除数据类型成功（删除成功！）
+        # 6、数据类型-新增按钮
+        self.addSjlxButton()
+        # 7、数据类型-新增-编号
+        bh = "zdy" + get_now_time_to_str()
+        self.addSjlxBh(bh)
+        # 8、数据类型-新增-名称
+        base_name = "流动性lqdrm自定义" + get_now_time_to_str()
+        add_name = base_name + "-新增"
+        edit_name = base_name + "-编辑"
+        self.addSjlxName(add_name)
+        # 9、数据类型-新增-说明
+        self.addSjlxSm(add_name + "说明")
+        # 10、数据类型-新增-保存按钮
+        self.addSjlxSave()
+        # 11、切换frame
+        self.QuiteFrame()
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.ZdysjlxFrame()
+        # 12、数据类型-选择点击数据行
+        self.choiceSjlxClick(bh)
+        # 13、数据类型-编辑按钮
+        self.editSjlxButton()
+        # 14、数据类型-编辑-名称
+        self.editSjlxName(edit_name)
+        # 15、数据类型-编辑-说明
+        self.editSjlxSm(edit_name + "说明")
+        # 16、数据类型-编辑-保存按钮
+        self.editSjlxSave()
+        # 17、切换frame
+        self.QuiteFrame()
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.ZdysjlxFrame()
+        # 18、数据类型-选择点击数据行
+        self.choiceSjlxClick(bh)
+        # 19、数据类型明细-新增按钮
+        self.addSjlxMxButton()
+        # 20、数据类型明细-新增-名称
+        self.addSjlxMxName("数据类型明细-新增名称")
+        # 21、数据类型明细-新增-参数值
+        self.addSjlxMxCsz("数据类型明细-新增参数值")
+        # 22、数据类型明细-新增-保存按钮
+        self.addSjlxMxSave()
+        # 23、切换frame
+        self.QuiteFrame()
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.ZdysjlxFrame()
+        # 24、数据类型明细-勾选第一行
+        self.SelectSjlxMxFrist()
+        # 25、数据类型明细-编辑按钮
+        self.editSjlxMxButton()
+        # 26、数据类型-编辑-名称
+        self.editSjlxMxName("数据类型明细-编辑名称")
+        # 27、数据类型-编辑-说明
+        self.editSjlxMxCsz("数据类型明细-编辑参数值")
+        # 28、数据类型-编辑-保存按钮
+        self.editSjlxMxSave()
+        # 29、切换frame
+        self.QuiteFrame()
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.ZdysjlxFrame()
+        # 30、数据类型-删除按钮
+        self.delSjlxButton()
+        # 31、断言 -数据类型-删除按钮-删除失败-该自定义类型已被引用，不可删除！
+        res = self.GetTagText(self.MSG_SJLX_RESULT_SUCCESS)
+        self.assertEqual(res, '该自定义类型已被引用，不可删除！')
+        # 32、数据类型--删除失败--确定
+        self.delSjlxFail()
+        # 33、数据类型明细复选框全选
+        self.SelectSjlxMxAll()
+        # 34、数据类型明细-删除按钮
+        self.delSjlxMxButton()
+        # 35、断言 -数据类型明细-删除按钮-删除成功
+        res = self.GetTagText(self.MSG_SJLXMX_RESULT_SUCCESS)
+        self.assertEqual(res, '删除成功！')
+        # 36、关闭删除成功弹窗
+        self.delSjlxMxSuccessClose()
+        # 37、数据类型-删除按钮
+        self.delSjlxButton()
+        # 38、断言 -数据类型-删除按钮-删除成功
+        res = self.GetTagText(self.MSG_SJLX_RESULT_SUCCESS)
+        self.assertEqual(res, '删除成功！')
+        # 39、关闭删除成功弹窗
+        self.delSjlxSuccessClose()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/8/30 17:08
+# @Author   : yangshukun
+# @File     : page_dataset_management.py
+
+from Common.common_map import *
+
+
+class DataSetManageFrame():
+    """数据集管理页面frame类"""
+    FRAME_MAIN_PAGE = "ifrSupplement010501"  # 数据集管理--主页面frame
+
+
+class DataSetManageMainPage():
+    """数据集管理主页面元素"""
+    BUTTON_GROUP_FOR_DATASET = "groupId".__add__(ID)  # 数据集管理--主页面--数据集分组下拉框
+    SELECT_GROUP_NAME_OF_DATASET = "//div[text()='{}']".__add__(XPATH)  # 数据集管理--主页面--根据输入名称选择数据集分组
+    INPUT_DATASET_NAME_QUERY = "datasetName".__add__(ID)  # 数据集管理--主页面--数据集名称查询输入框
+    BUTTON_RESET_FOR_DATASET = "//button[@id='saveDatasetBase']".__add__(XPATH)  # 数据集管理--主页面--重置按钮
+    BUTTON_REFRESH_DATASET_MAIN_PAGE = "refresh".__add__(ID)  # 数据集管理--主页面--刷新按钮
+    BUTTON_ADD_GROUP_FOR_DATASET = "//button[@lay-filter='addGroup']".__add__(XPATH)  # 数据集管理--主页面--新建分组
+    BUTTON_ADD_DATASET_FOR_DATASET = "//button[@lay-filter='addDataSet']".__add__(XPATH)  # 数据集管理--主页面--新建数据集
+    BUTTON_EDIT_GROUP_FOR_DATASET = "//a[@lay-event='editGroup']".__add__(XPATH)  # 数据集管理--主页面--编辑分组
+    BUTTON_DEL_GROUP_FOR_DATASET = "//a[@lay-event='deleteGroup']".__add__(XPATH)  # 数据集管理--主页面--删除分组
+    BUTTON_EDIT_DATASET_FOR_DATASET = "//a[@lay-event='editDataSetDetail']".__add__(XPATH)  # 数据集管理--主页面--编辑数据集
+    BUTTON_DEL_DATASET_FOR_DATASET = "//a[@lay-event='deleteDataSet']".__add__(XPATH)  # 数据集管理--主页面--删除数据集
+

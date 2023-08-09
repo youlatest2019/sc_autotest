@@ -1,0 +1,273 @@
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_east import *
+from utils.operationXml import *
+import sys
+from baseOperation.init_self import *
+from pageKeyword.keyword_bsgl_common import *
+
+
+class BsrwEastTest(InitCls, BsglMainKeyword, BsglPubBsrwKeyword, BsglPubBsfwKeyword, BsglEastBscsKeyword,
+                   BsglEastBmzhKeyword, BsglEastKmjzszKeyword, BsglEastMxkmszKeyword, BsglPubFzglKeyword, OperationXml):
+    # 报送任务
+    def test_01_add_bsrw_success(self):
+        """EAST报送任务新增+废弃报送任务成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送任务管理页签
+        self.swithToBsrw()
+        # 6、新增报送任务
+        self.bsglMainFrame()
+        self.addBsrw("101-JGXX", "2021")
+        self.addBsrwSave()
+        # 断言新增成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '保存成功')
+        self.closeXzrw_success()
+        # 7、废弃新增的报送任务
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.switchBspzFrame()
+        self.queryBsrw("2021年第一季度", "机构信息")
+        self.abandonBsrw("废弃")
+        # 断言废弃成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '操作成功!')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_jzcj_bsrw_success(self):
+        """EAST报送任务集中采集报送任务成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送任务管理页签
+        self.swithToBsrw()
+        # 6、集中采集报送任务
+        self.bsglMainFrame()
+        self.createEastJzcj()
+        # 断言集中采集成功
+        res = self.GetTagText(self.MSG_JZCJ_RESULT)
+        self.assertEqual(res, '报送任务已生成，系统正在生成报送数据，请稍后进入核对页面查看。')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    # 报送范围
+    def test_03_sfbs_bsfw_success(self):
+        """EAST报送范围点击是否报送成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、查询并点击是否报送按钮
+        self.bsglMainFrame()
+        self.queryBsnr("按季", "机构信息")
+        self.whetherBsnr()
+        # 断言点击是否报送成功
+        res = self.GetTagText(self.MSG_SFBS_RESULT)
+        self.assertEqual(res, '设置成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_04_change_bsfw_success(self):
+        """EAST报送范围修改单个报送内容设置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、修改单个报送内容设置
+        self.bsglMainFrame()
+        self.checkOneBsnr()
+        self.changeBsnr("上期", "0 45 /1 * * ?", "15", "天", "是", "是")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    # 报送参数
+    def test_05_change_bscs_success(self):
+        """EAST报送参数修改参数配置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBscs()
+        # 6、修改报送参数配置信息
+        self.bsglMainFrame()
+        self.changeEastBscsLead("EAST")
+        self.changeEastBscsDepartment("18828874586")
+        self.changeEastBscsPreparer("填表人3")
+        self.changeEastBscsNumber("15284702390")
+        self.changeEastBscsMonth()
+        self.changeEastBscsRemoveNum("")  # 不能随便填
+        self.changeEastBscsRemoveSub("1001")
+        self.changeEastBscsSbsp()
+        self.changeEastBscsExport()
+        # self.changeEastBscsJgdm("1213")
+        self.changeEastBscsSave()
+        # 断言修改参数配置成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '保存成功!')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    # 编码转换
+    def test_06_change_bmzh_success(self):
+        """EAST编码转换修改报送编码成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBmzh()
+        # 6、修改报送参数配置信息
+        self.bsglMainFrame()
+        self.changeEastBmzh("农村商业银行", "C10203")
+        self.GotoSleep()
+        # 断言修改报送编码成功
+        res = self.GetElementAttrbute(self.INPUT_MODIFY_BSBM, "value")
+        self.assertEqual(res, 'C10203')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    # 科目记账设置
+    def test_07_add_kmjz_success(self):
+        """EAST科目记账设置新增+删除成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToKmjzsz()
+        # 6、新增科目记账
+        self.bsglMainFrame()
+        self.addEastKmjz()
+        self.addEastKmh("1006")
+        self.addEastBz("美元")
+        self.addEastBskj("203-对公活期存款分户账")
+        self.addEastKmm("4333")
+        self.addEastKhbh("001")
+        self.addEastKhrq("2021-03-29")
+        self.addEastXhrq("2023-03-29")
+        self.addEastRate("1.88")
+        self.addEastZhzt("正常")
+        self.addEastBzj("是")
+        self.addEastCkqx("10")
+        self.addEastZhlx("555")
+        self.addEastDqr("2022-08-25")
+        self.saveEastKm()
+        # 断言修改报送编码成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '保存成功')
+        self.closeEastAlert()
+        # 7、删除新增的科目记账
+        self.queryEastKmjz("203-对公活期存款分户账", "1006")
+        self.refreshEastKmjz()
+        self.checkEastall()
+        self.deleteEastKm()
+        self.AlertAccept()
+        # 断言修改报送编码成功
+        res = self.GetElementAttrbute(self.MSG_DELETE_SUCC, "value")
+        self.assertEqual(res, '共0条数据')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    # 明细科目设置
+    def test_08_change_mxkm_success(self):
+        """EAST明细科目设置修改明细科目成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入明细科目管理页签
+        self.swithToMxkmsz()
+        # 6、修改明细科目配置信息
+        self.bsglMainFrame()
+        self.inputEastGetMode("融资担保", "通过映射关系获取")
+        self.inputEastValue("8888", "融资担保")
+        self.inputEastKmName("1003", "融资担保")
+        self.savaEastMxkm()
+        # 断言修改明细科目成功
+        res = self.GetTagText(self.MSG_MXKM_SAVE)
+        self.assertEqual(res, '保存成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_09_add_group_east_success(self):
+        """EAST分组管理--新增分组成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择EAST品种进入EAST管理界面
+        self.intoReastTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理页签
+        self.swithToFzgl()
+        # 6、新增分组并断言成功
+        self.bsglMainFrame()
+        self.addGroup("EAST自动化分组", "EAST权限1", "自动化测试_EAST分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 7、编辑分组并断言修改成功
+        self.editeGroup("EAST自动化分组", "EAST自动化分组_修改", "自动化测试_EAST分组描述_修改")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 8查询修改后的名称正确
+        self.searchGroupName("EAST自动化分组_修改")
+        self.refreshGroupPage()
+        res = self.GetTagText(self.DATA_FIRST_GROUP.format(1))
+        self.assertEqual(res, "EAST自动化分组_修改")
+        # 删除分组
+        self.delGroup("EAST自动化分组_修改")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

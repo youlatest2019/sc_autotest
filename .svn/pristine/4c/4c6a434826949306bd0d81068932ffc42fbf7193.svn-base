@@ -1,0 +1,58 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/6/15 11:41
+# @Author   : yangshukun
+# @File     : page_ywbl.py
+
+from Common.common_map import *
+
+
+class YwblElementMain(object):
+    """一级页面的功能及按钮"""
+    SJGL = "//span[text()='数据管理']".__add__(XPATH)  #数据管理菜单
+    YWSJCX = "//a[@menuid='Supplement010101']".__add__(XPATH)  #主框架
+    YWBL = "//li[text()='业务数据补录']".__add__(XPATH)   #业务补录界面
+    BUTTON_TJQB = "//*[@id='submitAllBtn']".__add__(XPATH)  #提交全部按钮
+    BUTTON_DR = "//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input".__add__(XPATH) #导入按钮
+    BUTTON_JYQB = "//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]".__add__(XPATH) #校验全部按钮
+    MSG_CHECK_END = "//div[@class='layui-layer-content']".__add__(XPATH)    #校验结束提示信息
+    BUTTON_EXPORT = "//*[@id='export']".__add__(XPATH)  #导出按钮
+    BUTTON_DELETE = "//*[@id='dataDelBtn']".__add__(XPATH)  #删除按钮
+    CHECKBOX_ALL = "//*[@id='listTabHead']/thead/tr/th[1]/input".__add__(XPATH) #复选框全选
+    CHECKBOX_FIRST_ONE = "//*[@id='listTabBody']/tbody/tr[1]/td[1]".__add__(XPATH)  #复选框选择第一个数据
+    BUTTON_ADD = "//*[@id='dataAddBtn']".__add__(XPATH) #新增按钮
+    BUTTON_REFRESH = "javascript:pageRefresh()" #刷新按钮
+
+    """下拉类元素及其它"""
+    FRAME_01 = "ifrSupplement010101"    #业务补录主框架frameID
+    FRAME_02 = "frame"  #业务补录页面数据功能页面frameID
+    # FRAME_02 =  "//iframe[@src='DOM-Web@dataSupplement.do']".__add__(XPATH)
+    FRAME_DATE = "LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/supDataSubmit.html_iframe"    #提交弹窗frame定位ID
+    FRAME_DR_INDEX = 2  #导入界面frame，定位的索引号
+    FRAME_ADD = "//iframe[contains(@src,'moduleId=JCXX_YGXX')]".__add__(XPATH)  #新增页面的frame定位元素表达式
+    FRAME_ADD_COMMANY = "//iframe[contains(@src,'moduleId=QUERY_KHXX')]".__add__(XPATH) #新增员工信息选择所属单位时弹出页面frame的定位表达式
+    YWLX_JCXX = "//*[@id='ywlx']/option[text()='基础信息']".__add__(XPATH)  #业务类型下拉选择
+    YWMX_YGXX = "//*[@id='moduleId']/option[text()='员工信息']".__add__(XPATH)  #业务模型下拉选择
+    FILE_PATH_YGXX = "D:\\DcabAtuoTest\\data\\补录\\2-基本信息\\3-员工信息.xlsx"  #员工信息导入文件路径
+    YWLX_CWXX = "//*[@id='ywlx']/option[text()='财务信息']".__add__(XPATH)  #财务信息
+    YWMX_KJKM = "//*[@id='moduleId']/option[text()='会计科目']".__add__(XPATH)  #会计科目
+    FILE_PATH_KJKM = "D:\\DcabAtuoTest\\data\\补录\\1-财务信息\\1-会计科目.xlsx"  #会计科目导入文件路径
+    EXPORT_EXCEL = "//span[text()='导出EXCEL格式']".__add__(XPATH)  #选择导出EXCEL
+    EXPORT_CSV = "//span[text()='导出CSV格式']".__add__(XPATH)  #选择导出CSV
+    CHECKBOX_BY_DATA = "//span[text()='auto_test_01']/../../td[1]".__add__(XPATH)   #通过第一列数据名称进行复选框勾选
+
+class YwblElementAdd(object):
+    """业务补录二级页面功能及按钮"""
+    INPUT_TJRQ = "//*[@id='dataDate']".__add__(XPATH)  # 提交日期输入框
+    BUTTON_TJQR = "/html/body/div[2]/div[2]/input".__add__(XPATH)  # 提交日期确认按钮
+    BUTTON_UPLOAD = "//*[@class='fileInput']".__add__(XPATH)  # 导入弹窗上传文件按钮
+    BUTTON_IMPORT = "//*[@id='upload']".__add__(XPATH)  # 导入弹窗导入按钮
+    VALUE_TOTAL = "//font[@id='total']".__add__(XPATH)  # 导入弹窗数据总数
+    BUTTON_DRQR = "//*[@id='confirmBtn']".__add__(XPATH)  # 导入弹窗确认按钮
+    ALERT_DDRW = "//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]".__add__(XPATH)    #提交后调度进度弹窗关闭按钮
+    ALERT_CONFIRM = "//a[text()='是']".__add__(XPATH)    #删除确认
+    BUTTON_ADD_SAVE = "//form[@id='formArea']//ul/li[last()]".__add__(XPATH)    #新增页面保存按钮
+    ALERT_ADD_SAVE = "//div[@class='layui-layer layui-layer-dialog layui-layer-border layui-layer-msg layui-layer-hui']/div[1]".__add__(
+        XPATH)  #新增页面保存提示信息
+
+class

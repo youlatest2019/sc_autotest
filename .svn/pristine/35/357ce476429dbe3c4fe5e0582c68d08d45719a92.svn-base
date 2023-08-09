@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/22 17:34
+# @Author   : yangshukun
+# @File     : case_1104_main_process.py
+
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bscl_common import *
+from pageKeyword.keyword_1104_hedui import *
+from data.data_class.common_data import *
+import sys
+from Common.OtherFunc import *
+
+
+class Rn1104MainProcessTest(InitCls, BsclMainKeyword, Rn1104HdMainKeyword):
+
+    def test_01(self):
+        # 1、点击主菜单--报送处理，进入1104核对界面
+        self.clickBsclMainMenue()
+        self.into1104HdPage()
+        # 2、输入数据日期，点击刷新按钮
+        self.inputSjrqRn1104Hd("2022-06-01", "2022-06-30")
+        self.clickRefreshButtonRn1104Hd()

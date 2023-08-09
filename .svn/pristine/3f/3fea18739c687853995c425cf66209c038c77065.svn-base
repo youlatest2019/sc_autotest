@@ -1,0 +1,106 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 10:01
+# @Author   : yangshukun
+# @File     : keyword_bsgl_common.py
+from pageElement.page_bsgl import *
+from pageElement.page_ptsz import *
+from baseOperation.WebOperation import *
+from Common.getconf import *
+
+
+class PTSZMainKeyword(PTSZElementMain, PtszCwgsElementFrame, PtszJtgsElementFrame, WebDriver):
+
+    def intoPtszMainMenu(self):
+        """进入平台设置主界面"""
+        self.RefreshPage()
+        self.MouseFouce(self.XTGL)
+        self.Click(self.PTSZ)
+        self.Click(self.PTSZ_TAB)
+
+    def switchToBsglBaseFrame(self):
+        """切换主框架"""
+        self.GotoSleep(0.5)
+        self.QuiteFrame()
+        self.SwitchFrame(self.MAIN_FRAME)
+        self.SwitchFrame(self.TAB_FRAME)
+
+    def switchGSYQFrame(self):
+        """切换到财务/集团公司页签框架"""
+        self.SwitchFrame(self.GSYQ_FRAME)
+
+    def intoBsjgxxTab(self):
+        """选报送机构信息"""
+        self.Click(self.SWITCH_PTSZ.format('报送机构信息'))
+
+    def intoGzrszTab(self):
+        """选工作日设置"""
+        self.Click(self.SWITCH_PTSZ.format('工作日设置'))
+
+    def intoBmcshTab(self):
+        """选编码初始化"""
+        self.Click(self.SWITCH_PTSZ.format('编码初始化'))
+
+    def swithToCwgs(self):
+        """财务公司"""
+        self.Click(self.CHOICE_FUNC_TAB.format('财务公司'))
+
+    def swithToJtgs(self):
+        """集团公司"""
+        self.Click(self.CHOICE_FUNC_TAB.format('集团公司'))
+
+    def swithToYwbz(self):
+        """业务币种"""
+        self.Click(self.CHOICE_FUNC_TAB.format('业务币种'))
+
+    def swithToXydj(self):
+        """信用等级"""
+        self.Click(self.CHOICE_FUNC_TAB.format('信用等级'))
+
+
+class CWGSMainKeyword(PTSZElementMain, PtszCwgsElementFrame, PtszJtgsElementFrame, WebDriver):
+    def tbCWGS(self):
+        """同步财务公司"""
+        self.Click(self.TB)
+
+    def sxCWGS(self):
+        """刷新财务公司"""
+        self.Click(self.SX)
+
+    def SaveCWGS(self):
+        """保存财务公司"""
+        self.Click(self.BC)
+
+    ##财务公司
+    def addCwgs_ggxx(self, JJCF, QYGM, JYZT, CKZBJJCFS, SFSS):
+        """新增财务公司-公共信息"""
+        self.ClearData(self.CWGSQC)  # 清除财务公司全称
+        self.Input('财务公司全称', self.CWGSQC) # 财务公司全称
+        self.ClearData(self.TYSHXYDM)  # 清除统一社会信用代码
+        self.Input('91510100MA61RTKK6Q', self.TYSHXYDM)  # 统一社会信用代码
+        self.ClearData(self.JGBM)  # 清除机构编码
+        self.Input('JGBM0123456789', self.JGBM)  # 机构编码
+        self.ClearData(self.QQFRSBBM)  # 清除全球法人识别编码
+        self.Input('123456', self.QQFRSBBM)  # 全球法人识别编码
+        self.ClearData(self.JRXKZH)  # 清除金融许可证号
+        self.Input('234234234', self.JRXKZH)
+        self.ClearData(self.JRJGDM)  # 清除金融机构代码
+        self.Input('111111', self.JRJGDM)  # 金融机构代码
+        self.ClearData(self.JGH_NB)  # 清除机构号（内部）
+        self.Input('00101', self.JGH_NB)  # 机构号（内部）
+        self.ClearData(self.KHBM_NB)  # 清除客户编码（内部）
+        self.Input('321654', self.KHBM_NB)  # 客户编码（内部）
+        self.ClearData(self.CYRYS)  # 清除从业人员数
+        self.Input('1000', self.CYRYS)  # 从业人员数
+        self.ClearData(self.JJCF)  # 清除经济成分
+        self.Click(self.JJCF.format(JJCF))   # 经济成分
+        self.ClearData(self.QYGM)  # 清除企业规模
+        self.Click(self.QYGM.format(QYGM))  #企业规模
+        self.ClearData(self.ZFHH)  # 清除支付行号
+        self.Input('123123', self.ZFHH)   # 支付行号
+        self.ClearData(self.JYZT)  # 清除经营状态
+        self.Click(self.JYZT.format(JYZT))  # 经营状态
+        self.ClearData(self.CKZBJJCFS)  # 清除存款准备金缴存方式
+        self.Click(self.CKZBJJCFS.format(CKZBJJCFS))  # 存款准备金缴存方式
+        self.ClearData(self.SFSS)  # 清除是否上市
+        self.Click(self.SFSS.format(SFSS))  #是否上市

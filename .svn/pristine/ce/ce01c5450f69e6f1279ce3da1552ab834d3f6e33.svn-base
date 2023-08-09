@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 10:01
+# @Author   : yangshukun
+# @File     : keyword_bsgl.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglMainKeyword(object, BsglElementMain, BsglElementFrame, WebDriver):
+
+    def intoBsglMainMenu(self):
+        """进入报送管理主界面"""
+        self.RefreshPage()
+        self.MouseFouce(self.XTGL)
+        self.Click(self.BSGL)
+        self.Click(self.BSGL_TAB)
+        self.SwitchFrame(self.MAIN_FRAME)
+        self.SwitchFrame(self.TAB_FRAME)
+
+

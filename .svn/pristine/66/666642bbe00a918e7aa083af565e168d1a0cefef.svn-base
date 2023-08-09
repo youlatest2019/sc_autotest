@@ -1,0 +1,201 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 10:01
+# @Author   : yangshukun
+# @File     : keyword_bsgl.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglEastBscsKeyword(BsglElementFrame, EastBscsElement, WebDriver):
+    """EAST报送参数"""
+
+    def bsglMainFrame(self):
+        """EAST报送管理主框架"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def changeEastBscsLead(self, lead_person):
+        """EAST修改报送参数-牵头部门负责人"""
+        self.ClearData(self.INPUT_LEAD_PERSON)
+        self.Input(lead_person, self.INPUT_LEAD_PERSON)
+
+    def changeEastBscsDepartment(self, department_person):
+        """EAST修改报送参数-部门负责人联系方式"""
+        self.ClearData(self.INPUT_DEPARTMENT_PERSON)
+        self.Input(department_person, self.INPUT_DEPARTMENT_PERSON)
+
+    def changeEastBscsPreparer(self, preparer):
+        """EAST修改报送参数-填表人"""
+        self.ClearData(self.INPUT_PREPARER)
+        self.Input(preparer, self.INPUT_PREPARER)
+
+    def changeEastBscsNumber(self, preparer_number):
+        """EAST修改报送参数-填表人手机号"""
+        self.ClearData(self.INPUT_PREPARER_NUMBER)
+        self.Input(preparer_number, self.INPUT_PREPARER_NUMBER)
+
+    def changeEastBscsMonth(self):
+        """EAST修改报送参数-月份计算方式"""
+        self.Click(self.INPUT_MONTH_COUNT)
+
+    def changeEastBscsRemoveNum(self, remove_number):
+        """EAST修改报送参数-内部分户账需排除的账号"""
+        self.ClearData(self.INPUT_REMOVE_NUMBER)
+        self.Input(remove_number, self.INPUT_REMOVE_NUMBER)
+
+    def changeEastBscsRemoveSub(self, remove_subject):
+        """EAST修改报送参数-内部分户账需排除的科目	"""
+        self.ClearData(self.INPUT_REMOVE_SUBJECT)
+        self.Input(remove_subject, self.INPUT_REMOVE_SUBJECT)
+
+    def changeEastBscsSbsp(self):
+        """EAST修改报送参数-上报审批"""
+        self.Click(self.BUTTON_SBSP)
+
+    def changeEastBscsExport(self):
+        """EAST修改报送参数-导出控制开关"""
+        self.Click(self.BUTTON_EXPORT)
+
+    def changeEastBscsJgdm(self, code):
+        """EAST修改报送参数-机构代码"""
+        self.ClearData(self.INPUT_ORGANIZATION_CODE)
+        self.Input(code, self.INPUT_ORGANIZATION_CODE)
+
+    def changeEastBscsSave(self):
+        """EAST修改报送参数-保存"""
+        self.Click(self.BUTTON_SAVE_CSSZ)
+
+
+class BsglEastBmzhKeyword(BsglElementFrame, EastBmzhElement, WebDriver):
+    """EAST编码转换"""
+
+    def bsglMainFrame(self):
+        """EAST报送管理主框架"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def changeEastBmzh(self, text, bm_code):
+        """EAST编码转换修改报送编码"""
+        self.Click(self.INPUT_BMLX)
+        self.Input(text, self.INPUT_BM_NAME)
+        self.Click(self.BUTTON_REFRESH)
+        self.ClearData(self.INPUT_MODIFY_BSBM)
+        self.Input(bm_code, self.INPUT_MODIFY_BSBM)
+        self.Click(self.INPUT_BM_NAME)
+
+
+class BsglEastKmjzszKeyword(BsglElementFrame, EastKmjzElement, WebDriver):
+    """EAST科目记账设置"""
+
+    def bsglMainFrame(self):
+        """EAST报送管理主框架"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def queryEastKmjz(self, bskj, text):
+        """EAST科目记账设置查询条件"""
+        self.Click(self.INPUT_BSKJ.format(bskj))
+        self.Input(text, self.INPUT_KMH)
+
+    def refreshEastKmjz(self):
+        """EAST科目记账设置刷新按钮"""
+        self.Click(self.BUTTON_REFRESH_KMJZ)
+
+    def addEastKmjz(self):
+        """EAST科目记账设置新增按钮"""
+        self.Click(self.BUTTON_ADD_KMJZ)
+
+    def addEastKmh(self, text):
+        """EAST科目记账设置新增科目号"""
+        self.Input(text, self.INPUT_ADD_KMH)
+
+    def addEastBz(self, bz):
+        """EAST科目记账设置新增币种"""
+        self.Click(self.INPUT_ADD_BZ.format(bz))
+
+    def addEastBskj(self, bskj):
+        """EAST科目记账设置新增报送口径"""
+        self.Click(self.INPUT_ADD_BSKJ.format(bskj))
+
+    def addEastKmm(self, kmm):
+        """EAST科目记账设置新增科目名"""
+        self.Input(kmm, self.INPUT_ADD_KMM)
+
+    def addEastKhbh(self, khbh):
+        """EAST科目记账设置新增客户编号"""
+        self.Input(khbh, self.INPUT_ADD_KHBH)
+
+    def addEastKhrq(self, khrq):
+        """EAST科目记账设置新增开户日期"""
+        self.Input(khrq, self.INPUT_ADD_KHRQ)
+
+    def addEastXhrq(self, xhrq):
+        """EAST科目记账设置新增销户日期"""
+        self.Input(xhrq, self.INPUT_ADD_XHRQ)
+
+    def addEastRate(self, rate):
+        """EAST科目记账设置新增销户日期"""
+        self.Input(rate, self.INPUT_ADD_RATE)
+
+    def addEastZhzt(self, zhzt):
+        """EAST科目记账设置新增账户状态"""
+        self.Click(self.INPUT_ADD_ZHZT.format(zhzt))
+
+    def addEastBzj(self, bzj):
+        """EAST科目记账设置新增保证金"""
+        self.Click(self.INPUT_ADD_BZJZHBZ.format(bzj))
+
+    def addEastCkqx(self, ckqx):
+        """EAST科目记账设置新增存款期限"""
+        self.Input(ckqx, self.INPUT_ADD_CKQX)
+
+    def addEastZhlx(self, zhlx):
+        """EAST科目记账设置新增对公定期存款账户类型"""
+        self.Input(zhlx, self.INPUT_ADD_DGDQCKZHLX)
+
+    def addEastDqr(self, dqr):
+        """EAST科目记账设置新增到期日"""
+        self.Input(dqr, self.INPUT_ADD_DQR)
+
+    def checkEastall(self):
+        """EAST科目记账设置复选框全选"""
+        self.Click(self.CHECK_ALL_KMJZ)
+
+    def checkEastOne(self):
+        """EAST科目记账设置复选框单选"""
+        self.Click(self.CHECK_ONE_KMJZ)
+
+    def deleteEastKm(self):
+        """EAST科目记账设置删除按钮"""
+        self.Click(self.BUTTON_DELETE_KMJZ)
+
+    def deleteEastKmX(self):
+        """EAST科目记账设置删除X按钮"""
+        self.Click(self.BUTTON_DELETE_KMJZ_X)
+
+    def saveEastKm(self):
+        """EAST科目记账设置保存按钮"""
+        self.Click(self.BUTTON_SAVE_KMJZ)
+
+    def closeEastAlert(self):
+        """EAST科目记账设置关闭保存弹窗"""
+        self.Click(self.ALERT_ADD_SUC)
+
+
+class BsglEastMxkmszKeyword(BsglElementFrame, EastMxkmElement, WebDriver):
+    """EAST明细科目设置"""
+
+    def savaEastMxkm(self):
+        """EAST明细科目设置保存按钮"""
+        self.Click(self.BUTTON_SAVA_MXKM)
+
+    def inputEastGetMode(self, yepl, get_mode):
+        """EAST明细科目设置选择获取方式"""
+        self.Click(self.INPUT_GET_MODE.format(yepl, get_mode))
+
+    def inputEastValue(self, value, ywpl):
+        """EAST明细科目设置输入参数值"""
+        self.Input(value, self.INPUT_VALUE_MXKM.format(ywpl))
+
+    def inputEastKmName(self, name, ywpl):
+        """EAST明细科目设置输入科目名称"""
+        self.Input(name, self.INPUT_KM_NAME.format(ywpl))
+

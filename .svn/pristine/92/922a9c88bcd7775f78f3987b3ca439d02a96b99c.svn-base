@@ -1,0 +1,58 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/8/31 9:40
+# @Author   : yangshukun
+# @File     : keyword_dataset_manage.py
+from pageElement.page_dataset_management import *
+from baseOperation.WebOperation import *
+
+
+class DataSetMainPageKeyword(DataSetManageFrame, DataSetManageMainPage, WebDriver):
+    """数据集管理主页面关键字"""
+
+    def changeToMainFrameForDataSet(self):
+        """切换到数据集管理主FRAME"""
+        self.SwitchFrame(self.FRAME_MAIN_PAGE)
+
+    def choiceDataSetGroup(self, group_name):
+        """选择数据集分组"""
+        self.Click(self.BUTTON_GROUP_FOR_DATASET)
+        self.Click(self.SELECT_GROUP_NAME_OF_DATASET.format(group_name))
+
+    def sendDataSetName(self, dataset_name):
+        """数据集名称输入框输入"""
+        self.Input(dataset_name, self.INPUT_DATASET_NAME_QUERY)
+
+    def resetQueryData(self):
+        """点击重置按钮"""
+        self.Click(self.BUTTON_RESET_FOR_DATASET)
+
+    def pressRefreshButton(self):
+        """点击刷新按钮"""
+        self.Click(self.BUTTON_REFRESH_DATASET_MAIN_PAGE)
+
+    def pressAddGroupButton(self):
+        """点击新建分组按钮"""
+        self.Click(self.BUTTON_ADD_GROUP_FOR_DATASET)
+
+    def pressAddDataSetButton(self):
+        """点击新增数据集按钮"""
+        self.Click(self.BUTTON_ADD_DATASET_FOR_DATASET)
+
+    def pressEditGroupButton(self):
+        """点击编辑分组"""
+        self.Click(self.BUTTON_EDIT_GROUP_FOR_DATASET)
+
+    def pressDelGroupButton(self):
+        """点击删除分组"""
+        self.Click(self.BUTTON_DEL_GROUP_FOR_DATASET)
+
+    def pressEditDatasetButton(self):
+        """点击编辑数据集"""
+        self.Click(self.BUTTON_EDIT_DATASET_FOR_DATASET)
+
+    def pressDelDatasetButton(self):
+        """点击删除数据集"""
+        self.Click(self.BUTTON_DEL_DATASET_FOR_DATASET)
+
+

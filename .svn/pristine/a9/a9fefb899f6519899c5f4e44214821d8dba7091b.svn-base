@@ -1,0 +1,126 @@
+#!/usr/bin/env python
+# __ coding: utf-8 _-
+# @Time     : 2022/6/15 11:43
+# @Author   : yangshukun
+# @File     : keyword_ywbl.py
+
+from pageElement.page_ywbl import *
+from baseOperation.WebOperation import *
+from data.data_class.jcxx_ygxx import *
+
+
+class YwblKeyword(WebDriver, PageYwblElement, DataYgxx):
+
+    def intoMainMenu(self):
+        """进入补录界面"""
+        self.MouseFouce(self.SJGL)
+        self.Click(self.YWSJCX)
+        self.Click(self.YWBL)
+
+    def switchMainFrame(self):
+        """切换到补录主框架"""
+        self.QuiteFrame()
+        self.SwitchFrame(self.FRAME_01)
+        self.SwitchFrame(self.FRAME_02)
+        # self.SwitchFrameByElement(self.FRAME_02)
+
+    def ywblRefresh(self):
+        """业务补录界面刷新按钮"""
+        self.ExcuteJs(self.BUTTON_REFRESH)
+
+    def choiceYwlx(self, ywlx):
+        """选择业务类型"""
+        self.Click(ywlx)
+
+    def choiceYwmx(self, ywmx):
+        """选择业务模型"""
+        self.Click(ywmx)
+
+    def importData(self, file_dir):
+        """导入数据"""
+        self.Click(self.BUTTON_DR)
+        self.SwitchFrame(self.FRAME_DR_INDEX)
+        self.Click(self.BUTTON_UPLOAD)
+        self.GotoSleep()
+        self.UploadFile(file_dir)
+        self.Click(self.BUTTON_IMPORT)
+        # 判断并等待，直到文件上传完成
+        t = 0
+        while t < 60:
+            t += 1
+            total = self.GetTagText(self.VALUE_TOTAL)
+            if int(total) > 0:
+                break
+            else:
+                time.sleep(0.5)
+                continue
+        self.Click(self.BUTTON_DRQR)
+        self.SwitchFatherFrame()
+
+    def checkData(self):
+        """校验数据"""
+        self.Click(self.BUTTON_JYQB)
+        t = 0
+        while t < 60:
+            t += 1
+            try:
+                is_check_end = self.GetTagText(self.MSG_CHECK_END)
+                if is_check_end == "数据校验执行完成":
+                    break
+            except:
+                print("校验正在执行中，请稍后.....")
+        self.QuiteFrame()
+
+    def commitAllData(self, text):
+        """提交数据"""
+        self.Click(self.BUTTON_TJQB)
+        self.QuiteFrame()
+        self.SwitchFrame(self.FRAME_DATE)
+        self.Input(text, self.INPUT_TJRQ)
+        self.Click(self.BUTTON_TJQR)
+        self.GotoSleep(3)
+
+    def closeProcessAlert(self):
+        """关闭提交后，调度任务进度弹窗"""
+        self.QuiteFrame()
+        self.Click(self.ALERT_DDRW)
+        self.RefreshPage()
+
+    def exportData(self, type):
+        """导出数据，type为导出格式的元素表达式"""
+        self.Click(self.BUTTON_EXPORT)
+        self.Click(type)
+
+    def delData(self):
+        """删除数据"""
+        self.Click(self.BUTTON_DELETE)
+        self.Click(self.ALERT_CONFIRM)
+
+    def checkBoxControl(self, box):
+        """复选框操作"""
+        self.Click(box)
+
+    def addYgxxMainTable(self):
+        """新增员工信息主表信息"""
+        self.Click(self.BUTTON_ADD)
+        self.SwitchFrameByElement(self.FRAME_ADD)
+        self.Input(self.EMPLOYEE_EMPLOYEE_ID, self.EMPLOYEE_EMPLOYEE_ID_XPATH)
+        self.Input(self.EMPLOYEE_EMPLOYEE_NAME, self.EMPLOYEE_EMPLOYEE_NAME_XPATH)
+        self.Click(self.EMPLOYEE_COMPANY_BUTTON_XPATH)
+        self.SwitchFrameByElement(self.FRAME_ADD_COMMANY)
+        self.DoubleClick(self.EMPLOYEE_COMPANY_KHH_CHOICE_XPATH)
+        self.SwitchFatherFrame()
+        self.Click(self.EMPLOYEE_CERTTP_XPATH)
+        self.Input(self.EMPLOYEE_CERTNO, self.EMPLOYEE_CERTNO_XPATH)
+        self.Input(self.EMPLOYEE_DEPT_NAME, self.EMPLOYEE_DEPT_NAME_XPATH)
+        self.Click(self.EMPLOYEE_POST_TYPE_CODE_XPATH)
+        self.Input(self.EMPLOYEE_PHONE, self.EMPLOYEE_PHONE_XPATH)
+        self.Click(self.EMPLOYEE_EMPLOYEE_STATUS_XPATH)
+        self.Click(self.BUTTON_ADD_SAVE)
+
+    def getAlertText(self):
+        """获取补录新增保存时的提示信息"""
+        return self.GetTagText(self.ALERT_ADD_SAVE)
+
+    def delOneData(self):
+        """删除一个数据"""

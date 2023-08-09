@@ -1,0 +1,66 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/5 17:52
+# @Author   : yangshukun
+# @File     : case_bsgl_rsafe.py
+
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_common import *
+from pageKeyword.keyword_bsgl_rsafe import *
+from utils.operationXml import *
+import sys
+
+
+class BsglRn1104Test(InitCls, BsglMainKeyword, OperationXml, RsafeZhxzwhKeyword, BsglPubBsrwKeyword, BsglPubBsfwKeyword,
+                     BsglPubFzglKeyword, BsglPubBssqKeyword, BsglPubSplcKeyword):
+
+    def test_01_add_zhxz_and_delete_success(self):
+        """外管局--新增账户性质并删除成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        # 3、选择外管局品种进入外管局接口管理界面
+        self.switchToBsglBaseFrame()
+        self.intoRsafeTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入账户性质维护管理页签
+        self.swithToZhxzwh()
+        # 6、新增账户性质数据
+        self.switchBspzFrame()
+        self.addZhxzwh("5001", "自动化测试账户性质名称")
+        self.saveZhxzwh()
+        self.GotoSleep(1)
+        # 7、删除数据
+        self.delZhxzwh("5001")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_add_bsrw_rsafe_success(self):
+        """外管局报送任务新增报送任务并废弃成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择1104品种进入1104管理界面
+        self.intoRsafeTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送任务管理页签
+        self.swithToBsrw()
+        # 6、新增报送任务
+        self.switchBspzFrame()
+        self.addBsrw("REP00028", "20210629", type="day")
+        self.addBsrwSave()
+        # 7、断言新增成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, "保存成功")
+        self.closeXzrw_success()
+        # 废弃报送任务
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.switchBspzFrame()
+        self.queryBsrw("2021年06月29日", "账户开关户信息")
+        self.abandonBsrw("外管局任务自动化废弃")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

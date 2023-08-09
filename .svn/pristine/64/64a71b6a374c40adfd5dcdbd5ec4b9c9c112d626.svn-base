@@ -1,0 +1,98 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/12/6 9:42
+# @Author   : gaomin
+# @File     : page_ptsz.py
+from Common.common_map import *
+
+class PTSZElementMain(object):
+    """主页面功能按钮及tab页切换"""
+    XTGL = "//span[text()='系统管理']".__add__(XPATH)  # 主菜单--系统管理
+    PTSZ = "//a[@menuid='Setings010101']".__add__(XPATH)  # 平台设置菜单按钮
+    PTSZ_TAB = "//li[@menuid='Setings010101']".__add__(XPATH)  # 平台设置标题菜单
+    SWITCH_PTSZ = "//li[contains(@url,'{}')]".__add__(XPATH)  # 切换报送品种的表达式，以占位符{}对品种进行站位，可以在关键字中传递品种名称
+    CHOICE_FUNC_TAB = "//a[text()='{}']".__add__(XPATH)  # 切换页签的表达式，使用占位符{}，可通过传参确定页签
+
+
+class PtszCwgsElementFrame(object):
+    """平台设置-财务公司菜单相关frame"""
+    MAIN_FRAME = "Setings010101"  # 平台设置页面主框架frameID
+    TAB_FRAME = "frame"  # 平台设置--功能按钮及数据主框架frameID
+    GSYQ_FRAME = "ifrmcontent"  # 财务公司/集团公司页签功能框架frameID
+    CWGS = "//*[@class='on_page_link layui-this navItemSelected']/a".__add__(XPATH)   #财务公司
+    TB = "//*[@class='button button3']".__add__(XPATH)      #同步
+    SX = "//*[@class='button button31']".__add__(XPATH)    #刷新
+    BC = "//*[@class='button button2']".__add__(XPATH)    #保存
+    ## 公共信息
+    CWGSQC = "//*[@id='ORG_FNAME']".__add__(XPATH)  # 财务公司全称
+    TYSHXYDM = "//*[@id='ORG_CREDIT_CODE']".__add__(XPATH)  # 统一社会信用代码
+    JGBM = "//*[@id='ORG_CODE']".__add__(XPATH)    # 机构编码
+    QQFRSBBM = "//*[@id='ORG_LEI_CODE']".__add__(XPATH)       # 全球法人识别编码
+    JRXKZH = "//*[@id='ORG_FINANCIALLICENSE']".__add__(XPATH)    # 金融许可证号
+    JRJGDM = "//*[@id='ORG_FINANCIAL_INSTITUTION_CODE']".__add__(XPATH)     # 金融机构代码
+    JGH_NB = "//*[@id='ORG_CLTNO']".__add__(XPATH)     # 机构号（内部）
+    KHBM_NB = "//*[@id='ORG_INTER_CUSTOMER_CODE']".__add__(XPATH)     # 客户编码（内部）
+    CYRYS = "//*[@id='ORG_EMPLOYEE_NUM']".__add__(XPATH)      # 从业人员数
+    JJCF = "//*[@id='ORG_ECONOMIC_SECTOR']/option[text()='{}']".__add__(XPATH)       # 经济成分
+    QYGM = "//*[@id='ORG_ENTERPRISE_SCALE']/option[text()='{}']".__add__(XPATH)        # 企业规模
+    ZFHH = "//*[@id='ORG_PAYBANKNO']".__add__(XPATH)     # 支付行号
+    JYZT ="//*[@id='ORG_STATUS']/option[text()='{}']".__add__(XPATH)       # 经营状态
+    CKZBJJCFS ="//*[@id='DEPOSIT_RESERVE_WAY']/option[text()='{}']".__add__(XPATH)    # 存款准备金缴存方式
+    SFSS = "//*[@id='LISTED_STATUS']/option[text()='{}']".__add__(XPATH)       # 是否上市
+    ## 注册信息
+    CLRQ = "//*[@id='ORG_DAYOFESTB']".__add__(XPATH)    # 成立日期
+    ZCDQ_S/ZXS = "//*[@id='ORG_PROVINCE']/option[text()='{}']".__add__(XPATH)      # 注册地区-省/直辖市
+    ZCDQ_S/Q = "//*[@id='ORG_AREA']/option[text()='{}']".__add__(XPATH)     # 注册地区-市/区
+    ZCZB = "//*[@id='ORG_REGCAPITAL']".__add__(XPATH)     # 注册资本
+    YZBM = "//*[@id='ORG_POSTCODE']".__add__(XPATH)    # 邮政编码
+    ZCDZ = "//*[@id='ORG_ADDRESS']".__add__(XPATH)    # 注册地址
+    ##法定代表人
+    FDDBR_XM = "//*[@id='ORG_LRNAME']".__add__(XPATH)      # 姓名
+    FDDBR_ZJLB = "//*[@id='ORG_LRCERTTP']/option[text()='{}']".__add__(XPATH)     # 证件类别
+    FDDBR_ZJHM = "//*[@id='ORG_LRCERTNO']".__add__(XPATH)     # 证件号码
+    ##主要负责人（EAST报送）
+    ZYFZR_XM = "//*[@id='ORG_MPNAME']".__add__(XPATH)     # 姓名
+    ZYFZR_ZJLB = "//*[@id='ORG_MPCERTTP']/option[text()='{}']".__add__(XPATH)     # 证件类别
+    ZYFZR_ZJHM = "//*[@id='ORG_MPCERTNO']".__add__(XPATH)     # 证件号码
+    ZYFZR_ZW = "//*[@id='ORG_MPPOSTCODE']".__add__(XPATH)     # 职务
+    ZYFZR_LXDH = "//*[@id='ORG_MPPHONE']".__add__(XPATH)     # 联系电话
+    ##对外联系人
+    DWLXR_LXR = "//*[@id='ORG_EXTERNAL_CONTACT']".__add__(XPATH)     # 联系人
+    DWLXR_LXDH = "//*[@id='ORG_EXTERNAL_CONTACT_TEL']".__add__(XPATH)     # 联系电话
+    ##实际控制人
+    SJKZR_XZ = "//*[@onclick='openOrgSJKZRDetailPage(this)']".__add__(XPATH)     # 新增
+    SJKZR_FRAME = "layui-layer-iframe4"  # 实际控制人页面框架frameID
+    SJKZR_mc = "//*[@id='ACT_NAME']".__add__(XPATH)     # 名称
+    SJKZR_ZJLX = "//*[@id='ACT_TTP']".__add__(XPATH)     # 证件类型
+    SJKZR_ZJHM = "//*[@id='ACT_TNO']".__add__(XPATH)     # 证件号码
+    SJKZR_BC = "//*[@class='icon icon_save']".__add__(XPATH)     # 保存
+    ##财务公司股东信息
+    CWGSGDXX_XZ = "//*[@onclick='openOrgGDXXDetailPage(this)']".__add__(XPATH)     # 新增
+    CWGGGDXX_FRAME = "layui-layer-iframe2"  # 财务公司股东信息页面框架frameID
+    ##财务公司股东信息-基本信息
+    CWGSGDXX_GDBH = "//*[@id='SHH_CODE']".__add__(XPATH)     # 股东编号
+    CWGSGDXX_GDMC = "//*[@id='SHH_NAME']".__add__(XPATH)     # 股东名称
+    CWGSGDXX_QQFRSBBM = "//*[@id='SHH_LEI_CODE']".__add__(XPATH)     # 全球法人识别编码
+    CWGSGDXX_SSHY = "//*[@id='SHH_BUSINESS']/option[text()='{}']".__add__(XPATH)     # 所属行业
+    CWGSGDXX_GDZT = "//*[@id='SHH_STATE']/option[text()='{}']".__add__(XPATH)     # 股东状态
+    CWGSGDXX_ZJLB = "//*[@id='SHH_TTP']/option[text()='{}']".__add__(XPATH)     # 证件类别
+    CWGSGDXX_ZJHM = "//*[@id='SHH_TNO']".__add__(XPATH)     # 证件号码
+    CWGSGDXX_GDDZ = "//*[@id='SHH_ADDRESS']".__add__(XPATH)     # 股东地址
+    CWGSGDXX_ZCFZL = "//*[@id='SHH_DEBT']".__add__(XPATH)     # 资产负债率
+    CWGSGDXX_JLL = "SHH_NET_PROFIT".__add__(XPATH)     # 净利润
+    ##财务公司股东信息-持股信息
+    CWGSGDXX_RGSJ = "//*[@id='SHH_JOIN_DATE']".__add__(XPATH)     # 入股日期
+    CWGSGDXX_CZE = "//*[@id='SHH_AMOUNT']".__add__(XPATH)     # 出资额
+    CWGSGDXX_CGBL = "//*[@id='SHH_RATIO']".__add__(XPATH)     # 持股比例
+    CWGSGDXX_BC = "//*[@class='icon icon_save']".__add__(XPATH)    # 保存
+
+
+class PtszJtgsElementFrame(object):
+    """平台设置-集团公司菜单相关frame"""
+    CWGS = "//*[@class='on_page_link layui-this navItemSelected']/a".__add__(XPATH)   #集团公司公司
+    SX = "//*[@class='button button31']".__add__(XPATH)      #刷新
+    BC = "//*[@class='button button2']".__add__(XPATH)      #保存
+    JGQC = "//*[@id='ORG_FNAME']".__add__(XPATH)     # 机构全称
+    JGJC = "//*[@id='ORG_ABBREVIATED_NAME']".__add__(XPATH)        # 机构简称
+    JGBM = "//*[@id='ORG_CODE']".__add__(XPATH)   # 机构编码
+    JTGS_TYSHXYDM = "//*[@id='ORG_CREDIT_CODE']".__add__(XPATH)      # 统一社会信用代码

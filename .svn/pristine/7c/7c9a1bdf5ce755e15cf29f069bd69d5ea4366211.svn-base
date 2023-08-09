@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemGroup01 name="基本信息测试数据01">
+    <test_data_01>
+        <item name="工号" code="EMPLOYEE.EMPLOYEE_ID" value="auto_test_01"
+              xpath="//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[2]/input"/>
+        <item name="姓名" code="EMPLOYEE.EMPLOYEE_NAME" value="自动化测试001"
+              xpath="//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[4]/input"/>
+        <item name="所属单位选择按钮" code="EMPLOYEE.COMPANY_BUTTON" value=""
+              xpath="//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[6]/input[1]"/>
+        <item name="所属单位查询客户号" code="EMPLOYEE.COMPANY_KHH" value="2021101377777"
+              xpath="//*[@id='queryArea']/table/tbody/tr/td[2]/input"/>
+        <item name="所属单位刷新按钮" code="EMPLOYEE.COMPANY_KHH_BUTTON" value=""
+              xpath="/html/body/div[2]/div[2]/div[1]/button"/>
+        <item name="所属单位选择第一个" code="EMPLOYEE.COMPANY_KHH_CHOICE" value=""
+              xpath="/html/body/div[2]/div[2]/div[3]/table/tbody/tr[1]/td[1]/span"/>
+        <item name="证件类别" code="EMPLOYEE.CERTTP" value="" xpath="//*[@name='EMPLOYEE.CERTTP']/option[2]"/>
+        <item name="证件号码" code="EMPLOYEE.CERTNO" value="522123198788854" xpath="//*[@name='EMPLOYEE.CERTNO']"/>
+        <item name="所属部门" code="EMPLOYEE.DEPT_NAME" value="自动测试部" xpath="//*[@name='EMPLOYEE.DEPT_NAME']"/>
+        <item name="岗位类型" code="EMPLOYEE.POST_TYPE_CODE" value=""
+              xpath="//*[@name='EMPLOYEE.POST_TYPE_CODE']/option[2]"/>
+        <item name="联系电话" code="EMPLOYEE.PHONE" value="1522123333" xpath="//*[@name='EMPLOYEE.PHONE']"/>
+        <item name="员工状态" code="EMPLOYEE.EMPLOYEE_STATUS" value=""
+              xpath="//*[@id='formArea']/div[1]/table/tbody/tr[4]/td[6]/select/option[2]"/>
+    </test_data_01>
+    <test_data_02>
+        <data1 name="工号" code="DATA1.EMPLOYEE_ID" value="auto_test_01"
+               xpath="//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[2]/input"/>
+        <data1 name="姓名" code="DATA1.EMPLOYEE_NAME" value="自动化测试001"
+               xpath="//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[4]/input"/>
+        <data1 name="所属单位选择按钮" code="DATA1.COMPANY_BUTTON" value=""
+               xpath="//*[@id='formArea']/div[1]/table/tbody/tr[2]/td[6]/input[1]"/>
+        <data1 name="所属单位查询客户号" code="DATA1.COMPANY_KHH" value="2021101377777"
+               xpath="//*[@id='queryArea']/table/tbody/tr/td[2]/input"/>
+        <data1 name="所属单位刷新按钮" code="DATA1.COMPANY_KHH_BUTTON" value="" xpath="/html/body/div[2]/div[2]/div[1]/button"/>
+        <data1 name="所属单位选择第一个" code="DATA1.COMPANY_KHH_CHOICE" value=""
+               xpath="/html/body/div[2]/div[2]/div[3]/table/tbody/tr[1]/td[1]/span"/>
+        <data1 name="证件类别" code="DATA1.CERTTP" value="" xpath="//*[@name='EMPLOYEE.CERTTP']/option[2]"/>
+        <data1 name="证件号码" code="DATA1.CERTNO" value="522123198788854" xpath="//*[@name='EMPLOYEE.CERTNO']"/>
+        <data1 name="所属部门" code="DATA1.DEPT_NAME" value="自动测试部" xpath="//*[@name='EMPLOYEE.DEPT_NAME']"/>
+        <data1 name="岗位类型" code="DATA1.POST_TYPE_CODE" value="" xpath="//*[@name='EMPLOYEE.POST_TYPE_CODE']/option[2]"/>
+        <data1 name="联系电话" code="DATA1.PHONE" value="1522123333" xpath="//*[@name='EMPLOYEE.PHONE']"/>
+        <data1 name="员工状态" code="DATA1.EMPLOYEE_STATUS" value=""
+               xpath="//*[@id='formArea']/div[1]/table/tbody/tr[4]/td[6]/select/option[2]"/>
+    </test_data_02>
+
+</itemGroup01>
+
+
+

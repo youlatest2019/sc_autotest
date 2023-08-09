@@ -1,0 +1,65 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 10:01
+# @Author   : yangshukun
+# @File     : keyword_bsgl.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglRmbtdBmzhKeyword(BsglElementFrame, ZXBmzhElement, WebDriver):
+    """征信编码转换"""
+
+    def bsglMainFrame(self):
+        """征信报送管理主框架"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+
+    def changeRmbtdBmzh(self, text, bm_code):
+        """征信编码转换修改报送编码"""
+        self.Click(self.INPUT_BMLX)
+        self.Input(text, self.INPUT_BM_NAME)
+        self.Click(self.BUTTON_REFRESH)
+        self.ClearData(self.INPUT_MODIFY_BSBM)
+        self.Input(bm_code, self.INPUT_MODIFY_BSBM)
+        self.Click(self.INPUT_BM_NAME)
+
+
+class BsglRmbtdCbmbglKeyword(BsglElementFrame, RmbtdCbmbglElement, WebDriver):
+    """征信财报模板管理"""
+
+    def changeCbRmbtdRefresh(self):
+        """征信财报模板管理-刷新"""
+        self.Click(self.BUTTON_REFRESH_CB)
+
+    def changeCbRmbtdSykhmb(self):
+        """征信财报模板管理-使用客户模板"""
+        self.Click(self.BUTTON_SYKHMB)
+
+    def changeCbRmbtdQzgxY(self, text):
+        """征信财报模板管理-取值关系-使用客户模板"""
+        self.Click(self.QZGX_TEXT_YES.format(text))
+
+    def changeCbRmbtdSykhmbOK(self):
+        """征信财报模板管理-确认按钮"""
+        self.Click(self.BUTTON_SYKHMB_OK)
+
+    def changeCbRmbtdSjxmc(self, text):
+        """征信财报模板管理-数据项名称"""
+        self.ClearData(self.INPUT_SJX_NAME)
+        self.Input(text, self.INPUT_SJX_NAME)
+
+    def changeCbRmbtdFrame(self):
+        """征信财务报表frame"""
+        self.SwitchFrameByElement(self.RMBTD_CB_FRAME)
+
+    def changeCbRmbtdQzdygzb(self, text1):
+        """征信财报模板管理-清除取值单元格坐标"""
+        self.ClearData(self.INPUT_QZDYGZB.format(text1))
+
+    def changeCbRmbtdQzdygzbok(self, text, text1):
+        """征信财报模板管理-输入取值单元格坐标"""
+        self.Input(text, self.INPUT_QZDYGZB.format(text1))
+
+    def changeCbRmbtdSave(self):
+        """征信财报模板管理-保存按钮"""
+        self.Click(self.BUTTON_SAVE_CB)

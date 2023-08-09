@@ -1,0 +1,70 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2021/6/7 9:26
+# @Author   : yangshukun
+# @File     : ExcelControl
+
+import openpyxl
+import os
+import json
+from Config.BaseEnv import *
+from CommonFunction.Simple_func import *
+
+base_path = os.path.join(os.path.dirname(os.path.dirname(__file__)))
+data_path = base_path + '\\BaseAutoData'
+
+
+class ExcelOperation():
+
+    def __init__(self, file_path):
+        self.path = file_path
+
+    def get_sheet_by_name(self, sheet_name=None):
+        '''
+        根据sheet名获取sheet实例对象
+        :param sheet_name:
+        :return: 返回sheet实例对象
+        '''
+        work_book = openpyxl.load_workbook(self.path)
+        if sheet_name is None:
+            book_sheet = work_book.active
+        else:
+            book_sheet = work_book.get_sheet_by_name(sheet_name)
+        return book_sheet
+
+    def excel_to_dict(self,header_row):
+        '''
+        把获取的sheet数据转化未字典数据
+        :return:
+        '''
+        result_list = []
+        table_instance = self.get_sheet_by_name()
+        headers = list(table_instance.iter_rows())[header_row]
+        for x in range(1, table_instance.max_row):
+            i = 0
+            dict = {}
+            for header in headers:
+                dict[header.value] = list(table_instance.iter_rows())[x][i].value
+                i += 1
+            result_list.append(dict)
+        print(json.dumps(result_list, indent=4, ensure_ascii=False, cls=DataEncoder))
+        return result_list
+
+    def write_excel(self,table_name,sheet_name,data):
+        '''
+        :param table_name:
+        :param sheet_name:
+        :param data:
+        :return:
+        '''
+        pass
+
+
+
+
+if __name__ == '__main__':
+    file = r'D:\G20\NSATP\NSATP\Data\非直连明细导入成功.xlsx'
+    ins = ExcelOperation(file)
+    table = ins.get_sheet_by_name()
+    total_rows = table.max_row
+    print(ins.excel_to_dict(0))

@@ -1,0 +1,36 @@
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_js import *
+from utils.operationXml import *
+import sys
+from baseOperation.init_self import *
+from pageKeyword.keyword_bsgl_common import *
+from data.data_class.bsgl_js_data import *
+
+
+class ZbjjcJsTest(InitCls, BsglMainKeyword, BsglJsKeyword, OperationXml, JsJcfs):
+
+    def test_01_set_zbjck(self):
+        """设置金数准备金缴存"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToZbjjcpz()
+        # 6、设置金数准备金缴存
+        self.setJsZbjjc("普通存款", self.JCFS_JEJC)
+        # 7、断言设置成功
+        res = self.GetTagText(self.MSG_JCFS_RESULT)
+        self.assertEqual(res, '保存成功')
+        # 8、关闭成功弹窗
+        self.successClose()
+        # 9、查询条件
+        self.queryZbjjc("普通存款", self.JCFS_JEJC)
+        # 10、刷新
+        self.refersh()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

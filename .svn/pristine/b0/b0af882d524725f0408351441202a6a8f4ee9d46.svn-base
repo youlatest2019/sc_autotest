@@ -1,0 +1,437 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/5/10 10:14
+# @Author   : yangshukun
+# @File     : Auto_Install.py
+import sys
+import time
+import datetime
+from CommonFunction.OracleControl import *
+from Config.BaseEnv import *
+from CommonFunction.SSH_Control import *
+from CommonFunction.Sftp_Control import *
+import os
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+from CommonFunction.getconf import *
+
+
+class Upgrade_Install():
+    def __init__(self):
+        database_conf = dict(Config('Install.ini').items('DataBase'))
+        dir_conf = dict(Config('Install.ini').items('Dir'))
+        self.user = database_conf['user']
+        self.adress = database_conf['adress']
+        self.driver_path = database_conf['chrome_driver_path']
+        self.ssh_passwd = database_conf['ssh_passwd']
+        self.tablespace_name = database_conf['tablespace_name']
+        self.tablespace_path = database_conf['tablespace_path']
+        self.web_user = database_conf['web_user']
+        self.dw_user = database_conf['dw_user']
+        self.dm_user = database_conf['dm_user']
+        self.base_dir = dir_conf['base_dir']
+        self.local_package_path = dir_conf['local_package_path']
+        self.wlst_path = dir_conf['wlst_path']
+        self.web_url = dir_conf['web_url']
+        self.dcab_url = dir_conf['dcab_url']
+        self.dom_url = dir_conf['dom_url']
+        self.ssh_info = {'url': self.adress, 'port': 22, 'username': 'root', 'password': self.ssh_passwd}
+        self.dom_domain_port = dir_conf['dom_domain_port']
+        self.dcab_domain_port = dir_conf['dcab_domain_port']
+        self.web_domain_port = dir_conf['web_domain_port']
+        self.yw_name = dir_conf['yw_name']
+        self.yw_user = dir_conf['yw_user']
+        self.yw_passwd = dir_conf['yw_passwd']
+        self.yw_ip = dir_conf['yw_ip']
+        self.yw_prot = dir_conf['yw_prot']
+        self.yw_dbname = dir_conf['yw_dbname']
+        self.standalone_ip = dir_conf['standalone_ip']
+        self.standalone_port = dir_conf['standalone_port']
+        self.fail_dict = {}
+
+    def create_dir_and_upload_files_and_unzip_file(self):
+        """
+        创建目录，创建域，上传安装包，解压
+        :return:
+        """
+        # 创建目录
+        ssh = SSH_Control(self.ssh_info)
+        sftp = SftpController(self.ssh_info)
+        log('-----开始创建安装目录-----')
+        ssh.ssh_exec_cmd('mkdir {base_dir}/upgrade_install_package'.format(base_dir=self.base_dir))
+        log('-----安装目录创建完成-----')
+        package_name_list = os.listdir(r'{local_package_path}'.format(local_package_path=self.local_package_path))
+        self.base_package_dict = {}
+        self.pz_package_list = []
+        for package_name in package_name_list:
+            if package_name.endswith('.zip'):
+                dir_name = package_name.split('.zip')[0]
+                if dir_name.startswith('JC-') or dir_name.startswith('PT-') or dir_name.startswith('CK'):
+                    key = dir_name.split('-')[0]
+                    self.base_package_dict[key] = dir_name
+                else:
+                    self.pz_package_list.append(dir_name)
+                # 先删除对应的目录及目录下文件（主要考虑到多次升级更新）
+                ssh.ssh_exec_cmd('rm -rf {base_dir}/upgrade_install_package/{dir_name}'.format(base_dir=self.base_dir,
+                                                                                               dir_name=dir_name))
+                # 创建与安装包同名的目录
+                ssh.ssh_exec_cmd('mkdir {base_dir}/upgrade_install_package/{dir_name}'.format(base_dir=self.base_dir,
+                                                                                              dir_name=dir_name))
+                log('-----创建安装包目录{}成功-----'.format(dir_name))
+                # 上传安装包到对应的目录
+                sftp.put_file(r'{local_package_path}\{package_name}'.format(local_package_path=self.local_package_path,
+                                                                            package_name=package_name),
+                              '{base_dir}/upgrade_install_package/{dir_name}/{package_name}'.format(
+                                  base_dir=self.base_dir, dir_name=dir_name, package_name=package_name))
+                log('-----上传安装包{}成功-----'.format(package_name))
+                # 解压对应目录下的安装包
+                log('-----开始解压：安装包{}-----'.format(package_name))
+                ssh.ssh_exec_cmd('cd {base_dir}/upgrade_install_package/{dir_name} && unzip {package_name}'.format(
+                    base_dir=self.base_dir, dir_name=dir_name, package_name=package_name))
+                log('-----解压完成：安装包{}-----'.format(package_name))
+
+        # 文件夹授权
+        ssh.ssh_exec_cmd('cd /home && chmod -R 777 {base_dir}'.format(base_dir=self.base_dir))
+        log('-----对文件主目录及子级文件授权成功-----')
+        ssh.ssh_close()
+
+    def start_install(self, module_name):
+        self.kill_process_with_port(8080)
+        time.sleep(2)
+        try:
+            ssh = SSH_Control(self.ssh_info)
+            url = 'http://{adress}:8080'.format(adress=self.adress)
+            ssh.ssh_exec_cmd_without_wait(
+                'cd {base_dir}/upgrade_install_package/{dir_name} && ./start.sh'.format(base_dir=self.base_dir,
+                                                                                        dir_name=module_name))
+            time.sleep(5)
+            log('【开始执行安装】:{}'.format(module_name))
+            t = 0
+            while t < 10:
+                try:
+                    driver = webdriver.Chrome(
+                        executable_path=os.path.join(r'{driver_path}'.format(driver_path=self.driver_path), 'chromedriver.exe'))
+                    driver.get(url)
+                    log('-----登录{}安装平台成功，登录地址{}-----'.format(module_name, url))
+                    break
+                except Exception:
+                    log('-----第{}次，尝试登录{}安装平台失败，等待3秒，尝试重新登录-----'.format(t, module_name))
+                    driver.close()
+                time.sleep(3)
+                t += 1
+            driver.maximize_window()
+            time.sleep(2)
+            """
+            基础信息填写
+            """
+            WebDriverWait(driver=driver, timeout=30, poll_frequency=0.5).until(
+                EC.element_to_be_clickable((By.XPATH, '//table[@id="web-install-path"]//tr[1]/td[3]')))
+            # 输入web-应用安装路径
+            driver.find_element(By.XPATH, '//table[@id="web-install-path"]//tr[1]/td[3]').click()
+            time.sleep(1)
+            driver.find_element(By.XPATH, '//input[@id="path"]').send_keys(Keys.CONTROL, "a")
+            time.sleep(1)
+            driver.find_element(By.XPATH, '//input[@id="path"]').send_keys(Keys.DELETE)
+            time.sleep(1)
+            driver.find_element(By.XPATH, '//input[@id="path"]').clear()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, '//input[@id="path"]').send_keys(
+                '{base_dir}/DCAB/WEB'.format(base_dir=self.base_dir))
+            time.sleep(0.5)
+            # 手动输入路径需要点击两次确定
+            driver.find_element(By.XPATH, '//input[@value="确认"]').click()
+            time.sleep(0.5)
+            driver.find_element(By.XPATH, '//input[@value="确认"]').click()
+            time.sleep(1)
+            
+
+            """
+            安装平台模块时，需要填写独立服务信息，根据传入的参数进行判断，如果时平台模块，才进入此步骤
+            """
+            if module_name.startswith('PT-'):
+                driver.find_element(By.XPATH, '//div[@class="page-tool-bar"]/ul/li[2]').click()
+                time.sleep(0.5)
+                driver.find_element(By.XPATH, '//table[@id="standalone-apps"]//tr[2]/td[2]/div/input[@class="ip"]').send_keys(Keys.CONTROL, 'a')
+                time.sleep(0.5)
+                driver.find_element(By.XPATH, '//table[@id="standalone-apps"]//tr[2]/td[2]/div/input[@class="ip"]').send_keys(Keys.DELETE)
+                time.sleep(0.5)
+                driver.find_element(By.XPATH, '//table[@id="standalone-apps"]//tr[2]/td[2]/div/input[@class="ip"]').send_keys(self.standalone_ip)
+                time.sleep(0.5)
+                driver.find_element(By.XPATH, '//table[@id="standalone-apps"]//tr[2]/td[2]/div/input[@class="port"]').clear()
+                time.sleep(0.5)
+                driver.find_element(By.XPATH, '//table[@id="standalone-apps"]//tr[2]/td[2]/div/input[@class="port"]').send_keys(self.standalone_port)
+                time.sleep(0.5)
+
+            # 点击依赖检查
+            driver.find_element(By.XPATH, '//input[@id="dependencyCheck"]').click()
+            time.sleep(1)
+
+            """
+            进入版本依赖检查界面，点击开始安装
+            """
+            WebDriverWait(driver=driver, timeout=30, poll_frequency=0.5).until(
+                EC.element_to_be_clickable((By.XPATH, '//input[@class="install"]')))
+            time.sleep(0.5)
+            # 点击开始安装
+            driver.find_element(By.XPATH, '//input[@class="install"]').click()
+            time.sleep(0.5)
+            # 勾选更新日志确认阅读
+            WebDriverWait(driver=driver, timeout=30, poll_frequency=0.5).until(
+                EC.element_to_be_clickable((By.XPATH, '//input[@id="read"]')))
+            driver.find_element(By.XPATH, '//input[@id="read"]').click()
+            time.sleep(0.5)
+            # 点击下一步
+            WebDriverWait(driver=driver, timeout=30, poll_frequency=0.5).until(
+                EC.element_to_be_clickable((By.XPATH, '//input[@id="next"]')))
+            driver.find_element(By.XPATH, '//input[@id="next"]').click()
+            time.sleep(0.5)
+            # 安装内容选择，不做任何选择，使用默认全选，直接下一步
+            WebDriverWait(driver=driver, timeout=30, poll_frequency=0.5).until(
+                EC.element_to_be_clickable((By.XPATH, '//input[@id="next"]')))
+            driver.find_element(By.XPATH, '//input[@id="next"]').click()
+            time.sleep(0.5)
+            # 等待安装完成，每5秒查询一次安装结果
+            WebDriverWait(driver=driver, timeout=30, poll_frequency=0.5).until(
+                EC.element_to_be_clickable((By.XPATH, '//progress[@id="fetching_installation_progress"]')))
+            while True:
+                progress = driver.find_element(By.XPATH,
+                                               '//progress[@id="fetching_installation_progress"]').get_attribute(
+                    'value')
+                log('当前正在执行安装模块：{}，sql执行进度为:{}%'.format(module_name, progress))
+                time.sleep(3)
+                if progress == '100':
+                    time.sleep(1)
+                    driver.close()
+                    log('-----【模块：{}安装成功】-----'.format(module_name))
+                    ssh.ssh_exec_cmd(
+                        'cd {base_dir}/install_package/{dir_name} && ./stop.sh'.format(base_dir=self.base_dir,
+                                                                                       dir_name=module_name))
+                    time.sleep(5)
+                    break
+                else:
+                    try:
+                        status = driver.find_element(By.XPATH, '//div[@id="errorImage"]/p').text
+                        if status == '安装失败':
+                            d = time.strftime('%Y年%m月%d日_%H点%M分', time.localtime())
+                            pic_name = module_name + '_' + str(d) + '.png'
+                            screent_path = os.path.join(
+                                os.path.join(os.path.dirname(__file__), 'install_fail_screenshosts'), pic_name)
+                            driver.get_screenshot_as_file(screent_path)
+                            time.sleep(1)
+                            self.fail_dict[module_name] = '安装失败，截图路径：{}'.format(screent_path)
+                            if module_name.split('-')[0] in ('JC', 'PT', 'CK'):
+                                log('必要模块{}安装失败，安装结束，请检查并重新更新安装包'.format(module_name))
+                                sys.exit()
+                            else:
+                                ssh.ssh_exec_cmd('cd {base_dir}/install_package/{dir_name} && ./stop.sh'.format(
+                                    base_dir=self.base_dir, dir_name=module_name))
+                                log('报送应用品种{}安装失败，失败报错已截图，跳过该品种，继续下一个品种的安装'.format(module_name))
+                                time.sleep(5)
+                                break
+                    except:
+                        continue
+        except Exception as e:
+            d = time.strftime('%Y年%m月%d日_%H点%M分', time.localtime())
+            pic_name = module_name + '_' + str(d) + '.png'
+            screent_path = os.path.join(os.path.join(os.path.dirname(__file__), 'install_fail_screenshosts'), pic_name)
+            driver.get_screenshot_as_file(screent_path)
+            self.fail_dict[module_name] = '安装失败，截图路径：{}'.format(screent_path)
+            print(e)
+            if module_name.split('-')[0] in ('JC', 'PT', 'CK'):
+                sys.exit()
+            else:
+                ssh.ssh_exec_cmd('cd {base_dir}/install_package/{dir_name} && ./stop.sh'.format(base_dir=self.base_dir, dir_name=module_name))
+                time.sleep(5)
+
+    def restart_weblogic(self):
+        """重启三个域的公共方法"""
+
+        """
+        分别kill掉已经启动的域进程
+        """
+        ssh = SSH_Control(self.ssh_info)
+        port_list = [self.dcab_domain_port, self.dom_domain_port, self.web_domain_port]
+        for port in port_list:
+            log('-----开始kill进程：端口号{}-----'.format(port))
+            stdin, stdout, stderr = ssh.ssh_exec_cmd_without_wait('cd /home && lsof -i:{port}'.format(port=port))
+            for i in stdout.readlines():
+                if i.split(' ')[2] == 'PID':
+                    continue
+                else:
+                    pid = i.split(' ')[4]
+                    ssh.ssh_exec_cmd('cd /home && kill -9 {pid}'.format(pid=pid))
+            log('-----结束kill进程：端口号{}-----'.format(port))
+        time.sleep(2)
+
+        """
+        重新启动三个域
+        """
+        log('-----dcab域开始启动-----')
+        ssh.ssh_exec_cmd_without_wait(
+            'cd {base_dir}/domains/dcab-domain && nohup sh startWebLogic.sh >dcab.log 2>&1 &tail -f dcab.log'.format(
+                base_dir=self.base_dir))
+        time.sleep(5)
+        log('-----dcab域启动完成，dom域开始启动-----')
+        ssh.ssh_exec_cmd_without_wait(
+            'cd {base_dir}/domains/dom-domain && nohup sh startWebLogic.sh >dom.log 2>&1 &tail -f dom.log'.format(
+                base_dir=self.base_dir))
+        time.sleep(5)
+        log('-----dom域启动完成，web域开始启动-----')
+        ssh.ssh_exec_cmd_without_wait(
+            'cd {base_dir}/domains/web-domain && nohup sh startWebLogic.sh >web.log 2>&1 &tail -f web.log'.format(
+                base_dir=self.base_dir))
+        time.sleep(5)
+        log('-----web域启动完成-----')
+        time.sleep(10)
+
+    def kill_process_with_port(self, port):
+        """
+        通过端口杀掉进程
+        """
+        ssh = SSH_Control(self.ssh_info)
+        log('-----开始kill进程：端口号{}-----'.format(port))
+        stdin, stdout, stderr = ssh.ssh_exec_cmd_without_wait('cd /home && lsof -i:{port}'.format(port=port))
+        for i in stdout.readlines():
+            if i.split(' ')[2] == 'PID':
+                continue
+            else:
+                pid = i.split(' ')[4]
+                ssh.ssh_exec_cmd('cd /home && kill -9 {pid}'.format(pid=pid))
+        log('-----结束kill进程：端口号{}-----'.format(port))
+        time.sleep(2)
+
+    def install_jc_app(self):
+        base_package_dict, _ = self.get_pz_list()
+        if base_package_dict and 'JC' in base_package_dict.keys():
+            module_name = self.base_package_dict['JC']
+            self.start_install(module_name)
+        else:
+            log('-----【基础模块】，无需升级或没有上传对应的升级安装包，本次不执行，请自行检查-----')
+
+    def install_pt_app(self):
+        base_package_dict, _ = self.get_pz_list()
+        if base_package_dict and 'PT' in base_package_dict.keys():
+            module_name = self.base_package_dict['PT']
+            self.start_install(module_name)
+        else:
+            log('-----【平台模块】，无需升级或没有上传对应的升级安装包，本次不执行，请自行检查-----')
+
+    def install_ck_app(self):
+        base_package_dict, _ = self.get_pz_list()
+        if base_package_dict and 'CK' in base_package_dict.keys():
+            module_name = self.base_package_dict['CK']
+            self.start_install(module_name)
+        else:
+            log('-----【仓库模块】，无需升级或没有上传对应的升级安装包，本次不执行，请自行检查-----')
+
+    def install_all_pz(self):
+        _, pz_list = self.get_pz_list()
+        for pz in pz_list:
+            self.start_install(pz)
+
+    def get_fail_data(self):
+        if self.fail_dict:
+            log('【安装失败的品种】：{}'.format(json.dumps(self.fail_dict, ensure_ascii=False, indent=4)))
+        else:
+            log('【安装结束，所有品种均已安装成功，请重启三个域并登录系统进行初始化操作】')
+
+
+    def make_env_info(self):
+        #格式化输出安装信息
+        install_date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
+        login_url = self.adress + ':' + self.web_domain_port + '/portal/main_new.do'
+        db_url = self.adress + ':' + '1521/orcl'
+        print('【服务器{adress}全新安装环境信息】--【安装日期】： {install_date} '
+              '\n 【安装主目录】：{base_dir}'
+              '\n 【前端访问地址】：{login_url} '
+              '\n 【数据库信息】：'
+              '\n     数据库地址--{db_url}    '
+              '\n     dm库用户--{dm_user}    dw库用户--{dw_user}    web库用户--{web_user}'
+              '\n 【端口信息】：'
+              '\n      dom域：{dom_port}     dcab域：{dcab_port}    web域：{web_port}    独立服务：{alone_port}'
+              .format(adress=self.adress, install_date=install_date, base_dir=self.base_dir, login_url=login_url,
+                      db_url=db_url, dm_user=self.dm_user, dw_user=self.dw_user, web_user=self.web_user,
+                      dom_port=self.dom_domain_port, dcab_port=self.dcab_domain_port, web_port=self.web_domain_port,
+                      alone_port=self.standalone_port))
+
+    def get_pz_list(self):
+        package_name_list = os.listdir(r'{local_package_path}'.format(local_package_path=self.local_package_path))
+        self.base_package_dict = {}
+        self.pz_package_list = []
+        for package_name in package_name_list:
+            if package_name.endswith('.zip'):
+                dir_name = package_name.split('.zip')[0]
+                if dir_name.startswith('JC-') or dir_name.startswith('PT-') or dir_name.startswith('CK'):
+                    key = dir_name.split('-')[0]
+                    self.base_package_dict[key] = dir_name
+                else:
+                    self.pz_package_list.append(dir_name)
+        return self.base_package_dict, self.pz_package_list
+
+    def pz_of_faild_retry(self):
+        '''
+        考虑到有时候由于网络或者环境原因导致执行失败，安装失败的品种允许重试一次，重试前询问是否重试，可根据截图报错判断
+        :return:
+        '''
+        if self.fail_dict:
+            user_command = input('【当前存在安装失败的品种，请确认是否重试（Y/N）】：')
+            if user_command == 'Y':
+                pz_list = self.fail_dict.keys()
+                for pz in pz_list:
+                    self.start_install(pz)
+            elif user_command == 'N':
+                log('【已放弃重试，程序运行完毕】')
+            else:
+                log('【输入错误，请注意字母大小写】')
+                self.pz_of_faild_retry()
+
+def install_main():
+    """
+    安装全过程执行main方法，按照顺寻进行安装
+    :param self:
+    :return:
+    """
+    # #初始化安装类实例
+    start_time = datetime.datetime.now()
+    log('【第一步：开始--初始化安装配置信息，实例化安装类】')
+    obj = Upgrade_Install()
+    log('【第一步：结束--初始化安装配置信息，实例化安装类】')
+    # 创建目录并上传文件，并且自动解压
+    log('【第二步：开始--创建目录，上传本地安装包，解压安装包到对应目录下】')
+    obj.create_dir_and_upload_files_and_unzip_file()
+    log('【第二步：结束--创建目录，上传本地安装包，解压安装包到对应目录下】')
+    # 安装基础模块
+    log('【第三步：开始--开始安装基础模块】')
+    obj.install_jc_app()
+    log('【第三步：结束--开始安装基础模块】')
+    # 安装平台模块
+    log('【第四步：开始--开始安装平台模块】')
+    obj.install_pt_app()
+    log('【第四步：结束--开始安装平台模块】')
+    # 安装仓库模块
+    log('【第五步：开始--开始安装仓库模块】')
+    obj.install_ck_app()
+    log('【第五步：结束--开始安装仓库模块】')
+    # 安装品种
+    log('【第六步：开始--开始安装品种模块】')
+    obj.install_all_pz()
+    log('【第六步：结束--开始安装品种模块】')
+    # 安装完成，如果存在失败的品种，则打印失败品种列表，如果全部成功，则打印安装完成结束语
+    obj.get_fail_data()
+    #格式化输出安装信息
+    obj.make_env_info()
+    # 失败品种，允许重试一次，重试
+    obj.pz_of_faild_retry()
+    #计算安装总耗时
+    end_time = datetime.datetime.now()
+    excuse_time = round((end_time - start_time).seconds / 60, 2)
+    print('【安装运行总耗时】： ' + str(excuse_time) + '分')
+    #失败品种，允许重试一次，重试
+    obj.pz_of_faild_retry()
+
+if __name__ == '__main__':
+    install_main()

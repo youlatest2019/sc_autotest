@@ -1,0 +1,210 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/22 15:04
+# @Author   : yangshukun
+# @File     : page_bscl_common.py
+
+from Common.common_map import *
+
+
+class BsclMainMenueElement(object):
+    """报送处理主菜单"""
+    BSCL_MENUE = "//span[text()='报送处理']".__add__(XPATH)  # 主菜单--报送处理
+    BUTTON_BSPZ_COMMON = "//li[@id='RMM03']/div[@class='menu_2']//a[text()='{}']".__add__(XPATH)  # 报送处理--报送品种不同页面的公共按钮
+    TAG_BSPZ_COMMON = "//li[starts-with(@menuid,'RMM03')]/a[text()='{}']".__add__(XPATH)  # 报送处理--报送品种不同页面的标题栏页签
+
+
+class ZhbbMainMenueElement(object):
+    """综合报表主菜单"""
+    ZHBB_MENUE = "//span[text()='综合报表']".__add__(XPATH)  # 主菜单--综合报表
+    BBHD_TAB = "//a[@menuid='RPTC-Web010701']".__add__(XPATH)  # 报表核对标题菜单
+    BBHD_TAG = "//li[@menuid='RPTC-Web010701']".__add__(XPATH)
+    BBSP_TAB = "//a[@menuid='RPTC-Web010702']".__add__(XPATH)  # 报表审批标题菜单
+    BBSP_TAG = "//li[@menuid='RPTC-Web010702']".__add__(XPATH)
+    BBSB_TAB = "//a[@menuid='RPTC-Web010703']".__add__(XPATH)  # 报表上报标题菜单
+    BBSB_TAG = "//li[@menuid='RPTC-Web010703']".__add__(XPATH)
+    BBCX_TAB = "//a[@menuid='RPTC-Web010704']".__add__(XPATH)  # 报表查询标题菜单
+    BBCX_TAG = "//li[@menuid='RPTC-Web010704']".__add__(XPATH)
+
+
+class BsclMainFrame(object):
+    """报送处理主框架--公共，品种的框架写在品种内"""
+    # RN1104报表核对、审批、上报、查询页面主框架
+    RN1104_HD_MAIN_FRAME = "ifrRMM030101"  # 1104核对主框架ID
+    RN1104_SP_MAIN_FRAME = "ifrRMM030102"  # 1104审批主框架ID
+    RN1104_SB_MAIN_FRAME = "ifrRMM030103"  # 1104上报主框架ID
+    RN1104_CX_MAIN_FRAME = "ifrRMM030104"  # 1104查询主框架ID
+
+    # 征信核对、审批、上报、查询、数据更正页面主框架
+    RMBTD_HD_MAIN_FRAME = "ifrRMM030201"  # 征信核对主框架ID
+    RMBTD_SP_MAIN_FRAME = "ifrRMM030202"  # 征信审批主框架ID
+    RMBTD_SB_MAIN_FRAME = "ifrRMM030203"  # 征信上报主框架ID
+    RMBTD_CX_MAIN_FRAME = "ifrRMM030205"  # 征信查询主框架ID
+    RMBTD_SJGZ_MAIN_FRAME = "ifrRMM030206"  # 征信查询主框架ID
+
+    # 外管局核对、审批、上报、查询页面主框架
+    RSAFE_HD_MAIN_FRAME = "ifrRMM030401"  # 外管局核对主框架ID
+    RSAFE_SP_MAIN_FRAME = "ifrRMM030403"  # 外管局审批主框架ID
+    RSAFE_SB_MAIN_FRAME = "ifrRMM030404"  # 外管局上报主框架ID
+    RSAFE_CX_MAIN_FRAME = "ifrRMM030405"  # 外管局查询主框架ID
+
+    # 人行报表核对、审批、上报、查询页面主框架
+    RPBCC_HD_MAIN_FRAME = "ifrRMM030801"  # 人行报表核对主框架ID
+    RPBCC_SP_MAIN_FRAME = "ifrRMM030802"  # 人行报表审批主框架ID
+    RPBCC_SB_MAIN_FRAME = "ifrRMM030803"  # 人行报表上报主框架ID
+    RPBCC_CX_MAIN_FRAME = "ifrRMM030804"  # 人行报表查询主框架ID
+
+    # 外管局报表核对、审批、上报、查询页面主框架
+    RSAFER_HD_MAIN_FRAME = "ifrRMM031501"  # 外管局报表核对主框架ID
+    RSAFER_SP_MAIN_FRAME = "ifrRMM031502"  # 外管局报表审批主框架ID
+    RSAFER_SB_MAIN_FRAME = "ifrRMM031503"  # 外管局报表上报主框架ID
+    RSAFER_CX_MAIN_FRAME = "ifrRMM031504"  # 外管局报表查询主框架ID
+
+    # 利率报备核对、审批、上报、查询页面主框架
+    RIMAS_HD_MAIN_FRAME = "ifrRMM-Web12010101"  # 利率报备核对主框架ID
+    RIMAS_SP_MAIN_FRAME = "ifrRMM-Web12010102"  # 利率报备审批主框架ID
+    RIMAS_SB_MAIN_FRAME = "ifrRMM-Web12010103"  # 利率报备上报主框架ID
+    RIMAS_CX_MAIN_FRAME = "ifrRMM-Web12010104"  # 利率报备查询主框架ID
+
+    # 金数核对、审批、上报、查询页面主框架
+    RFBS_HD_MAIN_FRAME = "ifrRMM-Web01010101"  # 金数核对主框架ID
+    RFBS_SP_MAIN_FRAME = "ifrRMM-Web01010102"  # 金数审批主框架ID
+    RFBS_SB_MAIN_FRAME = "ifrRMM-Web01010103"  # 金数上报主框架ID
+    RFBS_CX_MAIN_FRAME = "ifrRMM-Web01010104"  # 金数查询主框架ID
+
+    # EAST核对、审批、上报、查询页面主框架
+    REAST_HD_MAIN_FRAME = "ifrRMM-Web11010101"  # EAST核对主框架ID
+    REAST_SP_MAIN_FRAME = "ifrRMM-Web11010102"  # EAST审批主框架ID
+    REAST_SB_MAIN_FRAME = "ifrRMM-Web11010103"  # EAST上报主框架ID
+    REAST_CX_MAIN_FRAME = "ifrRMM-Web11010104"  # EAST查询主框架ID
+
+    # 浙江国资委核对、审批、上报、查询页面主框架
+    RSAZJ_HD_MAIN_FRAME = "ifrRMM-Web13010101"  # 浙江国资委核对主框架ID
+    RSAZJ_SP_MAIN_FRAME = "ifrRMM-Web13010102"  # 浙江国资委审批主框架ID
+    RSAZJ_SB_MAIN_FRAME = "ifrRMM-Web13010103"  # 浙江国资委上报主框架ID
+    RSAZJ_CX_MAIN_FRAME = "ifrRMM-Web13010104"  # 浙江国资委查询主框架ID
+
+    # 综合报表核对、审批、上报、查询页面主框架
+    RPTC_HD_MAIN_FRAME = "ifrRPTC-Web010701"  # 综合报表核对主框架ID
+    RPTC_SP_MAIN_FRAME = "ifrRPTC-Web010702"  # 综合报表审批主框架ID
+    RPTC_SB_MAIN_FRAME = "ifrRPTC-Web010703"  # 综合报表上报主框架ID
+    RPTC_CX_MAIN_FRAME = "ifrRPTC-Web010704"  # 综合报表查询主框架ID
+
+
+class PubBbBspzElement(object):
+    """报表类品种公共组件"""
+    INPUT_PUB_START_DATE_BB = "params.dataStartDate".__add__(NAME)  # 报表类--数据日期输入框（开始日期）
+    INPUT_PUB_END_DATE_BB = "params.dataEndDate".__add__(NAME)  # 报表类--数据日期输入框（结束日期）
+    SELECT_PUB_GROUP_BB = "//select[@name='params.groupId']/option[text()='{}']".__add__(XPATH)  # 报表类--报表分组选择,传参选择对应分组
+    INPUT_PUB_REPORT_NAME_BB = "params.reportName".__add__(NAME)  # 报表类--任务名称输入框
+    INPUT_PUB_REPORT_NO_BB = "params.reportNo".__add__(NAME)  # 报表类--报表编号输入框
+    SELECT_PUB_REPORT_DATA_BB = "//select[@name='params.reportRange']/option[text()='{}']".__add__(
+        XPATH)  # 报表类--报送期间选择下拉框，传参
+    BUTTON_PUB_REFRESH_BB = "//input[@class='button31 button' and @value='刷新']".__add__(XPATH)  # 报表类--刷新按钮
+    BUTTON_PUB_OPEN_BB = "//input[@class='button25 button' and @value='打开']".__add__(XPATH)  # 报表类--打开按钮
+    BUTTON_PUB_EXPORT_BATCH_BB = "//input[@class='button30 button' and @value='批量导出']".__add__(XPATH)  # 报表类--批量导出按钮
+    BUTTON_PUB_SUBMIT_BB = "//input[@class='button28 button' and @value='提交']".__add__(XPATH)  # 报表类--提交按钮
+    BUTTON_PUB_ENTERING_HANDLE_BB = "//span[text()='{}']/../..//a[@id='bf_common_todo_statistic_list.entering_handle']".__add__(
+        XPATH)  # 报表类--审批主页面--进入办理（传参为审批流名称）
+    BUTTON_PUB_BACK_BB = "//input[@class='button28 button' and @value='返回']".__add__(XPATH)  # 报表类--审批返回按钮
+    BUTTON_PUB_AGREE_BB = "//input[@class='button5 button' and @value='同意']".__add__(XPATH)  # 报表类--审批同意按钮
+    BUTTON_PUB_REFUSE_BB = "//input[@class='button24 button' and @value='驳回']".__add__(XPATH)  # 报表类--审批驳回按钮
+    INPUT_PUB_AUDIT_RESON_BB = "//input[@id='auditReason']".__add__(XPATH)  # 报表类--审批意见输入框
+    ALERT_PUB_BB = "//button[@class=' aui_state_highlight']".__add__(XPATH)  # 报表类--通用弹窗--确认按钮
+    MSG_PUB_BB = "//div[@class='aui_content']".__add__(XPATH)  # 报表类--通用弹窗--提示信息
+    BUTTON_PUB_SJJY_BB = "//input[@class='buttonDef button' and @value='数据校验']".__add__(XPATH)  # 报表类--数据校验按钮
+    BUTTON_PUB_JDGZ_BB = "//input[@class='buttonDef button' and @value='进度跟踪']".__add__(XPATH)  # 报表类-进度跟踪按钮
+    BUTTON_PUB_DBXZ_BB = "//input[@class='button30 button' and @value='打包下载']".__add__(XPATH)  # 报表类-打包下载
+    BUTTON_PUB_QRCG_BB = "//input[@class='button5 button' and @value='确认成功']".__add__(XPATH)  # 报表类-确认成功按钮
+    BOX_PUB_CHOOSE_ALL = "//input[@id='btSelectItemVal0']".__add__(XPATH)  # 报表类-任务列表全选根节点（不包括查询）
+    BOX_PUB_CHOOSE_ALL_CX_BB = "//div[@class='fixed-table-header']//th[@class='bs-checkbox ']//input".__add__(
+        XPATH)  # 报表类-查询界面，复选框全选
+
+
+class PubMxBspzElement(object):
+    """所有页面共用组件"""
+    BOX_ALL_PUB_MX = "//table[@id='fixed_title']//span[@class='checkbox_bg']".__add__(XPATH)  # 明细类--全页面通用--全选报送任务
+    MSG_PUB_MX = "//div[@class='aui_content']".__add__(XPATH)  # 明细类--通用弹窗--提示信息
+    ALERT_PUB_MX = "//button[@class='aui_state_highlight']".__add__(XPATH)  # 明细类--通用弹窗--确认按钮
+    DATA_LIST_FRAME_MX = "//iframe[starts-with(@id,'LAYOUT_WIN_/SmartPage/RMM-Web@RMM_ModulePageAction')]".__add__(
+        XPATH)  # 明细类报文，进入办理--数据列表主框架（独立第一层框架）
+    DATA_FORM_ADD_FRAME_MX = "//iframe[starts-with(@id,'layui-layer-iframe')]".__add__(
+        XPATH)  # 明细类报文，进入办理--数据列表--新增页面框架
+    DATA_FORM_ADD_CLOSE_BUTTON_MX = "//a[@class='layui-layer-ico layui-layer-close layui-layer-close1']".__add__(
+        XPATH)  # 明细类报文，进入办理--数据列表--新增页面--关闭按钮
+    DATA_LIST_CLOSE_BUTTON_MX = "//div[@class='layoutContentHeader_right']".__add__(
+        XPATH)  # 明细类报文，进入办理--数据列表--新增页面--关闭按钮
+
+    """明细类品种公共组件---核对页面"""
+    BUTTON_PUB_HD_REFRESH_MX = "pub_check_page_form.refresh".__add__(ID)  # 明细类--核对页面--刷新按钮
+    INPUT_PUB_HD_START_DATE_MX = "pub_check_page_form.dataDateStart".__add__(ID)  # 明细类--核对页面--数据日期输入框（开始日期）
+    INPUT_PUB_HD_END_DATE_MX = "pub_check_page_form.dataDateEnd".__add__(ID)  # 明细类--核对页面--数据日期输入框（结束日期）
+    INPUT_PUB_HD_REPORT_NO_MX = "pub_check_page_form.reportNo".__add__(ID)  # 明细类--核对页面--任务号输入框
+    INPUT_PUB_HD_REPORT_NAME_MX = "pub_check_page_form.reportName".__add__(ID)  # 明细类--核对页面--任务名称输入框
+    SELECT_PUB_HD_REPORT_PL_MX = "//select[@id='pub_check_page_form.frequency']/option[text()='{}']".__add__(
+        XPATH)  # 明细类--核对页面--报送频率下拉选项，传频率名称
+    SELECT_PUB_HD_BSQJ_MX = "//select[@id='pub_check_page_form.bsqj']/option[text()='{}']".__add__(
+        XPATH)  # 明细类--核对页面--报送期间下拉选项，传报送期间年月日
+    BUTTON_PUB_HD_BATCH_SUBMIT_MX = "pub_check_page_list.submit".__add__(ID)  # 明细类--核对页面--批量提交按钮
+    BUTTON_PUB_HD_CHECK_DATA_MX = "pub_check_page_list.checkDatas".__add__(ID)  # 明细类--核对页面--校验按钮
+    BUTTON_PUB_HD_JRBL_MX = "//input[@id='pub_check_page_list.reportNo' and @value='{}']/../../..//a[@id='pub_check_page_list.el_8']".__add__(
+        XPATH)  # 明细类--根据报送任务编号点击进入办理按钮
+
+    """明细类品种公共组件---核对页面--进入办理"""
+    BUTTON_PUB_ADD_DATA_FOR_MX = "addDataButton".__add__(ID)  # 明细类--进入办理--新增按钮
+    BUTTON_PUB_IMPORT_DATA_FOR_MX = "importButton".__add__(ID)  # 明细类--进入办理--导入按钮
+    BUTTON_PUB_EXPORT_DATA_FOR_MX = "exportButton".__add__(ID)  # 明细类--进入办理-导出按钮
+    SELECT_PUB_EXPORT_DATA_BY_TYPE_MX = "//button[@id='exportButton']/..//a[{}]".__add__(
+        XPATH)  # 明细类--进入办理-导出,传入索引，1-Excel，2-CSV
+    BUTTON_PUB_SUBMIT_ALONE_MX = "btn icon_submit".__add__(CLASS)  # 明细类--进入办理-提交按钮
+    BUTTON_PUB_REFRESH_FOR_INFORMATION_MX = "btn icon_submit".__add__(CLASS)  # 明细类--进入办理-刷新按钮
+    BUTTON_PUB_SAVE_FOR_INFORMATION_MX = "//li[@class='icon icon_save']".__add__(XPATH)  # 明细类--进入办理-新增--保存按钮
+
+    """明细类品种公共组件---审批页面"""
+    BUTTON_PUB_ENTERE_HANDLE_MX = "//span[text()='{}']/../..//a[@id='bf_common_todo_statistic_list.entering_handle']".__add__(
+        XPATH)  # 明细类--审批--进入办理，输入审批流名称
+    INPUT_PUB_SP_START_DATE_MX = "pub_approval_page_form.dataDateStart".__add__(ID)  # 明细类--审批页面--数据日期输入框（开始日期）
+    INPUT_PUB_SP_END_DATE_MX = "pub_approval_page_form.dataDateEnd".__add__(ID)  # 明细类--审批页面--数据日期输入框（结束日期）
+    INPUT_PUB_SP_REPORT_NO_MX = "pub_approval_page_form.reportNo".__add__(ID)  # 明细类--审批页面--任务号输入框
+    INPUT_PUB_SP_REPORT_NAME_MX = "pub_approval_page_form.reportName".__add__(ID)  # 明细类--审批页面--任务名称输入框
+    SELECT_PUB_SP_REPORT_PL_MX = "//select[@id='pub_approval_page_form.frequency']/option[text()='{}']".__add__(
+        XPATH)  # 明细类--审批页面--报送频率下拉选项，传频率名称
+    SELECT_PUB_SP_BSQJ_MX = "//select[@id='pub_approval_page_form.bsqj']/option[text()='{}']".__add__(
+        XPATH)  # 明细类--审批页面--报送期间下拉选项，传报送期间年月日
+    SELECT_PUB_SP_COMMIT_USER_MX = "//select[@id='pub_approval_page_form.commitUser']/option[text()='{}']".__add__(
+        XPATH)  # 明细类--审批页面--提交人下拉框
+    BUTTON_PUB_SP_REFRESH_MX = "pub_approval_page_form.refresh".__add__(ID)  # 明细类--审批页面-刷新按钮
+    BUTTON_PUB_SP_BACK_MX = "pub_approval_page_form.back".__add__(ID)  # 明细类--审批页面-刷新按钮
+    INPUT_PUB_SP_AUDIT_RESON_MX = "pub_approval_page_op.appReason".__add__(ID)  # 明细类--审批页面-审批意见输入框
+    BUTTON_PUB_SP_AUDIT_AGREE_MX = "pub_approval_page_op._um_agree".__add__(ID)  # 明细类--审批页面-审批同意按钮
+    BUTTON_PUB_SP_AUDIT_REJECT_MX = "pub_approval_page_op._um_reject".__add__(ID)  # 明细类--审批页面-审批拒绝按钮
+
+    """明细类品种公共组件---上报页面"""
+    INPUT_PUB_SB_START_DATE_MX = "pub_report_page_form.dataDateStart".__add__(ID)  # 明细类--上报页面--数据日期输入框（开始日期）
+    INPUT_PUB_SB_END_DATE_MX = "pub_report_page_form.dataDateEnd".__add__(ID)  # 明细类--上报页面--数据日期输入框（结束日期）
+    INPUT_PUB_SB_REPORT_NO_MX = "pub_report_page_form.reportNo".__add__(ID)  # 明细类--上报页面--任务号输入框
+    INPUT_PUB_SB_REPORT_NAME_MX = "pub_report_page_form.reportName".__add__(ID)  # 明细类--上报页面--任务名称输入框
+    SELECT_PUB_SB_REPORT_PL_MX = "//select[@id='pub_report_page_form.frequency']/option[text()='{}']".__add__(
+        XPATH)  # 明细类--上报页面--报送频率下拉选项，传频率名称
+    SELECT_PUB_SB_BSQJ_MX = "//select[@id='pub_report_page_form.bsqj']/option[text()='{}']".__add__(
+        XPATH)  # 明细类--上报页面--报送期间下拉选项，传报送期间年月日
+    BUTTON_PUB_SB_REFRESH_MX = "pub_report_page_form.refresh".__add__(ID)  # 明细类--上报页面-刷新按钮
+    BUTTON_PUB_SB_JDGZ_MX = "pub_report_page_list.proTracking".__add__(ID)  # 明细类--上报页面-进度跟踪按钮
+    BUTTON_PUB_SB_JYBG_MX = "pub_report_page_list.valiRptButton".__add__(ID)  # 明细类--上报页面-校验报告按钮
+    BUTTON_PUB_SB_DOWN_LOAD_MX = "pub_report_page_list.download".__add__(ID)  # 明细类--上报页面-下载按钮
+    BUTTON_PUB_SB_QRCG_MX = "pub_report_page_list._um_agree".__add__(ID)  # 明细类--上报页面-下载按钮
+    BUTTON_PUB_SB_JY_MX = "pub_report_page_list.checkDatas".__add__(ID)  # 明细类--上报页面-校验按钮
+    BUTTON_PUB_SB_TJ_MX = "pub_report_page_list._um_submit".__add__(ID)  # 明细类--上报页面-提交按钮（开启上报审批时才有）
+    ALERT_PUB_SB_QRCG_MX = "//div[@class='aui_buttons']/button[1]".__add__(XPATH)  # 明细类--上报页面-确认成功弹窗，1-确认，2-取消
+
+    """明细类品种公共组件---查询页面"""
+    INPUT_PUB_CX_START_DATE_MX = "pub_result_page_form.dataDateStart".__add__(ID)  # 明细类--查询页面--数据日期输入框（开始日期）
+    INPUT_PUB_CX_END_DATE_MX = "pub_result_page_form.dataDateEnd".__add__(ID)  # 明细类--查询页面--数据日期输入框（结束日期）
+    INPUT_PUB_CX_REPORT_NO_MX = "pub_result_page_form.reportNo".__add__(ID)  # 明细类--查询页面--任务号输入框
+    INPUT_PUB_CX_REPORT_NAME_MX = "pub_result_page_form.reportName".__add__(ID)  # 明细类--查询页面--任务名称输入框
+    SELECT_PUB_CX_REPORT_STATUS_MX = "//select[@id='pub_result_page_form.queryPageSource']/option[text()='{}']".__add__(
+        XPATH)  # 明细类--查询页面--任务状态
+    SELECT_PUB_CX_BSQJ_MX = "//select[@id='pub_result_page_form.bsq']/option[text()='{}']".__add__(
+        XPATH)  # 明细类--查询页面--报送期间下拉选项，传报送期间年月日
+    BUTTON_PUB_CX_REFRESH_MX = "pub_result_page_form.refresh".__add__(ID)  # 明细类--查询页面-刷新按钮
+    BUTTON_PUB_CX_DOWN_LOAD_MX = "pub_result_page_list.download".__add__(ID)  # 明细类--查询页面-下载按钮

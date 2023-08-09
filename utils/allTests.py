@@ -1,0 +1,28 @@
+import unittest
+import os
+from Common import HTMLTestRunnerNew
+import time
+from BeautifulReport import BeautifulReport
+
+
+def allTests():
+    """获取所有需要执行的测试用例"""
+    suite = unittest.defaultTestLoader.discover(
+        start_dir=os.path.join(os.path.dirname(os.path.dirname(__file__)), 'testCase'),
+        pattern='case_*', top_level_dir=None)
+    return suite
+
+
+def getNowTime():
+    """获取当前时间"""
+    return time.strftime('%Y-%m-%d %H_%M_%S', time.localtime(time.time()))
+
+
+def run():
+    filePath = os.path.join(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'result'), 'report')
+    fileName = getNowTime() + 'report.html'
+    BeautifulReport(allTests()).report(description='数仓自动化测试报告', report_dir=filePath, filename=fileName)
+
+
+if __name__ == '__main__':
+    run()

@@ -1,0 +1,2255 @@
+2022-07-01 10:47:12,408 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 11:08:37,721 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 11:08:44,325 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-07-01 11:09:00,577 - yangshukun-ERROR 获取元素:【//span[text()='数据管理']$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 11点09分00秒.png】
+2022-07-01 11:09:00,603 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-07-01 11:09:15,763 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 11:09:21,787 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-07-01 11:09:35,967 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 11:09:36,506 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 11:09:46,010 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 11:09:46,560 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-07-01 11:09:47,829 - yangshukun-INFO 元素【//*[@id='listTabHead']/thead/tr/th[1]/input$xpath】点击成功
+2022-07-01 11:09:48,438 - yangshukun-INFO 元素【//*[@id='export']$xpath】点击成功
+2022-07-01 11:09:49,197 - yangshukun-INFO 元素【//span[text()='导出EXCEL格式']$xpath】点击成功
+2022-07-01 11:09:50,199 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-07-01 11:09:50,201 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-07-01 18:13:56,960 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:14:05,536 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-07-01 18:14:07,696 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:14:08,237 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:14:10,803 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:14:11,331 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-07-01 18:14:12,515 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:14:13,631 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:14:17,720 - yangshukun-INFO 上传文件成功
+2022-07-01 18:14:18,389 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:14:21,694 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:14:22,889 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:14:26,787 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:14:28,499 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:14:29,103 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:14:36,216 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:14:36,723 - yangshukun-INFO 
+************案例：【test_01_import_kjkm】执行结束************
+2022-07-01 18:14:36,723 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-07-01 18:14:39,063 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:14:44,290 - yangshukun-INFO 
+************开始执行案例：【test_02_import_fzhsx】************
+2022-07-01 18:14:46,631 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:14:47,174 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:14:49,568 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:14:50,100 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='辅助核算项']$xpath】点击成功
+2022-07-01 18:14:51,302 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:14:52,410 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:14:56,521 - yangshukun-INFO 上传文件成功
+2022-07-01 18:14:57,142 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:14:58,771 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:14:59,871 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:15:03,629 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:15:05,355 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:15:06,093 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:15:13,214 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:15:14,117 - yangshukun-INFO 
+************案例：【test_02_import_fzhsx】执行结束************
+2022-07-01 18:15:14,117 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-07-01 18:15:16,366 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:15:21,726 - yangshukun-INFO 
+************开始执行案例：【test_03_import_ftpdj】************
+2022-07-01 18:15:24,057 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:15:24,786 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:15:26,885 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:15:27,416 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='FTP定价变动明细信息']$xpath】点击成功
+2022-07-01 18:15:28,541 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:15:29,839 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:15:33,923 - yangshukun-INFO 上传文件成功
+2022-07-01 18:15:34,655 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:15:36,332 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:15:37,641 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:15:41,579 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:15:43,274 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:15:44,008 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:15:51,129 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:15:51,647 - yangshukun-INFO 
+************案例：【test_03_import_ftpdj】执行结束************
+2022-07-01 18:15:51,648 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-07-01 18:15:53,928 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:16:22,684 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:16:29,131 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-07-01 18:16:31,512 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:16:32,076 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:16:34,164 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:16:34,733 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-07-01 18:16:35,845 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:16:37,061 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:16:41,160 - yangshukun-INFO 上传文件成功
+2022-07-01 18:16:41,837 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:16:43,581 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:16:44,851 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:16:48,658 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:16:50,478 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:16:51,212 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:16:58,374 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:16:58,882 - yangshukun-INFO 
+************案例：【test_01_import_kjkm】执行结束************
+2022-07-01 18:16:58,883 - yangshukun-INFO 
+************开始执行案例：【test_02_import_fzhsx】************
+2022-07-01 18:17:00,804 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:17:01,385 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:17:03,624 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:17:04,211 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='辅助核算项']$xpath】点击成功
+2022-07-01 18:17:05,390 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:17:06,693 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:17:10,798 - yangshukun-INFO 上传文件成功
+2022-07-01 18:17:11,541 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:17:13,251 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:17:14,390 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:17:18,240 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:17:19,911 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:17:20,494 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:17:27,593 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:17:28,340 - yangshukun-INFO 
+************案例：【test_02_import_fzhsx】执行结束************
+2022-07-01 18:17:28,340 - yangshukun-INFO 
+************开始执行案例：【test_03_import_ftpdj】************
+2022-07-01 18:17:30,365 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:17:30,933 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:17:33,127 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:17:33,704 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='FTP定价变动明细信息']$xpath】点击成功
+2022-07-01 18:17:35,003 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:17:36,202 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:17:40,297 - yangshukun-INFO 上传文件成功
+2022-07-01 18:17:40,897 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:17:42,646 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:17:43,780 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:17:47,552 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:17:49,216 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:17:49,919 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:17:57,069 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:17:57,586 - yangshukun-INFO 
+************案例：【test_03_import_ftpdj】执行结束************
+2022-07-01 18:17:57,588 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 18:17:59,431 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:17:59,989 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:18:02,215 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:18:02,767 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='企业客户']$xpath】点击成功
+2022-07-01 18:18:04,368 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:18:05,636 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:18:09,767 - yangshukun-INFO 上传文件成功
+2022-07-01 18:18:10,566 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:35:09,789 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:35:15,984 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-07-01 18:35:17,991 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:35:18,643 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:35:20,827 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:35:21,433 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-07-01 18:35:22,544 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:35:23,735 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:35:27,771 - yangshukun-INFO 上传文件成功
+2022-07-01 18:35:28,376 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:35:29,995 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:35:31,077 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:35:35,049 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:35:36,758 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:35:37,418 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:35:44,550 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:35:45,409 - yangshukun-INFO 
+************案例：【test_01_import_kjkm】执行结束************
+2022-07-01 18:35:45,410 - yangshukun-INFO 
+************开始执行案例：【test_02_import_fzhsx】************
+2022-07-01 18:35:47,277 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:35:47,846 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:35:49,989 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:35:50,528 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='辅助核算项']$xpath】点击成功
+2022-07-01 18:35:51,787 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:35:52,974 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:35:57,081 - yangshukun-INFO 上传文件成功
+2022-07-01 18:35:57,787 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:35:59,609 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:36:00,820 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:36:04,632 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:36:06,361 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:36:07,034 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:36:14,186 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:36:14,938 - yangshukun-INFO 
+************案例：【test_02_import_fzhsx】执行结束************
+2022-07-01 18:36:14,939 - yangshukun-INFO 
+************开始执行案例：【test_03_import_ftpdj】************
+2022-07-01 18:36:16,822 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:36:17,390 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:36:19,588 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:36:20,184 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='FTP定价变动明细信息']$xpath】点击成功
+2022-07-01 18:36:21,321 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:36:22,559 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:36:26,628 - yangshukun-INFO 上传文件成功
+2022-07-01 18:36:27,241 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:36:29,002 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:36:30,085 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:36:33,964 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:36:35,764 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:36:36,410 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:36:43,547 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:36:44,299 - yangshukun-INFO 
+************案例：【test_03_import_ftpdj】执行结束************
+2022-07-01 18:36:44,299 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 18:36:46,276 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:36:46,936 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:36:49,183 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:36:49,722 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='企业客户']$xpath】点击成功
+2022-07-01 18:36:51,268 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:36:52,527 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:36:56,563 - yangshukun-INFO 上传文件成功
+2022-07-01 18:36:57,174 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:37:06,558 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:37:07,636 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:37:14,173 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:37:15,445 - yangshukun-INFO 
+************开始执行案例：【test_05_import_jrjg】************
+2022-07-01 18:37:17,410 - yangshukun-INFO 
+************开始执行案例：【test_06_import_nbzh】************
+2022-07-01 18:37:19,292 - yangshukun-INFO 
+************开始执行案例：【test_07_import_yhzh】************
+2022-07-01 18:37:21,106 - yangshukun-INFO 
+************开始执行案例：【test_08_import_grkh】************
+2022-07-01 18:37:22,984 - yangshukun-INFO 
+************开始执行案例：【test_09_import_dbrxx_zzjg】************
+2022-07-01 18:37:24,825 - yangshukun-INFO 
+************开始执行案例：【test_10_import_ygxx】************
+2022-07-01 18:37:26,647 - yangshukun-INFO 
+************开始执行案例：【test_11_import_hl】************
+2022-07-01 18:37:28,472 - yangshukun-INFO 
+************开始执行案例：【test_12_import_jzll】************
+2022-07-01 18:37:30,330 - yangshukun-INFO 
+************开始执行案例：【test_13_import_dbrxx_zrr】************
+2022-07-01 18:37:32,205 - yangshukun-INFO 
+************开始执行案例：【test_14_import_jtzh】************
+2022-07-01 18:37:34,058 - yangshukun-INFO 
+************开始执行案例：【test_15_import_hqck】************
+2022-07-01 18:37:35,900 - yangshukun-INFO 
+************开始执行案例：【test_16_import_dqck】************
+2022-07-01 18:37:37,781 - yangshukun-INFO 
+************开始执行案例：【test_17_import_tzck】************
+2022-07-01 18:37:39,667 - yangshukun-INFO 
+************开始执行案例：【test_18_import_xyck】************
+2022-07-01 18:37:41,533 - yangshukun-INFO 
+************开始执行案例：【test_19_import_bzjck】************
+2022-07-01 18:37:43,363 - yangshukun-INFO 
+************开始执行案例：【test_20_import_ckzbj】************
+2022-07-01 18:37:45,211 - yangshukun-INFO 
+************开始执行案例：【test_21_import_wtck】************
+2022-07-01 18:37:47,029 - yangshukun-INFO 
+************开始执行案例：【test_22_import_ldzjdk】************
+2022-07-01 18:37:48,902 - yangshukun-INFO 
+************开始执行案例：【test_23_import_xmdk】************
+2022-07-01 18:37:50,783 - yangshukun-INFO 
+************开始执行案例：【test_24_import_xypj_dw】************
+2022-07-01 18:37:52,652 - yangshukun-INFO 
+************开始执行案例：【test_25_import_zrr_rzzl】************
+2022-07-01 18:37:54,523 - yangshukun-INFO 
+************开始执行案例：【test_26_import_zrr_xfxd】************
+2022-07-01 18:37:56,336 - yangshukun-INFO 
+************开始执行案例：【test_27_import_rzdb】************
+2022-07-01 18:37:58,173 - yangshukun-INFO 
+************开始执行案例：【test_28_import_sx_zrr】************
+2022-07-01 18:37:59,982 - yangshukun-INFO 
+************开始执行案例：【test_29_import_xypj_zrr】************
+2022-07-01 18:38:01,837 - yangshukun-INFO 
+************开始执行案例：【test_30_import_cydw_cprzzl_zrr】************
+2022-07-01 18:38:03,720 - yangshukun-INFO 
+************开始执行案例：【test_31_import_frzhtz】************
+2022-07-01 18:38:05,528 - yangshukun-INFO 
+************开始执行案例：【test_32_import_gdzcdk】************
+2022-07-01 18:38:07,388 - yangshukun-INFO 
+************开始执行案例：【test_33_import_bgdk】************
+2022-07-01 18:38:09,207 - yangshukun-INFO 
+************开始执行案例：【test_34_import_dw_rzzl】************
+2022-07-01 18:38:11,026 - yangshukun-INFO 
+************开始执行案例：【test_35_import_bl】************
+2022-07-01 18:38:12,834 - yangshukun-INFO 
+************开始执行案例：【test_36_import_mfxd】************
+2022-07-01 18:38:14,695 - yangshukun-INFO 
+************开始执行案例：【test_37_import_bh】************
+2022-07-01 18:38:16,563 - yangshukun-INFO 
+************开始执行案例：【test_38_import_dbht】************
+2022-07-01 18:38:18,395 - yangshukun-INFO 
+************开始执行案例：【test_39_import_sx_dw】************
+2022-07-01 18:38:20,217 - yangshukun-INFO 
+************开始执行案例：【test_40_import_frxfxd】************
+2022-07-01 18:38:22,052 - yangshukun-INFO 
+************开始执行案例：【test_41_import_cydw_cprzzl_fr】************
+2022-07-01 18:38:23,910 - yangshukun-INFO 
+************开始执行案例：【test_42_import_myrz】************
+2022-07-01 18:38:25,745 - yangshukun-INFO 
+************开始执行案例：【test_43_import_tysx_hd】************
+2022-07-01 18:38:27,586 - yangshukun-INFO 
+************开始执行案例：【test_44_import_tysx_sy】************
+2022-07-01 18:38:29,431 - yangshukun-INFO 
+************开始执行案例：【test_45_import_tykh_xypj】************
+2022-07-01 18:38:31,259 - yangshukun-INFO 
+************开始执行案例：【test_46_import_tyjr】************
+2022-07-01 18:38:33,114 - yangshukun-INFO 
+************开始执行案例：【test_47_import_tyjc】************
+2022-07-01 18:38:34,984 - yangshukun-INFO 
+************开始执行案例：【test_48_import_tycf】************
+2022-07-01 18:38:36,815 - yangshukun-INFO 
+************开始执行案例：【test_49_import_tycr】************
+2022-07-01 18:38:38,641 - yangshukun-INFO 
+************开始执行案例：【test_50_import_tycc】************
+2022-07-01 18:38:40,494 - yangshukun-INFO 
+************开始执行案例：【test_51_import_cfty】************
+2022-07-01 18:38:42,331 - yangshukun-INFO 
+************开始执行案例：【test_52_import_zqtz】************
+2022-07-01 18:38:44,185 - yangshukun-INFO 
+************开始执行案例：【test_53_import_zqhg】************
+2022-07-01 18:38:46,008 - yangshukun-INFO 
+************开始执行案例：【test_54_import_qytz】************
+2022-07-01 18:38:47,871 - yangshukun-INFO 
+************开始执行案例：【test_55_import_gmjj】************
+2022-07-01 18:38:49,666 - yangshukun-INFO 
+************开始执行案例：【test_56_import_smjj】************
+2022-07-01 18:38:51,525 - yangshukun-INFO 
+************开始执行案例：【test_57_import_zgcp】************
+2022-07-01 18:38:53,351 - yangshukun-INFO 
+************开始执行案例：【test_58_import_jgxck】************
+2022-07-01 18:39:00,183 - yangshukun-INFO 
+************开始执行案例：【test_59_import_tycdtz】************
+2022-07-01 18:39:01,987 - yangshukun-INFO 
+************开始执行案例：【test_60_import_bblc】************
+2022-07-01 18:39:03,827 - yangshukun-INFO 
+************开始执行案例：【test_61_import_xdzczr】************
+2022-07-01 18:39:10,702 - yangshukun-INFO 
+************开始执行案例：【test_62_import_zqfx】************
+2022-07-01 18:39:25,012 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:39:32,560 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-07-01 18:39:35,188 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:39:36,124 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:39:38,211 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:39:38,776 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-07-01 18:39:40,946 - yangshukun-INFO 
+************开始执行案例：【test_02_import_fzhsx】************
+2022-07-01 18:39:52,010 - yangshukun-ERROR 获取元素:【//span[text()='数据管理']$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 18点39分51秒.png】
+2022-07-01 18:39:52,068 - yangshukun-INFO 
+************开始执行案例：【test_03_import_ftpdj】************
+2022-07-01 18:40:03,185 - yangshukun-ERROR 获取元素:【//span[text()='数据管理']$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 18点40分03秒.png】
+2022-07-01 18:40:03,187 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 18:40:14,386 - yangshukun-ERROR 获取元素:【//span[text()='数据管理']$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 18点40分14秒.png】
+2022-07-01 18:40:14,391 - yangshukun-INFO 
+************开始执行案例：【test_05_import_jrjg】************
+2022-07-01 18:40:25,478 - yangshukun-ERROR 获取元素:【//span[text()='数据管理']$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 18点40分25秒.png】
+2022-07-01 18:40:25,480 - yangshukun-INFO 
+************开始执行案例：【test_06_import_nbzh】************
+2022-07-01 18:40:36,531 - yangshukun-ERROR 获取元素:【//span[text()='数据管理']$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 18点40分36秒.png】
+2022-07-01 18:40:36,533 - yangshukun-INFO 
+************开始执行案例：【test_07_import_yhzh】************
+2022-07-01 18:40:47,649 - yangshukun-ERROR 获取元素:【//span[text()='数据管理']$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 18点40分47秒.png】
+2022-07-01 18:40:47,651 - yangshukun-INFO 
+************开始执行案例：【test_08_import_grkh】************
+2022-07-01 18:40:53,788 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:41:00,381 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-07-01 18:41:02,385 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:41:04,528 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:41:06,899 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:41:07,433 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-07-01 18:41:08,553 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:41:09,739 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:41:13,876 - yangshukun-INFO 上传文件成功
+2022-07-01 18:41:14,472 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:41:16,099 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:41:17,177 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:41:21,128 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:41:22,830 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:41:23,414 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:41:30,492 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:41:31,538 - yangshukun-INFO 
+************案例：【test_01_import_kjkm】执行结束************
+2022-07-01 18:41:31,539 - yangshukun-INFO 
+************开始执行案例：【test_02_import_fzhsx】************
+2022-07-01 18:41:33,438 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:41:33,988 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:41:36,126 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:41:36,710 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='辅助核算项']$xpath】点击成功
+2022-07-01 18:41:37,816 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:41:38,990 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:41:43,094 - yangshukun-INFO 上传文件成功
+2022-07-01 18:41:43,762 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:41:45,481 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:41:46,563 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:41:50,439 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:41:52,122 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:41:52,790 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:41:59,926 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:42:00,643 - yangshukun-INFO 
+************案例：【test_02_import_fzhsx】执行结束************
+2022-07-01 18:42:00,643 - yangshukun-INFO 
+************开始执行案例：【test_03_import_ftpdj】************
+2022-07-01 18:42:02,477 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:42:03,020 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:42:05,154 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:42:05,690 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='FTP定价变动明细信息']$xpath】点击成功
+2022-07-01 18:42:06,837 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:42:08,109 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:42:12,207 - yangshukun-INFO 上传文件成功
+2022-07-01 18:42:12,874 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:42:14,636 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:42:15,744 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:42:19,573 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:42:21,234 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:42:21,807 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:42:28,902 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:42:29,606 - yangshukun-INFO 
+************案例：【test_03_import_ftpdj】执行结束************
+2022-07-01 18:42:29,607 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 18:42:31,579 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:42:32,116 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:42:34,322 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:42:34,911 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='企业客户']$xpath】点击成功
+2022-07-01 18:42:36,378 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:42:37,534 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:42:41,636 - yangshukun-INFO 上传文件成功
+2022-07-01 18:42:42,309 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:42:51,622 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:42:52,697 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:42:59,239 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:43:00,296 - yangshukun-INFO 
+************开始执行案例：【test_05_import_jrjg】************
+2022-07-01 18:43:02,230 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:43:03,810 - yangshukun-INFO 
+************开始执行案例：【test_06_import_nbzh】************
+2022-07-01 18:43:05,653 - yangshukun-INFO 
+************开始执行案例：【test_07_import_yhzh】************
+2022-07-01 18:43:07,503 - yangshukun-INFO 
+************开始执行案例：【test_08_import_grkh】************
+2022-07-01 18:43:09,339 - yangshukun-INFO 
+************开始执行案例：【test_09_import_dbrxx_zzjg】************
+2022-07-01 18:43:11,130 - yangshukun-INFO 
+************开始执行案例：【test_10_import_ygxx】************
+2022-07-01 18:43:13,010 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:43:13,631 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:43:15,799 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:43:16,397 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='员工信息']$xpath】点击成功
+2022-07-01 18:43:17,636 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:43:18,832 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:43:22,896 - yangshukun-INFO 上传文件成功
+2022-07-01 18:43:23,606 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:43:25,222 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:43:26,304 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:43:31,710 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:43:33,422 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:43:33,997 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:43:41,149 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:43:41,664 - yangshukun-INFO 
+************案例：【test_10_import_ygxx】执行结束************
+2022-07-01 18:43:41,666 - yangshukun-INFO 
+************开始执行案例：【test_11_import_hl】************
+2022-07-01 18:43:43,563 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:43:44,103 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:43:46,289 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:43:46,868 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='汇率']$xpath】点击成功
+2022-07-01 18:43:48,014 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:43:49,214 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:43:53,294 - yangshukun-INFO 上传文件成功
+2022-07-01 18:43:53,940 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:43:55,619 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:43:56,739 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:44:00,556 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:44:02,190 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:44:02,898 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:44:10,003 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:44:10,755 - yangshukun-INFO 
+************案例：【test_11_import_hl】执行结束************
+2022-07-01 18:44:10,756 - yangshukun-INFO 
+************开始执行案例：【test_12_import_jzll】************
+2022-07-01 18:44:12,726 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:44:13,288 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:44:15,446 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:44:16,004 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='基准利率']$xpath】点击成功
+2022-07-01 18:44:17,145 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:44:18,341 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:44:22,387 - yangshukun-INFO 上传文件成功
+2022-07-01 18:44:22,993 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:44:24,764 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:44:25,913 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:44:29,693 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:44:31,397 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:44:31,982 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:44:39,067 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:44:39,582 - yangshukun-INFO 
+************案例：【test_12_import_jzll】执行结束************
+2022-07-01 18:44:39,584 - yangshukun-INFO 
+************开始执行案例：【test_13_import_dbrxx_zrr】************
+2022-07-01 18:44:41,538 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:44:42,078 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:44:44,222 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:44:44,837 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='担保人信息（自然人）']$xpath】点击成功
+2022-07-01 18:44:46,050 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:44:47,170 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:44:51,223 - yangshukun-INFO 上传文件成功
+2022-07-01 18:44:51,856 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:44:56,687 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:44:57,766 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:45:02,175 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:45:03,246 - yangshukun-INFO 
+************开始执行案例：【test_14_import_jtzh】************
+2022-07-01 18:45:05,157 - yangshukun-INFO 
+************开始执行案例：【test_15_import_hqck】************
+2022-07-01 18:45:07,008 - yangshukun-INFO 
+************开始执行案例：【test_16_import_dqck】************
+2022-07-01 18:45:08,801 - yangshukun-INFO 
+************开始执行案例：【test_17_import_tzck】************
+2022-07-01 18:45:10,608 - yangshukun-INFO 
+************开始执行案例：【test_18_import_xyck】************
+2022-07-01 18:45:12,401 - yangshukun-INFO 
+************开始执行案例：【test_19_import_bzjck】************
+2022-07-01 18:45:14,195 - yangshukun-INFO 
+************开始执行案例：【test_20_import_ckzbj】************
+2022-07-01 18:46:37,142 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:46:46,690 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 18:46:49,090 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:46:49,946 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:46:52,160 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:46:52,708 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='企业客户']$xpath】点击成功
+2022-07-01 18:46:53,939 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:46:56,085 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-07-01 18:47:15,087 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:47:20,851 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 18:47:22,992 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:47:23,571 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:47:25,679 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:47:26,207 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='企业客户']$xpath】点击成功
+2022-07-01 18:47:27,684 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:47:28,817 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:47:32,898 - yangshukun-INFO 上传文件成功
+2022-07-01 18:47:33,537 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:47:43,004 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:47:44,203 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:47:50,890 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:47:52,564 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:47:53,232 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:48:10,813 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 18点48分10秒.png】
+2022-07-01 18:48:10,817 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-07-01 18:50:58,651 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:51:04,620 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-07-01 18:51:06,803 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:51:07,342 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:51:10,422 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:51:10,954 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-07-01 18:51:12,132 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:51:13,236 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:51:17,306 - yangshukun-INFO 上传文件成功
+2022-07-01 18:51:17,949 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:51:19,570 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:51:20,760 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:51:25,676 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:51:27,333 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:51:27,965 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:51:35,101 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:51:35,950 - yangshukun-INFO 
+************案例：【test_01_import_kjkm】执行结束************
+2022-07-01 18:51:35,951 - yangshukun-INFO 
+************开始执行案例：【test_02_import_fzhsx】************
+2022-07-01 18:51:37,856 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:51:38,394 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:51:41,585 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:51:42,118 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='辅助核算项']$xpath】点击成功
+2022-07-01 18:51:43,301 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:51:44,489 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:51:48,549 - yangshukun-INFO 上传文件成功
+2022-07-01 18:51:49,148 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:51:50,883 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:51:51,976 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:51:56,806 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:51:58,518 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:51:59,091 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:52:06,220 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:52:06,918 - yangshukun-INFO 
+************案例：【test_02_import_fzhsx】执行结束************
+2022-07-01 18:52:06,918 - yangshukun-INFO 
+************开始执行案例：【test_03_import_ftpdj】************
+2022-07-01 18:52:08,821 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:52:09,391 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:52:12,582 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:52:13,115 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='FTP定价变动明细信息']$xpath】点击成功
+2022-07-01 18:52:14,326 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:52:15,450 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:52:19,541 - yangshukun-INFO 上传文件成功
+2022-07-01 18:52:20,272 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:52:21,906 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:52:23,062 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:52:27,942 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:52:29,604 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:52:30,188 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:52:37,290 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:52:37,800 - yangshukun-INFO 
+************案例：【test_03_import_ftpdj】执行结束************
+2022-07-01 18:52:37,801 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 18:52:39,697 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:52:40,242 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:52:43,429 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:52:43,963 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='企业客户']$xpath】点击成功
+2022-07-01 18:52:45,500 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:52:46,666 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:52:50,701 - yangshukun-INFO 上传文件成功
+2022-07-01 18:52:51,434 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:52:59,382 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:53:00,514 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:53:07,896 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:53:09,534 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:53:10,172 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:53:27,714 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 18点53分27秒.png】
+2022-07-01 18:53:27,718 - yangshukun-INFO 
+************开始执行案例：【test_05_import_jrjg】************
+2022-07-01 18:53:29,544 - yangshukun-INFO 
+************开始执行案例：【test_06_import_nbzh】************
+2022-07-01 18:53:31,337 - yangshukun-INFO 
+************开始执行案例：【test_07_import_yhzh】************
+2022-07-01 18:53:33,166 - yangshukun-INFO 
+************开始执行案例：【test_08_import_grkh】************
+2022-07-01 18:53:34,976 - yangshukun-INFO 
+************开始执行案例：【test_09_import_dbrxx_zzjg】************
+2022-07-01 18:53:36,836 - yangshukun-INFO 
+************开始执行案例：【test_10_import_ygxx】************
+2022-07-01 18:53:38,725 - yangshukun-INFO 
+************开始执行案例：【test_11_import_hl】************
+2022-07-01 18:53:40,559 - yangshukun-INFO 
+************开始执行案例：【test_12_import_jzll】************
+2022-07-01 18:53:42,351 - yangshukun-INFO 
+************开始执行案例：【test_13_import_dbrxx_zrr】************
+2022-07-01 18:53:44,179 - yangshukun-INFO 
+************开始执行案例：【test_14_import_jtzh】************
+2022-07-01 18:53:46,015 - yangshukun-INFO 
+************开始执行案例：【test_15_import_hqck】************
+2022-07-01 18:53:47,865 - yangshukun-INFO 
+************开始执行案例：【test_16_import_dqck】************
+2022-07-01 18:53:49,676 - yangshukun-INFO 
+************开始执行案例：【test_17_import_tzck】************
+2022-07-01 18:53:51,556 - yangshukun-INFO 
+************开始执行案例：【test_18_import_xyck】************
+2022-07-01 18:53:53,360 - yangshukun-INFO 
+************开始执行案例：【test_19_import_bzjck】************
+2022-07-01 18:53:55,219 - yangshukun-INFO 
+************开始执行案例：【test_20_import_ckzbj】************
+2022-07-01 18:53:57,080 - yangshukun-INFO 
+************开始执行案例：【test_21_import_wtck】************
+2022-07-01 18:53:59,274 - yangshukun-INFO 
+************开始执行案例：【test_22_import_ldzjdk】************
+2022-07-01 18:54:01,105 - yangshukun-INFO 
+************开始执行案例：【test_23_import_xmdk】************
+2022-07-01 18:57:58,471 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 18:58:05,451 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-07-01 18:58:07,469 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:58:08,015 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:58:11,248 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:58:11,808 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-07-01 18:58:12,921 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:58:14,037 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:58:18,137 - yangshukun-INFO 上传文件成功
+2022-07-01 18:58:18,763 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:58:20,376 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:58:21,469 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:58:26,217 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:58:28,437 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:58:29,059 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:58:36,687 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:58:37,624 - yangshukun-INFO 
+************案例：【test_01_import_kjkm】执行结束************
+2022-07-01 18:58:37,625 - yangshukun-INFO 
+************开始执行案例：【test_02_import_fzhsx】************
+2022-07-01 18:58:39,489 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:58:40,047 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:58:43,273 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:58:43,810 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='辅助核算项']$xpath】点击成功
+2022-07-01 18:58:44,977 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:58:46,170 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:58:50,248 - yangshukun-INFO 上传文件成功
+2022-07-01 18:58:50,848 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:58:52,658 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:58:53,786 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:58:58,606 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:59:00,819 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:59:01,428 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:59:08,977 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:59:09,721 - yangshukun-INFO 
+************案例：【test_02_import_fzhsx】执行结束************
+2022-07-01 18:59:09,722 - yangshukun-INFO 
+************开始执行案例：【test_03_import_ftpdj】************
+2022-07-01 18:59:11,636 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:59:12,185 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:59:15,322 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 18:59:15,883 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='FTP定价变动明细信息']$xpath】点击成功
+2022-07-01 18:59:17,034 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:59:18,217 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:59:22,301 - yangshukun-INFO 上传文件成功
+2022-07-01 18:59:22,902 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 18:59:24,632 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 18:59:25,789 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 18:59:30,571 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 18:59:32,840 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 18:59:33,417 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 18:59:40,973 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 18:59:41,488 - yangshukun-INFO 
+************案例：【test_03_import_ftpdj】执行结束************
+2022-07-01 18:59:41,490 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 18:59:43,381 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 18:59:43,921 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 18:59:47,094 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 18:59:47,626 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='企业客户']$xpath】点击成功
+2022-07-01 18:59:49,181 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 18:59:50,362 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 18:59:54,422 - yangshukun-INFO 上传文件成功
+2022-07-01 18:59:55,026 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:00:05,901 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:00:07,041 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:00:14,408 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:00:16,619 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:00:17,290 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:00:40,104 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点00分39秒.png】
+2022-07-01 19:00:40,108 - yangshukun-INFO 
+************开始执行案例：【test_05_import_jrjg】************
+2022-07-01 19:00:42,007 - yangshukun-INFO 
+************开始执行案例：【test_06_import_nbzh】************
+2022-07-01 19:00:43,806 - yangshukun-INFO 
+************开始执行案例：【test_07_import_yhzh】************
+2022-07-01 19:00:45,629 - yangshukun-INFO 
+************开始执行案例：【test_08_import_grkh】************
+2022-07-01 19:00:47,465 - yangshukun-INFO 
+************开始执行案例：【test_09_import_dbrxx_zzjg】************
+2022-07-01 19:00:49,316 - yangshukun-INFO 
+************开始执行案例：【test_10_import_ygxx】************
+2022-07-01 19:00:51,121 - yangshukun-INFO 
+************开始执行案例：【test_11_import_hl】************
+2022-07-01 19:00:52,961 - yangshukun-INFO 
+************开始执行案例：【test_12_import_jzll】************
+2022-07-01 19:00:54,830 - yangshukun-INFO 
+************开始执行案例：【test_13_import_dbrxx_zrr】************
+2022-07-01 19:00:56,655 - yangshukun-INFO 
+************开始执行案例：【test_14_import_jtzh】************
+2022-07-01 19:00:58,566 - yangshukun-INFO 
+************开始执行案例：【test_15_import_hqck】************
+2022-07-01 19:01:00,362 - yangshukun-INFO 
+************开始执行案例：【test_16_import_dqck】************
+2022-07-01 19:02:50,766 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 19:02:57,495 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 19:02:59,875 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:03:00,439 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:03:03,522 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:03:04,089 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='企业客户']$xpath】点击成功
+2022-07-01 19:03:05,590 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:03:06,720 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:03:10,799 - yangshukun-INFO 上传文件成功
+2022-07-01 19:03:11,447 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:03:20,749 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:03:21,827 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:03:29,338 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:03:31,457 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:03:32,033 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:03:55,061 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:03:55,929 - yangshukun-INFO 
+************案例：【test_04_import_qykh】执行结束************
+2022-07-01 19:03:55,930 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-07-01 19:04:03,358 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 19:04:10,881 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-07-01 19:04:13,388 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:04:13,931 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:04:17,139 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 19:04:17,718 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-07-01 19:04:18,986 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:04:20,286 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:04:24,393 - yangshukun-INFO 上传文件成功
+2022-07-01 19:04:25,077 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:04:26,735 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:04:27,998 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:04:32,870 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:04:35,012 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:04:35,740 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:04:43,375 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:04:44,291 - yangshukun-INFO 
+************案例：【test_01_import_kjkm】执行结束************
+2022-07-01 19:04:44,291 - yangshukun-INFO 
+************开始执行案例：【test_02_import_fzhsx】************
+2022-07-01 19:04:46,149 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:04:46,720 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:04:49,972 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 19:04:50,564 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='辅助核算项']$xpath】点击成功
+2022-07-01 19:04:51,835 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:04:52,948 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:04:57,064 - yangshukun-INFO 上传文件成功
+2022-07-01 19:04:57,776 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:04:59,528 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:05:00,671 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:05:05,585 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:05:07,867 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:05:08,512 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:05:16,133 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:05:16,839 - yangshukun-INFO 
+************案例：【test_02_import_fzhsx】执行结束************
+2022-07-01 19:05:16,839 - yangshukun-INFO 
+************开始执行案例：【test_03_import_ftpdj】************
+2022-07-01 19:05:18,785 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:05:19,344 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:05:22,559 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 19:05:23,148 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='FTP定价变动明细信息']$xpath】点击成功
+2022-07-01 19:05:24,380 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:05:25,721 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:05:29,795 - yangshukun-INFO 上传文件成功
+2022-07-01 19:05:30,555 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:05:32,332 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:05:33,423 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:05:38,368 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:05:40,615 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:05:41,193 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:05:48,874 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:05:49,604 - yangshukun-INFO 
+************案例：【test_03_import_ftpdj】执行结束************
+2022-07-01 19:05:49,604 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 19:05:51,475 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:05:52,043 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:05:55,205 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:05:55,796 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='企业客户']$xpath】点击成功
+2022-07-01 19:05:57,299 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:05:58,407 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:06:02,520 - yangshukun-INFO 上传文件成功
+2022-07-01 19:06:03,230 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:06:12,699 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:06:14,013 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:06:19,565 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:06:21,825 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:06:22,400 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:06:46,169 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:06:46,880 - yangshukun-INFO 
+************案例：【test_04_import_qykh】执行结束************
+2022-07-01 19:06:46,881 - yangshukun-INFO 
+************开始执行案例：【test_05_import_jrjg】************
+2022-07-01 19:06:48,810 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:06:49,373 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:06:52,578 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:06:53,195 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='金融机构']$xpath】点击成功
+2022-07-01 19:06:54,365 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:06:55,581 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:06:59,729 - yangshukun-INFO 上传文件成功
+2022-07-01 19:07:00,435 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:07:03,760 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:07:04,960 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:07:12,437 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:07:14,721 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:07:15,361 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:07:22,909 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:07:23,642 - yangshukun-INFO 
+************案例：【test_05_import_jrjg】执行结束************
+2022-07-01 19:07:23,642 - yangshukun-INFO 
+************开始执行案例：【test_06_import_nbzh】************
+2022-07-01 19:07:25,607 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:07:26,150 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:07:29,368 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:07:29,982 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='内部账户']$xpath】点击成功
+2022-07-01 19:07:31,209 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:07:32,468 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:09:59,622 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 19:10:08,203 - yangshukun-INFO 
+************开始执行案例：【test_01_import_kjkm】************
+2022-07-01 19:10:10,573 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:10:11,116 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:10:14,316 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 19:10:14,850 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='会计科目']$xpath】点击成功
+2022-07-01 19:10:15,988 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:10:17,189 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:10:21,266 - yangshukun-INFO 上传文件成功
+2022-07-01 19:10:21,890 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:10:23,577 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:10:24,789 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:10:29,509 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:10:31,629 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:10:32,202 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:10:39,767 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:10:40,285 - yangshukun-INFO 
+************案例：【test_01_import_kjkm】执行结束************
+2022-07-01 19:10:40,289 - yangshukun-INFO 
+************开始执行案例：【test_02_import_fzhsx】************
+2022-07-01 19:10:42,217 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:10:42,755 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:10:45,952 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 19:10:46,505 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='辅助核算项']$xpath】点击成功
+2022-07-01 19:10:47,763 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:10:48,886 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:10:52,967 - yangshukun-INFO 上传文件成功
+2022-07-01 19:10:53,569 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:10:55,240 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:10:56,315 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:11:01,121 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:11:03,250 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:11:03,857 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:11:11,468 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:11:12,178 - yangshukun-INFO 
+************案例：【test_02_import_fzhsx】执行结束************
+2022-07-01 19:11:12,178 - yangshukun-INFO 
+************开始执行案例：【test_03_import_ftpdj】************
+2022-07-01 19:11:14,022 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:11:14,569 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:11:17,770 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='财务信息']$xpath】点击成功
+2022-07-01 19:11:18,309 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='FTP定价变动明细信息']$xpath】点击成功
+2022-07-01 19:11:19,414 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:11:20,568 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:11:24,644 - yangshukun-INFO 上传文件成功
+2022-07-01 19:11:25,243 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:11:26,895 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:11:27,973 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:11:32,887 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:11:35,015 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:11:35,657 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:11:43,265 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:11:44,013 - yangshukun-INFO 
+************案例：【test_03_import_ftpdj】执行结束************
+2022-07-01 19:11:44,014 - yangshukun-INFO 
+************开始执行案例：【test_04_import_qykh】************
+2022-07-01 19:11:45,882 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:11:46,422 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:11:49,697 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:11:50,295 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='企业客户']$xpath】点击成功
+2022-07-01 19:11:51,827 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:11:53,014 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:11:57,089 - yangshukun-INFO 上传文件成功
+2022-07-01 19:11:57,700 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:12:07,001 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:12:08,162 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:12:13,345 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:12:15,530 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:12:16,213 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:12:39,309 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:12:40,069 - yangshukun-INFO 
+************案例：【test_04_import_qykh】执行结束************
+2022-07-01 19:12:40,069 - yangshukun-INFO 
+************开始执行案例：【test_05_import_jrjg】************
+2022-07-01 19:12:41,993 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:12:42,582 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:12:45,673 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:12:46,203 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='金融机构']$xpath】点击成功
+2022-07-01 19:12:47,390 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:12:48,517 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:12:52,623 - yangshukun-INFO 上传文件成功
+2022-07-01 19:12:53,296 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:12:56,457 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:12:57,533 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:13:04,354 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:13:06,554 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:13:07,170 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:13:14,776 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:13:15,496 - yangshukun-INFO 
+************案例：【test_05_import_jrjg】执行结束************
+2022-07-01 19:13:15,497 - yangshukun-INFO 
+************开始执行案例：【test_06_import_nbzh】************
+2022-07-01 19:13:17,323 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:13:17,895 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:13:21,041 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:13:21,568 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='内部账户']$xpath】点击成功
+2022-07-01 19:13:22,702 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:13:23,808 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:13:27,897 - yangshukun-INFO 上传文件成功
+2022-07-01 19:13:28,595 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:13:33,356 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:13:34,433 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:13:39,781 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:13:42,084 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:13:42,694 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:13:50,346 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:13:51,051 - yangshukun-INFO 
+************案例：【test_06_import_nbzh】执行结束************
+2022-07-01 19:13:51,052 - yangshukun-INFO 
+************开始执行案例：【test_07_import_yhzh】************
+2022-07-01 19:13:52,949 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:13:53,487 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:13:56,654 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:13:57,192 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='银行账户']$xpath】点击成功
+2022-07-01 19:13:58,443 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:13:59,550 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:14:03,661 - yangshukun-INFO 上传文件成功
+2022-07-01 19:14:04,258 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:14:13,507 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:14:14,592 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:14:20,464 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:14:22,557 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:14:23,130 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:14:32,289 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:14:33,049 - yangshukun-INFO 
+************案例：【test_07_import_yhzh】执行结束************
+2022-07-01 19:14:33,049 - yangshukun-INFO 
+************开始执行案例：【test_08_import_grkh】************
+2022-07-01 19:14:34,880 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:14:35,444 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:14:38,663 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:14:39,197 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='个人客户']$xpath】点击成功
+2022-07-01 19:14:40,354 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:14:41,519 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:14:45,594 - yangshukun-INFO 上传文件成功
+2022-07-01 19:14:46,200 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:14:50,918 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:14:51,994 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:14:59,297 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:15:01,527 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:15:02,194 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:15:09,798 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:15:10,520 - yangshukun-INFO 
+************案例：【test_08_import_grkh】执行结束************
+2022-07-01 19:15:10,521 - yangshukun-INFO 
+************开始执行案例：【test_09_import_dbrxx_zzjg】************
+2022-07-01 19:15:12,343 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:15:12,896 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:15:16,013 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:15:16,543 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='担保人信息（组织机构）']$xpath】点击成功
+2022-07-01 19:15:17,878 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:15:19,046 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:15:23,134 - yangshukun-INFO 上传文件成功
+2022-07-01 19:15:23,818 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:15:26,955 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:15:28,103 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:15:32,795 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:15:34,905 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:15:35,479 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:15:43,030 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:15:43,788 - yangshukun-INFO 
+************案例：【test_09_import_dbrxx_zzjg】执行结束************
+2022-07-01 19:15:43,788 - yangshukun-INFO 
+************开始执行案例：【test_10_import_ygxx】************
+2022-07-01 19:15:45,623 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:15:46,176 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:15:49,295 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:15:49,860 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='员工信息']$xpath】点击成功
+2022-07-01 19:15:50,971 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:15:52,278 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:15:56,400 - yangshukun-INFO 上传文件成功
+2022-07-01 19:15:57,012 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:15:58,733 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:15:59,927 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:16:05,659 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:16:07,777 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:16:08,432 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:16:16,087 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:16:16,793 - yangshukun-INFO 
+************案例：【test_10_import_ygxx】执行结束************
+2022-07-01 19:16:16,794 - yangshukun-INFO 
+************开始执行案例：【test_11_import_hl】************
+2022-07-01 19:16:18,668 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:16:19,216 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:16:22,429 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:16:23,000 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='汇率']$xpath】点击成功
+2022-07-01 19:16:24,121 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:16:25,310 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:16:29,373 - yangshukun-INFO 上传文件成功
+2022-07-01 19:16:30,017 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:16:31,678 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:16:32,841 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:16:37,720 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:16:39,875 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:16:40,451 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:16:48,015 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:16:48,519 - yangshukun-INFO 
+************案例：【test_11_import_hl】执行结束************
+2022-07-01 19:16:48,520 - yangshukun-INFO 
+************开始执行案例：【test_12_import_jzll】************
+2022-07-01 19:16:50,399 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:16:50,960 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:16:54,173 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:16:54,754 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='基准利率']$xpath】点击成功
+2022-07-01 19:16:55,901 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:16:57,121 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:17:01,200 - yangshukun-INFO 上传文件成功
+2022-07-01 19:17:01,797 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:17:03,587 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:17:04,722 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:17:09,433 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:17:11,559 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:17:12,170 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:17:19,746 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:17:20,457 - yangshukun-INFO 
+************案例：【test_12_import_jzll】执行结束************
+2022-07-01 19:17:20,457 - yangshukun-INFO 
+************开始执行案例：【test_13_import_dbrxx_zrr】************
+2022-07-01 19:17:22,322 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:17:22,862 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:17:26,005 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:17:26,607 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='担保人信息（自然人）']$xpath】点击成功
+2022-07-01 19:17:27,827 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:17:28,998 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:17:33,033 - yangshukun-INFO 上传文件成功
+2022-07-01 19:17:33,713 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:17:38,475 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:17:39,596 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:17:45,043 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:17:47,189 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:17:47,819 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:17:57,480 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:17:58,177 - yangshukun-INFO 
+************案例：【test_13_import_dbrxx_zrr】执行结束************
+2022-07-01 19:17:58,178 - yangshukun-INFO 
+************开始执行案例：【test_14_import_jtzh】************
+2022-07-01 19:18:00,014 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:18:00,577 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:18:03,760 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='基础信息']$xpath】点击成功
+2022-07-01 19:18:04,297 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='集团账户']$xpath】点击成功
+2022-07-01 19:18:05,407 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:18:06,564 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:18:10,631 - yangshukun-INFO 上传文件成功
+2022-07-01 19:18:11,343 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:18:14,561 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:18:15,639 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:18:21,447 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:18:23,607 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:18:24,238 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:18:31,879 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:18:32,624 - yangshukun-INFO 
+************案例：【test_14_import_jtzh】执行结束************
+2022-07-01 19:18:32,624 - yangshukun-INFO 
+************开始执行案例：【test_15_import_hqck】************
+2022-07-01 19:18:34,456 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:18:35,013 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:18:38,112 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='存款业务']$xpath】点击成功
+2022-07-01 19:18:38,678 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='活期存款']$xpath】点击成功
+2022-07-01 19:18:40,080 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:18:41,414 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:18:51,565 - yangshukun-INFO 上传文件成功
+2022-07-01 19:18:52,195 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:21:06,089 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 19:21:13,128 - yangshukun-INFO 
+************开始执行案例：【test_15_import_hqck】************
+2022-07-01 19:21:15,026 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:21:15,566 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:21:18,764 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='存款业务']$xpath】点击成功
+2022-07-01 19:21:19,326 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='活期存款']$xpath】点击成功
+2022-07-01 19:21:20,442 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:21:21,556 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:21:25,592 - yangshukun-INFO 上传文件成功
+2022-07-01 19:21:26,190 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:21:57,583 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 19:22:04,515 - yangshukun-INFO 
+************开始执行案例：【test_15_import_hqck】************
+2022-07-01 19:22:06,485 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:22:07,227 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:22:10,317 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='存款业务']$xpath】点击成功
+2022-07-01 19:22:10,842 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='活期存款']$xpath】点击成功
+2022-07-01 19:22:11,948 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:22:13,060 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:22:17,124 - yangshukun-INFO 上传文件成功
+2022-07-01 19:22:17,729 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:22:19,451 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:22:20,650 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:22:26,981 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:22:29,229 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:22:29,902 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:22:37,455 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:22:37,963 - yangshukun-INFO 
+************案例：【test_15_import_hqck】执行结束************
+2022-07-01 19:22:37,964 - yangshukun-INFO 
+************开始执行案例：【test_16_import_dqck】************
+2022-07-01 19:22:39,846 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:22:40,387 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:22:43,627 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='存款业务']$xpath】点击成功
+2022-07-01 19:22:44,156 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='定期存款']$xpath】点击成功
+2022-07-01 19:22:45,349 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:22:46,534 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:22:50,606 - yangshukun-INFO 上传文件成功
+2022-07-01 19:22:51,338 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:22:53,110 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:22:54,312 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:23:00,116 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:23:02,285 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:23:02,873 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:23:10,429 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:23:11,186 - yangshukun-INFO 
+************案例：【test_16_import_dqck】执行结束************
+2022-07-01 19:23:11,186 - yangshukun-INFO 
+************开始执行案例：【test_17_import_tzck】************
+2022-07-01 19:23:13,170 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:23:13,797 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:23:16,954 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='存款业务']$xpath】点击成功
+2022-07-01 19:23:17,504 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='通知存款']$xpath】点击成功
+2022-07-01 19:23:18,656 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:23:19,875 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:23:23,931 - yangshukun-INFO 上传文件成功
+2022-07-01 19:23:24,548 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:23:26,318 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:23:27,449 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:23:32,206 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:23:34,419 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:23:35,064 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:23:42,656 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:23:43,173 - yangshukun-INFO 
+************案例：【test_17_import_tzck】执行结束************
+2022-07-01 19:23:43,176 - yangshukun-INFO 
+************开始执行案例：【test_18_import_xyck】************
+2022-07-01 19:23:45,062 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:23:45,621 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:23:48,832 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='存款业务']$xpath】点击成功
+2022-07-01 19:23:49,439 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='协议存款']$xpath】点击成功
+2022-07-01 19:23:50,564 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:23:51,811 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:23:55,936 - yangshukun-INFO 上传文件成功
+2022-07-01 19:23:56,536 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:23:58,231 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:23:59,321 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:24:04,086 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:24:06,230 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:24:06,909 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:24:14,535 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:24:15,043 - yangshukun-INFO 
+************案例：【test_18_import_xyck】执行结束************
+2022-07-01 19:24:15,044 - yangshukun-INFO 
+************开始执行案例：【test_19_import_bzjck】************
+2022-07-01 19:24:17,001 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:24:17,539 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:24:20,746 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='存款业务']$xpath】点击成功
+2022-07-01 19:24:21,304 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='保证金存款']$xpath】点击成功
+2022-07-01 19:24:22,453 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:24:23,622 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:24:27,778 - yangshukun-INFO 上传文件成功
+2022-07-01 19:24:28,375 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:24:29,993 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:24:31,097 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:24:35,884 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:24:38,144 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:24:38,818 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:24:46,382 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:24:47,083 - yangshukun-INFO 
+************案例：【test_19_import_bzjck】执行结束************
+2022-07-01 19:24:47,084 - yangshukun-INFO 
+************开始执行案例：【test_20_import_ckzbj】************
+2022-07-01 19:24:48,970 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:24:49,523 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:24:52,655 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='存款业务']$xpath】点击成功
+2022-07-01 19:24:53,227 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='存款准备金']$xpath】点击成功
+2022-07-01 19:24:54,419 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:24:55,580 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:24:59,688 - yangshukun-INFO 上传文件成功
+2022-07-01 19:25:00,360 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:25:01,984 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:25:03,232 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:25:07,972 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:25:10,148 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:25:10,722 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:25:18,379 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:25:19,082 - yangshukun-INFO 
+************案例：【test_20_import_ckzbj】执行结束************
+2022-07-01 19:25:19,083 - yangshukun-INFO 
+************开始执行案例：【test_21_import_wtck】************
+2022-07-01 19:25:21,068 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:25:21,654 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:25:24,920 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='存款业务']$xpath】点击成功
+2022-07-01 19:25:25,540 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='委托存款']$xpath】点击成功
+2022-07-01 19:25:26,764 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:25:27,951 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:25:32,058 - yangshukun-INFO 上传文件成功
+2022-07-01 19:25:32,697 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:25:34,420 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:25:35,522 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:25:40,239 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:25:42,478 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:25:43,051 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:25:50,640 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:25:51,335 - yangshukun-INFO 
+************案例：【test_21_import_wtck】执行结束************
+2022-07-01 19:25:51,336 - yangshukun-INFO 
+************开始执行案例：【test_22_import_ldzjdk】************
+2022-07-01 19:25:53,277 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:25:53,818 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:25:57,050 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:25:57,639 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='流动资金贷款']$xpath】点击成功
+2022-07-01 19:25:58,814 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:26:00,001 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:26:04,076 - yangshukun-INFO 上传文件成功
+2022-07-01 19:26:04,780 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:26:09,648 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:26:10,835 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:26:19,231 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:26:21,444 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:26:22,102 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:37:16,610 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 19:37:24,829 - yangshukun-INFO 
+************开始执行案例：【test_15_import_hqck】************
+2022-07-01 19:37:27,008 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:37:27,630 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:37:30,711 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='存款业务']$xpath】点击成功
+2022-07-01 19:37:31,298 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='活期存款']$xpath】点击成功
+2022-07-01 19:37:32,593 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:37:34,182 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:37:38,185 - yangshukun-INFO 上传文件成功
+2022-07-01 19:37:38,783 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:38:18,281 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 19:38:25,100 - yangshukun-INFO 
+************开始执行案例：【test_23_import_xmdk】************
+2022-07-01 19:38:27,096 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:38:27,723 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:38:30,913 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:38:31,443 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='项目贷款']$xpath】点击成功
+2022-07-01 19:38:32,584 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:38:33,695 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:38:37,880 - yangshukun-INFO 上传文件成功
+2022-07-01 19:38:38,599 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:38:43,395 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:38:44,570 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:38:56,142 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:38:58,421 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:38:59,100 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:39:36,889 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点39分36秒.png】
+2022-07-01 19:39:36,962 - yangshukun-INFO 
+************开始执行案例：【test_24_import_xypj_dw】************
+2022-07-01 19:39:38,852 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:39:39,387 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:39:42,601 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:39:43,371 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='信用评级（单位）$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点39分43秒.png】
+2022-07-01 19:39:43,479 - yangshukun-INFO 
+************开始执行案例：【test_25_import_zrr_rzzl】************
+2022-07-01 19:40:14,258 - yangshukun-ERROR 获取元素:【//span[text()='数据管理']$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点40分14秒.png】
+2022-07-01 19:40:14,260 - yangshukun-INFO 
+************开始执行案例：【test_26_import_zrr_xfxd】************
+2022-07-01 19:43:06,296 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 19:43:13,239 - yangshukun-INFO 
+************开始执行案例：【test_22_import_ldzjdk】************
+2022-07-01 19:43:15,788 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:43:16,374 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:43:19,527 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:43:20,077 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='流动资金贷款']$xpath】点击成功
+2022-07-01 19:43:21,193 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:43:22,320 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:43:26,385 - yangshukun-INFO 上传文件成功
+2022-07-01 19:43:26,997 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:43:33,360 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:43:34,518 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:43:41,842 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:43:44,022 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:43:44,652 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:44:22,428 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点44分22秒.png】
+2022-07-01 19:44:22,433 - yangshukun-INFO 
+************开始执行案例：【test_23_import_xmdk】************
+2022-07-01 19:44:25,073 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:44:25,628 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:44:28,713 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:44:29,284 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='项目贷款']$xpath】点击成功
+2022-07-01 19:44:30,394 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:44:31,529 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:44:35,617 - yangshukun-INFO 上传文件成功
+2022-07-01 19:44:36,301 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:44:41,035 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:44:42,158 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:44:49,550 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:44:51,677 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:44:52,277 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:45:30,075 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点45分29秒.png】
+2022-07-01 19:45:30,078 - yangshukun-INFO 
+************开始执行案例：【test_24_import_xypj_dw】************
+2022-07-01 19:45:32,707 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:45:33,259 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:45:36,560 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:45:37,284 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='信用评级（单位）$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点45分37秒.png】
+2022-07-01 19:45:37,287 - yangshukun-INFO 
+************开始执行案例：【test_25_import_zrr_rzzl】************
+2022-07-01 19:45:39,678 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:45:40,217 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:45:43,406 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:45:44,137 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='自然人融资租赁$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点45分43秒.png】
+2022-07-01 19:45:44,140 - yangshukun-INFO 
+************开始执行案例：【test_26_import_zrr_xfxd】************
+2022-07-01 19:45:46,512 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:45:47,065 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:45:50,338 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:45:50,909 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='自然人消费信贷']$xpath】点击成功
+2022-07-01 19:45:52,846 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:45:55,018 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:45:59,113 - yangshukun-INFO 上传文件成功
+2022-07-01 19:45:59,724 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:46:21,279 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:46:22,707 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:46:31,174 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:46:32,772 - yangshukun-INFO 
+************开始执行案例：【test_27_import_rzdb】************
+2022-07-01 19:46:35,412 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:46:35,951 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:46:39,203 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:46:39,996 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='融资担保$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点46分39秒.png】
+2022-07-01 19:46:40,003 - yangshukun-INFO 
+************开始执行案例：【test_28_import_sx_zrr】************
+2022-07-01 19:46:42,617 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:46:43,170 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:46:46,421 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:46:47,078 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='授信（自然人）$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点46分46秒.png】
+2022-07-01 19:46:47,082 - yangshukun-INFO 
+************开始执行案例：【test_29_import_xypj_zrr】************
+2022-07-01 19:46:49,702 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:46:50,239 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:46:53,432 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:46:54,190 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='信用评级（自然人）$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点46分54秒.png】
+2022-07-01 19:46:54,193 - yangshukun-INFO 
+************开始执行案例：【test_30_import_cydw_cprzzl_zrr】************
+2022-07-01 19:46:56,552 - yangshukun-INFO 
+************开始执行案例：【test_31_import_frzhtz】************
+2022-07-01 19:46:59,769 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:47:00,318 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:47:03,424 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:47:04,047 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='法人账户透支']$xpath】点击成功
+2022-07-01 19:47:05,227 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:47:06,375 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:47:10,422 - yangshukun-INFO 上传文件成功
+2022-07-01 19:47:11,132 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:47:14,361 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:47:15,448 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:47:22,235 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:47:24,443 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:47:25,138 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:48:02,879 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点48分02秒.png】
+2022-07-01 19:48:02,881 - yangshukun-INFO 
+************开始执行案例：【test_32_import_gdzcdk】************
+2022-07-01 19:48:05,544 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:48:06,127 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:48:09,375 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:48:09,948 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='固定资产贷款']$xpath】点击成功
+2022-07-01 19:48:11,063 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:48:12,222 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:48:16,301 - yangshukun-INFO 上传文件成功
+2022-07-01 19:48:17,107 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:48:22,109 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:48:23,194 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:48:30,566 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:48:32,730 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:48:33,340 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:49:11,618 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点49分11秒.png】
+2022-07-01 19:49:11,621 - yangshukun-INFO 
+************开始执行案例：【test_33_import_bgdk】************
+2022-07-01 19:49:14,293 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:49:14,936 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:49:18,116 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:49:18,646 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='并购贷款']$xpath】点击成功
+2022-07-01 19:49:19,797 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:49:21,089 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:49:25,191 - yangshukun-INFO 上传文件成功
+2022-07-01 19:49:25,805 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:49:29,022 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:49:30,102 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:49:38,494 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:49:40,688 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:49:41,285 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:49:48,920 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:49:48,921 - yangshukun-INFO 
+************案例：【test_33_import_bgdk】执行结束************
+2022-07-01 19:49:48,921 - yangshukun-INFO 
+************开始执行案例：【test_34_import_dw_rzzl】************
+2022-07-01 19:49:51,492 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:49:52,029 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:49:55,227 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:49:55,792 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='单位融资租赁']$xpath】点击成功
+2022-07-01 19:49:56,978 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:49:58,089 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:50:02,176 - yangshukun-INFO 上传文件成功
+2022-07-01 19:50:02,863 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:50:06,042 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:50:07,125 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:50:14,916 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:50:17,143 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:50:17,717 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:50:25,280 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:50:25,280 - yangshukun-INFO 
+************案例：【test_34_import_dw_rzzl】执行结束************
+2022-07-01 19:50:25,280 - yangshukun-INFO 
+************开始执行案例：【test_35_import_bl】************
+2022-07-01 19:50:27,864 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:50:28,414 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:50:31,626 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:50:32,207 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='保理']$xpath】点击成功
+2022-07-01 19:50:33,492 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:50:34,690 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:50:38,802 - yangshukun-INFO 上传文件成功
+2022-07-01 19:50:39,404 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:50:42,560 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:50:43,695 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:50:50,064 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:50:52,181 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:50:52,816 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:51:00,389 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:51:00,389 - yangshukun-INFO 
+************案例：【test_35_import_bl】执行结束************
+2022-07-01 19:51:00,390 - yangshukun-INFO 
+************开始执行案例：【test_36_import_mfxd】************
+2022-07-01 19:51:02,995 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:51:03,613 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:51:06,858 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:51:07,454 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='买方信贷']$xpath】点击成功
+2022-07-01 19:51:08,566 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:51:09,753 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:51:13,848 - yangshukun-INFO 上传文件成功
+2022-07-01 19:51:14,589 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:51:17,869 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:51:19,001 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:51:26,889 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:51:29,009 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:51:29,706 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:51:37,257 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:51:37,257 - yangshukun-INFO 
+************案例：【test_36_import_mfxd】执行结束************
+2022-07-01 19:51:37,257 - yangshukun-INFO 
+************开始执行案例：【test_37_import_bh】************
+2022-07-01 19:51:39,820 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:51:40,396 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:51:43,556 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:51:44,086 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='保函']$xpath】点击成功
+2022-07-01 19:51:45,255 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:51:46,367 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:51:50,415 - yangshukun-INFO 上传文件成功
+2022-07-01 19:51:51,130 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:51:52,776 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:51:54,012 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:51:59,816 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:52:01,974 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:52:02,616 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:52:10,166 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:52:10,166 - yangshukun-INFO 
+************案例：【test_37_import_bh】执行结束************
+2022-07-01 19:52:10,166 - yangshukun-INFO 
+************开始执行案例：【test_38_import_dbht】************
+2022-07-01 19:52:12,691 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:52:13,268 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:52:16,440 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:52:17,159 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='担保合同$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点52分16秒.png】
+2022-07-01 19:52:17,161 - yangshukun-INFO 
+************开始执行案例：【test_39_import_sx_dw】************
+2022-07-01 19:52:19,719 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:52:20,266 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:52:23,401 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:52:24,075 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='授信（单位）$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点52分23秒.png】
+2022-07-01 19:52:24,078 - yangshukun-INFO 
+************开始执行案例：【test_40_import_frxfxd】************
+2022-07-01 19:52:26,646 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:52:27,179 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:52:30,391 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:52:31,122 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='法人消费信贷$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点52分30秒.png】
+2022-07-01 19:52:31,125 - yangshukun-INFO 
+************开始执行案例：【test_41_import_cydw_cprzzl_fr】************
+2022-07-01 19:52:33,685 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:52:34,289 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:52:37,471 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:52:38,196 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='成员单位产品的融资租赁（法人）$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点52分37秒.png】
+2022-07-01 19:52:38,198 - yangshukun-INFO 
+************开始执行案例：【test_42_import_myrz】************
+2022-07-01 19:52:40,750 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:52:41,287 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:52:44,559 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 19:52:45,276 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='贸易融资$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 19点52分45秒.png】
+2022-07-01 19:52:45,278 - yangshukun-INFO 
+************开始执行案例：【test_43_import_tysx_hd】************
+2022-07-01 19:52:47,710 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:52:48,279 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:52:51,454 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='同业业务']$xpath】点击成功
+2022-07-01 19:52:51,990 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='同业授信（获得）']$xpath】点击成功
+2022-07-01 19:52:53,130 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:52:54,321 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:52:58,490 - yangshukun-INFO 上传文件成功
+2022-07-01 19:52:59,180 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:53:00,904 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:53:02,136 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:53:07,029 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:53:09,156 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:53:09,811 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:53:17,361 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:53:17,361 - yangshukun-INFO 
+************案例：【test_43_import_tysx_hd】执行结束************
+2022-07-01 19:53:17,362 - yangshukun-INFO 
+************开始执行案例：【test_44_import_tysx_sy】************
+2022-07-01 19:53:20,040 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:53:20,624 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:53:23,732 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='同业业务']$xpath】点击成功
+2022-07-01 19:53:24,287 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='同业授信（授予）']$xpath】点击成功
+2022-07-01 19:53:25,421 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:53:26,675 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:53:30,743 - yangshukun-INFO 上传文件成功
+2022-07-01 19:53:31,410 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:53:33,209 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:53:34,479 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:53:39,281 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:53:41,434 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:53:42,018 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:53:49,613 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:53:49,613 - yangshukun-INFO 
+************案例：【test_44_import_tysx_sy】执行结束************
+2022-07-01 19:53:49,614 - yangshukun-INFO 
+************开始执行案例：【test_45_import_tykh_xypj】************
+2022-07-01 19:53:51,963 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:53:52,511 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:53:55,677 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='同业业务']$xpath】点击成功
+2022-07-01 19:53:56,215 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='同业客户信用评级']$xpath】点击成功
+2022-07-01 19:53:57,337 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:53:58,497 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:54:02,544 - yangshukun-INFO 上传文件成功
+2022-07-01 19:54:03,258 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:54:04,960 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:54:06,090 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:54:10,796 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:54:12,993 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:54:13,620 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:54:21,246 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:54:21,246 - yangshukun-INFO 
+************案例：【test_45_import_tykh_xypj】执行结束************
+2022-07-01 19:54:21,246 - yangshukun-INFO 
+************开始执行案例：【test_46_import_tyjr】************
+2022-07-01 19:54:23,843 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:54:24,443 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:54:27,563 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='同业业务']$xpath】点击成功
+2022-07-01 19:54:28,178 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='同业借入']$xpath】点击成功
+2022-07-01 19:54:29,343 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:54:30,465 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:54:34,509 - yangshukun-INFO 上传文件成功
+2022-07-01 19:54:35,216 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:54:36,864 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:54:38,044 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:54:43,927 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:54:46,053 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:54:46,717 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:54:54,281 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:54:54,281 - yangshukun-INFO 
+************案例：【test_46_import_tyjr】执行结束************
+2022-07-01 19:54:54,282 - yangshukun-INFO 
+************开始执行案例：【test_47_import_tyjc】************
+2022-07-01 19:54:56,703 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:54:57,246 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:55:00,473 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='同业业务']$xpath】点击成功
+2022-07-01 19:55:01,063 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='同业借出']$xpath】点击成功
+2022-07-01 19:55:02,230 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:55:03,432 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:55:07,478 - yangshukun-INFO 上传文件成功
+2022-07-01 19:55:08,235 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:55:10,074 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:55:11,156 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:55:16,959 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:55:19,146 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:55:19,724 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:55:27,288 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:55:27,288 - yangshukun-INFO 
+************案例：【test_47_import_tyjc】执行结束************
+2022-07-01 19:55:27,289 - yangshukun-INFO 
+************开始执行案例：【test_48_import_tycf】************
+2022-07-01 19:55:29,875 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:55:30,451 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:55:33,559 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='同业业务']$xpath】点击成功
+2022-07-01 19:55:34,152 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='同业存放']$xpath】点击成功
+2022-07-01 19:55:35,266 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:55:36,469 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:55:40,519 - yangshukun-INFO 上传文件成功
+2022-07-01 19:55:41,166 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:55:42,815 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:55:43,921 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:55:49,288 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:55:51,386 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:55:52,018 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:55:59,595 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:55:59,595 - yangshukun-INFO 
+************案例：【test_48_import_tycf】执行结束************
+2022-07-01 19:55:59,596 - yangshukun-INFO 
+************开始执行案例：【test_49_import_tycr】************
+2022-07-01 19:56:01,962 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:56:02,536 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:56:05,743 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='同业业务']$xpath】点击成功
+2022-07-01 19:56:06,310 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='同业拆入']$xpath】点击成功
+2022-07-01 19:56:07,594 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:56:08,705 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:56:12,802 - yangshukun-INFO 上传文件成功
+2022-07-01 19:56:13,525 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:56:15,287 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:56:16,366 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:56:21,233 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:56:23,361 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:56:24,032 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:56:31,653 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:56:31,653 - yangshukun-INFO 
+************案例：【test_49_import_tycr】执行结束************
+2022-07-01 19:56:31,654 - yangshukun-INFO 
+************开始执行案例：【test_50_import_tycc】************
+2022-07-01 19:56:34,011 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:56:34,566 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:56:37,692 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='同业业务']$xpath】点击成功
+2022-07-01 19:56:38,264 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='同业拆出']$xpath】点击成功
+2022-07-01 19:56:39,456 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:56:40,687 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:56:44,787 - yangshukun-INFO 上传文件成功
+2022-07-01 19:56:45,425 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:56:47,113 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:56:48,191 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:56:53,104 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:56:55,210 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:56:55,848 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:57:03,516 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:57:03,516 - yangshukun-INFO 
+************案例：【test_50_import_tycc】执行结束************
+2022-07-01 19:57:03,517 - yangshukun-INFO 
+************开始执行案例：【test_51_import_cfty】************
+2022-07-01 19:57:06,091 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:57:06,627 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:57:09,777 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='同业业务']$xpath】点击成功
+2022-07-01 19:57:10,311 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='存放同业']$xpath】点击成功
+2022-07-01 19:57:11,450 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:57:12,643 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:57:16,785 - yangshukun-INFO 上传文件成功
+2022-07-01 19:57:17,396 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:57:19,208 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:57:20,308 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:57:25,047 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:57:27,253 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:57:27,843 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:57:35,479 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:57:35,480 - yangshukun-INFO 
+************案例：【test_51_import_cfty】执行结束************
+2022-07-01 19:57:35,480 - yangshukun-INFO 
+************开始执行案例：【test_52_import_zqtz】************
+2022-07-01 19:57:38,032 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:57:38,569 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:57:41,804 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='投资业务']$xpath】点击成功
+2022-07-01 19:57:42,329 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='债券投资']$xpath】点击成功
+2022-07-01 19:57:43,525 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:57:44,633 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:57:48,780 - yangshukun-INFO 上传文件成功
+2022-07-01 19:57:49,484 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:57:52,740 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:57:53,946 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:58:01,828 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:58:03,941 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:58:04,538 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:58:12,160 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:58:12,160 - yangshukun-INFO 
+************案例：【test_52_import_zqtz】执行结束************
+2022-07-01 19:58:12,160 - yangshukun-INFO 
+************开始执行案例：【test_53_import_zqhg】************
+2022-07-01 19:58:14,787 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:58:15,324 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:58:18,567 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='投资业务']$xpath】点击成功
+2022-07-01 19:58:19,152 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='债券回购']$xpath】点击成功
+2022-07-01 19:58:20,350 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:58:21,544 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:58:25,627 - yangshukun-INFO 上传文件成功
+2022-07-01 19:58:26,230 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:58:27,903 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:58:29,034 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:58:34,421 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:58:36,565 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:58:37,197 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:58:44,781 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:58:44,782 - yangshukun-INFO 
+************案例：【test_53_import_zqhg】执行结束************
+2022-07-01 19:58:44,782 - yangshukun-INFO 
+************开始执行案例：【test_54_import_qytz】************
+2022-07-01 19:58:47,458 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:58:48,039 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:58:51,203 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='投资业务']$xpath】点击成功
+2022-07-01 19:58:51,838 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='权益投资']$xpath】点击成功
+2022-07-01 19:58:53,214 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:58:54,376 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:58:58,435 - yangshukun-INFO 上传文件成功
+2022-07-01 19:58:59,104 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:59:02,373 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:59:03,456 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:59:10,811 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:59:12,945 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:59:13,621 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:59:21,203 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:59:21,203 - yangshukun-INFO 
+************案例：【test_54_import_qytz】执行结束************
+2022-07-01 19:59:21,204 - yangshukun-INFO 
+************开始执行案例：【test_55_import_gmjj】************
+2022-07-01 19:59:23,579 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 19:59:24,150 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 19:59:27,356 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='投资业务']$xpath】点击成功
+2022-07-01 19:59:27,937 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='公募基金']$xpath】点击成功
+2022-07-01 19:59:29,230 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 19:59:30,406 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 19:59:34,524 - yangshukun-INFO 上传文件成功
+2022-07-01 19:59:35,272 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 19:59:38,538 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 19:59:39,635 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 19:59:46,957 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 19:59:49,132 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 19:59:49,711 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 19:59:57,261 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 19:59:57,261 - yangshukun-INFO 
+************案例：【test_55_import_gmjj】执行结束************
+2022-07-01 19:59:57,261 - yangshukun-INFO 
+************开始执行案例：【test_56_import_smjj】************
+2022-07-01 19:59:59,825 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:00:00,419 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:00:03,525 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='投资业务']$xpath】点击成功
+2022-07-01 20:00:04,063 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='私募基金']$xpath】点击成功
+2022-07-01 20:00:05,180 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:00:06,309 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:00:10,356 - yangshukun-INFO 上传文件成功
+2022-07-01 20:00:11,002 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:00:14,213 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:00:15,294 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:00:22,045 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:00:24,186 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:00:24,780 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:00:32,337 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:00:32,337 - yangshukun-INFO 
+************案例：【test_56_import_smjj】执行结束************
+2022-07-01 20:00:32,338 - yangshukun-INFO 
+************开始执行案例：【test_57_import_zgcp】************
+2022-07-01 20:00:34,905 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:00:35,484 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:00:38,592 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='投资业务']$xpath】点击成功
+2022-07-01 20:00:39,167 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='资管产品']$xpath】点击成功
+2022-07-01 20:00:40,439 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:00:41,567 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:00:45,664 - yangshukun-INFO 上传文件成功
+2022-07-01 20:00:46,264 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:00:50,987 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:00:52,067 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:00:58,987 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:01:01,088 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:01:01,675 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:01:09,301 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:01:09,301 - yangshukun-INFO 
+************案例：【test_57_import_zgcp】执行结束************
+2022-07-01 20:01:09,302 - yangshukun-INFO 
+************开始执行案例：【test_58_import_jgxck】************
+2022-07-01 20:01:11,924 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:01:12,463 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:01:15,650 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='投资业务']$xpath】点击成功
+2022-07-01 20:01:16,239 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='结构性存款']$xpath】点击成功
+2022-07-01 20:01:17,356 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:01:18,542 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:01:22,655 - yangshukun-INFO 上传文件成功
+2022-07-01 20:01:23,444 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:01:25,168 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:01:26,261 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:01:33,630 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:01:35,766 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:01:36,356 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:01:43,974 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:01:43,975 - yangshukun-INFO 
+************案例：【test_58_import_jgxck】执行结束************
+2022-07-01 20:01:43,976 - yangshukun-INFO 
+************开始执行案例：【test_59_import_tycdtz】************
+2022-07-01 20:01:46,576 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:01:47,114 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:01:50,251 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='投资业务']$xpath】点击成功
+2022-07-01 20:01:50,814 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='同业存单投资']$xpath】点击成功
+2022-07-01 20:01:52,076 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:01:53,253 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:01:57,330 - yangshukun-INFO 上传文件成功
+2022-07-01 20:01:58,005 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:01:59,739 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:02:00,889 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:02:05,559 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:02:07,703 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:02:08,353 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:02:15,957 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:02:15,957 - yangshukun-INFO 
+************案例：【test_59_import_tycdtz】执行结束************
+2022-07-01 20:02:15,957 - yangshukun-INFO 
+************开始执行案例：【test_60_import_bblc】************
+2022-07-01 20:02:18,517 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:02:19,091 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:02:22,310 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='投资业务']$xpath】点击成功
+2022-07-01 20:02:22,868 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='保本理财']$xpath】点击成功
+2022-07-01 20:02:24,098 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:02:25,332 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:02:29,394 - yangshukun-INFO 上传文件成功
+2022-07-01 20:02:30,209 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:02:31,957 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:02:33,070 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:02:40,545 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:02:42,647 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:02:43,331 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:02:50,894 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:02:50,894 - yangshukun-INFO 
+************案例：【test_60_import_bblc】执行结束************
+2022-07-01 20:02:50,894 - yangshukun-INFO 
+************开始执行案例：【test_61_import_xdzczr】************
+2022-07-01 20:02:53,490 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:02:54,087 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:02:57,251 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='融资业务']$xpath】点击成功
+2022-07-01 20:02:57,784 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='信贷资产转让']$xpath】点击成功
+2022-07-01 20:02:58,933 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:03:00,057 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:03:04,150 - yangshukun-INFO 上传文件成功
+2022-07-01 20:03:04,865 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:03:06,587 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:03:07,672 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:03:13,501 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:03:15,752 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:03:16,416 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:03:24,019 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:03:24,020 - yangshukun-INFO 
+************案例：【test_61_import_xdzczr】执行结束************
+2022-07-01 20:03:24,021 - yangshukun-INFO 
+************开始执行案例：【test_62_import_zqfx】************
+2022-07-01 20:03:26,556 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:03:27,096 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:03:30,262 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='融资业务']$xpath】点击成功
+2022-07-01 20:03:30,825 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='债券发行']$xpath】点击成功
+2022-07-01 20:03:32,064 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:03:33,231 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:03:37,316 - yangshukun-INFO 上传文件成功
+2022-07-01 20:03:38,033 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:03:39,667 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:03:40,794 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:03:46,108 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:03:48,315 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:03:48,916 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:03:56,525 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:03:56,525 - yangshukun-INFO 
+************案例：【test_62_import_zqfx】执行结束************
+2022-07-01 20:03:56,525 - yangshukun-INFO 
+************开始执行案例：【test_63_import_tycdrz】************
+2022-07-01 20:03:59,147 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:03:59,686 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:04:02,830 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='融资业务']$xpath】点击成功
+2022-07-01 20:04:03,397 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='同业存单融资']$xpath】点击成功
+2022-07-01 20:04:04,550 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:04:05,662 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:04:09,753 - yangshukun-INFO 上传文件成功
+2022-07-01 20:04:10,440 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:04:12,175 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:04:13,267 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:04:18,608 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:04:20,808 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:04:21,388 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:04:28,962 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:04:28,963 - yangshukun-INFO 
+************案例：【test_63_import_tycdrz】执行结束************
+2022-07-01 20:04:28,963 - yangshukun-INFO 
+************开始执行案例：【test_64_import_wh】************
+2022-07-01 20:04:31,585 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:04:32,125 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:04:35,313 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='外汇业务']$xpath】点击成功
+2022-07-01 20:04:35,870 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='外汇']$xpath】点击成功
+2022-07-01 20:04:36,998 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:04:38,159 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:04:42,271 - yangshukun-INFO 上传文件成功
+2022-07-01 20:04:43,098 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:04:44,794 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:04:45,960 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:04:50,783 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:04:52,929 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:04:53,516 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:05:01,143 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:05:01,144 - yangshukun-INFO 
+************案例：【test_64_import_wh】执行结束************
+2022-07-01 20:05:01,144 - yangshukun-INFO 
+************开始执行案例：【test_65_import_jsh】************
+2022-07-01 20:05:03,756 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:05:04,293 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:05:07,542 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='外汇业务']$xpath】点击成功
+2022-07-01 20:05:08,103 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='结售汇']$xpath】点击成功
+2022-07-01 20:05:09,256 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:05:10,559 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:05:14,630 - yangshukun-INFO 上传文件成功
+2022-07-01 20:05:15,232 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:05:16,874 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:05:18,005 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:05:22,806 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:05:25,023 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:05:25,599 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:05:33,247 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:05:33,247 - yangshukun-INFO 
+************案例：【test_65_import_jsh】执行结束************
+2022-07-01 20:05:33,248 - yangshukun-INFO 
+************开始执行案例：【test_66_import_wtdk】************
+2022-07-01 20:05:35,801 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:05:36,360 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:05:39,564 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='委托代理业务']$xpath】点击成功
+2022-07-01 20:05:40,146 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='委托贷款']$xpath】点击成功
+2022-07-01 20:05:41,406 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:05:42,618 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:05:46,734 - yangshukun-INFO 上传文件成功
+2022-07-01 20:05:47,399 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:07:20,670 - yangshukun-INFO 
+************开始执行案例：【test_67_import_dldx】************
+2022-07-01 20:07:23,288 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:07:23,828 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:07:26,936 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='委托代理业务']$xpath】点击成功
+2022-07-01 20:07:27,515 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='代理代销']$xpath】点击成功
+2022-07-01 20:07:28,633 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:07:29,816 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:07:33,869 - yangshukun-INFO 上传文件成功
+2022-07-01 20:07:34,491 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:07:36,107 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:07:37,232 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:07:44,643 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:07:46,803 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:07:47,451 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:07:55,044 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:07:55,044 - yangshukun-INFO 
+************案例：【test_67_import_dldx】执行结束************
+2022-07-01 20:07:55,045 - yangshukun-INFO 
+************开始执行案例：【test_68_import_wttz】************
+2022-07-01 20:07:57,641 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:07:58,179 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:08:01,274 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='委托代理业务']$xpath】点击成功
+2022-07-01 20:08:01,842 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='委托投资']$xpath】点击成功
+2022-07-01 20:08:02,973 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:08:04,080 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:08:08,158 - yangshukun-INFO 上传文件成功
+2022-07-01 20:08:08,856 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:08:10,520 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:08:11,610 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:08:16,419 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:08:18,539 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:08:19,209 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:08:26,818 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:08:26,819 - yangshukun-INFO 
+************案例：【test_68_import_wttz】执行结束************
+2022-07-01 20:08:26,819 - yangshukun-INFO 
+************开始执行案例：【test_69_import_pjjbxx】************
+2022-07-01 20:08:29,376 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:08:29,921 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:08:33,166 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='票据业务']$xpath】点击成功
+2022-07-01 20:08:33,697 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='票据基本信息']$xpath】点击成功
+2022-07-01 20:08:34,974 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:08:36,083 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:08:40,213 - yangshukun-INFO 上传文件成功
+2022-07-01 20:08:40,925 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:08:45,661 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:08:46,741 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:08:52,011 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:08:54,115 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:08:54,746 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:09:02,295 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:09:02,295 - yangshukun-INFO 
+************案例：【test_69_import_pjjbxx】执行结束************
+2022-07-01 20:09:02,295 - yangshukun-INFO 
+************开始执行案例：【test_70_import_tx】************
+2022-07-01 20:09:04,867 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:09:05,408 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:09:08,587 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='票据业务']$xpath】点击成功
+2022-07-01 20:09:09,116 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='贴现']$xpath】点击成功
+2022-07-01 20:09:10,368 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:09:11,512 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:09:15,623 - yangshukun-INFO 上传文件成功
+2022-07-01 20:09:16,334 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:09:21,119 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:09:22,225 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:09:31,616 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:09:33,788 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:09:34,411 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:09:42,012 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:09:42,012 - yangshukun-INFO 
+************案例：【test_70_import_tx】执行结束************
+2022-07-01 20:09:42,013 - yangshukun-INFO 
+************开始执行案例：【test_71_import_zhuantx】************
+2022-07-01 20:09:44,432 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:09:44,973 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:09:48,228 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='票据业务']$xpath】点击成功
+2022-07-01 20:09:48,771 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='转贴现']$xpath】点击成功
+2022-07-01 20:09:49,924 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:09:51,069 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:09:55,215 - yangshukun-INFO 上传文件成功
+2022-07-01 20:09:55,822 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:09:57,600 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:09:58,719 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:10:03,659 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:10:05,836 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:10:06,524 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:10:14,108 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:10:14,108 - yangshukun-INFO 
+************案例：【test_71_import_zhuantx】执行结束************
+2022-07-01 20:10:14,108 - yangshukun-INFO 
+************开始执行案例：【test_72_import_zaitx】************
+2022-07-01 20:10:16,647 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:10:17,187 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:10:20,359 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='票据业务']$xpath】点击成功
+2022-07-01 20:10:20,972 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='再贴现']$xpath】点击成功
+2022-07-01 20:10:22,105 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:10:23,238 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:10:27,286 - yangshukun-INFO 上传文件成功
+2022-07-01 20:10:27,888 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:10:29,558 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:10:30,688 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:10:35,444 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:10:37,588 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:10:38,270 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:10:45,941 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:10:45,941 - yangshukun-INFO 
+************案例：【test_72_import_zaitx】执行结束************
+2022-07-01 20:10:45,941 - yangshukun-INFO 
+************开始执行案例：【test_73_import_pjcd】************
+2022-07-01 20:10:48,569 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:10:49,126 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:10:52,336 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='票据业务']$xpath】点击成功
+2022-07-01 20:10:52,902 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='票据承兑']$xpath】点击成功
+2022-07-01 20:10:54,048 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:10:55,248 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:10:59,277 - yangshukun-INFO 上传文件成功
+2022-07-01 20:10:59,882 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:11:01,637 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:11:02,798 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:11:11,203 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:11:13,358 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:11:13,999 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:11:21,616 - yangshukun-INFO 元素【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】点击成功
+2022-07-01 20:11:21,616 - yangshukun-INFO 
+************案例：【test_73_import_pjcd】执行结束************
+2022-07-01 20:11:21,617 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-07-01 20:11:38,138 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 20:11:45,665 - yangshukun-INFO 
+************开始执行案例：【test_22_import_ldzjdk】************
+2022-07-01 20:11:50,002 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:11:50,621 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:11:53,844 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:11:54,413 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='流动资金贷款']$xpath】点击成功
+2022-07-01 20:11:55,682 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:11:56,864 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:12:00,978 - yangshukun-INFO 上传文件成功
+2022-07-01 20:12:01,649 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:12:07,968 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:12:09,119 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:12:21,769 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:12:23,998 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:12:24,749 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:13:03,016 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 20点13分02秒.png】
+2022-07-01 20:13:03,091 - yangshukun-INFO 
+************开始执行案例：【test_23_import_xmdk】************
+2022-07-01 20:13:05,678 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:13:06,260 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:13:09,407 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:13:09,970 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='项目贷款']$xpath】点击成功
+2022-07-01 20:13:11,222 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:13:12,354 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:13:16,428 - yangshukun-INFO 上传文件成功
+2022-07-01 20:13:17,052 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:13:21,760 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:13:22,874 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:13:34,805 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:13:36,920 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:13:37,532 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:14:15,382 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 20点14分15秒.png】
+2022-07-01 20:14:15,385 - yangshukun-INFO 
+************开始执行案例：【test_24_import_xypj_dw】************
+2022-07-01 20:14:18,057 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:14:18,616 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:14:21,723 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:14:22,450 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='信用评级（单位）'$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 20点14分22秒.png】
+2022-07-01 20:14:22,479 - yangshukun-INFO 
+************开始执行案例：【test_25_import_zrr_rzzl】************
+2022-07-01 20:14:25,101 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:14:25,653 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:14:28,753 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:14:29,450 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='自然人融资租赁'$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 20点14分29秒.png】
+2022-07-01 20:14:29,453 - yangshukun-INFO 
+************开始执行案例：【test_26_import_zrr_xfxd】************
+2022-07-01 20:14:31,831 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:14:32,384 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:14:35,493 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:14:36,036 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='自然人消费信贷']$xpath】点击成功
+2022-07-01 20:14:38,013 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:14:40,173 - yangshukun-INFO 
+************开始执行案例：【test_27_import_rzdb】************
+2022-07-01 20:14:42,802 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:14:43,357 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:14:46,460 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:14:47,157 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='融资担保'$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 20点14分46秒.png】
+2022-07-01 20:14:47,159 - yangshukun-INFO 
+************开始执行案例：【test_28_import_sx_zrr】************
+2022-07-01 20:14:49,549 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:14:50,119 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:14:53,212 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:14:53,903 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='授信（自然人）'$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 20点14分53秒.png】
+2022-07-01 20:14:53,907 - yangshukun-INFO 
+************开始执行案例：【test_29_import_xypj_zrr】************
+2022-07-01 20:14:56,549 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:14:57,100 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:15:00,194 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:15:00,949 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='信用评级（自然人）'$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 20点15分00秒.png】
+2022-07-01 20:15:00,954 - yangshukun-INFO 
+************开始执行案例：【test_30_import_cydw_cprzzl_zrr】************
+2022-07-01 20:15:03,577 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:15:04,130 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:15:07,254 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:15:07,949 - yangshukun-ERROR 获取元素:【//*[@id='moduleId']/option[text()='成员单位产品的融资租赁（自然人）'$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 20点15分07秒.png】
+2022-07-01 20:15:07,952 - yangshukun-INFO 
+************开始执行案例：【test_31_import_frzhtz】************
+2022-07-01 20:15:10,671 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:15:11,219 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:15:14,316 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:15:14,857 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='法人账户透支']$xpath】点击成功
+2022-07-01 20:15:16,010 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:15:17,181 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:15:21,277 - yangshukun-INFO 上传文件成功
+2022-07-01 20:15:21,994 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:15:25,187 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:17:57,918 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-07-01 20:18:05,177 - yangshukun-INFO 
+************开始执行案例：【test_22_import_ldzjdk】************
+2022-07-01 20:18:07,806 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:18:08,401 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:18:11,929 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:18:12,468 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='流动资金贷款']$xpath】点击成功
+2022-07-01 20:18:13,636 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:18:14,763 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:18:18,810 - yangshukun-INFO 上传文件成功
+2022-07-01 20:18:19,425 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:18:25,625 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:18:26,718 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:18:38,290 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:18:40,473 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:18:41,081 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功
+2022-07-01 20:19:19,089 - yangshukun-ERROR 获取元素:【//*[@id='LAYOUT_WIN_/SmartPage/DOM-Web-ROOT/page/monitor.html']/div[3]$xpath】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-07-01 20点19分18秒.png】
+2022-07-01 20:19:19,093 - yangshukun-INFO 
+************开始执行案例：【test_23_import_xmdk】************
+2022-07-01 20:19:21,936 - yangshukun-INFO 元素【//a[@menuid='Supplement010101']$xpath】点击成功
+2022-07-01 20:19:22,499 - yangshukun-INFO 元素【//li[text()='业务数据补录']$xpath】点击成功
+2022-07-01 20:19:25,691 - yangshukun-INFO 元素【//*[@id='ywlx']/option[text()='贷款业务']$xpath】点击成功
+2022-07-01 20:19:26,305 - yangshukun-INFO 元素【//*[@id='moduleId']/option[text()='项目贷款']$xpath】点击成功
+2022-07-01 20:19:27,493 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[3]/input$xpath】点击成功
+2022-07-01 20:19:28,613 - yangshukun-INFO 元素【//*[@class='fileInput']$xpath】点击成功
+2022-07-01 20:19:32,665 - yangshukun-INFO 上传文件成功
+2022-07-01 20:19:33,294 - yangshukun-INFO 元素【//*[@id='upload']$xpath】点击成功
+2022-07-01 20:19:38,174 - yangshukun-INFO 元素【//*[@id='confirmBtn']$xpath】点击成功
+2022-07-01 20:19:39,314 - yangshukun-INFO 元素【//*[@id='mainTab']/tbody/tr[4]/td[2]/span[7]$xpath】点击成功
+2022-07-01 20:19:51,339 - yangshukun-INFO 元素【//*[@id='submitAllBtn']$xpath】点击成功
+2022-07-01 20:19:53,537 - yangshukun-INFO 元素【//*[@id='dataDate']$xpath】输入【2021-12-31】成功
+2022-07-01 20:19:54,223 - yangshukun-INFO 元素【/html/body/div[2]/div[2]/input$xpath】点击成功

@@ -1,0 +1,121 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/12/8 15:44
+# @Author   : tangle
+# @File     : case_sqgl.py
+
+import time
+from baseOperation.init_cls import *
+from pageKeyword.keyword_sqgl_common import *
+from Common.OtherFunc import *
+
+
+class SqglTest(InitCls, SqglMainKeyword, YwglSqKeyword, BsglSqKeyword, GzlglKeyword, GzlqxKeyword):
+
+    def test_01_ywmxsq_success(self):
+        """业务模型授权成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入授权管理主界面
+        self.intoSqglMainMenu()
+        self.switchToSqglBaseFrame()
+        # 3、选择业务模型授权进入业务模型授权界面
+        self.intoYwglSqTab()
+        # 4、切换切换到页签frame
+        self.switchSqglFrame()
+        # 5、选择角色
+        js = '全权限'
+        # js = '金数角色'
+        self.chioceYwglSqJs(js)
+        # 6、刷新页面
+        self.clickYwglSqRefresh()
+        # 7、选择权限项复选框
+        text = '权限项'
+        self.chioceYwglSqAllQxx(text)
+        # 8、保存
+        self.clickYwglSqSave()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_bsglsq_success(self):
+        """报送管理授权成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入授权管理主界面
+        self.intoSqglMainMenu()
+        self.switchToSqglBaseFrame()
+        # 3、选择报送管理授权进入报送管理授权界面
+        self.intoBsglSqTab()
+        # 4、切换切换到页签frame
+        self.switchSqglFrame()
+        # 5、选择角色
+        js = '全权限'
+        # js = '征信角色'
+        self.chioceBsglSqJs(js)
+        # 6、刷新页面
+        self.clickBsglSqRefresh()
+        # 7、选择权限项复选框
+        self.chioceBsglSqAllpz()
+        # 8、保存
+        self.clickBsglSqSave()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_03_gzlgl_success(self):
+        """工作流管理激活成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入授权管理主界面
+        self.intoSqglMainMenu()
+        self.switchToSqglBaseFrame()
+        # 3、选择工作流管理进入工作流管理界面
+        self.intoGzlglTab()
+        # 4、切换切换到页frame
+        self.switchSqglFrame()
+        # 5、选择模块名称
+        mkmc = '综合报表'
+        self.chioceGzlglMkmc(mkmc)
+        # 6、输入模块编号
+        mkbh = 'RPTC.001'
+        self.inputGzlglMkbh(mkbh)
+        # 7、点击查询按钮
+        self.clickGzlglCx()
+        # 8、定位勾选的工作流单选框-第一个传入模块编号（如：RPTC.001），第二个传入版本号（如：1）
+        version = 1
+        self.chioceGzlglOne(mkbh, version)
+        # 9、点击激活
+        self.clickGzlglJh()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_04_gzlsq_success(self):
+        """工作流权限设置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入授权管理主界面
+        self.intoSqglMainMenu()
+        self.switchToSqglBaseFrame()
+        # 3、选择工作流权限进入工作流权限界面
+        self.intoGzlqxTab()
+        # 4、切换切换到页签frame
+        self.switchSqglFrame()
+        # 5、选择模块名称
+        mkmc = '综合报表'
+        self.chioceGzlqxMkmc(mkmc)
+        # 6、输入模块编号
+        mkbh = 'RPTC.001'
+        self.inputGzlqxMkbh(mkbh)
+        # 7、点击查询按钮
+        self.clickGzlqxCx()
+        # 8、点击编辑
+        self.clickJhmblbBj()
+        # 9、切换到编辑-权限明细页面frame
+        self.switchToBjQxmxFrame()
+        # 10、权限明细页面-点击新增
+        self.clickQxmxAdd()
+        # 11、权限明细页面-点击保存
+        self.clickQxmxSave()
+        time.sleep(1)
+        # 12、权限明细页面-点击删除
+        self.clickQxmxDel()
+        # 13、权限明细页面-点击新增，保存
+        self.clickQxmxAdd()
+        self.clickQxmxSave()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

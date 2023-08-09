@@ -1,0 +1,75 @@
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglRamlrsBscsKeyword(RAMLRSBscsElement, WebDriver):
+    """反洗钱报送参数"""
+
+    def changeBscsRamlrsSave(self):
+        """反洗钱报送参数-保存按钮"""
+        self.Click(self.BUTTON_SAVE_RAMLRS)
+
+    def changeBscsRamlrsGsbm(self, text):
+        """反洗钱报送参数-可疑交易默认归属部门"""
+        self.Click(self.INPUT_GSBM_RAMLRS.format(text))
+
+    def changeBscsRamlrsBgjgbm(self, text):
+        """反洗钱报送参数-报告机构编码"""
+        self.ClearData(self.INPUT_BGJGBM_RAMLRS)
+        self.Input(text, self.INPUT_BGJGBM_RAMLRS)
+
+    def changeBscsRamlrsSjblj(self, text):
+        """反洗钱报送参数-数据包文件保存路径"""
+        self.ClearData(self.INPUT_SJBLJ_RAMLRS)
+        self.Input(text, self.INPUT_SJBLJ_RAMLRS)
+
+    def changeBscsRamlrsZjdq(self, text):
+        """反洗钱报送参数-证件到期提醒天数"""
+        self.ClearData(self.INPUT_ZJDQTXTS_RAMLRS)
+        self.Input(text, self.INPUT_ZJDQTXTS_RAMLRS)
+
+    def changeBscsRamlrsSaveOk(self):
+        """反洗钱报送参数-保存成功关闭按钮"""
+        self.Click(self.BUTTON_CLOSE_RAMLRS)
+
+
+class BsglRamlrsKytzszKeyword(RAMLRSKytzszElement, BsglElementFrame, WebDriver):
+    """反洗钱可疑特征设置"""
+
+    def changeKytzszRamlrsAdd(self, text):
+        """反洗钱可疑特征设置-新增"""
+        self.Click(self.BUTTON_ADD_RAMLRS_KY)
+        self.Input(text, self.INPUT_KYJYTZDM_KY)
+
+    def changeKytzszRamlrsDm(self, text):
+        """反洗钱可疑特征设置-可疑交易特征代码"""
+        self.Input(text, self.INPUT_KYJYTZDM_KY)
+
+    def changeKytzszRamlrsSm(self, text):
+        """反洗钱可疑特征设置-可疑交易特征说明"""
+        self.Input(text, self.INPUT_KYJYTZSM_KY)
+
+    def changeKytzszRamlrsSzlx(self):
+        """反洗钱可疑特征设置-涉罪类型代码-全部"""
+        self.Click(self.INPUT_SZLXDM_KY)
+        self.SwitchFrame(self.XZYSSZLX_FRAME)
+        self.Click(self.BUTTON_FXK_ALL_KY)
+
+    def changeKytzszRamlrsJcbzm(self):
+        """反洗钱可疑特征设置-监测标准码-全部"""
+        self.Click(self.INPUT_JCBZM_KY)
+        self.SwitchFrame(self.XZJCBZMLX_FRAME)
+        self.Click(self.BUTTON_FXK_ALL_KY)
+
+    def changeKytzszRamlrsJszb(self, text):
+        """反洗钱可疑特征设置-技术指标"""
+        self.Input(text, self.INPUT_JSZB_KY)
+
+    def changeKytzszRamlrsSave(self):
+        """反洗钱可疑特征设置-保存"""
+        self.Click(self.BUTTON_SAVE_RAMLRS_KY)
+
+    def changeKytzszRamlrsDelete(self, text):
+        """反洗钱可疑特征设置-删除"""
+        self.Click(self.BUTTON_FXK_ALL_KYJYTZ.format(text))
+        self.Click(self.BUTTON_DETELE_RAMLRS_KY)

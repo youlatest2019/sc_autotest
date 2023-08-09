@@ -1,0 +1,23 @@
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglRsaferBscsKeyword(BsglElementFrame, RsaferBscs, WebDriver):
+    """外管局报表报送参数"""
+
+    def changeRsaferBscsSave(self):
+        """外管局报表修改报送参数-保存"""
+        self.Click(self.BUTTON_SAVE_RSAFER)
+
+    def changeRsaferBscsJy(self):
+        """外管局报表修改报送参数-强制数据校验开关"""
+        self.Click(self.BUTTON_JY)
+
+    def changeRsaferBscsDay(self, text):
+        """外管局报表修改报送参数-报送提醒天数设置（天）"""
+        self.ClearData(self.INPUT_DAY)
+        self.Input(text, self.INPUT_DAY)
+
+    def changeRsaferBscsSbsp(self):
+        """外管局报表修改报送参数-上报审批"""
+        self.Click(self.BUTTON_SBSP)

@@ -1,0 +1,263 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 15:44
+# @Author   : yangshukun
+# @File     : case_bsgl_1104.py
+
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_common import *
+from pageKeyword.keyword_bsgl_rptc import *
+from utils.operationXml import *
+from data.data_class.bsgl_1104_data import *
+import sys
+
+
+class BsglRmbtdTest(InitCls, BsglMainKeyword, OperationXml,BsglPubBsrwKeyword, BsglPubBsfwKeyword,
+                     BsglPubFzglKeyword, BsglPubBssqKeyword, BsglPubSjsqKeyword, BsglPubSplcKeyword,BsglPubBbmbKeyword,BsglRptcBscsKeyword):
+
+    def test_01_import_module_success(self):
+        """综合报表报表模板导入成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        # 3、选择综合报表品种进入综合报表管理界面
+        self.switchToBsglBaseFrame()
+        self.intoRptcTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBbmb()
+        # 6、导入模板
+        self.switchBspzFrame()
+        self.importBbmb(self.RPTC_PATH)
+        self.GotoSleep(1)
+        # 断言导入成功
+        res = self.GetTagText(self.MSG_IMPORT_RESULT)
+        self.assertEqual(res, '成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_export_module_success(self):
+        """综合报表报表模板导出成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        # 3、选择综合报表品种进入综合报表管理界面
+        self.switchToBsglBaseFrame()
+        self.intoRptcTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBbmb()
+        # 6、导出模板
+        self.switchBspzFrame()
+        self.inputBsnrbh("T115")
+        self.refreshBbmbPage()
+        self.clickCheckBox(1)
+        self.exportBbmb()
+        self.GotoSleep(1)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_03_add_bsrw_rptc_success(self):
+        """综合报表报送任务新增报送任务并废弃成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择综合报表品种进入综合报表管理界面
+        self.intoRptcTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送任务管理页签
+        self.swithToBsrw()
+        # 6、新增报送任务
+        self.switchBspzFrame()
+        self.addBsrw("T115", "2021")
+        self.BbpzChoiceMould()
+        self.addBsrwSave()
+        # 7、断言新增成功
+        self.GotoSleep(1)
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, "保存成功")
+        self.closeXzrw_success()
+        # 废弃报送任务
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.switchBspzFrame()
+        self.queryBsrw("2021年上半年", "T115-绿色融资统计表")
+        self.abandonBsrw("综合报表任务自动化废弃")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_04_change_rptc_bsfw_success(self):
+        """综合报表报送范围修改单个报送内容设置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择综合报表品种进入综合报表管理界面
+        self.intoRptcTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、查询并修改单个报送内容设置
+        self.bsglMainFrame()
+        self.checkOneBsnr()
+        self.changeBsnr("上期", "0 45 /1 * * ?", "15", "天", "是", "是")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_05_change_bscs_success(self):
+        """综合报表报送参数修改参数配置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择综合报表品种进入综合报表管理界面
+        self.intoRptcTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBscs()
+        # 6、修改报送参数配置信息
+        self.bsglMainFrame()
+        self.changeRptcBscsSbsp()
+        self.changeRptcBscsSave()
+        # 断言修改参数配置成功
+        # res = self.GetTagText(self.MSG_ADD_RESULT)
+        # self.assertEqual(res, '保存成功!')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_06_add_edit_del_group_rptc_success(self):
+        """综合报表分组管理--新增分组，编辑，删除，成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择综合报表品种进入综合报表管理界面
+        self.intoRptcTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToFzgl()
+        # 6、新增分组并断言成功
+        self.bsglMainFrame()
+        self.addGroup("综合报表自动化分组", "征信权限1", "自动化测试_综合报表分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 7、编辑分组并断言修改成功
+        self.editeGroup("综合报表自动化分组", "综合报表自动化分组_修改", "自动化测试_综合报表分组描述_修改")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 8查询修改后的名称正确
+        self.searchGroupName("综合报表自动化分组_修改")
+        self.refreshGroupPage()
+        res = self.GetTagText(self.DATA_FIRST_GROUP.format(1))
+        self.assertEqual(res, "综合报表自动化分组_修改")
+        # 删除分组
+        self.delGroup("综合报表自动化分组_修改")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_07_bssq_success(self):
+        """综合报表报送授权成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择综合报表品种进入综合报表管理界面
+        self.intoRptcTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        self.addGroup("综合报表自动化授权分组", "征信权限2", "自动化测试_综合报表授权分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq("综合报表自动化授权分组")
+        self.searchBsnr("T115-绿色融资统计表")
+        self.refreshBssqPage()
+        # 8、勾选核对权限，上报权限，查询，重抽权限
+        self.tickHdqx()
+        self.tickSbqx()
+        self.tickCxqx()
+        self.tickCcqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 9、进入分组管理
+        self.SwitchFatherFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 10、删除分组
+        self.delGroup("综合报表自动化授权分组")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_08_splc_batch_update_success(self):
+        """综合报表审批流程批量修改成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择综合报表品种进入综合报表管理界面
+        self.intoRptcTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        self.addGroup("综合报表自动化授权分组", "征信权限2", "自动化测试_综合报表授权分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq("综合报表自动化授权分组")
+        self.searchBsnr("T115-绿色融资统计表")
+        self.refreshBssqPage()
+        # 8、勾选核对权限，上报权限，查询，重抽权限
+        self.tickHdqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 9、进入审批流程页面
+        self.SwitchFatherFrame()
+        self.swithToSplc()
+        self.bsglMainFrame()
+        # 10、选择分组
+        self.searchGroupNameSplc("综合报表自动化授权分组")
+        self.refreshSplcPage()
+        # 11、勾选报送内容，批量修改,并断言修改成功
+        self.tickBoxAll()
+        self.batchUpdateSplc("综合报表审批")
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.bsglMainFrame()
+        res = self.GetTagText(self.MSG_BATCH_ALERT_SPLC)
+        self.assertEqual(res, "保存成功")
+        self.closeBatchAlertSplc()
+        # 进入分组管理
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 删除分组
+        self.delGroup("综合报表自动化授权分组")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

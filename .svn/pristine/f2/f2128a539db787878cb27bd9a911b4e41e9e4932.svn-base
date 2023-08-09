@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2021/9/13 9:34
+# @Author   : yangshukun
+# @File     : getfiledir.py
+
+import os
+
+dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+DATADIR = os.path.join(dir, 'TestData')
+
+BASICELEMENTDIR = os.path.join(DATADIR, 'basic_element')
+
+CASEDIR = os.path.join(DATADIR, 'case')
+
+DEBUGCASEDIR = os.path.join(CASEDIR, 'debug')
+
+EXCUTEDIR = os.path.join(dir, 'excutetest')
+
+# EXCUTECASE = os.path.join(EXCUTEDIR, 'excute_case')
+
+CONFDIR = os.path.join(dir, 'Config')
+
+BASEFACTORYDIR = os.path.join(dir, 'BaseOperations')
+
+RESULTDIR = os.path.join(dir, 'result')
+
+LOGDIR = os.path.join(RESULTDIR, 'logs')
+
+REPORTDIR = os.path.join(RESULTDIR, 'test_reports')
+
+SCREENSHOTDIR = os.path.join(RESULTDIR, 'screenshosts')
+
+JSONDATADIR = os.path.join(DATADIR, 'InputDataDir')
+
+print(BASEFACTORYDIR)
+

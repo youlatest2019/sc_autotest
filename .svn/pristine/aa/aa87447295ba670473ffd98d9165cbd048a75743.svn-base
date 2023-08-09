@@ -1,0 +1,37 @@
+#配置文件，环境安装配置
+[DataBase]
+#创建用户时登录服务器使用的用户及密码配置
+adress = 192.168.20.157
+
+#linux服务器密码
+ssh_passwd = Ninestar1571552
+
+#已创建的三个用户名称配置信息
+web_user = TEST_AUTO_WEB
+dw_user = TEST_AUTO_DW
+dm_user = TEST_AUTO_DM
+
+[Dir]
+#安装目录（已安装的环境的目录）
+base_dir = /home/TestAuto
+
+#本地安装包存放路径（注意安装包.zip文件的层级结构必须和基线版结构一致）---存放升级安装包的本地路径
+local_package_path = D:\数仓安装记录\test
+
+
+#三个域端口号（账号，密码均使用固定值，代码写死）
+dom_domain_port = 2006
+dcab_domain_port = 2007
+web_domain_port = 2008
+
+#业务系统配置（可以不做修改，使用默认值）
+yw_name = N9
+yw_user = test_ods
+yw_passwd = 123456
+yw_ip = 192.168.20.135
+yw_prot = 1521
+yw_dbname = orcl
+
+#独立服务相关配置
+standalone_ip = 192.168.20.157
+standalone_port = 8087

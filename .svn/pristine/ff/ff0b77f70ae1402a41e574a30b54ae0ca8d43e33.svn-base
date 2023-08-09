@@ -1,0 +1,616 @@
+2022-06-16 16:27:24,904 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:16:28,959 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:16:37,526 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 18:16:48,477 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='数据管理11']")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点16分48秒.png】
+2022-06-16 18:16:48,481 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 18:16:59,507 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='数据管理11']")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点16分59秒.png】
+2022-06-16 18:16:59,509 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 18:17:20,751 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:17:28,534 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 18:17:32,245 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:17:32,860 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:17:35,978 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:17:36,504 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:17:37,649 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:17:38,400 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点17分38秒.png】
+2022-06-16 18:17:38,594 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点17分38秒.png】
+2022-06-16 18:17:38,594 - yangshukun-INFO 元素【('xpath', "//*[@id='export]")】点击成功
+2022-06-16 18:17:49,667 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='导出CSV格式']")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点17分49秒.png】
+2022-06-16 18:17:49,844 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点17分49秒.png】
+2022-06-16 18:17:49,845 - yangshukun-INFO 元素【('xpath', "//span[text()='导出CSV格式']")】点击成功
+2022-06-16 18:17:51,758 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 18:17:51,759 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 18:17:53,819 - yangshukun-ERROR 元素:【('xpath', "//a[@menuid='Supplement010101']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点17分53秒.png】
+2022-06-16 18:17:53,820 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:18:05,040 - yangshukun-ERROR 获取元素:【('xpath', "//li[text()='业务数据补录']")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点18分04秒.png】
+2022-06-16 18:18:05,225 - yangshukun-ERROR 元素:【('xpath', "//li[text()='业务数据补录']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点18分05秒.png】
+2022-06-16 18:18:05,225 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:18:06,279 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 18:22:27,040 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:22:35,294 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 18:22:38,099 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:22:38,640 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:22:41,223 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:22:41,749 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:22:42,919 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:22:43,700 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点22分43秒.png】
+2022-06-16 18:22:43,884 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点22分43秒.png】
+2022-06-16 18:22:43,884 - yangshukun-INFO 元素【('xpath', "//*[@id='export]")】点击成功
+2022-06-16 18:22:55,074 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='导出CSV格式']")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点22分54秒.png】
+2022-06-16 18:22:55,268 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点22分55秒.png】
+2022-06-16 18:22:55,268 - yangshukun-INFO 元素【('xpath', "//span[text()='导出CSV格式']")】点击成功
+2022-06-16 18:22:56,792 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 18:22:56,794 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 18:22:58,818 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:22:59,369 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:23:01,566 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:23:02,095 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:23:03,314 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:23:03,980 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点23分03秒.png】
+2022-06-16 18:23:04,129 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点23分03秒.png】
+2022-06-16 18:23:04,129 - yangshukun-INFO 元素【('xpath', "//*[@id='export]")】点击成功
+2022-06-16 18:23:15,186 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='导出EXCEL格式']")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点23分14秒.png】
+2022-06-16 18:23:15,333 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点23分15秒.png】
+2022-06-16 18:23:15,333 - yangshukun-INFO 元素【('xpath', "//span[text()='导出EXCEL格式']")】点击成功
+2022-06-16 18:23:17,109 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 18:23:17,109 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 18:35:58,069 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:36:06,460 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 18:36:08,962 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:36:09,506 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:36:11,590 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:36:12,121 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:36:13,306 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:36:14,050 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点36分13秒.png】
+2022-06-16 18:36:14,231 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点36分14秒.png】
+2022-06-16 18:36:25,387 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='导出CSV格式']")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点36分25秒.png】
+2022-06-16 18:36:25,552 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点36分25秒.png】
+2022-06-16 18:36:27,414 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 18:36:27,414 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 18:36:29,287 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:36:29,824 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:36:31,902 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:36:32,441 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:36:33,620 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:36:34,371 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点36分34秒.png】
+2022-06-16 18:36:34,561 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点36分34秒.png】
+2022-06-16 18:36:45,657 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='导出EXCEL格式']")】失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点36分45秒.png】
+2022-06-16 18:36:45,836 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点36分45秒.png】
+2022-06-16 18:36:47,558 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 18:36:47,559 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 18:41:20,884 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:41:27,695 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 18:41:33,227 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:41:33,767 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:41:36,512 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:41:37,045 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:41:38,290 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:41:38,843 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败
+2022-06-16 18:41:39,051 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点41分38秒.png】
+2022-06-16 18:41:50,027 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='导出CSV格式']")】失败
+2022-06-16 18:41:50,238 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点41分50秒.png】
+2022-06-16 18:41:52,020 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 18:41:52,020 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 18:41:53,901 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:41:54,481 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:41:56,724 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:41:57,289 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:41:58,473 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:41:59,030 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败
+2022-06-16 18:41:59,244 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点41分59秒.png】
+2022-06-16 18:42:10,261 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='导出EXCEL格式']")】失败
+2022-06-16 18:42:10,485 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点42分10秒.png】
+2022-06-16 18:42:12,027 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 18:42:12,028 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 18:44:48,835 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:44:56,648 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 18:44:59,099 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:44:59,640 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:45:07,432 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:45:08,005 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:45:09,175 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:45:09,735 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败
+2022-06-16 18:45:09,922 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点45分09秒.png】
+2022-06-16 18:45:20,875 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='导出CSV格式']")】失败
+2022-06-16 18:45:21,104 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点45分20秒.png】
+2022-06-16 18:45:23,071 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 18:45:23,071 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 18:45:24,901 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:45:25,438 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:45:27,605 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:45:28,184 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:45:29,362 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:45:29,878 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败
+2022-06-16 18:45:30,038 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点45分29秒.png】
+2022-06-16 18:45:41,016 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='导出EXCEL格式']")】失败
+2022-06-16 18:45:41,214 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点45分41秒.png】
+2022-06-16 18:45:42,961 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 18:45:42,962 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 18:48:03,896 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:48:12,554 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 18:48:15,172 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:48:15,715 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:48:18,161 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:48:18,689 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:48:19,837 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:48:20,387 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败,报错信息：Message: invalid selector: Unable to locate an element with the xpath expression //*[@id='export] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id='export]' is not a valid XPath expression.
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00449943+2595139]
+	Ordinal0 [0x003DC9F1+2148849]
+	Ordinal0 [0x002D4528+1066280]
+	Ordinal0 [0x002D6E04+1076740]
+	Ordinal0 [0x002D6CBE+1076414]
+	Ordinal0 [0x002D6F50+1077072]
+	Ordinal0 [0x00300D1E+1248542]
+	Ordinal0 [0x003011CB+1249739]
+	Ordinal0 [0x0032D812+1431570]
+	Ordinal0 [0x0031BA34+1358388]
+	Ordinal0 [0x0032BAF2+1424114]
+	Ordinal0 [0x0031B806+1357830]
+	Ordinal0 [0x002F6086+1204358]
+	Ordinal0 [0x002F6F96+1208214]
+	GetHandleVerifier [0x005EB232+1658114]
+	GetHandleVerifier [0x006A312C+2411516]
+	GetHandleVerifier [0x004DF261+560433]
+	GetHandleVerifier [0x004DE366+556598]
+	Ordinal0 [0x003E286B+2173035]
+	Ordinal0 [0x003E75F8+2192888]
+	Ordinal0 [0x003E76E5+2193125]
+	Ordinal0 [0x003F11FC+2232828]
+	BaseThreadInitThunk [0x75600419+25]
+	RtlGetAppContainerNamedObjectPath [0x774972FD+237]
+	RtlGetAppContainerNamedObjectPath [0x774972CD+189]
+
+2022-06-16 18:48:20,572 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点48分20秒.png】
+2022-06-16 18:48:31,739 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点48分31秒.png】
+2022-06-16 18:48:33,277 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 18:48:33,277 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 18:48:35,243 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:48:35,794 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:48:37,991 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:48:38,572 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:48:39,796 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:48:40,325 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败,报错信息：Message: invalid selector: Unable to locate an element with the xpath expression //*[@id='export] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id='export]' is not a valid XPath expression.
+  (Session info: chrome=100.0.4896.75)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00449943+2595139]
+	Ordinal0 [0x003DC9F1+2148849]
+	Ordinal0 [0x002D4528+1066280]
+	Ordinal0 [0x002D6E04+1076740]
+	Ordinal0 [0x002D6CBE+1076414]
+	Ordinal0 [0x002D6F50+1077072]
+	Ordinal0 [0x00300D1E+1248542]
+	Ordinal0 [0x003011CB+1249739]
+	Ordinal0 [0x0032D812+1431570]
+	Ordinal0 [0x0031BA34+1358388]
+	Ordinal0 [0x0032BAF2+1424114]
+	Ordinal0 [0x0031B806+1357830]
+	Ordinal0 [0x002F6086+1204358]
+	Ordinal0 [0x002F6F96+1208214]
+	GetHandleVerifier [0x005EB232+1658114]
+	GetHandleVerifier [0x006A312C+2411516]
+	GetHandleVerifier [0x004DF261+560433]
+	GetHandleVerifier [0x004DE366+556598]
+	Ordinal0 [0x003E286B+2173035]
+	Ordinal0 [0x003E75F8+2192888]
+	Ordinal0 [0x003E76E5+2193125]
+	Ordinal0 [0x003F11FC+2232828]
+	BaseThreadInitThunk [0x75600419+25]
+	RtlGetAppContainerNamedObjectPath [0x774972FD+237]
+	RtlGetAppContainerNamedObjectPath [0x774972CD+189]
+
+2022-06-16 18:48:40,482 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点48分40秒.png】
+2022-06-16 18:48:51,608 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点48分51秒.png】
+2022-06-16 18:48:53,384 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 18:48:53,385 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 18:50:01,097 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:50:09,010 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 18:50:11,388 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:50:11,941 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:50:14,626 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:50:15,154 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:50:16,372 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:50:17,074 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点50分16秒.png】
+2022-06-16 18:50:28,156 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点50分27秒.png】
+2022-06-16 18:50:29,958 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 18:50:29,958 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 18:50:31,797 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:50:32,332 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:50:34,567 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:50:35,138 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:50:36,282 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:50:36,970 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点50分36秒.png】
+2022-06-16 18:50:48,017 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点50分47秒.png】
+2022-06-16 18:50:49,908 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 18:50:49,909 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 18:55:36,639 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:55:44,120 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 18:55:46,719 - yangshukun-ERROR 元素:【('xpath', "//a[@menuid='Supplement010101']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点55分46秒.png】
+2022-06-16 18:55:57,865 - yangshukun-ERROR 元素:【('xpath', "//li[text()='业务数据补录']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点55分57秒.png】
+2022-06-16 18:55:58,956 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 18:56:01,092 - yangshukun-ERROR 元素:【('xpath', "//a[@menuid='Supplement010101']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点56分00秒.png】
+2022-06-16 18:56:12,163 - yangshukun-ERROR 元素:【('xpath', "//li[text()='业务数据补录']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 18点56分11秒.png】
+2022-06-16 18:56:13,177 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 18:56:55,349 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 18:57:03,610 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 18:57:06,490 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:57:07,087 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:57:09,192 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:57:09,718 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:57:10,874 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:57:11,472 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 18:57:12,127 - yangshukun-INFO 元素【('xpath', "//span[text()='导出CSV格式']")】点击成功
+2022-06-16 18:57:13,633 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 18:57:13,633 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 18:57:15,552 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 18:57:16,121 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 18:57:18,239 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 18:57:18,828 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 18:57:20,028 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 18:57:20,695 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 18:57:21,342 - yangshukun-INFO 元素【('xpath', "//span[text()='导出EXCEL格式']")】点击成功
+2022-06-16 18:57:23,083 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 18:57:23,083 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 19:00:13,719 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 19:00:21,703 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 19:00:24,104 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:00:24,666 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:00:26,753 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:00:27,280 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:00:28,434 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:00:29,053 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 19:00:29,737 - yangshukun-INFO 元素【('xpath', "//span[text()='导出CSV格式']")】点击成功
+2022-06-16 19:00:31,705 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 19:00:31,705 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 19:00:33,534 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:00:34,077 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:00:36,222 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:00:36,827 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:00:38,071 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:00:38,727 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 19:00:39,321 - yangshukun-INFO 元素【('xpath', "//span[text()='导出EXCEL格式']")】点击成功
+2022-06-16 19:00:41,042 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 19:00:41,042 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 19:13:43,593 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 19:13:52,770 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 19:13:56,804 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:13:57,341 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:13:59,500 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:14:00,059 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:14:01,177 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:14:01,924 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 19:14:02,529 - yangshukun-INFO 元素【('xpath', "//span[text()='导出CSV格式']")】点击成功
+2022-06-16 19:14:04,296 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 19:14:04,296 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 19:14:06,126 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:14:06,660 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:14:08,871 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:14:09,462 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:14:10,598 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:14:11,229 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 19:14:11,949 - yangshukun-INFO 元素【('xpath', "//span[text()='导出EXCEL格式']")】点击成功
+2022-06-16 19:14:13,658 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 19:14:13,658 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 19:18:36,652 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 19:18:44,011 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 19:18:46,174 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:18:46,926 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:18:49,706 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:18:50,231 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:18:51,438 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:18:52,015 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 19:18:52,680 - yangshukun-INFO 元素【('xpath', "//span[text()='导出CSV格式']")】点击成功
+2022-06-16 19:18:54,490 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 19:18:54,491 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 19:18:56,333 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:18:56,897 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:18:59,107 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:18:59,640 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:19:00,765 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:19:01,390 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 19:19:02,005 - yangshukun-INFO 元素【('xpath', "//span[text()='导出EXCEL格式']")】点击成功
+2022-06-16 19:19:03,704 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 19:19:03,704 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 19:46:49,494 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 19:46:57,378 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 19:46:59,797 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:47:00,340 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:47:02,460 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:47:02,986 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:47:04,286 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:47:04,975 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 19:47:05,586 - yangshukun-INFO 元素【('xpath', "//span[text()='导出CSV格式']")】点击成功
+2022-06-16 19:47:07,547 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 19:47:07,548 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 19:47:09,381 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:47:09,956 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:47:12,218 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:47:12,816 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:47:14,094 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:47:14,727 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 19:47:15,397 - yangshukun-INFO 元素【('xpath', "//span[text()='导出EXCEL格式']")】点击成功
+2022-06-16 19:47:17,131 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 19:47:17,132 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 19:56:02,927 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 19:56:10,236 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 19:56:12,538 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:56:13,148 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:56:15,471 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:56:16,000 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:56:17,235 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:56:17,839 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 19:56:18,499 - yangshukun-INFO 元素【('xpath', "//span[text()='导出CSV格式']")】点击成功
+2022-06-16 19:56:20,379 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 19:56:20,380 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 19:56:22,234 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:56:22,805 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:56:24,976 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:56:25,569 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:56:26,700 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:56:27,275 - yangshukun-INFO 元素【('xpath', "//*[@id='export']")】点击成功
+2022-06-16 19:56:27,955 - yangshukun-INFO 元素【('xpath', "//span[text()='导出EXCEL格式']")】点击成功
+2022-06-16 19:56:29,734 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 19:56:29,735 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 19:57:18,956 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 19:57:26,197 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 19:57:28,695 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:57:29,238 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:57:31,397 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:57:31,923 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:57:33,123 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:57:33,860 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 19点57分33秒.png】
+2022-06-16 19:57:45,076 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 19点57分44秒.png】
+2022-06-16 19:57:46,884 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 19:57:46,884 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 19:57:48,799 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 19:57:49,346 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 19:57:51,561 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 19:57:52,142 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 19:57:53,345 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 19:57:54,075 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 19点57分53秒.png】
+2022-06-16 19:58:05,282 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 19点58分05秒.png】
+2022-06-16 19:58:06,999 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 19:58:06,999 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 20:00:09,409 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 20:00:16,150 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 20:00:18,225 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 20:00:18,862 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 20:00:20,942 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 20:00:21,469 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 20:00:22,681 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 20:00:23,457 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点00分23秒.png】
+2022-06-16 20:00:34,643 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点00分34秒.png】
+2022-06-16 20:00:36,544 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 20:00:36,544 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 20:00:38,430 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 20:00:39,011 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 20:00:41,266 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 20:00:41,840 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 20:00:43,059 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 20:00:43,778 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点00分43秒.png】
+2022-06-16 20:00:54,510 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点00分54秒.png】
+2022-06-16 20:00:56,279 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 20:00:56,279 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 20:02:58,141 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 20:03:03,848 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 20:03:06,231 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 20:03:06,775 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 20:03:08,861 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 20:03:09,388 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 20:03:10,533 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 20:03:11,290 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点03分11秒.png】
+2022-06-16 20:03:22,021 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点03分21秒.png】
+2022-06-16 20:03:23,912 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 20:03:23,913 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 20:03:25,872 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 20:03:26,413 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 20:03:28,632 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 20:03:29,157 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 20:03:30,307 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 20:03:31,101 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点03分30秒.png】
+2022-06-16 20:03:42,278 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点03分42秒.png】
+2022-06-16 20:03:44,089 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 20:03:44,089 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 20:06:33,120 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 20:06:39,736 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 20:06:42,218 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 20:06:42,842 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 20:06:44,924 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 20:06:45,451 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 20:06:46,654 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 20:06:47,440 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点06分47秒.png】
+2022-06-16 20:06:53,382 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点06分53秒.png】
+2022-06-16 20:06:55,219 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 20:06:55,220 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 20:06:57,295 - yangshukun-ERROR 元素:【('xpath', "//a[@menuid='Supplement010101']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点06分57秒.png】
+2022-06-16 20:07:03,207 - yangshukun-ERROR 元素:【('xpath', "//li[text()='业务数据补录']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点07分02秒.png】
+2022-06-16 20:07:04,290 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 20:08:07,436 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 20:08:14,607 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 20:08:18,303 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 20:08:18,845 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 20:08:21,019 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 20:08:21,574 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 20:08:22,727 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 20:08:23,495 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点08分23秒.png】
+2022-06-16 20:08:34,713 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出CSV格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点08分34秒.png】
+2022-06-16 20:08:36,570 - yangshukun-INFO 
+************案例：【test_export_csv_success】执行结束************
+2022-06-16 20:08:36,570 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 20:08:38,542 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 20:08:39,089 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 20:08:41,306 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 20:08:41,889 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 20:08:43,098 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 20:08:43,832 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点08分43秒.png】
+2022-06-16 20:08:55,005 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点08分54秒.png】
+2022-06-16 20:08:56,784 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 20:08:56,784 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 20:10:08,974 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 20:10:14,466 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 20:10:16,850 - yangshukun-ERROR 元素:【('xpath', "//a[@menuid='Supplement010101']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点10分16秒.png】
+2022-06-16 20:10:27,848 - yangshukun-ERROR 元素:【('xpath', "//li[text()='业务数据补录']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点10分27秒.png】
+2022-06-16 20:10:28,875 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 20:10:30,709 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 20:10:31,245 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 20:10:33,365 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 20:10:33,943 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 20:10:35,203 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 20:10:35,946 - yangshukun-ERROR 元素:【('xpath', "//*[@id='export]")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点10分35秒.png】
+2022-06-16 20:10:47,108 - yangshukun-ERROR 元素:【('xpath', "//span[text()='导出EXCEL格式']")】点击失败,已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点10分46秒.png】
+2022-06-16 20:10:48,983 - yangshukun-INFO 
+************案例：【test_export_excel_success】执行结束************
+2022-06-16 20:10:48,984 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 20:17:52,546 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 20:17:58,443 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 20:18:03,093 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 20:18:03,665 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 20:18:05,857 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 20:18:06,380 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 20:18:07,656 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 20:18:08,356 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点18分08秒.png】
+2022-06-16 20:18:08,358 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 20:18:19,400 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='数据管理']")】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点18分19秒.png】
+2022-06-16 20:18:19,401 - yangshukun-INFO 
+----------【用例执行结束】----------
+2022-06-16 20:22:58,823 - yangshukun-INFO 
+----------【用例开始执行】----------
+2022-06-16 20:23:04,591 - yangshukun-INFO 
+************开始执行案例：【test_export_csv_success】************
+2022-06-16 20:23:06,993 - yangshukun-INFO 元素【('xpath', "//a[@menuid='Supplement010101']")】点击成功
+2022-06-16 20:23:07,536 - yangshukun-INFO 元素【('xpath', "//li[text()='业务数据补录']")】点击成功
+2022-06-16 20:23:09,624 - yangshukun-INFO 元素【('xpath', "//*[@id='ywlx']/option[text()='财务信息']")】点击成功
+2022-06-16 20:23:10,168 - yangshukun-INFO 元素【('xpath', "//*[@id='moduleId']/option[text()='会计科目']")】点击成功
+2022-06-16 20:23:11,321 - yangshukun-INFO 元素【('xpath', "//*[@id='listTabHead']/thead/tr/th[1]/input")】点击成功
+2022-06-16 20:23:12,084 - yangshukun-ERROR 获取元素:【('xpath', "//*[@id='export]")】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点23分11秒.png】
+2022-06-16 20:23:12,087 - yangshukun-INFO 
+************开始执行案例：【test_export_excel_success】************
+2022-06-16 20:23:23,148 - yangshukun-ERROR 获取元素:【('xpath', "//span[text()='数据管理']")】失败，已截图:【D:\DcabAtuoTest\result\screenshosts\2022-06-16 20点23分22秒.png】
+2022-06-16 20:23:23,149 - yangshukun-INFO 
+----------【用例执行结束】----------

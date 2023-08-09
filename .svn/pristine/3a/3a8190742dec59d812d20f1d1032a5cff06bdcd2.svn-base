@@ -1,0 +1,355 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 9:42
+# @Author   : yangshukun
+# @File     : page_bsgl.py
+from Common.common_map import *
+
+
+class BsglElementMain(object):
+    """主页面功能按钮及tab页切换"""
+    XTGL = "//span[text()='系统管理']".__add__(XPATH)  # 主菜单--系统管理
+    BSGL = "//a[@menuid='Setings010102']".__add__(XPATH)  # 报送管理菜单按钮
+    BSGL_TAB = "//li[@menuid='Setings010102']".__add__(XPATH)  # 报送管理标题菜单
+    SWITCH_BSPZ = "//li[contains(@url,'{}')]".__add__(XPATH)  # 切换报送品种的表达式，以占位符{}对品种进行站位，可以在关键字中传递品种名称
+    CHOICE_FUNC_TAB = "//a[text()='{}']".__add__(XPATH)  # 不同品种下管理页签切换的表达式，使用占位符{}，可通过传参确定页签
+
+
+class BsglElementFrame(object):
+    """报送管理菜单相关frame"""
+    MAIN_FRAME = "ifrSetings010102"  # 报送管理页面主框架frameID
+    TAB_FRAME = "frame"  # 报送管理--功能按钮及数据主框架frameID
+    BSPZ_FRAME = "ifrmcontent"  # 各报送品种页签功能框架frameID
+    ADD_BSRW_FRAME = "//iframe[contains(@id,'LAYOUT_WIN_/SmartPage/RMM-Web@createOrUpdateReport.do')]".__add__(
+        XPATH)  # 新增报送任务框架frameID
+    ADD_BSNR_FRAME = "//iframe[contains(@id,'LAYOUT_WIN_/SmartPage/RMM-Web@Pub_queryBsnr.sf')]".__add__(
+        XPATH)  # 新增--选择报送内容框架frameID
+    JZCJ_FRAME = "LAYOUT_WIN_/SmartPage/REAST-Web-ROOT/page/centralizedCollection.html_iframe"  # 集中采集框架frameID
+    RN1104_UPLOAD_ALTER_FRAME = "LAYOUT_WIN_/RPTS/upload.jsp_iframe"  # 报表模板导入弹窗frameID
+    RN1104_MSG_ALTER_FRAME = "//iframe[@id='LAYOUT_WIN_/RPTS/errorMsg.jsp_iframe']".__add__(
+        XPATH)  # 报表模板导入弹窗，导入结果frameID
+    RN1104_BSRYPZ_BATCH_UPDATE_FRAME = "LAYOUT_WIN_/SmartPage/RN1104-Web@RN1104_Oper_Param.sf%3Fm%3De_iframe"  # 1104报送人员配置批量编辑frameID
+    BSGL_TAB_FRAME = "ifrmcontent"  # 报送品种管理框架ID
+    RWFQ_FRAME = "//iframe[contains(@id,'LAYOUT_WIN_/SmartPage/DOM-Web@DOM_missionLocked')]".__add__(
+        XPATH)  # 任务废弃原因框架frameXPATH
+    BSFW_CHANGE_FRAME = "//iframe[contains(@id,'LAYOUT_WIN_/SmartPage/RMM-Web@RMM_BSFWEditPage')]".__add__(
+        XPATH)  # EAST报送范围修改框架frameXPATH
+    SJSQ_FRAME = "//iframe[contains(@id,'LAYOUT_WIN_/SmartPage/RMM-Web@Pub_RptGrant_DataRange')]".__add__(
+        XPATH)  # 数据授权frame
+    PUB_SPLC_BATCH_UPDATE_FRAME = "LAYOUT_WIN_/SmartPage/RMM-Web@PubBatchBizFlow.sf%3F_iframe"  # 审批流程--批量修改，公共frameID
+
+
+class PubBbmb(object):
+    """1104报表模板页面"""
+    CHOOSE_GROUP_NAME = "//select[@id='dom_ReportTemplateSettingForm.dgroup_s']/option[text()='{}']".__add__(
+        XPATH)  # 报送分组选择，分组名称使用{}占位符，可在案例中传参
+    INPUT_BSNRBH = "dom_ReportTemplateSettingForm.bsnrbh".__add__(ID)  # 报送内容编号输入框
+    INPUT_BSNRMC = "dom_ReportTemplateSettingForm.bsnrmc".__add__(ID)  # 报送内容名称输入框
+    INPUT_REPORT_FLAG = "//select[@id='dom_ReportTemplateSettingForm.availableFlag']/option[{}]".__add__(
+        XPATH)  # 是否报送下拉框，传参2为“是”，3为“否”
+    BUTTON_BBMB_REFRESH = "//input[@id='dom_ReportTemplateSettingForm.refresh']".__add__(XPATH)  # 报表模板页面刷新按钮
+    BUTTON_IMPORT = "dom_ReportTemplateList.export".__add__(ID)  # 导入模板按钮
+    BUTTON_UPLOAD = "//span[@class='fileInput']".__add__(XPATH)  # 导入弹窗上传按钮
+    BUTTON_UPLOAD_FILE = "upload".__add__(ID)  # 模板导入弹窗中，文件导入按钮
+    MSG_IMPORT_RESULT = "//table[@id='msgTable']/tbody/tr/td[2]".__add__(XPATH)  # 导入结果提示信息
+    G0100_PATH = "D:\\DcabAtuoTest\\data\\2022年模板\\月报\\G0100-211.xls"
+    RPBCC_A1302_PATH = "D:\\DcabAtuoTest\\data\\人行报表模板\\季报1批\\A1302监管类指标类报表（2015年，单位：人、家）.xls"
+    RPTC_PATH = "D:\\DcabAtuoTest\\data\\综合报表模版\\江铃个性化报表\\综合报表表样\\半年报\\绿色融资统计表_T115.xls"
+    BUTTON_EXPORT = "dom_ReportTemplateList.import".__add__(ID)  # 导出模板按钮
+    BOX_BBMB = "//*[@id='dom_ReportTemplateList']/tbody/tr[1]/td[{}]/span/span".__add__(
+        XPATH)  # 复选框选择，传参1为第一条，2为第二条，last()为最后一条
+
+
+class PubBsrw(object):
+    """EAST报送任务页签相关元素"""
+    INPUT_BSQJ = "//*[@id='reportJobManagement_from.bsqj']/option[text()='{}']".__add__(XPATH)  # 查询条件--报送期间
+    INPUT_RWMC = "//*[@id='reportJobManagement_from.reportName']".__add__(XPATH)  # 查询条件--任务名称
+    BUTTON_SEARCH = "reportJobManagement_from.refresh".__add__(ID)  # 刷新按钮
+    BUTTON_ADD_BSRW = "//*[@id='reportJobManagement_list.add']".__add__(XPATH)  # 新增报送任务按钮
+    TITLE_ADD_BSRW = "//th[@class='DefaultTitleBar-title']".__add__(XPATH)  # 新增报送任务页面标题
+    ALERT_BSNRMC = "//*[@id='bsnrmc']".__add__(XPATH)  # 新增--点击报送内容名称选择框
+    BUTTON_BSNRMC = "//*[@id='queryBsnrList.bsnrbh' and text()='{}']".__add__(XPATH)  # 选择报送内容编号
+    INPUT_ADD_BSQJ_FOR_YEAR = "//*[@id='reportRangeYearSel']/option[text()='{}']".__add__(XPATH)  # 选择报送期间
+    INPUT_ADD_BSQJ_FOR_DAY = "//span[@id='reportRangeDay']/input".__add__(XPATH)  # 外管局选择报送期间
+    INPUT_RWLX_BB = "//td[text()='任务类型']/../td[2]/input[1]".__add__(XPATH)  # 选择任务类型为补报
+    INPUT_RWLX_TQSC = "//td[text()='任务类型']/../td[2]/input[2]".__add__(XPATH)  # 选择任务类型为提前生成任务
+    INPUT_QSSD_ZDSJ = "//*[@id='getDataTimeType1']".__add__(XPATH)  # 选择取数时点为指定时间
+    INPUT_QSSD_LJQS = "//*[@id='getDataTimeType2']".__add__(XPATH)  # 选择取数时点为立即取数
+    INPUT_QSSD_BQS = "//*[@id='getDataTimeType3']".__add__(XPATH)  # 选择取数时点为不取数
+    BUTTON_SAVE_BSRW = "//*[@class='button2 button']".__add__(XPATH)  # 新增--保存按钮
+    ALERT_ADD = "//*[@class=' aui_state_highlight']".__add__(XPATH)  # 关闭新增任务成功弹窗按钮
+    BUTTON_JZCJ = "//*[@id='ccBtn']".__add__(XPATH)  # 集中采集按钮
+    BUTTON_SCBSRW = "//*[@id='confirm']".__add__(XPATH)  # 点击生成集中采集报送任务
+    ALERT_JZCJ = "//*[@class='layui-layer-btn0']".__add__(XPATH)  # 确认按钮
+    BUTTON_RWFQ = "reportJobManagement_list.lockedText".__add__(ID)  # 任务废弃按钮
+    INPUT_RWFQ = "missionLocked_from.lockedReason".__add__(ID)  # 任务废弃原因输入框
+    ALERT_RWFQ = "missionLocked_from.reset".__add__(ID)  # 确定废弃该任务
+    ALERT_QRCG1 = "aui_close".__add__(CLASS)  # 关闭废弃/填报结束日期成功弹窗
+    ALERT_QRCG2 = "layoutContentHeader_right".__add__(CLASS)  # 关闭废弃任务/填报结束日期弹窗
+    BUTTON_TBJSRQ = "//*[@id='reportJobManagement_list.changeEndTime']".__add__(XPATH)  # 填报结束日期
+    BUTTON_TBJSRQ_BC = "//*[@id='missionChangeEndTime.save']".__add__(XPATH)  # 保存填报结束日期
+    MSG_ADD_RESULT = "//*[@class='aui_content']".__add__(XPATH)  # 新增成功提示信息
+    MSG_JZCJ_RESULT = "//*[@class='layui-layer-content']".__add__(XPATH)  # 集中采集生成报送任务后断言
+    INPUT_BBMB_FOR_1104 = "//select[@id='version']/option[{}]".__add__(XPATH)  # 报表类新增任务选择模板，{}占位符，输入int型，2代表第一个
+
+
+class PubBsfw(object):
+    """EAST报送范围页签相关元素"""
+    INPUT_BSPL = "//*[@id='bsfwSettingForm.bspl']/option[text()='{}']".__add__(XPATH)  # 查询条件--报送频率
+    INPUT_BSNR = "//*[@id='bsfwSettingForm.bsnr']".__add__(XPATH)  # 查询条件--报送内容
+    BUTTON_SEARCH1 = "//input[@id='bsfwSettingForm.refresh']".__add__(XPATH)  # 刷新按钮
+    BUTTON_SFBS = "//*[@id='bsfwSettingList']/tbody/tr[1]/td[6]/span/label".__add__(XPATH)  # 是否报送按钮
+    CHECK_ALL = "//*[@id='fixed_title']/thead/tr/th[1]/span/span".__add__(XPATH)  # 全选复选框
+    CHECK_ONE = '//*[@id="bsfwSettingList"]/tbody/tr[1]/td[1]/span[1]/span'.__add__(XPATH)  # 单选复选框
+    BUTTON_MODIFY = "//input[@id='bsfwSettingList.btnEdit']".__add__(XPATH)  # 修改按钮
+    INPUT_QSQJ = "//select[@id='bsfwBatchSettingForm.dataPeriod']/option[text()='{}']".__add__(XPATH)  # 取数期间-本期 上期
+    INPUT_QSSD = "//input[@id='bsfwBatchSettingForm.cronExp']".__add__(XPATH)  # 输入取数时点
+    INPUT_BSJZQX = "//input[@id='bsfwBatchSettingForm.deadLineNum']".__add__(XPATH)  # 输入报送截止期限
+    INPUT_BSJZQX_TYPE = "//*[@id='bsfwBatchSettingForm.deadLineUnit']/option[text()='{}']".__add__(
+        XPATH)  # 报送截止期限类型  天  小时  分
+    INPUT_SFHJJR = "//select[@id='bsfwBatchSettingForm.isHolidayIncluded']/option[text()='{}']".__add__(
+        XPATH)  # 是否含节假日 是 否
+    INPUT_ZDHD = "//select[@id='bsfwBatchSettingForm.autoCheck']/option[text()='{}']".__add__(XPATH)  # 自动核对  是  否
+    BUTTON_CHANGE_SAVE = "//input[@id='bsfwBatchSettingForm.save']".__add__(XPATH)  # 保存按钮
+    ALERT_MODIFY = "//*[@class='layoutContentHeader_right']".__add__(XPATH)  # 关闭弹窗
+    MSG_SFBS_RESULT = "/html/body/div[1]/div/table/tbody/tr[2]/td[2]/div/table/tbody/tr[2]/td[2]/div".__add__(
+        XPATH)  # 断言是否报送
+    MSG_CHANGE_RESULT = "//*[@id='bsfwSettingList']/tbody/tr[1]/td[9]/span[1]/text()".__add__(XPATH)  # 断言修改配置成功
+    BUTTON_OK_ALERT = '//*[@class="aui_state_highlight"]'.__add__(XPATH)  # 保存成功弹窗确认按钮
+
+
+class Rn1104ElementBsrypz(object):
+    """1104报送人员配置"""
+    INPUT_BSPL = "//select[@id='report_Oper_Param_Form.bspl']/option[text()='{}']".__add__(
+        XPATH)  # 报送频率，频率名称使用{}站位，案例编写根据需要传参
+    INPUT_BBBH = "//*[@id='report_Oper_Param_Form.reportNo']".__add__(XPATH)  # 报表编号输入框
+    INPUT_BBMC = "//*[@id='report_Oper_Param_Form.reportName']".__add__(XPATH)  # 报表名称输入框
+    INPUT_BBFZ = "//select[@id='report_Oper_Param_Form.reportGroup']/option[text()='{}']".__add__(
+        XPATH)  # 报表分组下拉选择，使用{}占位，案例根据需要传参
+    BUTTON_REFRESH = "//*[@id='report_Oper_Param_Form.refresh']".__add__(XPATH)  # 刷新按钮
+    BOX_ALL = "//*[@id='fixed_title']/thead/tr/th[1]/span/span".__add__(XPATH)  # 全选复选框
+    BOX_ALONE = "//*[@id='report_Oper_Param_List']/tbody/tr[1]/td[1]/span/span"  # 复选框单选
+    BUTTON_EDIT_MANY = "//*[@id='report_Oper_Param_List.el']".__add__(XPATH)  # 批量编辑按钮
+    INPUT_RYLX = "//select[@id='oper_param_form.operTye']/option[text()='{}']".__add__(
+        XPATH)  # 批量编辑弹窗，人员类型下拉选项，{}占位，案例传参
+    INPUT_NAME = "//*[@id='oper_param_form.operName']".__add__(XPATH)  # 批量编辑弹窗，人员姓名输入框
+    BUTTON_CONFIRM = "//*[@id='oper_param_form.save']".__add__(XPATH)  # 批量编辑弹窗，确认按钮
+    BUTTON_SAVE = "//*[@id='report_Oper_Param_List.save']".__add__(XPATH)  # 保存按钮
+    INPUT_TBR = "//*[@id='report_Oper_Param_List.preparer']".__add__(XPATH)  # 填表人输入框
+    INPUT_FHR = "//*[@id='report_Oper_Param_List.reviewer']".__add__(XPATH)  # 复核人输入框
+    INPUT_FZR = "//*[@id='report_Oper_Param_List.chargePerson']".__add__(XPATH)  # 负责人输入框
+    DATA_BBBH = "//table[@id='report_Oper_Param_List']/tbody/tr[1]/td[2]/span[1]".__add__(XPATH)  # 第一行数据的第一个值
+    MSG_SAVE_SUCC = "//div[@class='aui_content']".__add__(XPATH)  # 保存成功提示信息
+
+
+class RsafeZhxzwh(object):
+    """外管局--账户性质维护"""
+    BUTTON_ADD = "U01_28_list.newRow".__add__(ID)  # 新增按钮
+    INPUT_ZHXZBH = "//table[@id='mainTable']/tbody/tr[last()]/td[2]/input".__add__(XPATH)  # 账户性质编号输入框
+    INPUT_ZHXZMC = "//table[@id='mainTable']/tbody/tr[last()]/td[3]/input".__add__(XPATH)  # 账户性质名称输入框
+    BUTTON_SAVE = "U01_28_list.save".__add__(ID)  # 保存按钮
+    BUTTON_DEL = "U01_28_list.deleteData".__add__(ID)  # 删除按钮
+    BOX_DEL_DATA = "//table[@id='mainTable']/tbody//input[@value='{}'][1]/../../td[1]/img".__add__(
+        XPATH)  # 根据编号定位数据，编号值为占位符{}
+
+
+class EastBscs(object):
+    """EAST报送参数页签相关元素"""
+    INPUT_LEAD_PERSON = "//span[text()='牵头部门负责人']/../../td[2]/span[1]/input".__add__(XPATH)  # 牵头部门负责人
+    INPUT_DEPARTMENT_PERSON = "//span[text()='部门负责人联系方式']/../../td[2]/span[1]/input".__add__(XPATH)  # 部门负责人联系方式
+    INPUT_PREPARER = "//span[text()='填表人']/../../td[2]/span[1]/input".__add__(XPATH)  # 填表人
+    INPUT_PREPARER_NUMBER = "//span[text()='填表人手机号']/../../td[2]/span[1]/input".__add__(XPATH)  # 填表人手机号
+    INPUT_MONTH_COUNT = "//select[@id='mcaltype_select']/option[text()='30天']".__add__(XPATH)  # 月份计算方式  30天  自然月
+    INPUT_REMOVE_NUMBER = "//span[text()='内部分户账需排除的账号']/../../td[2]/span[1]/input".__add__(XPATH)  # 内部分户账需排除的账号
+    INPUT_REMOVE_SUBJECT = "//span[text()='内部分户账需排除的科目']/../../td[2]/span[1]/input".__add__(XPATH)  # 内部分户账需排除的科目
+    BUTTON_SBSP = "//*[@id='reast_Param_Settings_list']/tbody/tr[8]/td[2]/span[1]/input[2]".__add__(
+        XPATH)  # 上报审批  是：input[2]   否：input[3]
+    BUTTON_EXPORT = '//*[@id="reast_Param_Settings_list"]/tbody/tr[9]/td[2]/span[1]/input[3]'.__add__(
+        XPATH)  # 导出控制开关 是：input[2]  否：input[3]
+    INPUT_ORGANIZATION_CODE = "//span[text()='机构代码']/../../td[2]/span[1]/input".__add__(XPATH)  # 机构代码
+    BUTTON_SAVE_CSSZ = "//input[@id='reast_Param_Settings_list.save']".__add__(XPATH)  # 保存参数设置
+
+
+class EastBmzh(object):
+    """EAST编码转换页签相关元素"""
+    INPUT_BMLX = "//select[@id='pub_report_code_change_form.codeType']/option[text()='金融机构类型']".__add__(
+        XPATH)  # 标准编码类型 1、金融机构类型  2、被投资机构类型
+    INPUT_BM_NAME = "pub_report_code_change_form.codeName".__add__(ID)  # 标准编码名称
+    INPUT_IFBSBM = "//select[@id='pub_report_code_change_form.isCodeEmpty']/option[2]".__add__(
+        XPATH)  # 报送编码是否为空 1、是：option[2]  2、否：option[3]
+    INPUT_MODIFY = "//select[@id='pub_report_code_change_form.isChanged']/option[2]".__add__(
+        XPATH)  # 是否修改 1、是：option[2]  2、否：option[3]
+    BUTTON_REFRESH = "//input[@id='pub_report_code_change_form.refresh']".__add__(XPATH)  # 刷新按钮
+    INPUT_MODIFY_BSBM = "/html/body/center/form/div[2]/table/tbody/tr[2]/td/div/table/tbody/tr[3]/td/div/div[2]/table/tbody/tr[1]/td[3]/span[1]/input".__add__(
+        XPATH)  # 修改报送编码
+
+
+class JsZbjpz(object):
+    """金数准备金配置页签相关元素"""
+    INPUT_CKZL = "//*[@id='depositSettingForm.paramname']".__add__(XPATH)  # 查询条件--存款种类输入框
+    CHOICE_JCFS = "//*[@id='depositSettingForm.reservesType']/option[text()='{}']".__add__(XPATH)  # 查询条件--缴存方式下拉
+    BUTTON_REFRESH = "depositSettingForm.refresh".__add__(ID)  # 刷新按钮
+    SET_ZBJJC = "//span[text()='{}']/../../td/span/select/option[text()='{}']".__add__(
+        XPATH)  # 准备金缴存方式列表--存款种类,缴存方式下拉使用{}站位，案例编写根据需要传参
+    SET_ZBJJC_NULL = "//span[text()='{}']/../../td/span/select/option[1]".__add__(
+        XPATH)  # 准备金缴存方式列表--存款种类使用{}站位，缴存方式为空
+    MSG_JCFS_RESULT = "//*[@class='aui_content']".__add__(XPATH)  # 准备金缴存方式列表--选择缴存方式后断言 --保存成功
+    SUCCESS_CLOSE = "//a[@class='aui_close']".__add__(XPATH)  # 关闭弹窗
+
+
+class JsBscs(object):
+    """金数报送参数页签相关元素"""
+    SET_QYPJHL = "//select[@id='rfbsParamSettingsform.AVG_EXCHANGE_RATE']/option[text()='{}']".__add__(
+        XPATH)  # 启用平均汇率，是/否--下拉列表使用{}占位
+    SET_SBSP_YES = "//input[@id='reportBizFlagY']".__add__(XPATH)  # 上报审批--是
+    SET_SBSP_NO = "//input[@id='reportBizFlagN']".__add__(XPATH)  # 上报审批--否
+    BUTTON_SAVE = "//input[@id='rfbsParamSettingsform.save']".__add__(XPATH)  # 保存
+    MSG_SAVE_RESULT = "//*[@class='aui_content']".__add__(XPATH)  # 准备金缴存方式列表--选择缴存方式后断言 --保存成功
+    SUCCESS_CLOSE = "//a[@class='aui_close']".__add__(XPATH)  # 关闭弹窗
+
+
+class EastKmjz(object):
+    """EAST科目记账设置页签相关元素"""
+    INPUT_BSKJ = "//*[@id='REAST_KMJZ_form.bskj']/option[text()='{}']".__add__(
+        XPATH)  # 查询条件-报送口径 203-对公活期存款分户账、205-对公定期存款分户账、211-内部分户账
+    INPUT_KMH = "//*[@id='REAST_KMJZ_form.kmh']".__add__(XPATH)  # 查询条件-科目号
+    BUTTON_REFRESH_KMJZ = "//*[@id='REAST_KMJZ_form.refresh']".__add__(XPATH)  # 刷新按钮
+    BUTTON_ADD_KMJZ = "//*[@id='REAST_KMJZ_list.add']".__add__(XPATH)  # 新增按钮
+    INPUT_ADD_KMH = "//table[@id='REAST_KMJZ_list']/tbody/tr[last()]//input[@id='REAST_KMJZ_list.SUBJECT_NO']".__add__(
+        XPATH)  # 输入科目号
+    INPUT_ADD_BZ = "//table[@id='REAST_KMJZ_list']/tbody/tr[last()]//select[@id='REAST_KMJZ_list.BZ']/option[text()='{}']".__add__(
+        XPATH)  # 选择币种 人民币
+    INPUT_ADD_BSKJ = "//table[@id='REAST_KMJZ_list']/tbody/tr[last()]//select[@id='REAST_KMJZ_list.GSBW']/option[text()='{}']".__add__(
+        XPATH)  # 选择报送口径
+    INPUT_ADD_KMM = '//table[@id="REAST_KMJZ_list"]/tbody/tr[last()]//input[@id="REAST_KMJZ_list.SUBJECT_NAME"]'.__add__(
+        XPATH)  # 输入科目名
+    INPUT_ADD_KHBH = '//table[@id="REAST_KMJZ_list"]/tbody/tr[last()]//input[@id="REAST_KMJZ_list.CLTNO"]'.__add__(
+        XPATH)  # 输入客户编号
+    INPUT_ADD_KHRQ = '//table[@id="REAST_KMJZ_list"]/tbody/tr[last()]//input[@id="REAST_KMJZ_list.KHRQ"]'.__add__(
+        XPATH)  # 选择开户日期
+    INPUT_ADD_XHRQ = '//table[@id="REAST_KMJZ_list"]/tbody/tr[last()]//input[@id="REAST_KMJZ_list.XHRQ"]'.__add__(
+        XPATH)  # 选择销户日期
+    INPUT_ADD_RATE = '//table[@id="REAST_KMJZ_list"]/tbody/tr[last()]//input[@id="REAST_KMJZ_list.RATE_VALUE"]'.__add__(
+        XPATH)  # 输入利率
+    INPUT_ADD_ZHZT = '//table[@id="REAST_KMJZ_list"]/tbody/tr[last()]//select[@id="REAST_KMJZ_list.ZHZT"]/option[text()="{}"]'.__add__(
+        XPATH)  # 选择账户状态  正常、冻结、销户、其他
+    INPUT_ADD_BZJZHBZ = '//table[@id="REAST_KMJZ_list"]/tbody/tr[last()]//select[@id="REAST_KMJZ_list.BZJZHBZ"]/option[text()="{}"]'.__add__(
+        XPATH)  # 选择保证金账户标志(203)  是、否
+    INPUT_ADD_CKQX = '//table[@id="REAST_KMJZ_list"]/tbody/tr[last()]//input[@id="REAST_KMJZ_list.CKQX"]'.__add__(
+        XPATH)  # 输入存款期限
+    INPUT_ADD_DGDQCKZHLX = '//table[@id="REAST_KMJZ_list"]/tbody/tr[last()]//input[@id="REAST_KMJZ_list.DGDQCKZHLX"]'.__add__(
+        XPATH)  # 输入对公定期存款账户类型(205)
+    INPUT_ADD_DQR = '//table[@id="REAST_KMJZ_list"]/tbody/tr[last()]//input[@id="REAST_KMJZ_list.DQR"]'.__add__(
+        XPATH)  # 输入到期日(205)
+    CHECK_ALL_KMJZ = "//*[@id='fixed_title']/thead/tr/th[1]/span/span".__add__(XPATH)  # 复选框全选
+    CHECK_ONE_KMJZ = "//*[@id='REAST_KMJZ_list']/tbody/tr[1]/td[1]/span[1]/span".__add__(XPATH)  # 复选框单选
+    BUTTON_DELETE_KMJZ = '//*[@id="REAST_KMJZ_list.del"]'.__add__(XPATH)  # 删除按钮
+    BUTTON_DELETE_KMJZ_X = '//*[@id="tableCopy_REAST_KMJZ_list"]/td[1]/input[1]'.__add__(XPATH)  # 删除X按钮
+    BUTTON_SAVE_KMJZ = '//*[@id="REAST_KMJZ_list.save"]'.__add__(XPATH)  # 保存按钮
+    ALERT_ADD_SUC = '/html/body/div[1]/div/table/tbody/tr[2]/td[2]/div/table/tbody/tr[1]/td/div/a'.__add__(
+        XPATH)  # 保存成功弹窗关闭按钮
+    MSG_DELETE_SUCC = '//*[@id="REAST_KMJZ_list.tipsText"]'.__add__(XPATH)  # 断言删除成功
+
+
+class EastMxkm(object):
+    """EAST明细科目设置页签相关元素"""
+    BUTTON_SAVA_MXKM = '//*[@id="settingForm"]/table/tbody/tr[1]/td[2]/input'.__add__(XPATH)  # 保存按钮
+    INPUT_GET_MODE = "//form[@id='settingForm']/table/tbody//span[text()='{}']/../..//select[@name='GETTYPE']/option[text()='{}']".__add__(
+        XPATH)  # 获取方式
+    INPUT_VALUE_MXKM = "//form[@id='settingForm']/table/tbody//span[text()='{}']/../..//input[@name='KB']".__add__(
+        XPATH)  # 参数值
+    INPUT_KM_NAME = "//form[@id='settingForm']/table/tbody//span[text()='{}']/../..//input[@name='KB_NAME']".__add__(
+        XPATH)  # 科目名称
+    MSG_MXKM_SAVE = '//*[@class="layui-layer-content"]'.__add__(XPATH)  # 断言保存成功
+
+
+class PubFzgl(object):
+    """分组管理，公共页面元素"""
+    INPUT_GROUP_NAME = "groupName".__add__(ID)  # 分组名称输入框
+    INPUT_GROUP_USER = "groupUserName".__add__(ID)  # 分组成员姓名
+    BUTTON_GROUP_REFRESH = "//*[@class='button31 button']".__add__(XPATH)  # 分组管理刷新按钮
+    BUTTON_GROUP_ADD = "//*[@class='button26 button']".__add__(XPATH)  # 分组管理新增按钮
+    INPUT_ADD_FZMC = "//*[@id='listTable']/tbody/tr[1]/td[1]/input".__add__(XPATH)  # 新增分组时，输入分组名称（新增时，默认在第一条数据）
+    DATA_FIRST_GROUP = "//*[@id='listTable']/tbody/tr[1]/td[{}]/span".__add__(
+        XPATH)  # 第一条数据的标签（传参，1为分组名称，2为成员列表，3为分组描述）
+    BUTTON_CLICK_CYLB = "//*[@class='xm-label single-row']".__add__(XPATH)  # 新增分组时，点击选择成员列表（新增时，默认在第一条数据）
+    BUTTON_CLEAN_CYLB = "//*[@class='xm-iconfont xm-icon-qingkong']".__add__(XPATH)  # 成员列表清空按钮
+    INPUT_ADD_CYLB = "//*[@class='xm-input xm-search-input']".__add__(XPATH)  # 成员列表输入查询人员
+    BOX_CYLB = "//*[@class='xm-iconfont xm-icon-quanxuan']".__add__(XPATH)  # 成员列表全选
+    INPUT_ADD_FZMS = "//*[@id='listTable']/tbody/tr[1]/td[3]/textarea".__add__(XPATH)  # 分组描述
+    BUTTON_GROUP_SAVE = "//*[@class='button30 button']".__add__(XPATH)  # 分组管理-保存按钮
+    ALERT_GROUP_SAVE_CLOSE = "//*[@class=' aui_state_highlight']".__add__(XPATH)  # 分组管理-保存-弹窗关闭
+    MSG_GROUP_SAVE = "//td[@class='aui_main']/div".__add__(XPATH)  # 保存弹窗提示信息
+    INPUT_EDITE_GROUP_BY_NAME = "//span[text()='{}']/../input".__add__(XPATH)  # 编辑状态下，根据分组名称定位到数据行的名称编辑框
+    INPUT_EDITE_GROUP_BY_MS = "//span[text()='{}']/../../td[3]/textarea".__add__(XPATH)  # 编辑状态下，根据分组名称定位到数据行的描述编辑框
+    BUTTON_GROUP_EDITE_OR_DEL = "//span[text()='{}']/../../td[4]/a[{}]".__add__(
+        XPATH)  # 根据分组名称定位到数据行的操作列（分别输入分组名称和序号，序号1代表编辑，2代表删除）
+    BUTTON_GROUP_DEL_CONFIRM = "aui_state_highlight".__add__(CLASS)  # 删除弹窗--确认按钮
+
+
+class PubBssq(object):
+    """报送授权，公共页面"""
+    CLICK_GROUP_NAME_BSSQ = "search_input_input".__add__(CLASS)  # 查询条件-分组名称
+    INPUT_GROUP_NAME_BSSQ = "//*[@class='search_input_input_table']//input".__add__(XPATH)  # 查询条件-输入分组名称
+    CLICK_GROUP_NAME_ONE_BSSQ = "//*[@class='search_input_table']/tbody/tr[1]".__add__(XPATH)  # 查询条件-选择查询出的第一个分组名称
+    INPUT_BSNR_BSSQ = "//*[@id='reportUserAuthorizationForm.bsnrmc']".__add__(XPATH)  # 查询条件-报送内容
+    BUTTON_REFRESH_BSSQ = "reportUserAuthorizationForm.refresh".__add__(ID)  # 刷新按钮
+    BUTTON_HDQX = "//*[@id='fixed_title']/thead/tr/th[2]/span/span".__add__(XPATH)  # 核对权限
+    BUTTON_SBQX = '//*[@id="fixed_title"]/thead/tr/th[3]/span/span'.__add__(XPATH)  # 上报权限
+    BUTTON_CXQX = '//*[@id="fixed_title"]/thead/tr/th[4]/span/span'.__add__(XPATH)  # 查询权限
+    BUTTON_CCQX = '//*[@id="fixed_title"]/thead/tr/th[5]/span/span'.__add__(XPATH)  # 重抽权限
+    BUTTON_SAVE_BSSQ = "//input[@id='reportUserAuthorizationList.save']".__add__(XPATH)  # 保存按钮
+    MSG_SAVE_BSSQ = "//div[@class='aui_content']".__add__(XPATH)  # 保存弹窗提示信息
+    ALERT_SAVE_BSSQ_CLOSE = "aui_close".__add__(CLASS)  # 关闭保存成功弹窗
+
+
+class PubSjsq(object):
+    """数据授权，公共页面"""
+    INPUT_BSNR_SJSQ = "//input[@id='rptContentGrant_form.bscontent']".__add__(XPATH)  # 查询条件-报送内容
+    BUTTON_REFRESH_SJSQ = "//input[@id='rptContentGrant_form.refresh']".__add__(XPATH)  # 刷新按钮
+    BUTTON_CLEAR = "//input[@id='rptContentGrant_form.clearInput']".__add__(XPATH)  # 清除条件按钮
+    BUTTON_ALL = '//*[@id="rptContentGrant_list.dataRange"]'.__add__(XPATH)  # 全部按钮
+    INPUT_ALL_SJSQ = "//input[@id='pubRptGrantDataRangeForm.dataRangeType_all']/../span".__add__(XPATH)  # 选择全部权限
+    BUTTON_AZDSX = "//input[@id='pubRptGrantDataRangeForm.dataRangeType_column']/../span".__add__(XPATH)  # 按字段筛选
+    INPUT_AZDSX = "//*[@name='pubRptGrantDataRangeForm.column']/option[text()='{}']".__add__(XPATH)  # 按字段筛选-选择下拉框字段
+    CLICK_AZDSX_XLK = '//*[@class="MultiDropIMG"]'.__add__(XPATH)  # 按字段筛选-点击第二个下拉框
+    INPUT_AZDSX_CLICK = '//*[@id="nstc.sf.multiDropDivEle"]/div/span[text()="{}"]/../span[1]'.__add__(
+        XPATH)  # 按字段筛选-第二个为下拉框
+    INPUT_AZDSX_INPUT = '//*[@name="pubRptGrantDataRangeForm.columnValue"]'.__add__(XPATH)  # 按字段筛选-第二个为输入框
+    BUTTON_ASJBSSX = "//*[@value='按数据标识筛选']/../../span/span[@class='radioStyle']".__add__(XPATH)  # 按数据标识筛选
+    INPUT_ASJBSSX = "//input[@id='pubRptGrantDataRangeForm.dataFlag']".__add__(XPATH)  # 按数据标识筛选-输入值
+    BUTTON_SAVE_SJSQ = "//input[@id='pubRptGrantDataRangeForm.save']".__add__(XPATH)  # 保存按钮
+    ALERT_QR_SJSQ = '//*[@class="aui_state_highlight"]'.__add__(XPATH)  # 保存成功确认按钮
+    ALERT_CLOSE_SJSQ = "//*[@class='layoutContentHeader_right']".__add__(XPATH)  # 关闭数据范围弹窗
+
+
+class PubSplc(object):
+    """公共页面-审批流程"""
+    CLICK_GROUP_NAME_SPLC = "search_input_input".__add__(CLASS)  # 查询条件-分组名称
+    INPUT_GROUP_NAME_SPLC = "//*[@class='search_input_input_table']//input".__add__(XPATH)  # 查询条件-输入分组名称
+    CLICK_GROUP_NAME_ONE_SPLC = "//*[@class='search_input_table']/tbody/tr[1]".__add__(XPATH)  # 查询条件-选择查询出的第一个分组名称
+    BOX_ALL_SPLC = "//*[@id='fixed_title']/thead/tr/th[1]/span/span".__add__(XPATH)  # 审批流程，复选框全选
+    BOX_BY_BSNRMC = "//span[text()='{}']/../../td[1]/span[1]".__add__(XPATH)  # 根据传入的报送内容名称，定位单个复选框
+    BUTTON_BATCH_UPDATE = "reportBizFlow_List.batchModify".__add__(ID)  # 批量修改按钮
+    INPUT_BIZCODE_SPLC = "//*[@id='reportBizFlow_List.bizCode']/option[text()='{}']".__add__(
+        XPATH)  # 审批流程名称，通过传参选择，每个品种名称不一样
+    BUTTON_BATCH_SAVE_SPLC = "batchBizFlowForm.save".__add__(ID)  # 审批流程批量修改弹窗保存按钮
+    BUTTON_MAIN_SAVE_SPLC = "reportBizFlow_List.save".__add__(ID)  # 审批流程主页面保存按钮
+    BUTTON_REFRESH_SPLC = "reportBizFlow_Form.refresh".__add__(ID)  # 审批流程页面--刷新按钮
+    BUTTON_BATCH_ALERT_CLOSE_SPLC = "aui_close".__add__(CLASS)  # 审批流程--批量修改弹窗--关闭
+    MSG_BATCH_ALERT_SPLC = "//div[@class='aui_content']".__add__(XPATH)  # 审批流程-批量修改保存--弹窗提示信息
+
+
+class RimasBscs(object):
+    """利率报备-报送参数"""
+    BUTTON_SAVE_RIMAS = 'rimas_param_Settings_list.save'.__add__(ID)  # 保存按钮
+    INPUT_BSJRFS = "//*[@id='prpMode_select']/option[text()='{}']".__add__(XPATH)  # 报送接入方式
+    INPUT_QTBM = "//*[@value='{}']/../../../td[2]/span/input[@id='rimas_param_Settings_list.value_']".__add__(
+        XPATH)  # 输入牵头部门/牵头部门联系人/牵头部门联系电话
+    INPUT_SBSP_RIMAS = "//*[@value='上报审批']/../../../td[2]/span/input[2]".__add__(XPATH)  # 上报审批 是：input[2]   否：input[3]
+
+class RPTCBscs(object):
+    """综合报表报送参数页签相关元素"""
+    BUTTON_SBSP = "//*[@class='content_body']/td[2]/input[1]".__add__(
+        XPATH)  # 上报审批  是：input[1]   否：input[2]
+    BUTTON_SAVE_RPTC = "//*[@class='button button0111']".__add__(XPATH)  # 保存

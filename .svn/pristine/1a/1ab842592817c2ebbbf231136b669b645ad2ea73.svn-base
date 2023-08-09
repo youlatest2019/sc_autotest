@@ -1,0 +1,26 @@
+#配置文件，只存储浏览器类型和服务器URL
+#调用的浏览器驱动，保留现在使用的浏览器驱动
+[browserType]
+#browserName = Firefox
+browserName = Chrome
+#browserName = IE
+
+[BaseUrl]
+url = http://192.168.20.157:1003/portal/main_new.do
+user = js1
+
+[LOG]
+level = INFO
+
+[email]
+host = smtp.exmail.qq.com
+port = 465
+user = yangshukun@nstc.com.cn
+pwd = 520ty1314ysK
+from_addr = yangshukun@nstc.com.cn
+to_addr = zhangxue@nstc.com.cn
+
+
+
+
+

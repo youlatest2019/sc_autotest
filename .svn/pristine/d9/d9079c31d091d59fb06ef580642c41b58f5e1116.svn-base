@@ -1,0 +1,150 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/8/31 9:40
+# @Author   : yangshukun
+# @File     : keyword_dataset_manage.py
+from pageElement.page_dataset_management import *
+from baseOperation.WebOperation import *
+
+
+class DataSetMainPageKeyword(DataSetManageFrame, DataSetManageMainPage, WebDriver):
+    """数据集管理主页面关键字"""
+
+    def changeToMainFrameForDataSet(self):
+        """切换到数据集管理主FRAME"""
+        self.SwitchFrame(self.FRAME_MAIN_PAGE)
+
+    def choiceDataSetGroup(self, group_name):
+        """选择数据集分组"""
+        self.Click(self.BUTTON_GROUP_FOR_DATASET)
+        self.Click(self.SELECT_GROUP_NAME_OF_DATASET.format(group_name))
+
+    def sendDataSetName(self, dataset_name):
+        """数据集名称输入框输入"""
+        self.Input(dataset_name, self.INPUT_DATASET_NAME_QUERY)
+
+    def resetQueryData(self):
+        """点击重置按钮"""
+        self.Click(self.BUTTON_RESET_FOR_DATASET)
+
+    def pressRefreshButton(self):
+        """点击刷新按钮"""
+        self.Click(self.BUTTON_REFRESH_DATASET_MAIN_PAGE)
+
+    def pressAddGroupButton(self):
+        """点击新建分组按钮"""
+        self.Click(self.BUTTON_ADD_GROUP_FOR_DATASET)
+
+    def pressAddDataSetButton(self):
+        """点击新增数据集按钮"""
+        self.Click(self.BUTTON_ADD_DATASET_FOR_DATASET)
+
+    def pressEditGroupButton(self):
+        """点击编辑分组"""
+        self.Click(self.BUTTON_EDIT_GROUP_FOR_DATASET)
+
+    def pressDelGroupButton(self):
+        """点击删除分组"""
+        self.Click(self.BUTTON_DEL_GROUP_FOR_DATASET)
+
+    def pressEditDatasetButton(self):
+        """点击编辑数据集"""
+        self.Click(self.BUTTON_EDIT_DATASET_FOR_DATASET)
+
+    def pressDelDatasetButton(self):
+        """点击删除数据集"""
+        self.Click(self.BUTTON_DEL_DATASET_FOR_DATASET)
+
+
+class DataSetGroupPageKeyword(DataSetGroupPage, WebDriver):
+    """数据集分组管理页面关键字"""
+
+    def changeToGroupManageFrame(self):
+        """切换到数据集分组管理frame"""
+        self.SwitchFrameByElement(self.FRAME_GROUP_PAGE)
+
+    def choiceUpGroup(self, group_name):
+        """选择上级分组"""
+        if group_name == "":
+            pass
+        else:
+            self.Click(self.BUTTON_UP_GROUP_DATASET)
+            self.Click(self.SELECT_UP_GROUP_DATASET.format(group_name))
+
+    def inputGroupNameForDataSet(self, group_name):
+        """数据集管理--分组管理--输入分组名称"""
+        self.Input(group_name, self.INPUT_GROUP_NAME_DATASET)
+
+    def inputGroupSortForDataSet(self, sort_no):
+        """数据集管理--分组管理--输入分组排序编号"""
+        self.Input(sort_no, self.INPUT_GROUP_SORT_DATASET)
+
+    def saveGroupForDataSet(self):
+        """数据集管理--分组管理--保存分组"""
+        self.Click(self.BUTTON_GROUP_SAVE_DATASET)
+
+    def addGroupMainprocess(self, upgroup_name, new_group_name, sort_no):
+        """新建数据集分组正向组合关键字"""
+        self.changeToGroupManageFrame()
+        self.choiceUpGroup(upgroup_name)
+        self.inputGroupNameForDataSet(new_group_name)
+        self.inputGroupSortForDataSet(sort_no)
+        self.saveGroupForDataSet()
+
+
+class DataSetConfigBaseInfoKeyword(DataSetConfigBaseInfoPage, WebDriver):
+    """数据集配置--基本信息关键字"""
+
+    def changeToConfigBaseInfoFrame(self):
+        """切换到数据集配置--基本信息配置frame"""
+        self.SwitchFrameByElement(self.FRAME_BASE_INFO_PAGE)
+
+    def inputDataSetName(self, dataset_name):
+        """输入数据集名称"""
+        self.Input(dataset_name, self.INPUT_DATASET_NAME_DATASET)
+
+    def getDataSetCode(self):
+        """获取数据集编码"""
+        self.Click(self.BUTTON_GET_DATASET_CODE_DATASET)
+
+    def choiceSelGroupByName(self, group_name):
+        """根据输入的分组名称选择所属分组"""
+        self.Click(self.BUTTON_SELGROUP_DATASET)
+        self.Click(self.SELECT_SEL_GROUP_DATASET.format(group_name))
+
+    def choiceSelGroupFirst(self):
+        """默认选择第一个分组作为所属分组"""
+        self.Click(self.BUTTON_SELGROUP_DATASET)
+        self.Click(self.DATA_SETGROUP_FIRST_DATASET)
+
+    def inputExportName(self, export_name):
+        """输入文件导出名称"""
+        self.Input(export_name, self.INPUT_EXPORT_NAME_DATASET)
+
+    def inputDescribe(self, desc_info):
+        """输入描述信息"""
+        self.Click(self.INPUT_DESCRIBE_DATASET)
+        self.Input(desc_info, self.INPUT_DESCRIBE_DATASET)
+
+    def saveDataSetBaseInfo(self):
+        """点击保存按钮"""
+        self.Click(self.BUTTON_SAVE_BASE_INFO_DATASET)
+
+    def closeDataSetBaseInfo(self):
+        """点击右上角关闭按钮"""
+        self.Click(self.BUTTON_CLOSE_FOR_BASE_INFO_DATASET)
+
+    def addDataSetBaseInfoMergeKwd(self, dataset_name, group_name, export_name, desc_info):
+        """数据集配置基本信息组合关键字"""
+        self.changeToConfigBaseInfoFrame()
+        self.inputDataSetName(dataset_name)
+        self.getDataSetCode()
+        if group_name == "":
+            self.choiceSelGroupFirst()
+        else:
+            self.choiceSelGroupByName(group_name)
+        self.inputExportName(export_name)
+        self.inputDescribe(desc_info)
+        self.saveDataSetBaseInfo()
+        self.SwitchFatherFrame()
+        self.closeDataSetBaseInfo()

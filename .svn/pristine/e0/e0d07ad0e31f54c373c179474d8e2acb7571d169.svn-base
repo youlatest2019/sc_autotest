@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 10:01
+# @Author   : yangshukun
+# @File     : keyword_bsgl.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BsglEastKeyword(BsglElementFrame, EastBsrw, WebDriver):
+
+    def addEastBsrw(self, bsnr_name, bsqj):
+        """EAST新增报送任务"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+        self.Click(self.BUTTON_ADD)
+        self.QuiteFrame()
+        self.SwitchFrame(self.ADD_BSRW_FRAME)
+        self.Click(self.ALERT_BSNRMC)
+        self.QuiteFrame()
+        self.SwitchFrame(self.ADD_BSNR_FRAME)
+        self.Click(self.BUTTON_BSNRMC.format(bsnr_name))
+        self.QuiteFrame()
+        self.SwitchFrame(self.ADD_BSRW_FRAME)
+        self.Click(self.INPUT_ADD_BSQJ.format(bsqj))
+        self.Click(self.INPUT_RWLX_TQSC)  # 可修改为其他任务类型
+        self.Click(self.INPUT_QSSD_LJQS)  # 可修改为其他取数时点
+        self.Click(self.BUTTON_SAVE)
+
+    def closeEastXzrw_success(self):
+        """关闭新增任务成功弹窗"""
+        self.Click(self.ALERT_ADD)
+
+    def queryEastBsrw(self, bsqj, text):
+        """EAST查询报送任务"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+        self.Click(self.INPUT_BSQJ.format(bsqj))
+        self.Input(text, self.INPUT_RWMC)
+        self.Click(self.BUTTON_SEARCH)
+
+    def createEastJzcj(self):
+        """EAST创建集中采集任务"""
+        self.SwitchFrame(self.BSGL_TAB_FRAME)
+        self.Click(self.BUTTON_JZCJ)
+        self.QuiteFrame()
+        self.SwitchFrame(self.JZCJ_FRAME)
+        self.Click(self.BUTTON_SCBSRW)
+
+    def abandonEastBsrw(self, text):
+        """EAST废弃报送任务"""
+        self.Click(self.BUTTON_RWFQ)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.RWFQ_FRAME)
+        self.Input(text, self.INPUT_RWFQ)
+        self.Click(self.ALERT_RWFQ)
+
+    def inputEastTbjsrq(self):
+        """EAST填报结束日期"""
+        self.Click(self.BUTTON_TBJSRQ)
+        self.QuiteFrame()
+        self.SwitchFrameByElement(self.RWFQ_FRAME)
+        self.Click(self.BUTTON_TBJSRQ_BC)
+        self.Click(self.ALERT_QRCG1)
+        self.QuiteFrame()
+        self.Click(self.ALERT_QRCG2)

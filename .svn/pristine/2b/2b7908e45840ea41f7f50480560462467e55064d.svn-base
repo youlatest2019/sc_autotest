@@ -1,0 +1,491 @@
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_js import *
+from utils.operationXml import *
+import sys
+from baseOperation.init_self import *
+from pageKeyword.keyword_bsgl_common import *
+from data.data_class.bsgl_js_data import *
+
+
+class BsglRfbsTest(InitCls, BsglMainKeyword, BsglJsKeyword, OperationXml, BsglPubBsrwKeyword,
+                   BsglPubBsfwKeyword, BsglPubFzglKeyword, BsglPubBssqKeyword, BsglPubSjsqKeyword, BsglPubSplcKeyword,
+                   BscsJsKeyword, ZdysjlxPubSplcKeyword, JsJcfs_jcfs, JsBscs_pjhl):
+
+    def test_01_set_zbjck_success(self):
+        """设置金数准备金缴存"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToZbjjcpz()
+        self.JsZbjjcFrame()
+        # 6、设置金数准备金缴存,设置存款种类，设置缴存方式
+        self.setJsZbjjc("普通存款", self.JCFS_JEJC)
+        # 7、断言设置成功
+        res = self.GetTagText(self.MSG_JCFS_RESULT)
+        self.assertEqual(res, '保存成功')
+        # 8、关闭成功弹窗
+        self.successClose()
+        # 9、查询条件
+        self.queryZbjjc("普通存款", self.JCFS_JEJC)
+        # 10、刷新
+        self.refersh()
+        # 11、置金数准备金缴存，设置存款种类，缴存方式为空
+        self.setJsZbjjc_null("普通存款")
+        # 12、断言设置成功
+        res = self.GetTagText(self.MSG_JCFS_RESULT)
+        self.assertEqual(res, '保存成功')
+        # 13、关闭成功弹窗
+        self.successClose()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_add_bsrw_success(self):
+        """金数报送任务新增+废弃报送任务成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送任务管理页签
+        self.swithToBsrw()
+        # 6、新增报送任务
+        self.bsglMainFrame()
+        self.addBsrw("CLZTXX", "2021")
+        self.addBsrwSave()
+        # 断言新增成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '保存成功')
+        self.closeXzrw_success()
+        # 7、废弃新增的报送任务
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.switchBspzFrame()
+        self.queryBsrw("2021年01月", "存量再贴现信息")
+        self.abandonBsrw("废弃")
+        # 断言废弃成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, '操作成功!')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_03_sfbs_bsfw_success(self):
+        """金数报送范围点击是否报送成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、查询并点击是否报送按钮(否)
+        self.bsglMainFrame()
+        self.queryBsnr("按月", "存量票据融资信息")
+        self.whetherBsnr()
+        # 断言点击是否报送成功
+        res = self.GetTagText(self.MSG_SFBS_RESULT)
+        self.assertEqual(res, '设置成功')
+        self.clickOkAlert()
+        # 6、查询并点击是否报送按钮(是)
+        self.whetherBsnr()
+        # 断言点击是否报送成功
+        res = self.GetTagText(self.MSG_SFBS_RESULT)
+        self.assertEqual(res, '设置成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_04_change_bsfw_success(self):
+        """金数报送范围修改单个报送内容设置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、修改单个报送内容设置
+        self.bsglMainFrame()
+        self.checkOneBsnr()
+        self.changeBsnr("上期", "0 35 /1 * * ?", "15", "天", "是", "是")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_05_add_group_east_success(self):
+        """金数分组管理--新增分组+删除分组成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理页签
+        self.swithToFzgl()
+        # 6、新增分组并断言成功
+        self.bsglMainFrame()
+        self.addGroup("金数自动化分组", "金数权限1", "自动化测试_金数分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 7、编辑分组并断言修改成功
+        self.editeGroup("金数自动化分组", "金数自动化分组_修改", "自动化测试_金数分组描述_修改")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 8查询修改后的名称正确
+        self.searchGroupName("金数自动化分组_修改")
+        self.refreshGroupPage()
+        res = self.GetTagText(self.DATA_FIRST_GROUP.format(1))
+        self.assertEqual(res, "金数自动化分组_修改")
+        # 删除分组
+        self.delGroup("金数自动化分组_修改")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_06_bssq_success(self):
+        """金数报送授权成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        self.addGroup("金数自动化分组", "金数权限1", "自动化测试_金数分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq("金数自动化分组")
+        self.searchBsnr("个人存款发生额信息")
+        self.refreshBssqPage()
+        # 勾选核对权限，上报权限，查询，重抽权限
+        self.tickHdqx()
+        self.tickSbqx()
+        self.tickCxqx()
+        self.tickCcqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 进入分组管理
+        self.SwitchFatherFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 删除分组
+        self.delGroup("金数自动化分组")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_07_change_power_east_success(self):
+        """金数数据授权--修改授权成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理页签,新增分组并断言成功
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        self.addGroup("金数自动化分组", "金数权限1", "自动化测试_金数分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面选择分组
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        self.searchGroupNameBssq("金数自动化分组")
+        self.searchBsnr("个人存款发生额信息")
+        self.refreshBssqPage()
+        # 7、勾选核对权限
+        self.tickHdqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 8、进入数据授权页面,选择分组
+        self.SwitchFatherFrame()
+        self.swithToSjsq()
+        self.bsglMainFrame()
+        self.searchGroupNameSjsq("金数自动化分组")
+        self.searchBsnrSjsq("个人存款发生额信息")
+        self.refreshSjsqPage()
+        # 9、点击全部，修改权限为按字段筛选+下拉框并断言成功
+        self.clickAllBssqPage()
+        self.bssqMainFrame()
+        self.checkZdBssqPage()
+        self.clickZdOneBssqPage("币种")
+        self.clickZdTwoBssqPage("CNY-人民币")
+        self.saveSjsqPage()
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, "保存成功！")
+        self.alertSucBssqPage()
+        self.alertBssqPage()
+        # 10、进入报送管理主界面，选择金数品种进入金数管理界面，切换到品种管理frame
+        self.switchToBsglBaseFrame()
+        self.intoRfbsTab()
+        self.switchBspzFrame()
+        self.swithToSjsq()
+        self.bsglMainFrame()
+        # 11、点击数据范围按钮，修改权限为按字段筛选+输入值并断言成功
+        self.clickAllBssqPage()
+        self.bssqMainFrame()
+        self.checkZdBssqPage()
+        self.clickZdOneBssqPage("金融机构代码")
+        self.inputZdBssqPage("91510100MA61RTKK6Q")
+        self.saveSjsqPage()
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, "保存成功！")
+        self.alertSucBssqPage()
+        self.alertBssqPage()
+        # 12、进入报送管理主界面，选择金数品种进入金数管理界面，切换到品种管理frame
+        self.switchToBsglBaseFrame()
+        self.intoRfbsTab()
+        self.switchBspzFrame()
+        self.swithToSjsq()
+        self.bsglMainFrame()
+        # 13、点击数据范围按钮，修改权限为全部并断言成功
+        self.clickAllBssqPage()
+        self.bssqMainFrame()
+        self.clickAllSjsq()
+        self.saveSjsqPage()
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, "保存成功！")
+        self.alertSucBssqPage()
+        self.alertBssqPage()
+        # 14、进入报送管理主界面，选择金数品种进入金数管理界面，切换到品种管理frame
+        self.switchToBsglBaseFrame()
+        self.intoRfbsTab()
+        self.switchBspzFrame()
+        self.swithToSjsq()
+        self.bsglMainFrame()
+        # 15、清除查询条件并断言成功
+        self.clearDataBssqPage()
+        res = self.GetElementAttrbute(self.INPUT_BSNR_SJSQ, "value")
+        self.assertEqual(res, "")
+        # 进入分组管理删除分组
+        self.SwitchFatherFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        self.delGroup("金数自动化分组")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_08_splc_batch_update_success(self):
+        """金数审批流程批量修改成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        self.addGroup("金数自动化分组", "金数权限1", "自动化测试_金数分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        self.bsglMainFrame()
+        # 7、选择分组
+        self.searchGroupNameBssq("金数自动化分组")
+        self.searchBsnr("个人存款发生额信息")
+        self.refreshBssqPage()
+        # 8、勾选核对权限
+        self.tickHdqx()
+        self.saveBssq()
+        res = self.GetTagText(self.MSG_SAVE_BSSQ)
+        self.assertEqual(res, "保存成功")
+        # 9、进入审批流程页面
+        self.SwitchFatherFrame()
+        self.swithToSplc()
+        self.bsglMainFrame()
+        # 10、选择分组
+        self.searchGroupNameSplc("金数自动化分组")
+        self.refreshSplcPage()
+        # 11、勾选报送内容，批量修改,并断言修改成功
+        self.tickBoxAll()
+        self.batchUpdateSplc("金融基础数据采集审批")
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.bsglMainFrame()
+        res = self.GetTagText(self.MSG_BATCH_ALERT_SPLC)
+        self.assertEqual(res, "保存成功")
+        self.closeBatchAlertSplc()
+        # 进入分组管理
+        self.switchToBsglBaseFrame()
+        self.bsglMainFrame()
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        # 删除分组
+        self.delGroup("金数自动化分组")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_09_set_bscs_success(self):
+        """设置金数报送参数"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送参数页签
+        self.swithToBscs()
+        self.JsBscsFrame()
+        # 6、设置报送参数--启用平均汇率--是
+        self.setJsPjhl(self.YES)
+        # 7、设置上报审批--是
+        self.setJsSbspYes()
+        # 8、保存
+        self.save()
+        # 9、断言设置成功
+        res = self.GetTagText(self.MSG_SAVE_RESULT)
+        self.assertEqual(res, '保存成功')
+        # 10、关闭成功弹窗
+        self.successClose()
+        # 11、设置报送参数--启用平均汇率--否
+        self.setJsPjhl(self.NO)
+        # 12、设置上报审批--否
+        self.setJsSbspNo()
+        # 13、保存
+        self.save()
+        # 14、断言设置成功
+        res = self.GetTagText(self.MSG_SAVE_RESULT)
+        self.assertEqual(res, '保存成功')
+        # 15、关闭成功弹窗
+        self.successClose()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_10_set_zdysjlx_success(self):
+        """设置金数-自定义数据类型"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择金数品种进入金数管理界面
+        self.intoRfbsTab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入自定义数据类型页签
+        self.swithToZdysjlx()
+        self.ZdysjlxFrame()
+        # 新增数据类型-编辑数据类型-新增数据类型明细-编辑数据类型明细-删除数据类型失败（该自定义类型已被引用，不可删除！）--删除数据类型明细后（删除成功！）--删除数据类型成功（删除成功！）
+        # 6、数据类型-新增按钮
+        self.addSjlxButton()
+        # 7、数据类型-新增-编号
+        self.addSjlxBh("zdhcsxz01")
+        # 8、数据类型-新增-名称
+        self.addSjlxName("自动化测试名称新增01")
+        # 9、数据类型-新增-说明
+        self.addSjlxSm("自动化测试名称01-新增说明")
+        # 10、数据类型-新增-保存按钮
+        self.addSjlxSave()
+        # 11、切换frame
+        self.QuiteFrame()
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.ZdysjlxFrame()
+        # 12、数据类型-选择点击数据行
+        self.choiceSjlxClick("zdhcsxz01")
+        # 13、数据类型-编辑按钮
+        self.editSjlxButton()
+        # 14、数据类型-编辑-名称
+        self.editSjlxName("自动化测试名称新增01-编辑")
+        # 15、数据类型-编辑-说明
+        self.editSjlxSm("自动化测试名称01-编辑说明")
+        # 16、数据类型-编辑-保存按钮
+        self.editSjlxSave()
+        # 17、切换frame
+        self.QuiteFrame()
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.ZdysjlxFrame()
+        # 18、数据类型-选择点击数据行
+        self.choiceSjlxClick("zdhcsxz01")
+        # 19、数据类型明细-新增按钮
+        self.addSjlxMxButton()
+        # 20、数据类型明细-新增-名称
+        self.addSjlxMxName("数据类型明细-新增名称")
+        # 21、数据类型明细-新增-参数值
+        self.addSjlxMxCsz("数据类型明细-新增参数值")
+        # 22、数据类型明细-新增-保存按钮
+        self.addSjlxMxSave()
+        # 23、切换frame
+        self.QuiteFrame()
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.ZdysjlxFrame()
+        # 24、数据类型明细-勾选第一行
+        self.SelectSjlxMxFrist()
+        # 25、数据类型明细-编辑按钮
+        self.editSjlxMxButton()
+        # 26、数据类型-编辑-名称
+        self.editSjlxMxName("数据类型明细-编辑名称")
+        # 27、数据类型-编辑-说明
+        self.editSjlxMxCsz("数据类型明细-编辑参数值")
+        # 28、数据类型-编辑-保存按钮
+        self.editSjlxMxSave()
+        # 29、切换frame
+        self.QuiteFrame()
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.ZdysjlxFrame()
+        # 30、数据类型-删除按钮
+        self.delSjlxButton()
+        # 31、断言 -数据类型-删除按钮-删除失败-该自定义类型已被引用，不可删除！
+        res = self.GetTagText(self.MSG_SJLX_RESULT_SUCCESS)
+        self.assertEqual(res, '该自定义类型已被引用，不可删除！')
+        # 32、数据类型--删除失败--确定
+        self.delSjlxFail()
+        # 33、数据类型明细复选框全选
+        self.SelectSjlxMxAll()
+        # 34、数据类型明细-删除按钮
+        self.delSjlxMxButton()
+        # 35、断言 -数据类型明细-删除按钮-删除成功
+        res = self.GetTagText(self.MSG_SJLXMX_RESULT_SUCCESS)
+        self.assertEqual(res, '删除成功！')
+        # 36、关闭删除成功弹窗
+        self.delSjlxMxSuccessClose()
+        # 37、数据类型-删除按钮
+        self.delSjlxButton()
+        # 38、断言 -数据类型-删除按钮-删除成功
+        res = self.GetTagText(self.MSG_SJLX_RESULT_SUCCESS)
+        self.assertEqual(res, '删除成功！')
+        # 39、关闭删除成功弹窗
+        self.delSjlxSuccessClose()
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

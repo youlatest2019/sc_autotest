@@ -1,0 +1,55 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/5/10 11:39
+# @Author   : yangshukun
+# @File     : SSH_Control.py
+
+import re
+import time
+
+from Config.BaseEnv import *
+from Common.OtherFunc import *
+import paramiko
+import os
+
+
+class SSH_Control():
+    def __init__(self, env_name):
+        service_dict = env_name
+        service_obj = dict_to_obj(service_dict)
+        self.host = service_obj.url
+        self.port = service_obj.port
+        self.username = service_obj.username
+        self.password = service_obj.password
+        self.ssh = paramiko.SSHClient()
+        self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        self.ssh.connect(hostname=self.host, port=self.port, username=self.username, password=self.password)
+
+    def ssh_exec_cmd(self, command):
+        outdata, errdata = '', ''
+        sleeptime = 0.001
+        ssh_transp = self.ssh.get_transport()
+        chan = ssh_transp.open_session()
+        chan.setblocking(0)
+        chan.exec_command(command)
+        while True:
+            if chan.exit_status_ready():
+                break
+            time.sleep(sleeptime)
+        retcode = chan.recv_exit_status()
+
+    def ssh_exec_cmd_without_wait(self, cmd):
+        """
+        执行命令，不等待
+        :return:
+        """
+        stdin, stdout, stderr = self.ssh.exec_command(cmd)
+        return stdin, stdout, stderr
+
+    def ssh_close(self):
+        self.ssh.close()
+
+
+if __name__ == '__main__':
+    s = SSH_Control(sftp_157)
+    s.ssh_exec_cmd()

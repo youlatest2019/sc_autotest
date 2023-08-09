@@ -1,0 +1,264 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 15:44
+# @Author   : yangshukun
+# @File     : case_bsgl_1104.py
+
+from baseOperation.init_cls import *
+from pageKeyword.keyword_bsgl_common import *
+from pageKeyword.keyword_bsgl_1104 import *
+from utils.operationXml import *
+from data.data_class.bsgl_1104_data import *
+import sys
+
+
+class BsglRn1104Test(InitCls, BsglMainKeyword, OperationXml, Rn1104BbmbKeyword, Rn1104BsrypzKeyword, Rn1104BsrypzData, BsglPubBsrwKeyword, BsglPubBsfwKeyword,
+                     BsglPubFzglKeyword):
+
+    def test_01_import_module_success(self):
+        """1104报表模板导入成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        # 3、选择1104品种进入1104管理界面
+        self.switchToBsglBaseFrame()
+        self.intoRn1104Tab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBbmb()
+        # 6、导入模板
+        self.switchBspzFrame()
+        self.importBbmb(self.G0100_PATH)
+        self.GotoSleep(1)
+        # 断言导入成功
+        res = self.GetTagText(self.MSG_IMPORT_RESULT)
+        self.assertEqual(res, '成功')
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_02_export_module_success(self):
+        """1104报表模板导出成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        # 3、选择1104品种进入1104管理界面
+        self.switchToBsglBaseFrame()
+        self.intoRn1104Tab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报表模板管理页签
+        self.swithToBbmb()
+        # 6、导出模板
+        self.switchBspzFrame()
+        self.inputBsnrbh("G0100")
+        self.refreshBbmbPage()
+        self.clickCheckBox(1)
+        self.exportBbmb()
+        self.GotoSleep(1)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_03_query_bsrypz_success(self):
+        """1104报送人员配置查询成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        # 3、选择1104品种进入1104管理界面
+        self.switchToBsglBaseFrame()
+        self.intoRn1104Tab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送人员配置页签
+        self.swithToBsrypz()
+        self.switchBspzFrame()
+        # 6、输入查询条件查询
+        self.choiceBspl(self.PL_MONTH)
+        self.inputBbbh("G0100")
+        self.inputBbmc("G0100")
+        self.choiceBbfz(self.GROUP_MONTH_ONE)
+        self.refreshBsrypz()
+        res = self.GetTagText(self.DATA_BBBH)
+        self.assertEqual(res, "G0100")
+        self.GotoSleep(1)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_04_batch_update_tbr_success(self):
+        """1104报送人员配置批量编辑填表人成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        # 3、选择1104品种进入1104管理界面
+        self.switchToBsglBaseFrame()
+        self.intoRn1104Tab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送人员配置页签
+        self.swithToBsrypz()
+        self.switchBspzFrame()
+        # 6、全选所有数据
+        self.checkAllBsrypz()
+        # 7、批量编辑填表人
+        self.batchUpdate("填表人", "自动化填表人01")
+        # 切换到保存按钮所在frame
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.switchBspzFrame()
+        # 点击保存按钮
+        self.saveBsrypz()
+        res = self.GetTagText(self.MSG_SAVE_SUCC)
+        self.assertEqual(res, "保存成功")
+        self.GotoSleep(1)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_05_update_one_success(self):
+        """1104报送人员配置单个数据添加填表人，复核人，负责人成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        # 3、选择1104品种进入1104管理界面
+        self.switchToBsglBaseFrame()
+        self.intoRn1104Tab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送人员配置页签
+        self.swithToBsrypz()
+        self.switchBspzFrame()
+        # 6、查询得到数据
+        self.choiceBspl(self.PL_MONTH)
+        self.inputBbbh("G0100")
+        self.inputBbmc("G0100")
+        self.choiceBbfz(self.GROUP_MONTH_ONE)
+        self.refreshBsrypz()
+        # 7、单条数据编辑
+        self.updateUserForTable("填表人01", "复核人01", "负责人01")
+        # 8、点击保存按钮
+        self.saveBsrypz()
+        res = self.GetTagText(self.MSG_SAVE_SUCC)
+        self.assertEqual(res, "保存成功")
+        self.GotoSleep(1)
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_06_add_bsrw_1104_success(self):
+        """1104报送任务新增报送任务并废弃成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择1104品种进入1104管理界面
+        self.intoRn1104Tab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送任务管理页签
+        self.swithToBsrw()
+        # 6、新增报送任务
+        self.switchBspzFrame()
+        self.addBsrw("G0100", "2021")
+        self.BbpzChoiceMould()
+        self.addBsrwSave()
+        # 7、断言新增成功
+        res = self.GetTagText(self.MSG_ADD_RESULT)
+        self.assertEqual(res, "保存成功")
+        self.closeXzrw_success()
+        # 废弃报送任务
+        self.switchToBsglBaseFrame()
+        self.switchBspzFrame()
+        self.switchBspzFrame()
+        self.queryBsrw("2021年01月", "G0100-211-资产负债项目统计表")
+        self.abandonBsrw("1104任务自动化废弃")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_07_change_1104_bsfw_success(self):
+        """1104报送范围修改单个报送内容设置成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择1104品种进入1104管理界面
+        self.intoRn1104Tab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToBsfw()
+        # 6、查询并修改单个报送内容设置
+        self.bsglMainFrame()
+        self.queryBsnr(self.PL_MONTH, "G0101-191-第Ⅰ部分：表外业务情况报表")
+        self.checkOneBsnr()
+        self.changeBsnr("上期", "0 45 /1 * * ?", "15", "天", "是", "是")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_08_add_edit_del_group_1104_success(self):
+        """1104分组管理--新增分组，编辑，删除，成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.RefreshPage()
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择1104品种进入1104管理界面
+        self.intoRn1104Tab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入报送范围管理页签
+        self.swithToFzgl()
+        # 6、新增分组并断言成功
+        self.bsglMainFrame()
+        self.addGroup("1104自动化分组", "1104权限1", "自动化测试_1104分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 7、编辑分组并断言修改成功
+        self.editeGroup("1104自动化分组", "1104自动化分组_修改", "自动化测试_1104分组描述_修改")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 8查询修改后的名称正确
+        self.searchGroupName("1104自动化分组_修改")
+        self.refreshGroupPage()
+        res = self.GetTagText(self.DATA_FIRST_GROUP.format(1))
+        self.assertEqual(res, "1104自动化分组_修改")
+        # 删除分组
+        self.delGroup("1104自动化分组_修改")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))
+
+    def test_09_bssq_success(self):
+        """1104报送授权成功"""
+        mylog.info('\n************开始执行案例：【{}】************'.format(sys._getframe().f_code.co_name))
+        # 1、登录(已在Init类中进行了登录，无需在案例中再次进行登录)
+        # 2、进入报送管理主界面
+        self.intoBsglMainMenu()
+        self.switchToBsglBaseFrame()
+        # 3、选择1104品种进入1104管理界面
+        self.intoRn1104Tab()
+        # 4、切换到品种管理frame
+        self.switchBspzFrame()
+        # 5、进入分组管理，新增一个分组
+        self.swithToFzgl()
+        self.bsglMainFrame()
+        self.addGroup("1104自动化授权分组", "1104权限2", "自动化测试_1104授权分组描述")
+        res = self.GetTagText(self.MSG_GROUP_SAVE)
+        self.assertEqual(res, "保存成功！")
+        self.closeGroupSaveAlert()
+        # 6、进入报送授权页面
+        self.SwitchFatherFrame()
+        self.swithToBssq()
+        # 7、选择分组
+        self.inpu
+        self.refreshGroupPage()
+        res = self.GetTagText(self.DATA_FIRST_GROUP.format(1))
+        self.assertEqual(res, "1104自动化分组_修改")
+        # 删除分组
+        self.delGroup("1104自动化分组_修改")
+        mylog.info('\n************案例：【{}】执行结束************'.format(sys._getframe().f_code.co_name))

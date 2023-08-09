@@ -1,0 +1,213 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2021/5/26 20:54
+# @Author   : yangshukun
+# @File     : Sftp_Control.py
+import re
+import time
+
+import paramiko
+import os
+from Common.OtherFunc import *
+from Config.BaseEnv import *
+
+_XFER_FILE = 'FILE'
+_XFER_DIR = 'DIR'
+
+
+class SftpController():
+    def __init__(self, env_name):
+        super(SftpController, self).__init__()
+        service_dict = env_name
+        service_obj = dict_to_obj(service_dict)
+        self.host = service_obj.url
+        self.port = service_obj.port
+        self.username = service_obj.username
+        self.password = service_obj.password
+        self.sf = paramiko.Transport((self.host, self.port))
+        self.sf.connect(username=self.username, password=self.password)
+        self.sftp = paramiko.SFTPClient.from_transport(self.sf)
+        log('sftp服务器链接成功')
+
+    def get_sftp_dir(self, remote_patch):
+        '''
+        获取SFTP服务器文件目录
+        :return:
+        '''
+        dir_list = self.sftp.listdir(remote_patch)
+        return dir_list
+
+    def delete_sftp_file(self, remote_file_path, file_name):
+        '''
+        获取SFTP服务器指定文件并删除,使用正则匹配，如果满足则删除，可只传部分名称或者全名
+        :param remote_file_path: 文件所在目录
+        :param file_name: 文件名，可以不带版本号，模糊匹配
+        :return:
+        '''
+        try:
+            files = self.sftp.listdir(remote_file_path)
+            for f in files:
+                if re.match(file_name, f):
+                    f_path = remote_file_path + '/{}'.format(f)
+                    self.sftp.remove(f_path)
+            log('删除文件{}成功'.format(f_path))
+        except:
+            log('请检查传入的路径参数{}是否正确'.format(remote_file_path))
+        return None
+
+        # 获得文件媒体数据({文件/目录, 文件名称})
+
+    def __filetype(self, source):
+        # 判断文件类型
+        if os.path.isfile(source):
+            # 1.文件
+            index = source.rfind('\\')
+            return _XFER_FILE, source[index + 1:]
+        elif os.path.isdir(source):
+            # 2.目录
+            return _XFER_DIR, ''
+
+        # 创建目标路径
+        # 说明: 目标路径不存在则依次创建路径目录
+
+    def __makePath(self, target):
+        # 切换根目录
+        self.sftp.chdir('/')
+
+        # 分割目标目录为目录单元集合
+        data = target.split('/')
+        # 进入目标目录, 目录不存在则创建
+        for item in data:
+            try:
+                self.sftp.chdir(item)
+                currrent_path = self.sftp.getcwd()
+                log('要上传的目录已经存在，选择性进入合并：' + item)
+            except Exception as e:
+                # self.sftp.mkdir(item)
+                # self.sftp.chdir(item)
+                log('要上传的目录不存在，创建目录：' + item)
+                log(e)
+                return None
+
+    def upload_main(self, source, target, replace):
+        '''
+
+        :param source: 来源路径
+        :param target: 目标路径
+        :return:
+        '''
+        ### 验证数据
+        if not os.path.exists(source):
+            log('本地资源不存在，请检查：' + source)
+            return
+
+        ### 格式数据
+        # 格式化目标路径
+        self.__makePath(target)
+
+        ### 处理数据
+        # 文件媒体数据(文件类型, 文件名称)
+        filetype, filename = self.__filetype(source)
+        # 判断文件类型
+        if filetype == _XFER_DIR:
+            # 1.目录
+            self.upload_dir(source, target, replace)
+        elif filetype == _XFER_FILE:
+            # 2.文件
+            self.upload_file(source, filename, replace)
+
+    def upload_dir(self, source, target, replace):
+        '''
+        上传文件夹
+        :param source: 本地文件目录（可以是目录路径，也可以是文件全路径）
+        :param target: 远程目录，传参时必须要带上需要上传的文件或目录名称与本地保持一致，不然会报错
+        :param replace: 是否覆盖，True，表示覆盖，False表示不覆盖跳过
+        :return:
+        '''
+        ### 验证数据
+        # 判断目录存在
+        if not os.path.isdir(source):
+            log('这个函数是用来传送本地目录的')
+            return
+
+        ### 处理数据
+        # 遍历目录内容，上传资源
+        for file in os.listdir(source):
+            # 资源路径
+            filepath = os.path.join(source, file)
+
+            # 判断资源文件类型
+            if os.path.isfile(filepath):
+                # 1.文件
+                self.upload_file(filepath, file, replace)
+            elif os.path.isdir(filepath):
+                # 2.目录
+                try:
+                    self.sftp.chdir(file)
+                except Exception as e:
+                    log(e)
+
+                self.upload_dir(filepath, file, replace)
+        ### 重置数据
+        # 返回上一层目录
+        self.sftp.chdir('..')
+
+    def upload_file(self, filepath, filename, replace):
+        ### 验证数据
+        # 验证文件类型
+        if not os.path.isfile(filepath):
+            log('这个函数是用来传送单个文件的')
+            return
+        # 验证文件存在
+        if not os.path.exists(filepath):
+            log('err:本地文件不存在，检查一下' + filepath)
+            return
+        # 验证FTP已连接
+        if self.sftp == None:
+            log('sftp 还未链接')
+            return
+        ### 处理数据
+        # 判断文件存在是否覆盖
+        if not replace:
+            if filename in self.sftp.listdir():
+                log('[*] 这个文件已经存在了，选择跳过:' + filepath + ' -> ' + self.sftp.getcwd() + '/' + filename)
+                return
+        # 上传文件
+        try:
+            a = self.sftp.getcwd()
+            self.sftp.put(filepath, filename)
+            log('[+] 上传成功:' + filepath + ' -> ' + self.sftp.getcwd() + '/' + filename)
+        except Exception as e:
+            log('[+] 上传失败:' + filepath + ' because ' + str(e))
+
+    def sftp_download(self, local_path, remote_path):
+        '''
+        下载文件或文件夹
+        :param local_path:
+        :param remote_path:
+        :return:
+        '''
+        try:
+            if os.path.isdir(local_path):  # 判断本地参数是目录还是文件
+                for f in self.sftp.listdir(remote_path):  # 遍历远程目录
+                    self.sftp.get(os.path.join(remote_path + f), os.path.join(local_path + f))  # 下载目录中文件
+            else:
+                self.sftp.get(remote_path, local_path)  # 下载文件
+        except Exception as e:
+            print('download exception:', e)
+        self.sf.close()
+
+    def close_sftp(self):
+        if self.sftp:
+            self.sftp.close()
+            log('sftp服务器关闭成功')
+            self.sftp = None
+
+    def put_file(self, localpath, remotepath):
+        time.sleep(1)
+        self.sftp.put(localpath, remotepath)
+
+
+if __name__ == '__main__':
+    sftp = SftpController(sftp_135)  # 上传
+    print(sftp.get_sftp_dir("/home/D2210_QXAZ/install_package"))

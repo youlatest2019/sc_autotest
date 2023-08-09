@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*-
+# @Time     : 2022/7/4 16:40
+# @Author   : yangshukun
+# @File     : keyword_bsgl_1104.py
+from pageElement.page_bsgl import *
+from baseOperation.WebOperation import *
+
+
+class BspzRn1104Keyword(BsglElementMain, BsglElementFrame, WebDriver, Rn1104ElementBbmb):
+
+    def importBbmb(self, file_path):
+        """导入报表模板"""
+        self.Click(self.BUTTON_IMPORT)
+        self.QuiteFrame()
+        self.SwitchFrame(self.RN1104_UPLOAD_ALTER_FRAME)
+        self.Click(self.BUTTON_UPLOAD)
+        self.UploadFile(file_path)
+        self.Click(self.BUTTON_UPLOAD_FILE)
+        self.SwitchFatherFrame()
+        self.SwitchFrameByElement(self.RN1104_MSG_ALTER_FRAME)
+
+    def exportBbmb(self):
+        """导出模板"""
+        self.Click(self.BUTTON_EXPORT)
+
+    def inputBsnrbh(self, text):
+        """输入报送内容编号"""
+        self.Input(text, self.INPUT_BSNRBH)
+
+    def inputBsnrmc(self, text):
+        """输入报送内容名称"""
+        self.Input(text, self.INPUT_BSNRMC)
+
+    def choiceGroup(self, group_name):
+        """选择报送分组"""
+        self.Click(self.CHOOSE_GROUP_NAME.format(group_name))
+
+    def choiceReportFlag(self, flag_index):
+        """选择是否报送"""
+        self.Click(self.INPUT_REPORT_FLAG.format(flag_index))
+
+    def clickCheckBox(self, box_index):
+        """复选框选择数据"""
+        self.Click(self.BOX_BBMB.format(box_index))
+
+    def refreshBbmbPage(self):
+        """点击刷新按钮"""
+        self.Click(self.BUTTON_BBMB_REFRESH)
